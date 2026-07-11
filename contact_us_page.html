@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Core Meta Tags -->
+  <title>Contact Us | The Great Builds - Premium Developers in Bangalore</title>
+  <meta name="description" content="Get in touch with The Great Builds. Schedule site visits to Royal Greens or Orchard Valley, ask legal questions, or visit our head office in Yelahanka, Bangalore." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons for modern UI aesthetics -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Playfair Display (Luxury Serif) & Plus Jakarta Sans (Clean Modern Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            cream: {
+              DEFAULT: '#FAF7F0',  /* Light luxury beige background */
+              dark: '#F3EFE3',     /* Slightly darker shade for sections / hover */
+              light: '#FCFBF9'     /* Ultra-light cream */
+            },
+            forest: {
+              DEFAULT: '#0B241C',  /* Deep emerald forest green */
+              light: '#143C2E',
+              dark: '#05120E'
+            },
+            olive: {
+              DEFAULT: '#818D6F',  /* Elegant muted olive gold */
+              light: '#9FA88C',
+              dark: '#677255'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #818D6F;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0B241C;
+    }
+
+    /* Core Utility Classes */
+    .premium-border {
+      border-color: rgba(129, 141, 111, 0.2);
+    }
+    
+    .hover-lift {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(11, 36, 28, 0.08);
+    }
+
+    /* Elegant custom navigation blur */
+    .glass-nav {
+      background: rgba(11, 36, 28, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-forest font-sans overflow-x-hidden antialiased selection:bg-olive selection:text-cream">
+
+  <!-- Navigation bar (Glass-dark styled as in main page setups) -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav shadow-lg" id="main-header">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-4">
+      <!-- Logo Representing The Great Builds -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20 group-hover:bg-cream/20 transition duration-300">
+          <svg class="w-8 h-8 text-cream" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z"/>
+            <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z"/>
+            <path d="M35 48 H65 M35 55 H65 M45 62 H55" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none">The</span>
+          <span class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight">Great Builds</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-wider text-cream/90 uppercase">
+        <div class="relative group">
+          <button class="hover:text-olive transition flex items-center gap-1 py-2">
+            Our Projects <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-48 bg-forest border border-cream/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Royal Greens</a>
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Orchard Valley</a>
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Shankar Enclave</a>
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Anubhav Megacity</a>
+          </div>
+        </div>
+        <a href="#" class="hover:text-olive transition py-2">Gallery</a>
+        <a href="#" class="hover:text-olive transition py-2">About Us</a>
+        <a href="#" class="hover:text-olive transition py-2">Blog</a>
+        <a href="#" class="text-olive font-bold border-b-2 border-olive py-2">Contact Us</a>
+      </nav>
+
+      <!-- Right Action Contacts -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="tel:+918217855041" class="text-cream hover:text-olive transition flex items-center gap-2 text-sm font-semibold tracking-wide">
+          <i class="fa-solid fa-phone text-olive"></i>
+          <span>+91 82178 55041</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden text-cream hover:text-olive focus:outline-none text-2xl" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-forest-dark border-t border-cream/10 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-xs font-semibold tracking-widest uppercase text-cream/90">
+        <span class="text-[10px] text-olive font-bold tracking-widest">Our Projects</span>
+        <div class="pl-4 flex flex-col gap-3 border-l border-cream/10">
+          <a href="#" class="hover:text-olive">Royal Greens</a>
+          <a href="#" class="hover:text-olive">Orchard Valley</a>
+          <a href="#" class="hover:text-olive">Shankar Enclave</a>
+          <a href="#" class="hover:text-olive">Anubhav Megacity</a>
+        </div>
+        <hr class="border-cream/10 my-1">
+        <a href="#" onclick="toggleMobileMenu()" class="hover:text-olive py-1">Gallery</a>
+        <a href="#" onclick="toggleMobileMenu()" class="hover:text-olive py-1">About Us</a>
+        <a href="#" onclick="toggleMobileMenu()" class="hover:text-olive py-1">Blog</a>
+        <a href="#" onclick="toggleMobileMenu()" class="text-olive py-1">Contact Us</a>
+        <hr class="border-cream/10 my-1">
+        <a href="tel:+918217855041" class="flex items-center gap-2 text-sm text-cream/90 font-medium tracking-normal py-1">
+          <i class="fa-solid fa-phone text-olive"></i> +91 82178 55041
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-forest pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden flex items-center">
+    <!-- Overlay Background Image pattern -->
+    <div class="absolute inset-0 z-0 opacity-20">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80" 
+           alt="Real estate planning" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-forest/90 to-forest/98 z-0"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-center text-cream">
+      <p class="text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] text-olive mb-4">Let's Build Together</p>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight tracking-wide mb-6">
+        Get In <span class="italic font-light text-olive-light">Touch</span>
+      </h1>
+      <p class="text-sm sm:text-base md:text-lg text-cream/80 font-light max-w-xl mx-auto leading-relaxed">
+        Have questions about our premium plotting properties, legal validations, or scheduling a site tour? Our team of real estate experts is ready to assist you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Contact Details & Form Section -->
+  <section class="py-20 max-w-7xl mx-auto px-6 md:px-12 relative -mt-10 z-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Hand Side: Contact Info Blocks -->
+      <div class="lg:col-span-5 space-y-8">
+        
+        <!-- Contact Block Header -->
+        <div class="border-b border-olive/20 pb-6">
+          <h2 class="font-serif text-2xl md:text-3xl text-forest font-semibold">Contact Information</h2>
+          <p class="text-xs text-forest/70 uppercase tracking-widest mt-2 font-bold">The Great Builds Headquarters</p>
+        </div>
+
+        <!-- Detail Cards -->
+        <div class="space-y-6">
+          
+          <!-- Office Address -->
+          <div class="bg-cream-dark/40 p-6 rounded-xl border border-olive/10 flex items-start gap-4 hover-lift">
+            <div class="w-12 h-12 flex items-center justify-center bg-forest text-cream rounded-full flex-shrink-0">
+              <i class="fa-solid fa-location-dot text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-forest mb-1">Our Registered Office</h3>
+              <p class="text-sm text-forest/85 leading-relaxed">
+                No. 762, 7th Cross Rd, Sector A,<br>
+                Yelahanka New Town, Bengaluru,<br>
+                Karnataka - 560064
+              </p>
+              <span class="inline-block mt-2 text-xs font-bold text-olive uppercase tracking-wider">
+                Landmark: California Burrito
+              </span>
+            </div>
+          </div>
+
+          <!-- Direct Phone -->
+          <div class="bg-cream-dark/40 p-6 rounded-xl border border-olive/10 flex items-start gap-4 hover-lift">
+            <div class="w-12 h-12 flex items-center justify-center bg-forest text-cream rounded-full flex-shrink-0">
+              <i class="fa-solid fa-phone text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-forest mb-1">Call Our Site Consultants</h3>
+              <a href="tel:+918217855041" class="text-base font-bold text-forest hover:text-olive transition">
+                +91 82178 55041
+              </a>
+              <p class="text-xs text-forest/60 mt-1">Available 9:00 AM - 7:00 PM (Monday - Sunday)</p>
+            </div>
+          </div>
+
+          <!-- Direct Email -->
+          <div class="bg-cream-dark/40 p-6 rounded-xl border border-olive/10 flex items-start gap-4 hover-lift">
+            <div class="w-12 h-12 flex items-center justify-center bg-forest text-cream rounded-full flex-shrink-0">
+              <i class="fa-solid fa-envelope text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-forest mb-1">Official Support Mail</h3>
+              <a href="mailto:thegreatbuilds123@gmail.com" class="text-sm font-semibold text-forest hover:text-olive transition break-all">
+                thegreatbuilds123@gmail.com
+              </a>
+              <p class="text-xs text-forest/60 mt-1">We respond to email queries within 1-2 hours.</p>
+            </div>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="bg-cream-dark/40 p-6 rounded-xl border border-olive/10 flex items-start gap-4 hover-lift">
+            <div class="w-12 h-12 flex items-center justify-center bg-forest text-cream rounded-full flex-shrink-0">
+              <i class="fa-solid fa-calendar-days text-lg"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-bold text-forest mb-1">Site Visit Schedules</h3>
+              <p class="text-sm text-forest/85">
+                <strong>Mon - Sat:</strong> 9:00 AM - 6:30 PM<br>
+                <strong>Sunday:</strong> 10:00 AM - 4:00 PM
+              </p>
+              <p class="text-xs text-olive font-bold mt-2 uppercase tracking-wide">Cab Facilities Available for Site Tours</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Hand Side: Premium Dynamic Contact Form -->
+      <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-cream-dark relative">
+        <div class="mb-8">
+          <h2 class="font-serif text-2xl md:text-3xl text-forest font-bold">Request a Call Back</h2>
+          <p class="text-xs text-forest/60 mt-1 uppercase tracking-widest font-semibold">Reserve Your Plot Booking Consultation</p>
+        </div>
+
+        <form id="contact-page-form" onsubmit="handleFormSubmission(event)" class="space-y-6">
+          
+          <!-- Name Field -->
+          <div class="flex flex-col gap-1.5">
+            <label for="contact-name" class="text-xs font-bold uppercase tracking-wider text-forest/70">Full Name *</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-olive">
+                <i class="fa-regular fa-user"></i>
+              </span>
+              <input type="text" id="contact-name" required placeholder="John Doe" 
+                     class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg pl-11 pr-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white transition-all text-forest font-medium">
+            </div>
+          </div>
+
+          <!-- Phone & Email Dual Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Phone Field -->
+            <div class="flex flex-col gap-1.5">
+              <label for="contact-phone" class="text-xs font-bold uppercase tracking-wider text-forest/70">Phone Number *</label>
+              <div class="relative flex">
+                <span class="inline-flex items-center px-3.5 rounded-l-lg border border-r-0 border-olive/20 bg-cream-dark text-forest text-sm font-bold select-none">
+                  +91
+                </span>
+                <input type="tel" id="contact-phone" required pattern="[0-9]{10}" placeholder="98765 43210" 
+                       class="w-full bg-cream-dark/20 border border-olive/20 rounded-r-lg px-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white transition-all text-forest font-medium">
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="flex flex-col gap-1.5">
+              <label for="contact-email" class="text-xs font-bold uppercase tracking-wider text-forest/70">Email Address *</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-olive">
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+                <input type="email" id="contact-email" required placeholder="john@example.com" 
+                       class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg pl-11 pr-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white transition-all text-forest font-medium">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dropdowns: Project & Department Selector -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Project Select -->
+            <div class="flex flex-col gap-1.5">
+              <label for="contact-project" class="text-xs font-bold uppercase tracking-wider text-forest/70">Project of Interest</label>
+              <select id="contact-project" class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white text-forest/80 transition-all font-semibold">
+                <option value="General Consultation">General Property Consult</option>
+                <option value="Royal Greens">Royal Greens (Gauribidanur)</option>
+                <option value="Orchard Valley">Orchard Valley (Near Adiyogi)</option>
+                <option value="Shankar Enclave">Shankar Enclave (Rajankunte)</option>
+                <option value="Anubhav Megacity">Anubhav Megacity (Basavakalyan)</option>
+              </select>
+            </div>
+
+            <!-- Department Select -->
+            <div class="flex flex-col gap-1.5">
+              <label for="contact-department" class="text-xs font-bold uppercase tracking-wider text-forest/70">Department Routing</label>
+              <select id="contact-department" class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white text-forest/80 transition-all font-semibold">
+                <option value="Sales / Site Visits">Sales &amp; Site Visits</option>
+                <option value="Legal & Documentation">Legal &amp; Title Verification</option>
+                <option value="Investments">Investment Advisory Team</option>
+                <option value="Customer Support">General Support Desk</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Message Field -->
+          <div class="flex flex-col gap-1.5">
+            <label for="contact-message" class="text-xs font-bold uppercase tracking-wider text-forest/70">Your message or special request</label>
+            <textarea id="contact-message" rows="4" placeholder="I would like to schedule a site tour of Royal Greens layout plans this Saturday..." 
+                      class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white transition-all text-forest font-medium resize-none"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full bg-forest hover:bg-olive hover:text-forest text-cream font-bold py-4.5 text-xs uppercase tracking-widest rounded-lg transition-all duration-300 shadow-lg transform active:scale-95">
+            Submit Consultation Request
+          </button>
+
+          <!-- Safe-secure notice badge -->
+          <div class="text-center mt-3 flex items-center justify-center gap-1.5 text-[10px] text-forest/50 font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-shield-halved text-olive text-xs"></i>
+            <span>Your personal parameters are secured under total compliance.</span>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive responsive Google Maps Section pointing near California Burrito -->
+  <section class="py-12 bg-cream-dark/20 border-y border-olive/10">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <!-- Maps Header -->
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold text-olive uppercase tracking-[0.3em]">Corporate Location Grid</span>
+        <h2 class="font-serif text-3xl text-forest mt-2">Find Us on the Map</h2>
+        <div class="w-16 h-0.5 bg-olive mx-auto mt-4"></div>
+      </div>
+
+      <!-- Real Responsive Iframe -->
+      <div class="w-full h-[450px] bg-cream-dark rounded-2xl overflow-hidden shadow-2xl border border-cream-dark relative">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6455110825946!2d77.5925345!3d13.0899011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1ec003f9055d%3A0xe2da24cb09efb4b4!2s7th%20Cross%20Rd%2C%20Yelahanka%20New%20Town%2C%20Bengaluru%2C%20Karnataka%20560064!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+          class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Foot Segment (Deep forest styled color grids matching original) -->
+  <footer class="bg-forest-dark text-cream/70 py-20 border-t border-cream/5">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+      
+      <!-- Brand column -->
+      <div class="lg:col-span-4 flex flex-col gap-6">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-14 h-14 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20">
+            <svg class="w-10 h-10 text-cream" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z"/>
+              <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z"/>
+              <path d="M35 48 H65 M35 55 H65 M45 62 H55" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <polygon points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none">The</span>
+            <span class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight">Great Builds</span>
+          </div>
+        </a>
+        <p class="text-xs text-cream/50 leading-relaxed max-w-sm">
+          Delivering gated, secure, top-tier plotting communities and luxury construction across Bangalore's prospective growth avenues.
+        </p>
+        <div class="flex items-center gap-4 mt-2">
+          <a href="#" class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300">
+            <i class="fa-brands fa-facebook-f text-sm"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300">
+            <i class="fa-brands fa-youtube text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Projects Links -->
+      <div class="lg:col-span-3 flex flex-col gap-5">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">Projects</h4>
+        <div class="flex flex-col gap-3 text-xs">
+          <a href="#" class="hover:text-olive transition">Royal Greens</a>
+          <a href="#" class="hover:text-olive transition">Orchard Valley</a>
+          <a href="#" class="hover:text-olive transition">Shankar Enclave</a>
+          <a href="#" class="hover:text-olive transition">Anubhav Megacity</a>
+        </div>
+      </div>
+
+      <!-- Quick Company Links -->
+      <div class="lg:col-span-2 flex flex-col gap-5">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">Company</h4>
+        <div class="flex flex-col gap-3 text-xs">
+          <a href="#" class="hover:text-olive transition">About Us</a>
+          <a href="#" class="hover:text-olive transition">Gallery</a>
+          <a href="#" class="hover:text-olive transition">Blog</a>
+          <a href="#" class="hover:text-olive transition">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Quick Contacts Details -->
+      <div class="lg:col-span-3 flex flex-col gap-5">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">Headquarters</h4>
+        <div class="flex flex-col gap-4 text-xs">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-olive mt-0.5"></i>
+            <span class="leading-relaxed">
+              No. 762, 7th Cross Rd, Sector A, Yelahanka New Town, Bengaluru, Karnataka - 560064
+            </span>
+          </div>
+          <a href="tel:+918217855041" class="flex items-center gap-3 hover:text-olive transition">
+            <i class="fa-solid fa-phone text-olive"></i>
+            <span>+91 82178 55041</span>
+          </a>
+          <a href="mailto:thegreatbuilds123@gmail.com" class="flex items-center gap-3 hover:text-olive transition break-all">
+            <i class="fa-solid fa-envelope text-olive"></i>
+            <span>thegreatbuilds123@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright / Policy links -->
+    <hr class="border-cream/5 mb-8 max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-cream/45 uppercase">
+      <div>© 2026 The Great Builds. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-cream transition">Privacy Policy</a>
+        <a href="#" class="hover:text-cream transition">Terms of Use</a>
+        <a href="#" class="hover:text-cream transition">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTIONS -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <!-- WhatsApp Direct Floater -->
+    <a href="https://wa.me/918217855041?text=Hi!%20I'm%20interested%20in%20The%20Great%20Builds%20residential%20plots." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="w-12 h-12 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl flex items-center justify-center text-2xl transition-transform hover:scale-110 active:scale-95" 
+       aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Custom Success Overlay Toast Notification -->
+  <div id="toast-notif" class="fixed top-24 right-6 bg-forest text-cream border border-olive/30 px-6 py-4 rounded-xl shadow-2xl z-50 flex items-center gap-3 transition-all duration-500 transform translate-x-96 opacity-0 max-w-md">
+    <div class="w-8 h-8 rounded-full bg-olive flex items-center justify-center text-cream flex-shrink-0">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="flex flex-col">
+      <h5 class="text-sm font-bold text-cream">Callback Scheduled Successfully</h5>
+      <p id="toast-message" class="text-xs text-cream/70 mt-0.5">We will call you back within 1 hour.</p>
+    </div>
+  </div>
+
+  <!-- Interaction Logic Controls -->
+  <script>
+    // Header styling on window scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 80) {
+        header.classList.add('py-2', 'bg-forest');
+        header.classList.remove('py-4');
+      } else {
+        header.classList.add('py-4');
+        header.classList.remove('py-2', 'bg-forest');
+      }
+    });
+
+    // Mobile Navbar Drawer Control
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        menu.classList.add('hidden');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    // Form Submission Handler
+    function handleFormSubmission(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('contact-name').value;
+      const project = document.getElementById('contact-project').value;
+      const department = document.getElementById('contact-department').value;
+
+      // Access Toast Objects
+      const toast = document.getElementById('toast-notif');
+      const toastText = document.getElementById('toast-message');
+
+      // Update success message dynamic parameters
+      toastText.innerText = `Thanks ${name}! Your callback request for ${project} has been routed to our ${department} team.`;
+      
+      // Reveal Toast block smoothly
+      toast.classList.remove('translate-x-96', 'opacity-0');
+      toast.classList.add('translate-x-0', 'opacity-100');
+
+      // Dismiss feedback overlay after 5.5 seconds
+      setTimeout(() => {
+        toast.classList.remove('translate-x-0', 'opacity-100');
+        toast.classList.add('translate-x-96', 'opacity-0');
+      }, 5500);
+
+      // Reset form variables
+      document.getElementById('contact-page-form').reset();
+    }
+  </script>
+
+</body>
+
+</html>

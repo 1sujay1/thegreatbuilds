@@ -1,1228 +1,2203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The Great Builds | Premium Builders and Developers in Bangalore
+    </title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Great Builds | Premium Builders and Developers in Bangalore</title>
-  
-  <!-- SEO & Meta Tags -->
-  <meta name="description" content="Property Developers in Yelahanka New Town | The Great Builds. Premium residential plots with world-class amenities in Karnataka." />
-  
-  <!-- Google Fonts: Cormorant Garamond (Serif) & Inter (Sans) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons for visual flair -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SEO & Meta Tags -->
+    <meta
+      name="description"
+      content="Property Developers in Yelahanka New Town | The Great Builds. Premium residential plots with world-class amenities in Karnataka."
+    />
 
-  <link rel="stylesheet" href="assets/css/common.css">
+    <!-- Google Fonts: Cormorant Garamond (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Tailwind Configuration for Custom Luxury Palette -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Cormorant Garamond"', 'serif'],
-            sans: ['Inter', 'sans-serif'],
+    <!-- FontAwesome Icons for visual flair -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/common.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration for Custom Luxury Palette -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              luxury: {
+                gold: "#B08E59" /* Warm premium gold accent */,
+                goldLight: "#C5A880" /* Lighter highlight gold */,
+                darkGreen: "#091F13" /* Rich premium background green */,
+                greenHover: "#123D26" /* Medium dark forest hover */,
+                creamBg: "#FAF6EE" /* Soft high-end background cream */,
+                creamCard:
+                  "#F5EFE4" /* Slightly darker cream for cards/stats */,
+                charcoal: "#2D312E" /* Muted dark text color */,
+              },
+            },
           },
-          colors: {
-            luxury: {
-              gold: '#B08E59',      /* Warm premium gold accent */
-              goldLight: '#C5A880', /* Lighter highlight gold */
-              darkGreen: '#091F13', /* Rich premium background green */
-              greenHover: '#123D26',/* Medium dark forest hover */
-              creamBg: '#FAF6EE',   /* Soft high-end background cream */
-              creamCard: '#F5EFE4', /* Slightly darker cream for cards/stats */
-              charcoal: '#2D312E',  /* Muted dark text color */
-            }
-          }
+        },
+      };
+    </script>
+
+    <!-- Custom CSS for specific elements (lines, transitions, floats) -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #faf6ee;
+        color: #2d312e;
+        overflow-x: hidden;
+      }
+
+      /* Custom scrollbar to match theme */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #faf6ee;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #b08e59;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #091f13;
+      }
+
+      /* Elegant double-line accent design */
+      .luxury-line-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .luxury-line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: rgba(176, 142, 89, 0.4);
+        position: relative;
+      }
+      .luxury-line::after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(176, 142, 89, 0.2);
+      }
+
+      /* Smooth transition for tabs content filtering */
+      .tab-content-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition:
+          opacity 0.4s ease,
+          transform 0.4s ease;
+      }
+      .tab-content-hidden {
+        opacity: 0;
+        transform: translateY(15px);
+        display: none;
+      }
+
+      /* Floating utilities */
+      .whatsapp-pulse {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        animation: pulse-green 2s infinite;
+      }
+      @keyframes pulse-green {
+        0% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+        }
+        100% {
+          transform: scale(0.95);
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
         }
       }
-    }
-  </script>
+    </style>
+  </head>
 
-  <!-- Custom CSS for specific elements (lines, transitions, floats) -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #FAF6EE;
-      color: #2D312E;
-      overflow-x: hidden;
-    }
-
-    /* Custom scrollbar to match theme */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #FAF6EE;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #B08E59;
-      border-radius: 5px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #091F13;
-    }
-
-    /* Elegant double-line accent design */
-    .luxury-line-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .luxury-line {
-      flex-grow: 1;
-      height: 1px;
-      background-color: rgba(176, 142, 89, 0.4);
-      position: relative;
-    }
-    .luxury-line::after {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: rgba(176, 142, 89, 0.2);
-    }
-
-    /* Smooth transition for tabs content filtering */
-    .tab-content-active {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-    .tab-content-hidden {
-      opacity: 0;
-      transform: translateY(15px);
-      display: none;
-    }
-
-    /* Floating utilities */
-    .whatsapp-pulse {
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      animation: pulse-green 2s infinite;
-    }
-    @keyframes pulse-green {
-      0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-      }
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
-    }
-  </style>
-</head>
-
-<body class="antialiased">
-
-  <!-- Top Luxury Header & Navigation -->
-  <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/30 backdrop-blur-sm border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20 sm:h-24">
-        
-        <!-- Eagle Logo & Brand Crest -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-full border border-luxury-gold/50 bg-luxury-darkGreen/80 p-1.5 transition-transform duration-500 group-hover:rotate-[360deg]">
-            <!-- Custom inline SVG of Eagle Crest matching the image logo -->
-            <svg class="w-full h-full text-white" viewBox="0 0 100 100" fill="currentColor">
-              <path d="M50,10 C45,25 30,28 15,30 C25,45 20,60 35,68 C42,65 40,55 50,55 C60,55 58,65 65,68 C80,60 75,45 85,30 C70,28 55,25 50,10 Z" opacity="0.9"/>
-              <circle cx="50" cy="50" r="3" fill="#B08E59"/>
-              <path d="M20,38 Q50,48 80,38" stroke="#B08E59" stroke-width="2" fill="none"/>
-              <path d="M30,75 L70,75 M35,80 L65,80" stroke="white" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="flex flex-col">
-            <span class="font-serif tracking-widest text-lg sm:text-xl font-bold text-white leading-tight">THE GREAT BUILDS</span>
-            <span class="text-[9px] sm:text-[10px] tracking-[0.25em] text-luxury-gold uppercase">Builders & Developers</span>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Items -->
-        <nav class="hidden md:flex items-center gap-8">
-          <div class="relative group">
-            <button class="font-sans text-xs tracking-widest text-white uppercase font-medium flex items-center gap-1.5 hover:text-luxury-gold transition-colors">
-              Our Projects <i class="fa-solid fa-chevron-down text-[9px] transition-transform group-hover:rotate-180"></i>
-            </button>
-            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-luxury-darkGreen border border-luxury-gold/20 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-              <a href="#projects-section" onclick="filterProjects('ongoing')" class="block px-4 py-3 text-xs tracking-wider text-white hover:bg-luxury-gold/20 hover:text-luxury-gold transition-colors">Ongoing Projects</a>
-              <a href="#projects-section" onclick="filterProjects('upcoming')" class="block px-4 py-3 text-xs tracking-wider text-white hover:bg-luxury-gold/20 hover:text-luxury-gold transition-colors">Upcoming Projects</a>
-              <a href="#projects-section" onclick="filterProjects('completed')" class="block px-4 py-3 text-xs tracking-wider text-white hover:bg-luxury-gold/20 hover:text-luxury-gold transition-colors">Completed Projects</a>
-            </div>
-          </div>
-          <a href="#about-section" class="font-sans text-xs tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-luxury-gold hover:after:w-full after:transition-all">Gallery</a>
-          <a href="#about-section" class="font-sans text-xs tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-luxury-gold hover:after:w-full after:transition-all">About Us</a>
-          <a href="#footer-section" class="font-sans text-xs tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-luxury-gold hover:after:w-full after:transition-all">Blog</a>
-        </nav>
-
-        <!-- Right Side Contact Info -->
-        <div class="hidden lg:flex items-center gap-6">
-          <a href="tel:+918217855041" class="flex items-center gap-2 text-white hover:text-luxury-gold transition-colors">
-            <div class="w-8 h-8 rounded-full bg-luxury-gold/10 border border-luxury-gold/30 flex items-center justify-center">
-              <i class="fa-solid fa-phone text-xs text-luxury-gold"></i>
-            </div>
-            <span class="text-xs sm:text-sm font-semibold tracking-wider font-sans">+91 82178 55041</span>
-          </a>
-          <button onclick="openContactModal('General Inquiry')" class="bg-white text-luxury-darkGreen px-6 py-3 rounded-none text-xs font-semibold tracking-widest uppercase hover:bg-luxury-gold hover:text-white transition-all duration-300 border border-white hover:border-luxury-gold shadow-lg">
-            Contact Us
-          </button>
-        </div>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-white hover:text-luxury-gold focus:outline-none p-2" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars-staggered text-2xl"></i>
-        </button>
-
-      </div>
-    </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobile-drawer" class="fixed inset-0 bg-luxury-darkGreen/95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-8 md:hidden">
-      <div>
-        <div class="flex items-center justify-between mb-12">
-          <span class="font-serif tracking-widest text-xl font-bold text-white">THE GREAT BUILDS</span>
-          <button id="close-drawer-btn" class="text-white hover:text-luxury-gold text-2xl focus:outline-none">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <nav class="flex flex-col gap-6">
-          <a href="#projects-section" onclick="toggleMobileMenu(); filterProjects('ongoing');" class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors">Ongoing Projects</a>
-          <a href="#projects-section" onclick="toggleMobileMenu(); filterProjects('upcoming');" class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors">Upcoming Projects</a>
-          <a href="#projects-section" onclick="toggleMobileMenu(); filterProjects('completed');" class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors">Completed Projects</a>
-          <a href="#about-section" onclick="toggleMobileMenu();" class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors">Gallery</a>
-          <a href="#about-section" onclick="toggleMobileMenu();" class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors">About Us</a>
-          <a href="#footer-section" onclick="toggleMobileMenu();" class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors">Blog</a>
-        </nav>
-      </div>
-
-      <div class="flex flex-col gap-6 border-t border-white/10 pt-8">
-        <a href="tel:+918217855041" class="flex items-center gap-3 text-white hover:text-luxury-gold transition-colors">
-          <i class="fa-solid fa-phone text-luxury-gold"></i>
-          <span class="text-sm font-semibold tracking-wider font-sans">+91 82178 55041</span>
-        </a>
-        <button onclick="toggleMobileMenu(); openContactModal('Mobile Callback Request');" class="w-full bg-luxury-gold text-white py-4 text-sm font-semibold tracking-widest uppercase hover:bg-white hover:text-luxury-darkGreen transition-all duration-300">
-          Contact Us
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO SECTION WITH FEATURED VILLAS -->
-  <section class="relative min-h-screen bg-luxury-darkGreen flex items-center pt-24 overflow-hidden">
-    <!-- Overlay/Background Image referencing Orchard Valley aesthetics -->
-    <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2000&auto=format&fit=crop" 
-           alt="Orchard Valley Estate Luxury Living" 
-           class="w-full h-full object-cover opacity-35 scale-105 animate-[pulse_8s_infinite] filter brightness-75 contrast-125"
-           onerror="this.src='https://placehold.co/1920x1080/091f13/ffffff?text=Orchard+Valley+Estate'"/>
-      <!-- Soft gradient overlay to secure typography contrast -->
-      <div class="absolute inset-0 bg-gradient-to-t from-luxury-darkGreen via-transparent to-black/50"></div>
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-      <div class="max-w-3xl">
-        <!-- Badge -->
-        <span class="inline-block text-[11px] sm:text-xs tracking-[0.3em] font-semibold text-luxury-gold uppercase mb-4 animate-pulse">
-          Featured Project
-        </span>
-        
-        <!-- Big Premium Header -->
-        <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl text-white font-normal mb-6 tracking-wide leading-tight">
-          Orchard <span class="text-luxury-goldLight italic font-light font-serif">Valley</span>
-        </h1>
-        
-        <!-- Luxury Description -->
-        <p class="font-sans text-sm sm:text-base text-gray-300 leading-relaxed max-w-xl mb-10 tracking-wide font-light">
-          Each villa plot at Orchard Valley is a testament to architectural <span class="text-luxury-gold font-medium">excellence</span> and the pursuit of perfection. Spacious interiors, adorned with top-notch fixtures and finishes, provide an unmatched sense of grandeur.
-        </p>
-        
-        <!-- View Details Button -->
-        <div class="flex flex-col sm:flex-row gap-4 items-start">
-          <button onclick="openProjectDetails('Orchard Valley')" class="px-8 py-4 bg-white hover:bg-luxury-gold hover:text-white text-luxury-darkGreen font-sans font-bold text-xs tracking-[0.25em] uppercase transition-all duration-300 shadow-xl group flex items-center gap-2">
-            View Details 
-            <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1.5"></i>
-          </button>
-          
-          <button onclick="openContactModal('Orchard Valley Enquiry')" class="px-8 py-4 bg-transparent border border-white/30 hover:border-luxury-gold hover:bg-luxury-gold/10 text-white font-sans font-semibold text-xs tracking-[0.25em] uppercase transition-all duration-300">
-            Enquire Now
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-      <a href="#about-section" class="flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors">
-        <span class="text-[10px] tracking-widest uppercase font-semibold">Scroll Down</span>
-        <i class="fa-solid fa-chevron-down text-xs text-luxury-gold"></i>
-      </a>
-    </div>
-  </section>
-
-  <!-- LUXURY LIVING & STRATEGIC INVESTMENT COPY SECTION -->
-  <section id="about-section" class="py-24 sm:py-32 bg-luxury-creamBg relative">
-    <!-- Subtle architectural guidelines background lines -->
-    <div class="absolute inset-0 flex justify-between px-10 pointer-events-none opacity-5">
-      <div class="w-px bg-luxury-gold h-full"></div>
-      <div class="w-px bg-luxury-gold h-full"></div>
-      <div class="w-px bg-luxury-gold h-full"></div>
-    </div>
-
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      
-      <!-- Styled Luxury Double Line Header -->
-      <div class="luxury-line-container mb-10">
-        <div class="luxury-line"></div>
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-luxury-darkGreen px-6 sm:px-10 font-normal leading-tight">
-          Luxury Living <span class="font-sans font-light text-xl sm:text-2xl text-luxury-gold inline-block align-middle mx-1">&amp;</span> <span class="text-luxury-gold italic">Strategic Investment</span>
-        </h2>
-        <div class="luxury-line"></div>
-      </div>
-
-      <!-- Rich Corporate Copywrite (cloned context from original image_dca504.png) -->
-      <div class="space-y-8 text-luxury-charcoal font-sans font-light text-sm sm:text-base leading-relaxed tracking-wide text-justify sm:text-center">
-        <p class="first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:text-luxury-gold first-letter:float-left first-letter:mr-3 first-letter:mt-1">
-          Our portfolio features a curated selection of premium residential plots and luxury villas across North Bangalore's high-growth corridors. From the serene 10-acre estates at Orchard Valley near Adiyogi to the strategically located Shankar Enclave in Rajanukunte, these gated communities offer unmatched capital appreciation. Each development, including Royal Greens in Gauribidanur, is meticulously planned with DTCP or BMRDA approvals, ensuring a secure and transparent real estate investment.
-        </p>
-        <p>
-          We specialize in sophisticated urban living that blends modern infrastructure with natural tranquility. Anubhava Mega City in Basavakalyan redefines the township model, integrating senior citizen villas with 24/7 medical support and world-class commercial amenities. Our projects feature designer clubhouses, lush landscapes, and superior connectivity to Kempegowda International Airport and major industrial hubs, catering to discerning homeowners and investors seeking long-term value.
-        </p>
-        <p class="font-medium text-luxury-darkGreen">
-          By prioritizing clear titles, E-Khata registration, and architectural excellence, we deliver elite residential assets in Bangalore's most promising neighborhoods. Whether you are searching for villas near Isha Foundation or BMRDA approved plots, our developments provide the perfect canvas for a premium lifestyle. Discover the future of North Bangalore with gated communities built for excellence, growth, and unparalleled quality.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- OUR PROJECTS FILTERING SECTION -->
-  <section id="projects-section" class="py-24 bg-white relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <!-- Section Title with Accent Lines -->
-      <div class="luxury-line-container mb-12">
-        <div class="luxury-line"></div>
-        <h2 class="font-serif text-4xl sm:text-5xl text-luxury-darkGreen px-8 sm:px-12 text-center font-normal">
-          Our <span class="text-luxury-gold italic">Projects</span>
-        </h2>
-        <div class="luxury-line"></div>
-      </div>
-
-      <!-- Project Interactive Filter Tabs -->
-      <div class="flex justify-center mb-16 overflow-x-auto no-scrollbar">
-        <div class="flex space-x-2 sm:space-x-4 border-b border-gray-100 pb-2">
-          <button onclick="filterProjects('ongoing')" id="tab-ongoing" class="tab-btn px-6 py-3 font-sans text-xs tracking-[0.2em] font-semibold text-luxury-darkGreen uppercase transition-all border-b-2 border-luxury-darkGreen whitespace-nowrap">
-            Ongoing Projects
-          </button>
-          <button onclick="filterProjects('upcoming')" id="tab-upcoming" class="tab-btn px-6 py-3 font-sans text-xs tracking-[0.2em] font-semibold text-gray-400 uppercase transition-all border-b-2 border-transparent hover:text-luxury-gold whitespace-nowrap">
-            Upcoming Projects
-          </button>
-          <button onclick="filterProjects('completed')" id="tab-completed" class="tab-btn px-6 py-3 font-sans text-xs tracking-[0.2em] font-semibold text-gray-400 uppercase transition-all border-b-2 border-transparent hover:text-luxury-gold whitespace-nowrap">
-            Completed Projects
-          </button>
-        </div>
-      </div>
-
-      <!-- PROJECTS DYNAMIC GRID CONTAINER -->
-      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- ================== ONGOING PROJECTS ================== -->
-        <!-- Card 1: Royal Greens (Ongoing) -->
-        <div class="project-card ongoing group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
-          <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
-                 alt="Royal Greens Villa Layout" 
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
-                 onerror="this.src='https://placehold.co/800x600/091f13/ffffff?text=Royal+Greens'"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <!-- Embedded badge text matching original design -->
-            <div class="absolute bottom-4 left-4 right-4 text-center">
-              <span class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md">ROYAL GREENS</span>
-            </div>
-          </div>
-          
-          <!-- Card Info -->
-          <div class="p-6 flex-grow">
-            <div class="flex justify-between items-start mb-1">
-              <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">Royal Greens</h3>
-              <span class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1">DTCP</span>
-            </div>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6">GAURIBIDANUR, NORTH BENGALURU</p>
-            
-            <!-- Specs table (signature layout) -->
-            <div class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6">
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL AREA</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">10+ Acres</span>
-              </div>
-              <div class="border-x border-luxury-gold/10">
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL PLOTS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">164 Units</span>
-              </div>
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-gold mt-0.5">Ongoing</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4">
-            <button onclick="openProjectDetails('Royal Greens')" class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-            <button onclick="openContactModal('Royal Greens Inquiry')" class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 2: Orchard Valley (Ongoing) -->
-        <div class="project-card ongoing group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
-          <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
-            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop" 
-                 alt="Orchard Valley Land Site" 
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
-                 onerror="this.src='https://placehold.co/800x600/091f13/ffffff?text=Orchard+Valley'"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <!-- Embedded badge text matching original design -->
-            <div class="absolute bottom-4 left-4 right-4 text-center">
-              <span class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md">ORCHARD VALLEY</span>
-            </div>
-          </div>
-          
-          <!-- Card Info -->
-          <div class="p-6 flex-grow">
-            <div class="flex justify-between items-start mb-1">
-              <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">Orchard Valley</h3>
-              <span class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1">FARMLANDS</span>
-            </div>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6">NEAR ADIYOGI, CHIKKABALLAPUR</p>
-            
-            <!-- Specs table (signature layout) -->
-            <div class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6">
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL AREA</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">10 Acres</span>
-              </div>
-              <div class="border-x border-luxury-gold/10">
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL PLOTS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">50 Units</span>
-              </div>
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-gold mt-0.5">Ongoing</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4">
-            <button onclick="openProjectDetails('Orchard Valley')" class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-            <button onclick="openContactModal('Orchard Valley Inquiry')" class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 3: Anubhav Megacity (Ongoing) -->
-        <div class="project-card ongoing group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
-          <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
-            <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format&fit=crop" 
-                 alt="Anubhav Megacity Townscape" 
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
-                 onerror="this.src='https://placehold.co/800x600/091f13/ffffff?text=Anubhav+Megacity'"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <!-- Embedded badge text matching original design -->
-            <div class="absolute bottom-4 left-4 right-4 text-center">
-              <span class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md">ANUBHAVA MEGA CITY</span>
-            </div>
-          </div>
-          
-          <!-- Card Info -->
-          <div class="p-6 flex-grow">
-            <div class="flex justify-between items-start mb-1">
-              <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">Anubhav Megacity</h3>
-              <span class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1">DTCP</span>
-            </div>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6">BASAVAKALYAN, KARNATAKA</p>
-            
-            <!-- Specs table (signature layout) -->
-            <div class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6">
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL AREA</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">100+ Acres</span>
-              </div>
-              <div class="border-x border-luxury-gold/10">
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL PLOTS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">980 Units</span>
-              </div>
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-gold mt-0.5">Ongoing</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4">
-            <button onclick="openProjectDetails('Anubhav Megacity')" class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-            <button onclick="openContactModal('Anubhav Megacity Inquiry')" class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- ================== UPCOMING PROJECTS ================== -->
-        <!-- Card 4: Shankar Enclave (Upcoming) -->
-        <div class="project-card upcoming hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
-          <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop" 
-                 alt="Shankar Enclave Estate" 
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
-                 onerror="this.src='https://placehold.co/800x600/091f13/ffffff?text=Shankar+Enclave'"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <!-- Embedded badge text matching original design -->
-            <div class="absolute bottom-4 left-4 right-4 text-center">
-              <span class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md">SHANKAR ENCLAVE</span>
-            </div>
-          </div>
-          
-          <!-- Card Info -->
-          <div class="p-6 flex-grow">
-            <div class="flex justify-between items-start mb-1">
-              <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">Shankar Enclave</h3>
-              <span class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1">BMRDA</span>
-            </div>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6">RAJANUKUNTE, NORTH BENGALURU</p>
-            
-            <!-- Specs table (signature layout) -->
-            <div class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6">
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL AREA</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">15 Acres</span>
-              </div>
-              <div class="border-x border-luxury-gold/10">
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL PLOTS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">120 Units</span>
-              </div>
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-amber-600 mt-0.5">Upcoming</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4">
-            <button onclick="openProjectDetails('Shankar Enclave')" class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-            <button onclick="openContactModal('Shankar Enclave Inquiry')" class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 5: Golden Crest (Upcoming) -->
-        <div class="project-card upcoming hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
-          <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" 
-                 alt="Golden Crest Elite Estates" 
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
-                 onerror="this.src='https://placehold.co/800x600/091f13/ffffff?text=Golden+Crest'"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <!-- Embedded badge text matching original design -->
-            <div class="absolute bottom-4 left-4 right-4 text-center">
-              <span class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md">GOLDEN CREST</span>
-            </div>
-          </div>
-          
-          <!-- Card Info -->
-          <div class="p-6 flex-grow">
-            <div class="flex justify-between items-start mb-1">
-              <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">Golden Crest</h3>
-              <span class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1">DTCP</span>
-            </div>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6">YELAHANKA EXTENSION, BANGALORE</p>
-            
-            <!-- Specs table (signature layout) -->
-            <div class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6">
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL AREA</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">8 Acres</span>
-              </div>
-              <div class="border-x border-luxury-gold/10">
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL PLOTS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">85 Units</span>
-              </div>
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-amber-600 mt-0.5">Upcoming</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4">
-            <button onclick="openProjectDetails('Golden Crest')" class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-            <button onclick="openContactModal('Golden Crest Inquiry')" class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- ================== COMPLETED PROJECTS ================== -->
-        <!-- Card 6: Signature Boulevard (Completed) -->
-        <div class="project-card completed hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
-          <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" 
-                 alt="Signature Boulevard completed community" 
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
-                 onerror="this.src='https://placehold.co/800x600/091f13/ffffff?text=Signature+Boulevard'"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <!-- Embedded badge text matching original design -->
-            <div class="absolute bottom-4 left-4 right-4 text-center">
-              <span class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md">SIGNATURE BOULEVARD</span>
-            </div>
-          </div>
-          
-          <!-- Card Info -->
-          <div class="p-6 flex-grow">
-            <div class="flex justify-between items-start mb-1">
-              <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">Signature Blvd</h3>
-              <span class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1">BIAAPA</span>
-            </div>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6">DEVANAHALLI, BANGALORE NORTH</p>
-            
-            <!-- Specs table (signature layout) -->
-            <div class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6">
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL AREA</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">22 Acres</span>
-              </div>
-              <div class="border-x border-luxury-gold/10">
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL PLOTS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">210 Units</span>
-              </div>
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-emerald-700 mt-0.5">Completed</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4">
-            <button onclick="openProjectDetails('Signature Blvd')" class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-            <button onclick="openContactModal('Signature Blvd Inquiry')" class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Card 7: Heritage Greens (Completed) -->
-        <div class="project-card completed hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
-          <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
-            <img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=800&auto=format&fit=crop" 
-                 alt="Heritage Greens luxury houses" 
-                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
-                 onerror="this.src='https://placehold.co/800x600/091f13/ffffff?text=Heritage+Greens'"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <!-- Embedded badge text matching original design -->
-            <div class="absolute bottom-4 left-4 right-4 text-center">
-              <span class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md">HERITAGE GREENS</span>
-            </div>
-          </div>
-          
-          <!-- Card Info -->
-          <div class="p-6 flex-grow">
-            <div class="flex justify-between items-start mb-1">
-              <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">Heritage Greens</h3>
-              <span class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1">DTCP</span>
-            </div>
-            <p class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6">CHIKKABALLAPUR TOWN</p>
-            
-            <!-- Specs table (signature layout) -->
-            <div class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6">
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL AREA</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">12 Acres</span>
-              </div>
-              <div class="border-x border-luxury-gold/10">
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL PLOTS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5">140 Units</span>
-              </div>
-              <div>
-                <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-                <span class="block text-xs sm:text-sm font-semibold text-emerald-700 mt-0.5">Completed</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4">
-            <button onclick="openProjectDetails('Heritage Greens')" class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-            <button onclick="openContactModal('Heritage Greens Inquiry')" class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"></i>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXTRA EXPERIENCE PILLARS FOR ENHANCED CONTEMPORARY UX -->
-  <section class="py-20 bg-luxury-creamBg border-t border-luxury-gold/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <!-- Pillar 1 -->
-        <div class="flex items-start gap-4 p-6 bg-white shadow-sm border border-luxury-gold/5 hover:border-luxury-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 flex items-center justify-center bg-luxury-creamCard text-luxury-gold shrink-0">
-            <i class="fa-solid fa-shield-halved text-xl"></i>
-          </div>
-          <div>
-            <h4 class="font-serif text-lg font-bold text-luxury-darkGreen mb-1">Clear Titles & Approved Plots</h4>
-            <p class="font-sans text-xs text-luxury-charcoal leading-relaxed font-light">All projects hold verified legal frameworks, DTCP, BMRDA, or local municipal sanctions with perfect physical layouts.</p>
-          </div>
-        </div>
-        <!-- Pillar 2 -->
-        <div class="flex items-start gap-4 p-6 bg-white shadow-sm border border-luxury-gold/5 hover:border-luxury-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 flex items-center justify-center bg-luxury-creamCard text-luxury-gold shrink-0">
-            <i class="fa-solid fa-tree text-xl"></i>
-          </div>
-          <div>
-            <h4 class="font-serif text-lg font-bold text-luxury-darkGreen mb-1">Eco-Conscious Living</h4>
-            <p class="font-sans text-xs text-luxury-charcoal leading-relaxed font-light">Beautiful open parks, rain water harvesting, organic layout planning, and hundreds of native trees per residential street.</p>
-          </div>
-        </div>
-        <!-- Pillar 3 -->
-        <div class="flex items-start gap-4 p-6 bg-white shadow-sm border border-luxury-gold/5 hover:border-luxury-gold/30 transition-all duration-300">
-          <div class="w-12 h-12 flex items-center justify-center bg-luxury-creamCard text-luxury-gold shrink-0">
-            <i class="fa-solid fa-chart-line text-xl"></i>
-          </div>
-          <div>
-            <h4 class="font-serif text-lg font-bold text-luxury-darkGreen mb-1">Strategic Locations</h4>
-            <p class="font-sans text-xs text-luxury-charcoal leading-relaxed font-light">High appreciation zones of North Bangalore, providing robust investment avenues alongside top healthcare & education access.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECT DETAILS LIGHT OVERLAY MODAL -->
-  <div id="project-details-overlay" class="fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300">
-    <div class="bg-white max-w-2xl w-full mx-4 overflow-hidden relative border border-luxury-gold/30">
-      <button onclick="closeProjectDetails()" class="absolute top-4 right-4 text-luxury-darkGreen hover:text-luxury-gold transition-colors text-2xl z-10 focus:outline-none">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <div class="relative h-48 sm:h-64 bg-luxury-darkGreen">
-        <img id="detail-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
-             alt="Detail image" class="w-full h-full object-cover opacity-90"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-luxury-darkGreen to-transparent"></div>
-        <div class="absolute bottom-6 left-6">
-          <span id="detail-badge" class="bg-luxury-gold text-white text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm">DTCP</span>
-          <h3 id="detail-title" class="font-serif text-3xl text-white font-bold mt-2">Royal Greens</h3>
-        </div>
-      </div>
-
-      <div class="p-6 sm:p-8">
-        <p class="text-xs uppercase tracking-wider text-luxury-gold font-semibold mb-2">PROJECT METRICS & OVERVIEW</p>
-        <p id="detail-desc" class="text-sm text-luxury-charcoal font-light leading-relaxed mb-6">
-          Premium lifestyle plots designed for true comfort. Equipped with continuous clean water supplies, under-ground fiber optic cable provisions, perfectly scaled arterial roads, concrete street drains, and designer boundary parameters.
-        </p>
-
-        <!-- Dynamic specs table inside detail view -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-luxury-creamBg border border-luxury-gold/15 mb-6 text-center">
-          <div>
-            <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL SIZE</span>
-            <span id="detail-size" class="block text-sm font-semibold text-luxury-darkGreen mt-0.5">10+ Acres</span>
-          </div>
-          <div>
-            <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">TOTAL UNITS</span>
-            <span id="detail-plots" class="block text-sm font-semibold text-luxury-darkGreen mt-0.5">164 Units</span>
-          </div>
-          <div>
-            <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">REGULATION</span>
-            <span id="detail-approved" class="block text-sm font-semibold text-luxury-darkGreen mt-0.5">Approved</span>
-          </div>
-          <div>
-            <span class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium">STATUS</span>
-            <span id="detail-status" class="block text-sm font-semibold text-luxury-gold mt-0.5">Ongoing</span>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-between gap-4">
-          <button onclick="closeProjectDetails(); openContactModal('Layout Map request');" class="flex-1 bg-luxury-darkGreen text-white py-3.5 text-xs tracking-widest font-bold uppercase hover:bg-luxury-gold transition-colors">
-            Request Layout Map
-          </button>
-          <button onclick="closeProjectDetails(); openContactModal('Book Site Visit');" class="flex-1 bg-transparent border border-luxury-darkGreen text-luxury-darkGreen py-3.5 text-xs tracking-widest font-bold uppercase hover:bg-luxury-creamCard transition-colors">
-            Book Site Visit
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTACT & ENQUIRY LIGHT OVERLAY MODAL -->
-  <div id="contact-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300">
-    <div class="bg-white max-w-md w-full mx-4 overflow-hidden relative border border-luxury-gold/30">
-      <button onclick="closeContactModal()" class="absolute top-4 right-4 text-luxury-darkGreen hover:text-luxury-gold transition-colors text-2xl z-10 focus:outline-none">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <!-- Head visual -->
-      <div class="bg-luxury-darkGreen p-6 text-center relative">
-        <div class="w-12 h-12 flex items-center justify-center bg-luxury-gold rounded-full mx-auto mb-3 text-white">
-          <i class="fa-regular fa-envelope text-xl"></i>
-        </div>
-        <h3 class="font-serif text-2xl text-white font-bold">Secure Your Plot Today</h3>
-        <p class="text-[10px] tracking-widest text-luxury-goldLight uppercase mt-1">THE GREAT BUILDS REAL ESTATE EXPERIENCE</p>
-      </div>
-
-      <!-- Form body -->
-      <form id="enquiryForm" onsubmit="submitForm(event)" class="p-6 sm:p-8 space-y-4">
-        <!-- Hidden/Preset field to track source project -->
-        <input type="hidden" id="form-subject" name="subject" value="General Inquiry">
-
-        <div>
-          <label class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1">Your Full Name *</label>
-          <input type="text" required placeholder="Enter your name" class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none">
-        </div>
-
-        <div>
-          <label class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1">Mobile Number *</label>
-          <div class="flex">
-            <span class="bg-luxury-creamCard border border-luxury-gold/25 border-r-0 p-3 text-sm text-luxury-darkGreen select-none font-semibold">+91</span>
-            <input type="tel" required pattern="[0-9]{10}" placeholder="9876543210" class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1">Email Address *</label>
-          <input type="email" required placeholder="name@email.com" class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none">
-        </div>
-
-        <div>
-          <label class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1">Inquiry Purpose</label>
-          <select id="form-purpose-select" class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none">
-            <option value="Select Project">Select Project Preferred</option>
-            <option value="Royal Greens">Royal Greens (Gauribidanur)</option>
-            <option value="Orchard Valley">Orchard Valley (Adiyogi Chikkaballapur)</option>
-            <option value="Anubhav Megacity">Anubhav Megacity (Basavakalyan)</option>
-            <option value="Shankar Enclave">Shankar Enclave (Rajanukunte)</option>
-            <option value="Golden Crest">Golden Crest (Yelahanka)</option>
-            <option value="Signature Boulevard">Signature Boulevard (Devanahalli)</option>
-          </select>
-        </div>
-
-        <p class="text-[10px] text-gray-400 leading-relaxed font-light text-center">
-          * By submitting this form, you authorize our sales specialists to reach out to you via Call, Email, or WhatsApp. We secure your details with absolute privacy compliance.
-        </p>
-
-        <button type="submit" class="w-full bg-luxury-gold hover:bg-luxury-darkGreen text-white py-4 text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md">
-          SUBMIT ENQUIRY
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- LUXURY SUCCESS TOAST NOTIFICATION -->
-  <div id="success-toast" class="fixed bottom-6 left-6 bg-luxury-darkGreen border border-luxury-gold text-white p-5 shadow-2xl z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-500 max-w-sm w-full">
-    <div class="flex items-start gap-4">
-      <div class="w-10 h-10 rounded-full bg-luxury-gold/20 border border-luxury-gold flex items-center justify-center shrink-0 text-luxury-gold">
-        <i class="fa-regular fa-circle-check text-xl"></i>
-      </div>
-      <div>
-        <h5 class="font-serif font-bold text-base text-white">Thank You!</h5>
-        <p class="text-xs text-gray-300 mt-1 leading-relaxed">Your luxury real estate interest query was cataloged successfully. Our portfolio partner will contact you shortly.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- MAIN DEEP DARK GREEN FOOTER -->
-  <footer id="footer-section" class="bg-luxury-darkGreen text-white relative pt-20 pb-8 border-t border-luxury-gold/20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-        
-        <!-- Column 1: Crest & Logo Brand -->
-        <div class="space-y-6">
-          <div class="flex items-center gap-3">
-            <div class="w-16 h-16 flex items-center justify-center rounded-full border border-luxury-gold/50 p-2 bg-black/25">
-              <!-- Custom inline SVG of Eagle Crest matching original design -->
-              <svg class="w-full h-full text-white" viewBox="0 0 100 100" fill="currentColor">
-                <path d="M50,10 C45,25 30,28 15,30 C25,45 20,60 35,68 C42,65 40,55 50,55 C60,55 58,65 65,68 C80,60 75,45 85,30 C70,28 55,25 50,10 Z" opacity="0.9"/>
-                <circle cx="50" cy="50" r="3" fill="#B08E59"/>
-                <path d="M20,38 Q50,48 80,38" stroke="#B08E59" stroke-width="2" fill="none"/>
-                <path d="M30,75 L70,75 M35,80 L65,80" stroke="white" stroke-width="1.5"/>
+  <body class="antialiased">
+    <!-- Top Luxury Header & Navigation -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-black/30 backdrop-blur-sm border-b border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20 sm:h-24">
+          <!-- Eagle Logo & Brand Crest -->
+          <a href="#" class="flex items-center gap-3 group">
+            <div
+              class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-full border border-luxury-gold/50 bg-luxury-darkGreen/80 p-1.5 transition-transform duration-500 group-hover:rotate-[360deg]"
+            >
+              <!-- Custom inline SVG of Eagle Crest matching the image logo -->
+              <svg
+                class="w-full h-full text-white"
+                viewBox="0 0 100 100"
+                fill="currentColor"
+              >
+                <path
+                  d="M50,10 C45,25 30,28 15,30 C25,45 20,60 35,68 C42,65 40,55 50,55 C60,55 58,65 65,68 C80,60 75,45 85,30 C70,28 55,25 50,10 Z"
+                  opacity="0.9"
+                />
+                <circle cx="50" cy="50" r="3" fill="#B08E59" />
+                <path
+                  d="M20,38 Q50,48 80,38"
+                  stroke="#B08E59"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M30,75 L70,75 M35,80 L65,80"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
               </svg>
             </div>
             <div class="flex flex-col">
-              <span class="font-serif tracking-widest text-lg font-bold text-white leading-tight">THE GREAT BUILDS</span>
-              <span class="text-[9px] tracking-[0.25em] text-luxury-gold uppercase">Builders & Developers</span>
+              <span
+                class="font-serif tracking-widest text-lg sm:text-xl font-bold text-white leading-tight"
+                >THE GREAT BUILDS</span
+              >
+              <span
+                class="text-[9px] sm:text-[10px] tracking-[0.25em] text-luxury-gold uppercase"
+                >Builders & Developers</span
+              >
             </div>
+          </a>
+
+          <!-- Desktop Navigation Items -->
+          <nav class="hidden md:flex items-center gap-8">
+            <div class="relative group">
+              <button
+                class="font-sans text-xs tracking-widest text-white uppercase font-medium flex items-center gap-1.5 hover:text-luxury-gold transition-colors"
+              >
+                Our Projects
+                <i
+                  class="fa-solid fa-chevron-down text-[9px] transition-transform group-hover:rotate-180"
+                ></i>
+              </button>
+              <div
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-48 bg-luxury-darkGreen border border-luxury-gold/20 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+              >
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('ongoing')"
+                  class="block px-4 py-3 text-xs tracking-wider text-white hover:bg-luxury-gold/20 hover:text-luxury-gold transition-colors"
+                  >Ongoing Projects</a
+                >
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('upcoming')"
+                  class="block px-4 py-3 text-xs tracking-wider text-white hover:bg-luxury-gold/20 hover:text-luxury-gold transition-colors"
+                  >Upcoming Projects</a
+                >
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('completed')"
+                  class="block px-4 py-3 text-xs tracking-wider text-white hover:bg-luxury-gold/20 hover:text-luxury-gold transition-colors"
+                  >Completed Projects</a
+                >
+              </div>
+            </div>
+            <a
+              href="#about-section"
+              class="font-sans text-xs tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-luxury-gold hover:after:w-full after:transition-all"
+              >Gallery</a
+            >
+            <a
+              href="#about-section"
+              class="font-sans text-xs tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-luxury-gold hover:after:w-full after:transition-all"
+              >About Us</a
+            >
+            <a
+              href="#footer-section"
+              class="font-sans text-xs tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-luxury-gold hover:after:w-full after:transition-all"
+              >Blog</a
+            >
+          </nav>
+
+          <!-- Right Side Contact Info -->
+          <div class="hidden lg:flex items-center gap-6">
+            <a
+              href="tel:+918217855041"
+              class="flex items-center gap-2 text-white hover:text-luxury-gold transition-colors"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-luxury-gold/10 border border-luxury-gold/30 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone text-xs text-luxury-gold"></i>
+              </div>
+              <span
+                class="text-xs sm:text-sm font-semibold tracking-wider font-sans"
+                >+91 82178 55041</span
+              >
+            </a>
+            <button
+              onclick="openContactModal('General Inquiry')"
+              class="bg-white text-luxury-darkGreen px-6 py-3 rounded-none text-xs font-semibold tracking-widest uppercase hover:bg-luxury-gold hover:text-white transition-all duration-300 border border-white hover:border-luxury-gold shadow-lg"
+            >
+              Contact Us
+            </button>
           </div>
-          <p class="font-sans text-xs text-gray-400 leading-relaxed font-light">
-            Luxury Gated plots, premium layouts and curated modern residential environments inside high-growth corridors of North Bangalore. Built on trust, exceptional infrastructure, and legal compliance.
-          </p>
-          <!-- Social Icons -->
-          <div class="flex items-center gap-4 pt-2">
-            <a href="https://facebook.com" target="_blank" class="w-9 h-9 border border-white/10 hover:border-luxury-gold rounded-none flex items-center justify-center text-white/60 hover:text-luxury-gold hover:bg-white/5 transition-all" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f text-sm"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" class="w-9 h-9 border border-white/10 hover:border-luxury-gold rounded-none flex items-center justify-center text-white/60 hover:text-luxury-gold hover:bg-white/5 transition-all" aria-label="Instagram">
-              <i class="fa-brands fa-instagram text-sm"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank" class="w-9 h-9 border border-white/10 hover:border-luxury-gold rounded-none flex items-center justify-center text-white/60 hover:text-luxury-gold hover:bg-white/5 transition-all" aria-label="YouTube">
-              <i class="fa-brands fa-youtube text-sm"></i>
-            </a>
-          </div>
-        </div>
 
-        <!-- Column 2: Projects Links -->
-        <div>
-          <h4 class="font-serif text-xs font-bold tracking-[0.25em] text-luxury-gold uppercase mb-6 border-b border-luxury-gold/10 pb-2">Projects</h4>
-          <ul class="space-y-3 font-sans text-xs text-gray-400 font-light">
-            <li><a href="#projects-section" onclick="filterProjects('ongoing')" class="hover:text-luxury-gold transition-colors block">Royal Greens</a></li>
-            <li><a href="#projects-section" onclick="filterProjects('ongoing')" class="hover:text-luxury-gold transition-colors block">Orchard Valley</a></li>
-            <li><a href="#projects-section" onclick="filterProjects('upcoming')" class="hover:text-luxury-gold transition-colors block">Shankar Enclave</a></li>
-            <li><a href="#projects-section" onclick="filterProjects('ongoing')" class="hover:text-luxury-gold transition-colors block">Anubhav Megacity</a></li>
-            <li><a href="#projects-section" onclick="filterProjects('upcoming')" class="hover:text-luxury-gold transition-colors block">Golden Crest</a></li>
-          </ul>
+          <!-- Mobile Menu Toggle Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-white hover:text-luxury-gold focus:outline-none p-2"
+            aria-label="Toggle Menu"
+          >
+            <i class="fa-solid fa-bars-staggered text-2xl"></i>
+          </button>
         </div>
-
-        <!-- Column 3: Company Links -->
-        <div>
-          <h4 class="font-serif text-xs font-bold tracking-[0.25em] text-luxury-gold uppercase mb-6 border-b border-luxury-gold/10 pb-2">Company</h4>
-          <ul class="space-y-3 font-sans text-xs text-gray-400 font-light">
-            <li><a href="#about-section" class="hover:text-luxury-gold transition-colors block">About Us</a></li>
-            <li><a href="#projects-section" class="hover:text-luxury-gold transition-colors block">Gallery</a></li>
-            <li><a href="#footer-section" class="hover:text-luxury-gold transition-colors block">Blog</a></li>
-            <li><button onclick="openContactModal('General Inquiry')" class="hover:text-luxury-gold transition-colors text-left block">Contact Us</button></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Headquarters Contact Info -->
-        <div>
-          <h4 class="font-serif text-xs font-bold tracking-[0.25em] text-luxury-gold uppercase mb-6 border-b border-luxury-gold/10 pb-2">Headquarters</h4>
-          <ul class="space-y-4 font-sans text-xs text-gray-400 font-light">
-            <li class="flex items-start gap-3">
-              <i class="fa-solid fa-map-location-dot text-luxury-gold mt-0.5 shrink-0"></i>
-              <span class="leading-relaxed">
-                No. 762, 7th Cross, Sector A,<br>
-                Yelahanka New Town, Bengaluru,<br>
-                Karnataka - 560064
-              </span>
-            </li>
-            <li class="flex items-center gap-3">
-              <i class="fa-solid fa-phone text-luxury-gold shrink-0"></i>
-              <a href="tel:+918217855041" class="hover:text-luxury-gold transition-colors font-medium text-white">+91 82178 55041</a>
-            </li>
-            <li class="flex items-center gap-3">
-              <i class="fa-regular fa-envelope text-luxury-gold shrink-0"></i>
-              <a href="mailto:thegreatbuilds123@gmail.com" class="hover:text-luxury-gold transition-colors break-all">thegreatbuilds123@gmail.com</a>
-            </li>
-          </ul>
-        </div>
-
       </div>
 
-      <!-- Legal Sub-Footer matching actual reference layout -->
-      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-gray-500 font-medium uppercase">
+      <!-- Mobile Navigation Drawer -->
+      <div
+        id="mobile-drawer"
+        class="fixed inset-0 bg-luxury-darkGreen/95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between p-8 md:hidden"
+      >
         <div>
-          © 2026 THE GREAT BUILDS. ALL RIGHTS RESERVED.
+          <div class="flex items-center justify-between mb-12">
+            <span
+              class="font-serif tracking-widest text-xl font-bold text-white"
+              >THE GREAT BUILDS</span
+            >
+            <button
+              id="close-drawer-btn"
+              class="text-white hover:text-luxury-gold text-2xl focus:outline-none"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <nav class="flex flex-col gap-6">
+            <a
+              href="#projects-section"
+              onclick="
+                toggleMobileMenu();
+                filterProjects('ongoing');
+              "
+              class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors"
+              >Ongoing Projects</a
+            >
+            <a
+              href="#projects-section"
+              onclick="
+                toggleMobileMenu();
+                filterProjects('upcoming');
+              "
+              class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors"
+              >Upcoming Projects</a
+            >
+            <a
+              href="#projects-section"
+              onclick="
+                toggleMobileMenu();
+                filterProjects('completed');
+              "
+              class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors"
+              >Completed Projects</a
+            >
+            <a
+              href="#about-section"
+              onclick="toggleMobileMenu()"
+              class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors"
+              >Gallery</a
+            >
+            <a
+              href="#about-section"
+              onclick="toggleMobileMenu()"
+              class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors"
+              >About Us</a
+            >
+            <a
+              href="#footer-section"
+              onclick="toggleMobileMenu()"
+              class="font-sans text-lg tracking-widest text-white uppercase font-medium hover:text-luxury-gold transition-colors"
+              >Blog</a
+            >
+          </nav>
         </div>
-        <div class="flex items-center gap-6">
-          <a href="#" class="hover:text-luxury-gold transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-luxury-gold transition-colors">Terms of Use</a>
-          <a href="#" class="hover:text-luxury-gold transition-colors">Disclaimer</a>
+
+        <div class="flex flex-col gap-6 border-t border-white/10 pt-8">
+          <a
+            href="tel:+918217855041"
+            class="flex items-center gap-3 text-white hover:text-luxury-gold transition-colors"
+          >
+            <i class="fa-solid fa-phone text-luxury-gold"></i>
+            <span class="text-sm font-semibold tracking-wider font-sans"
+              >+91 82178 55041</span
+            >
+          </a>
+          <button
+            onclick="
+              toggleMobileMenu();
+              openContactModal('Mobile Callback Request');
+            "
+            class="w-full bg-luxury-gold text-white py-4 text-sm font-semibold tracking-widest uppercase hover:bg-white hover:text-luxury-darkGreen transition-all duration-300"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION WITH FEATURED VILLAS -->
+    <section
+      class="relative min-h-screen bg-luxury-darkGreen flex items-center pt-24 overflow-hidden"
+    >
+      <!-- Overlay/Background Image referencing Orchard Valley aesthetics -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2000&auto=format&fit=crop"
+          alt="Orchard Valley Estate Luxury Living"
+          class="w-full h-full object-cover opacity-35 scale-105 animate-[pulse_8s_infinite] filter brightness-75 contrast-125"
+          onerror="
+            this.src =
+              'https://placehold.co/1920x1080/091f13/ffffff?text=Orchard+Valley+Estate'
+          "
+        />
+        <!-- Soft gradient overlay to secure typography contrast -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-luxury-darkGreen via-transparent to-black/50"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full"
+      >
+        <div class="max-w-3xl">
+          <!-- Badge -->
+          <span
+            class="inline-block text-[11px] sm:text-xs tracking-[0.3em] font-semibold text-luxury-gold uppercase mb-4 animate-pulse"
+          >
+            Featured Project
+          </span>
+
+          <!-- Big Premium Header -->
+          <h1
+            class="font-serif text-5xl sm:text-7xl lg:text-8xl text-white font-normal mb-6 tracking-wide leading-tight"
+          >
+            Orchard
+            <span class="text-luxury-goldLight italic font-light font-serif"
+              >Valley</span
+            >
+          </h1>
+
+          <!-- Luxury Description -->
+          <p
+            class="font-sans text-sm sm:text-base text-gray-300 leading-relaxed max-w-xl mb-10 tracking-wide font-light"
+          >
+            Each villa plot at Orchard Valley is a testament to architectural
+            <span class="text-luxury-gold font-medium">excellence</span> and the
+            pursuit of perfection. Spacious interiors, adorned with top-notch
+            fixtures and finishes, provide an unmatched sense of grandeur.
+          </p>
+
+          <!-- View Details Button -->
+          <div class="flex flex-col sm:flex-row gap-4 items-start">
+            <button
+              onclick="openProjectDetails('Orchard Valley')"
+              class="px-8 py-4 bg-white hover:bg-luxury-gold hover:text-white text-luxury-darkGreen font-sans font-bold text-xs tracking-[0.25em] uppercase transition-all duration-300 shadow-xl group flex items-center gap-2"
+            >
+              View Details
+              <i
+                class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1.5"
+              ></i>
+            </button>
+
+            <button
+              onclick="openContactModal('Orchard Valley Enquiry')"
+              class="px-8 py-4 bg-transparent border border-white/30 hover:border-luxury-gold hover:bg-luxury-gold/10 text-white font-sans font-semibold text-xs tracking-[0.25em] uppercase transition-all duration-300"
+            >
+              Enquire Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce"
+      >
+        <a
+          href="#about-section"
+          class="flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors"
+        >
+          <span class="text-[10px] tracking-widest uppercase font-semibold"
+            >Scroll Down</span
+          >
+          <i class="fa-solid fa-chevron-down text-xs text-luxury-gold"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- LUXURY LIVING & STRATEGIC INVESTMENT COPY SECTION -->
+    <section
+      id="about-section"
+      class="py-24 sm:py-32 bg-luxury-creamBg relative"
+    >
+      <!-- Subtle architectural guidelines background lines -->
+      <div
+        class="absolute inset-0 flex justify-between px-10 pointer-events-none opacity-5"
+      >
+        <div class="w-px bg-luxury-gold h-full"></div>
+        <div class="w-px bg-luxury-gold h-full"></div>
+        <div class="w-px bg-luxury-gold h-full"></div>
+      </div>
+
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+      >
+        <!-- Styled Luxury Double Line Header -->
+        <div class="luxury-line-container mb-10">
+          <div class="luxury-line"></div>
+          <h2
+            class="font-serif text-3xl sm:text-4xl lg:text-5xl text-luxury-darkGreen px-6 sm:px-10 font-normal leading-tight"
+          >
+            Luxury Living
+            <span
+              class="font-sans font-light text-xl sm:text-2xl text-luxury-gold inline-block align-middle mx-1"
+              >&amp;</span
+            >
+            <span class="text-luxury-gold italic">Strategic Investment</span>
+          </h2>
+          <div class="luxury-line"></div>
+        </div>
+
+        <!-- Rich Corporate Copywrite (cloned context from original image_dca504.png) -->
+        <div
+          class="space-y-8 text-luxury-charcoal font-sans font-light text-sm sm:text-base leading-relaxed tracking-wide text-justify sm:text-center"
+        >
+          <p
+            class="first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:text-luxury-gold first-letter:float-left first-letter:mr-3 first-letter:mt-1"
+          >
+            Our portfolio features a curated selection of premium residential
+            plots and luxury villas across North Bangalore's high-growth
+            corridors. From the serene 10-acre estates at Orchard Valley near
+            Adiyogi to the strategically located Shankar Enclave in Rajanukunte,
+            these gated communities offer unmatched capital appreciation. Each
+            development, including Royal Greens in Gauribidanur, is meticulously
+            planned with DTCP or BMRDA approvals, ensuring a secure and
+            transparent real estate investment.
+          </p>
+          <p>
+            We specialize in sophisticated urban living that blends modern
+            infrastructure with natural tranquility. Anubhava Mega City in
+            Basavakalyan redefines the township model, integrating senior
+            citizen villas with 24/7 medical support and world-class commercial
+            amenities. Our projects feature designer clubhouses, lush
+            landscapes, and superior connectivity to Kempegowda International
+            Airport and major industrial hubs, catering to discerning homeowners
+            and investors seeking long-term value.
+          </p>
+          <p class="font-medium text-luxury-darkGreen">
+            By prioritizing clear titles, E-Khata registration, and
+            architectural excellence, we deliver elite residential assets in
+            Bangalore's most promising neighborhoods. Whether you are searching
+            for villas near Isha Foundation or BMRDA approved plots, our
+            developments provide the perfect canvas for a premium lifestyle.
+            Discover the future of North Bangalore with gated communities built
+            for excellence, growth, and unparalleled quality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROJECTS FILTERING SECTION -->
+    <section id="projects-section" class="py-24 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Title with Accent Lines -->
+        <div class="luxury-line-container mb-12">
+          <div class="luxury-line"></div>
+          <h2
+            class="font-serif text-4xl sm:text-5xl text-luxury-darkGreen px-8 sm:px-12 text-center font-normal"
+          >
+            Our <span class="text-luxury-gold italic">Projects</span>
+          </h2>
+          <div class="luxury-line"></div>
+        </div>
+
+        <!-- Project Interactive Filter Tabs -->
+        <div class="flex justify-center mb-16 overflow-x-auto no-scrollbar">
+          <div
+            class="flex space-x-2 sm:space-x-4 border-b border-gray-100 pb-2"
+          >
+            <button
+              onclick="filterProjects('ongoing')"
+              id="tab-ongoing"
+              class="tab-btn px-6 py-3 font-sans text-xs tracking-[0.2em] font-semibold text-luxury-darkGreen uppercase transition-all border-b-2 border-luxury-darkGreen whitespace-nowrap"
+            >
+              Ongoing Projects
+            </button>
+            <button
+              onclick="filterProjects('upcoming')"
+              id="tab-upcoming"
+              class="tab-btn px-6 py-3 font-sans text-xs tracking-[0.2em] font-semibold text-gray-400 uppercase transition-all border-b-2 border-transparent hover:text-luxury-gold whitespace-nowrap"
+            >
+              Upcoming Projects
+            </button>
+            <button
+              onclick="filterProjects('completed')"
+              id="tab-completed"
+              class="tab-btn px-6 py-3 font-sans text-xs tracking-[0.2em] font-semibold text-gray-400 uppercase transition-all border-b-2 border-transparent hover:text-luxury-gold whitespace-nowrap"
+            >
+              Completed Projects
+            </button>
+          </div>
+        </div>
+
+        <!-- PROJECTS DYNAMIC GRID CONTAINER -->
+        <div
+          id="projects-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- ================== ONGOING PROJECTS ================== -->
+          <!-- Card 1: Royal Greens (Ongoing) -->
+          <div
+            class="project-card ongoing group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+          >
+            <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                alt="Royal Greens Villa Layout"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x600/091f13/ffffff?text=Royal+Greens'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <!-- Embedded badge text matching original design -->
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md"
+                  >ROYAL GREENS</span
+                >
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">
+                  Royal Greens
+                </h3>
+                <span
+                  class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1"
+                  >DTCP</span
+                >
+              </div>
+              <p
+                class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6"
+              >
+                GAURIBIDANUR, NORTH BENGALURU
+              </p>
+
+              <!-- Specs table (signature layout) -->
+              <div
+                class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6"
+              >
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL AREA</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >10+ Acres</span
+                  >
+                </div>
+                <div class="border-x border-luxury-gold/10">
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL PLOTS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >164 Units</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >STATUS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-gold mt-0.5"
+                    >Ongoing</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div
+              class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
+            >
+              <button
+                onclick="openProjectDetails('Royal Greens')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
+              >
+                VIEW DETAILS
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+              <button
+                onclick="openContactModal('Royal Greens Inquiry')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn"
+              >
+                ENQUIRE NOW
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Orchard Valley (Ongoing) -->
+          <div
+            class="project-card ongoing group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+          >
+            <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
+              <img
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop"
+                alt="Orchard Valley Land Site"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x600/091f13/ffffff?text=Orchard+Valley'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <!-- Embedded badge text matching original design -->
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md"
+                  >ORCHARD VALLEY</span
+                >
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">
+                  Orchard Valley
+                </h3>
+                <span
+                  class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1"
+                  >FARMLANDS</span
+                >
+              </div>
+              <p
+                class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6"
+              >
+                NEAR ADIYOGI, CHIKKABALLAPUR
+              </p>
+
+              <!-- Specs table (signature layout) -->
+              <div
+                class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6"
+              >
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL AREA</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >10 Acres</span
+                  >
+                </div>
+                <div class="border-x border-luxury-gold/10">
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL PLOTS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >50 Units</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >STATUS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-gold mt-0.5"
+                    >Ongoing</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div
+              class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
+            >
+              <button
+                onclick="openProjectDetails('Orchard Valley')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
+              >
+                VIEW DETAILS
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+              <button
+                onclick="openContactModal('Orchard Valley Inquiry')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn"
+              >
+                ENQUIRE NOW
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Anubhav Megacity (Ongoing) -->
+          <div
+            class="project-card ongoing group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+          >
+            <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
+              <img
+                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format&fit=crop"
+                alt="Anubhav Megacity Townscape"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x600/091f13/ffffff?text=Anubhav+Megacity'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <!-- Embedded badge text matching original design -->
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md"
+                  >ANUBHAVA MEGA CITY</span
+                >
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">
+                  Anubhav Megacity
+                </h3>
+                <span
+                  class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1"
+                  >DTCP</span
+                >
+              </div>
+              <p
+                class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6"
+              >
+                BASAVAKALYAN, KARNATAKA
+              </p>
+
+              <!-- Specs table (signature layout) -->
+              <div
+                class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6"
+              >
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL AREA</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >100+ Acres</span
+                  >
+                </div>
+                <div class="border-x border-luxury-gold/10">
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL PLOTS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >980 Units</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >STATUS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-gold mt-0.5"
+                    >Ongoing</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div
+              class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
+            >
+              <button
+                onclick="openProjectDetails('Anubhav Megacity')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
+              >
+                VIEW DETAILS
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+              <button
+                onclick="openContactModal('Anubhav Megacity Inquiry')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn"
+              >
+                ENQUIRE NOW
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ================== UPCOMING PROJECTS ================== -->
+          <!-- Card 4: Shankar Enclave (Upcoming) -->
+          <div
+            class="project-card upcoming hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+          >
+            <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
+                alt="Shankar Enclave Estate"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x600/091f13/ffffff?text=Shankar+Enclave'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <!-- Embedded badge text matching original design -->
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md"
+                  >SHANKAR ENCLAVE</span
+                >
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">
+                  Shankar Enclave
+                </h3>
+                <span
+                  class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1"
+                  >BMRDA</span
+                >
+              </div>
+              <p
+                class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6"
+              >
+                RAJANUKUNTE, NORTH BENGALURU
+              </p>
+
+              <!-- Specs table (signature layout) -->
+              <div
+                class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6"
+              >
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL AREA</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >15 Acres</span
+                  >
+                </div>
+                <div class="border-x border-luxury-gold/10">
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL PLOTS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >120 Units</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >STATUS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-amber-600 mt-0.5"
+                    >Upcoming</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div
+              class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
+            >
+              <button
+                onclick="openProjectDetails('Shankar Enclave')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
+              >
+                VIEW DETAILS
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+              <button
+                onclick="openContactModal('Shankar Enclave Inquiry')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn"
+              >
+                ENQUIRE NOW
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Golden Crest (Upcoming) -->
+          <div
+            class="project-card upcoming hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+          >
+            <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
+              <img
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop"
+                alt="Golden Crest Elite Estates"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x600/091f13/ffffff?text=Golden+Crest'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <!-- Embedded badge text matching original design -->
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md"
+                  >GOLDEN CREST</span
+                >
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">
+                  Golden Crest
+                </h3>
+                <span
+                  class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1"
+                  >DTCP</span
+                >
+              </div>
+              <p
+                class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6"
+              >
+                YELAHANKA EXTENSION, BANGALORE
+              </p>
+
+              <!-- Specs table (signature layout) -->
+              <div
+                class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6"
+              >
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL AREA</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >8 Acres</span
+                  >
+                </div>
+                <div class="border-x border-luxury-gold/10">
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL PLOTS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >85 Units</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >STATUS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-amber-600 mt-0.5"
+                    >Upcoming</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div
+              class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
+            >
+              <button
+                onclick="openProjectDetails('Golden Crest')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
+              >
+                VIEW DETAILS
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+              <button
+                onclick="openContactModal('Golden Crest Inquiry')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn"
+              >
+                ENQUIRE NOW
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- ================== COMPLETED PROJECTS ================== -->
+          <!-- Card 6: Signature Boulevard (Completed) -->
+          <div
+            class="project-card completed hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+          >
+            <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
+              <img
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
+                alt="Signature Boulevard completed community"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x600/091f13/ffffff?text=Signature+Boulevard'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <!-- Embedded badge text matching original design -->
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md"
+                  >SIGNATURE BOULEVARD</span
+                >
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">
+                  Signature Blvd
+                </h3>
+                <span
+                  class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1"
+                  >BIAAPA</span
+                >
+              </div>
+              <p
+                class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6"
+              >
+                DEVANAHALLI, BANGALORE NORTH
+              </p>
+
+              <!-- Specs table (signature layout) -->
+              <div
+                class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6"
+              >
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL AREA</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >22 Acres</span
+                  >
+                </div>
+                <div class="border-x border-luxury-gold/10">
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL PLOTS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >210 Units</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >STATUS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-emerald-700 mt-0.5"
+                    >Completed</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div
+              class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
+            >
+              <button
+                onclick="openProjectDetails('Signature Blvd')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
+              >
+                VIEW DETAILS
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+              <button
+                onclick="openContactModal('Signature Blvd Inquiry')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn"
+              >
+                ENQUIRE NOW
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7: Heritage Greens (Completed) -->
+          <div
+            class="project-card completed hidden group bg-luxury-creamBg border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
+          >
+            <div class="relative overflow-hidden h-64 bg-luxury-darkGreen">
+              <img
+                src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=800&auto=format&fit=crop"
+                alt="Heritage Greens luxury houses"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-95"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x600/091f13/ffffff?text=Heritage+Greens'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+              ></div>
+              <!-- Embedded badge text matching original design -->
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="font-serif tracking-widest text-lg sm:text-xl text-white font-bold block drop-shadow-md"
+                  >HERITAGE GREENS</span
+                >
+              </div>
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-grow">
+              <div class="flex justify-between items-start mb-1">
+                <h3 class="font-serif text-2xl text-luxury-darkGreen font-bold">
+                  Heritage Greens
+                </h3>
+                <span
+                  class="text-[9px] font-bold tracking-widest text-luxury-gold uppercase pt-1"
+                  >DTCP</span
+                >
+              </div>
+              <p
+                class="text-[10px] tracking-widest text-gray-500 uppercase font-medium mb-6"
+              >
+                CHIKKABALLAPUR TOWN
+              </p>
+
+              <!-- Specs table (signature layout) -->
+              <div
+                class="grid grid-cols-3 gap-2 bg-luxury-creamCard/60 p-3 text-center rounded border border-luxury-gold/5 mb-6"
+              >
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL AREA</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >12 Acres</span
+                  >
+                </div>
+                <div class="border-x border-luxury-gold/10">
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >TOTAL PLOTS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                    >140 Units</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                    >STATUS</span
+                  >
+                  <span
+                    class="block text-xs sm:text-sm font-semibold text-emerald-700 mt-0.5"
+                    >Completed</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div
+              class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
+            >
+              <button
+                onclick="openProjectDetails('Heritage Greens')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
+              >
+                VIEW DETAILS
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+              <button
+                onclick="openContactModal('Heritage Greens Inquiry')"
+                class="text-xs font-semibold tracking-wider font-sans text-luxury-gold hover:text-luxury-darkGreen flex items-center gap-1.5 transition-colors group/btn"
+              >
+                ENQUIRE NOW
+                <i
+                  class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover/btn:translate-x-1"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXTRA EXPERIENCE PILLARS FOR ENHANCED CONTEMPORARY UX -->
+    <section class="py-20 bg-luxury-creamBg border-t border-luxury-gold/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Pillar 1 -->
+          <div
+            class="flex items-start gap-4 p-6 bg-white shadow-sm border border-luxury-gold/5 hover:border-luxury-gold/30 transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-luxury-creamCard text-luxury-gold shrink-0"
+            >
+              <i class="fa-solid fa-shield-halved text-xl"></i>
+            </div>
+            <div>
+              <h4
+                class="font-serif text-lg font-bold text-luxury-darkGreen mb-1"
+              >
+                Clear Titles & Approved Plots
+              </h4>
+              <p
+                class="font-sans text-xs text-luxury-charcoal leading-relaxed font-light"
+              >
+                All projects hold verified legal frameworks, DTCP, BMRDA, or
+                local municipal sanctions with perfect physical layouts.
+              </p>
+            </div>
+          </div>
+          <!-- Pillar 2 -->
+          <div
+            class="flex items-start gap-4 p-6 bg-white shadow-sm border border-luxury-gold/5 hover:border-luxury-gold/30 transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-luxury-creamCard text-luxury-gold shrink-0"
+            >
+              <i class="fa-solid fa-tree text-xl"></i>
+            </div>
+            <div>
+              <h4
+                class="font-serif text-lg font-bold text-luxury-darkGreen mb-1"
+              >
+                Eco-Conscious Living
+              </h4>
+              <p
+                class="font-sans text-xs text-luxury-charcoal leading-relaxed font-light"
+              >
+                Beautiful open parks, rain water harvesting, organic layout
+                planning, and hundreds of native trees per residential street.
+              </p>
+            </div>
+          </div>
+          <!-- Pillar 3 -->
+          <div
+            class="flex items-start gap-4 p-6 bg-white shadow-sm border border-luxury-gold/5 hover:border-luxury-gold/30 transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-luxury-creamCard text-luxury-gold shrink-0"
+            >
+              <i class="fa-solid fa-chart-line text-xl"></i>
+            </div>
+            <div>
+              <h4
+                class="font-serif text-lg font-bold text-luxury-darkGreen mb-1"
+              >
+                Strategic Locations
+              </h4>
+              <p
+                class="font-sans text-xs text-luxury-charcoal leading-relaxed font-light"
+              >
+                High appreciation zones of North Bangalore, providing robust
+                investment avenues alongside top healthcare & education access.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT DETAILS LIGHT OVERLAY MODAL -->
+    <div
+      id="project-details-overlay"
+      class="fixed inset-0 bg-black/75 backdrop-blur-md z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300"
+    >
+      <div
+        class="bg-white max-w-2xl w-full mx-4 overflow-hidden relative border border-luxury-gold/30"
+      >
+        <button
+          onclick="closeProjectDetails()"
+          class="absolute top-4 right-4 text-luxury-darkGreen hover:text-luxury-gold transition-colors text-2xl z-10 focus:outline-none"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="relative h-48 sm:h-64 bg-luxury-darkGreen">
+          <img
+            id="detail-img"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+            alt="Detail image"
+            class="w-full h-full object-cover opacity-90"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-luxury-darkGreen to-transparent"
+          ></div>
+          <div class="absolute bottom-6 left-6">
+            <span
+              id="detail-badge"
+              class="bg-luxury-gold text-white text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-sm"
+              >DTCP</span
+            >
+            <h3
+              id="detail-title"
+              class="font-serif text-3xl text-white font-bold mt-2"
+            >
+              Royal Greens
+            </h3>
+          </div>
+        </div>
+
+        <div class="p-6 sm:p-8">
+          <p
+            class="text-xs uppercase tracking-wider text-luxury-gold font-semibold mb-2"
+          >
+            PROJECT METRICS & OVERVIEW
+          </p>
+          <p
+            id="detail-desc"
+            class="text-sm text-luxury-charcoal font-light leading-relaxed mb-6"
+          >
+            Premium lifestyle plots designed for true comfort. Equipped with
+            continuous clean water supplies, under-ground fiber optic cable
+            provisions, perfectly scaled arterial roads, concrete street drains,
+            and designer boundary parameters.
+          </p>
+
+          <!-- Dynamic specs table inside detail view -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 bg-luxury-creamBg border border-luxury-gold/15 mb-6 text-center"
+          >
+            <div>
+              <span
+                class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                >TOTAL SIZE</span
+              >
+              <span
+                id="detail-size"
+                class="block text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                >10+ Acres</span
+              >
+            </div>
+            <div>
+              <span
+                class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                >TOTAL UNITS</span
+              >
+              <span
+                id="detail-plots"
+                class="block text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                >164 Units</span
+              >
+            </div>
+            <div>
+              <span
+                class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                >REGULATION</span
+              >
+              <span
+                id="detail-approved"
+                class="block text-sm font-semibold text-luxury-darkGreen mt-0.5"
+                >Approved</span
+              >
+            </div>
+            <div>
+              <span
+                class="block text-[8px] tracking-widest text-gray-400 uppercase font-medium"
+                >STATUS</span
+              >
+              <span
+                id="detail-status"
+                class="block text-sm font-semibold text-luxury-gold mt-0.5"
+                >Ongoing</span
+              >
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-4">
+            <button
+              onclick="
+                closeProjectDetails();
+                openContactModal('Layout Map request');
+              "
+              class="flex-1 bg-luxury-darkGreen text-white py-3.5 text-xs tracking-widest font-bold uppercase hover:bg-luxury-gold transition-colors"
+            >
+              Request Layout Map
+            </button>
+            <button
+              onclick="
+                closeProjectDetails();
+                openContactModal('Book Site Visit');
+              "
+              class="flex-1 bg-transparent border border-luxury-darkGreen text-luxury-darkGreen py-3.5 text-xs tracking-widest font-bold uppercase hover:bg-luxury-creamCard transition-colors"
+            >
+              Book Site Visit
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
 
-  <!-- FLOATING WIDGETS (WHATSAPP & SCROLL TO TOP) -->
-  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-    <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/918217855041?text=Hello%20The%20Great%20Builds,%20I%20am%20interested%20in%20your%20luxury%20villa%20plots." 
-       target="_blank" 
-       class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl whatsapp-pulse hover:scale-110 transition-transform duration-300"
-       aria-label="Contact via WhatsApp">
-      <i class="fa-brands fa-whatsapp text-2xl"></i>
-    </a>
+    <!-- CONTACT & ENQUIRY LIGHT OVERLAY MODAL -->
+    <div
+      id="contact-modal"
+      class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center opacity-0 invisible transition-all duration-300"
+    >
+      <div
+        class="bg-white max-w-md w-full mx-4 overflow-hidden relative border border-luxury-gold/30"
+      >
+        <button
+          onclick="closeContactModal()"
+          class="absolute top-4 right-4 text-luxury-darkGreen hover:text-luxury-gold transition-colors text-2xl z-10 focus:outline-none"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" 
-            onclick="scrollToTop()" 
-            class="w-12 h-12 rounded-full bg-white border border-luxury-gold/20 text-luxury-darkGreen flex items-center justify-center shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-luxury-gold hover:text-white"
-            aria-label="Back to Top">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
-  </div>
+        <!-- Head visual -->
+        <div class="bg-luxury-darkGreen p-6 text-center relative">
+          <div
+            class="w-12 h-12 flex items-center justify-center bg-luxury-gold rounded-full mx-auto mb-3 text-white"
+          >
+            <i class="fa-regular fa-envelope text-xl"></i>
+          </div>
+          <h3 class="font-serif text-2xl text-white font-bold">
+            Secure Your Plot Today
+          </h3>
+          <p
+            class="text-[10px] tracking-widest text-luxury-goldLight uppercase mt-1"
+          >
+            THE GREAT BUILDS REAL ESTATE EXPERIENCE
+          </p>
+        </div>
 
-  <!-- JAVASCRIPT LOGIC & INTERACTIONS -->
-  <script>
-    // HEADER SCROLL TRANSITION
-    window.addEventListener('scroll', function () {
-      const header = document.getElementById('main-header');
-      const backToTopBtn = document.getElementById('back-to-top');
-      
-      if (window.scrollY > 80) {
-        header.classList.remove('bg-black/30', 'backdrop-blur-sm');
-        header.classList.add('bg-luxury-darkGreen', 'shadow-lg');
-        
-        // Show back to top button
-        backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
-        backToTopBtn.classList.add('opacity-100', 'translate-y-0');
-      } else {
-        header.classList.add('bg-black/30', 'backdrop-blur-sm');
-        header.classList.remove('bg-luxury-darkGreen', 'shadow-lg');
-        
-        // Hide back to top button
-        backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
-        backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
-      }
-    });
+        <!-- Form body -->
+        <form
+          id="enquiryForm"
+          onsubmit="submitForm(event)"
+          class="p-6 sm:p-8 space-y-4"
+        >
+          <!-- Hidden/Preset field to track source project -->
+          <input
+            type="hidden"
+            id="form-subject"
+            name="subject"
+            value="General Inquiry"
+          />
 
-    // SCROLL TO TOP UTILITY
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
+          <div>
+            <label
+              class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1"
+              >Your Full Name *</label
+            >
+            <input
+              type="text"
+              required
+              placeholder="Enter your name"
+              class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none"
+            />
+          </div>
 
-    // MOBILE DRAWER MENUS
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const closeDrawerBtn = document.getElementById('close-drawer-btn');
-    const mobileDrawer = document.getElementById('mobile-drawer');
+          <div>
+            <label
+              class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1"
+              >Mobile Number *</label
+            >
+            <div class="flex">
+              <span
+                class="bg-luxury-creamCard border border-luxury-gold/25 border-r-0 p-3 text-sm text-luxury-darkGreen select-none font-semibold"
+                >+91</span
+              >
+              <input
+                type="tel"
+                required
+                pattern="[0-9]{10}"
+                placeholder="9876543210"
+                class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none"
+              />
+            </div>
+          </div>
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileDrawer.classList.remove('translate-x-full');
-    });
+          <div>
+            <label
+              class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1"
+              >Email Address *</label
+            >
+            <input
+              type="email"
+              required
+              placeholder="name@email.com"
+              class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none"
+            />
+          </div>
 
-    closeDrawerBtn.addEventListener('click', toggleMobileMenu);
+          <div>
+            <label
+              class="block text-[10px] tracking-wider text-gray-400 font-semibold uppercase mb-1"
+              >Inquiry Purpose</label
+            >
+            <select
+              id="form-purpose-select"
+              class="w-full bg-luxury-creamBg border border-luxury-gold/25 p-3 text-sm focus:outline-none focus:border-luxury-gold transition-colors text-luxury-darkGreen font-sans rounded-none"
+            >
+              <option value="Select Project">Select Project Preferred</option>
+              <option value="Royal Greens">Royal Greens (Gauribidanur)</option>
+              <option value="Orchard Valley">
+                Orchard Valley (Adiyogi Chikkaballapur)
+              </option>
+              <option value="Anubhav Megacity">
+                Anubhav Megacity (Basavakalyan)
+              </option>
+              <option value="Shankar Enclave">
+                Shankar Enclave (Rajanukunte)
+              </option>
+              <option value="Golden Crest">Golden Crest (Yelahanka)</option>
+              <option value="Signature Boulevard">
+                Signature Boulevard (Devanahalli)
+              </option>
+            </select>
+          </div>
 
-    function toggleMobileMenu() {
-      mobileDrawer.classList.add('translate-x-full');
-    }
+          <p
+            class="text-[10px] text-gray-400 leading-relaxed font-light text-center"
+          >
+            * By submitting this form, you authorize our sales specialists to
+            reach out to you via Call, Email, or WhatsApp. We secure your
+            details with absolute privacy compliance.
+          </p>
 
-    // INTERACTIVE FILTERING FOR PROJECTS
-    function filterProjects(category) {
-      // Manage Active Tab styles
-      const tabs = document.querySelectorAll('.tab-btn');
-      tabs.forEach(tab => {
-        if (tab.id === `tab-${category}`) {
-          tab.classList.remove('text-gray-400', 'border-transparent');
-          tab.classList.add('text-luxury-darkGreen', 'border-luxury-darkGreen');
+          <button
+            type="submit"
+            class="w-full bg-luxury-gold hover:bg-luxury-darkGreen text-white py-4 text-xs font-bold tracking-widest uppercase transition-all duration-300 shadow-md"
+          >
+            SUBMIT ENQUIRY
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- LUXURY SUCCESS TOAST NOTIFICATION -->
+    <div
+      id="success-toast"
+      class="fixed bottom-6 left-6 bg-luxury-darkGreen border border-luxury-gold text-white p-5 shadow-2xl z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-500 max-w-sm w-full"
+    >
+      <div class="flex items-start gap-4">
+        <div
+          class="w-10 h-10 rounded-full bg-luxury-gold/20 border border-luxury-gold flex items-center justify-center shrink-0 text-luxury-gold"
+        >
+          <i class="fa-regular fa-circle-check text-xl"></i>
+        </div>
+        <div>
+          <h5 class="font-serif font-bold text-base text-white">Thank You!</h5>
+          <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+            Your luxury real estate interest query was cataloged successfully.
+            Our portfolio partner will contact you shortly.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN DEEP DARK GREEN FOOTER -->
+    <footer
+      id="footer-section"
+      class="bg-luxury-darkGreen text-white relative pt-20 pb-8 border-t border-luxury-gold/20"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Column 1: Crest & Logo Brand -->
+          <div class="space-y-6">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full border border-luxury-gold/50 p-2 bg-black/25"
+              >
+                <!-- Custom inline SVG of Eagle Crest matching original design -->
+                <svg
+                  class="w-full h-full text-white"
+                  viewBox="0 0 100 100"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M50,10 C45,25 30,28 15,30 C25,45 20,60 35,68 C42,65 40,55 50,55 C60,55 58,65 65,68 C80,60 75,45 85,30 C70,28 55,25 50,10 Z"
+                    opacity="0.9"
+                  />
+                  <circle cx="50" cy="50" r="3" fill="#B08E59" />
+                  <path
+                    d="M20,38 Q50,48 80,38"
+                    stroke="#B08E59"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M30,75 L70,75 M35,80 L65,80"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+              <div class="flex flex-col">
+                <span
+                  class="font-serif tracking-widest text-lg font-bold text-white leading-tight"
+                  >THE GREAT BUILDS</span
+                >
+                <span
+                  class="text-[9px] tracking-[0.25em] text-luxury-gold uppercase"
+                  >Builders & Developers</span
+                >
+              </div>
+            </div>
+            <p
+              class="font-sans text-xs text-gray-400 leading-relaxed font-light"
+            >
+              Luxury Gated plots, premium layouts and curated modern residential
+              environments inside high-growth corridors of North Bangalore.
+              Built on trust, exceptional infrastructure, and legal compliance.
+            </p>
+            <!-- Social Icons -->
+            <div class="flex items-center gap-4 pt-2">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="w-9 h-9 border border-white/10 hover:border-luxury-gold rounded-none flex items-center justify-center text-white/60 hover:text-luxury-gold hover:bg-white/5 transition-all"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="w-9 h-9 border border-white/10 hover:border-luxury-gold rounded-none flex items-center justify-center text-white/60 hover:text-luxury-gold hover:bg-white/5 transition-all"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram text-sm"></i>
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                class="w-9 h-9 border border-white/10 hover:border-luxury-gold rounded-none flex items-center justify-center text-white/60 hover:text-luxury-gold hover:bg-white/5 transition-all"
+                aria-label="YouTube"
+              >
+                <i class="fa-brands fa-youtube text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Projects Links -->
+          <div>
+            <h4
+              class="font-serif text-xs font-bold tracking-[0.25em] text-luxury-gold uppercase mb-6 border-b border-luxury-gold/10 pb-2"
+            >
+              Projects
+            </h4>
+            <ul class="space-y-3 font-sans text-xs text-gray-400 font-light">
+              <li>
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('ongoing')"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >Royal Greens</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('ongoing')"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >Orchard Valley</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('upcoming')"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >Shankar Enclave</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('ongoing')"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >Anubhav Megacity</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('upcoming')"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >Golden Crest</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company Links -->
+          <div>
+            <h4
+              class="font-serif text-xs font-bold tracking-[0.25em] text-luxury-gold uppercase mb-6 border-b border-luxury-gold/10 pb-2"
+            >
+              Company
+            </h4>
+            <ul class="space-y-3 font-sans text-xs text-gray-400 font-light">
+              <li>
+                <a
+                  href="#about-section"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects-section"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#footer-section"
+                  class="hover:text-luxury-gold transition-colors block"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <button
+                  onclick="openContactModal('General Inquiry')"
+                  class="hover:text-luxury-gold transition-colors text-left block"
+                >
+                  Contact Us
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Headquarters Contact Info -->
+          <div>
+            <h4
+              class="font-serif text-xs font-bold tracking-[0.25em] text-luxury-gold uppercase mb-6 border-b border-luxury-gold/10 pb-2"
+            >
+              Headquarters
+            </h4>
+            <ul class="space-y-4 font-sans text-xs text-gray-400 font-light">
+              <li class="flex items-start gap-3">
+                <i
+                  class="fa-solid fa-map-location-dot text-luxury-gold mt-0.5 shrink-0"
+                ></i>
+                <span class="leading-relaxed">
+                  No. 762, 7th Cross, Sector A,<br />
+                  Yelahanka New Town, Bengaluru,<br />
+                  Karnataka - 560064
+                </span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-luxury-gold shrink-0"></i>
+                <a
+                  href="tel:+918217855041"
+                  class="hover:text-luxury-gold transition-colors font-medium text-white"
+                  >+91 82178 55041</a
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fa-regular fa-envelope text-luxury-gold shrink-0"></i>
+                <a
+                  href="mailto:thegreatbuilds123@gmail.com"
+                  class="hover:text-luxury-gold transition-colors break-all"
+                  >thegreatbuilds123@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Legal Sub-Footer matching actual reference layout -->
+        <div
+          class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-gray-500 font-medium uppercase"
+        >
+          <div>© 2026 THE GREAT BUILDS. ALL RIGHTS RESERVED.</div>
+          <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-luxury-gold transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-luxury-gold transition-colors"
+              >Terms of Use</a
+            >
+            <a href="#" class="hover:text-luxury-gold transition-colors"
+              >Disclaimer</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING WIDGETS (WHATSAPP & SCROLL TO TOP) -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+      <!-- WhatsApp Floating Icon -->
+      <a
+        href="https://wa.me/918217855041?text=Hello%20The%20Great%20Builds,%20I%20am%20interested%20in%20your%20luxury%20villa%20plots."
+        target="_blank"
+        class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl whatsapp-pulse hover:scale-110 transition-transform duration-300"
+        aria-label="Contact via WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+      </a>
+
+      <!-- Back to Top Button -->
+      <button
+        id="back-to-top"
+        onclick="scrollToTop()"
+        class="w-12 h-12 rounded-full bg-white border border-luxury-gold/20 text-luxury-darkGreen flex items-center justify-center shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-luxury-gold hover:text-white"
+        aria-label="Back to Top"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & INTERACTIONS -->
+    <script>
+      // HEADER SCROLL TRANSITION
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("main-header");
+        const backToTopBtn = document.getElementById("back-to-top");
+
+        if (window.scrollY > 80) {
+          header.classList.remove("bg-black/30", "backdrop-blur-sm");
+          header.classList.add("bg-luxury-darkGreen", "shadow-lg");
+
+          // Show back to top button
+          backToTopBtn.classList.remove(
+            "opacity-0",
+            "translate-y-4",
+            "pointer-events-none",
+          );
+          backToTopBtn.classList.add("opacity-100", "translate-y-0");
         } else {
-          tab.classList.remove('text-luxury-darkGreen', 'border-luxury-darkGreen');
-          tab.classList.add('text-gray-400', 'border-transparent');
+          header.classList.add("bg-black/30", "backdrop-blur-sm");
+          header.classList.remove("bg-luxury-darkGreen", "shadow-lg");
+
+          // Hide back to top button
+          backToTopBtn.classList.add(
+            "opacity-0",
+            "translate-y-4",
+            "pointer-events-none",
+          );
+          backToTopBtn.classList.remove("opacity-100", "translate-y-0");
         }
       });
 
-      // Filter Projects Cards
-      const cards = document.querySelectorAll('.project-card');
-      cards.forEach(card => {
-        if (card.classList.contains(category)) {
-          card.classList.remove('hidden');
-          // Smooth fade-in animation trigger
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0px)';
-            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-          }, 50);
-        } else {
-          card.classList.add('hidden');
-        }
+      // SCROLL TO TOP UTILITY
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // MOBILE DRAWER MENUS
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const closeDrawerBtn = document.getElementById("close-drawer-btn");
+      const mobileDrawer = document.getElementById("mobile-drawer");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileDrawer.classList.remove("translate-x-full");
       });
-    }
 
-    // DICTIONARY FOR DETAILED PROPERTY WINDOWS (MOCK DATAS)
-    const projectDetailsData = {
-      'Royal Greens': {
-        title: 'Royal Greens',
-        badge: 'DTCP APPROVED',
-        desc: 'Royal Greens is an exceptionally crafted luxury plotted development spread across 10+ lush acres in Gauribidanur, North Bengaluru. Strategically designed to maximize spaces, with broad 40-feet asphalted primary roads, advanced street lighting, modern storm water drainage infrastructure, and direct, uninterrupted access to clean water networks.',
-        size: '10+ Acres',
-        plots: '164 Units',
-        approved: 'DTCP',
-        status: 'Ongoing',
-        img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop'
-      },
-      'Orchard Valley': {
-        title: 'Orchard Valley',
-        badge: 'FARMLANDS APPROVED',
-        desc: 'Nestled next to the pristine foot of Nandi Hills near the mystical Adiyogi (Isha Foundation), Orchard Valley features ultra-premium organic villa plots and managed farmlands. It boasts exquisite designer entrance portals, gated perimeter compounds, premium modern sewage layouts, underground utility line provisions, and customized community tree plantation systems.',
-        size: '10 Acres',
-        plots: '50 Units',
-        approved: 'Farmlands',
-        status: 'Ongoing',
-        img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop'
-      },
-      'Anubhav Megacity': {
-        title: 'Anubhav Megacity',
-        badge: 'DTCP APPROVED',
-        desc: 'Anubhav Megacity is a mega-township redefining contemporary community landscapes in Basavakalyan. It stands as a pinnacle of meticulously secure gated lifestyle layouts, featuring fully modern wellness parks, integrated healthcare facility spaces, dedicated security stations, commercial high-street complexes, and scenic outdoor walkways.',
-        size: '100+ Acres',
-        plots: '980 Units',
-        approved: 'DTCP',
-        status: 'Ongoing',
-        img: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format&fit=crop'
-      },
-      'Shankar Enclave': {
-        title: 'Shankar Enclave',
-        badge: 'BMRDA PLANS',
-        desc: 'Shankar Enclave in Rajanukunte presents highly anticipated luxury plots tailored for capital appreciation. Located comfortably on North Bengaluru high-growth paths, it features designer parklands, underground sewage treaters, integrated standard security compounds, and premium municipal approval parameters.',
-        size: '15 Acres',
-        plots: '120 Units',
-        approved: 'BMRDA',
-        status: 'Upcoming',
-        img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop'
-      },
-      'Golden Crest': {
-        title: 'Golden Crest',
-        badge: 'DTCP REGISTERED',
-        desc: 'Golden Crest is an elite upcoming boutique community offering signature spaces on Yelahanka Extension roads. It features smart secure structures, underground electric layout cabling, rain-water storage spaces, high designer gate enclosures, and quick routes to corporate international airport hubs.',
-        size: '8 Acres',
-        plots: '85 Units',
-        approved: 'DTCP',
-        status: 'Upcoming',
-        img: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop'
-      },
-      'Signature Blvd': {
-        title: 'Signature Blvd',
-        badge: 'BIAAPA SANCTIONED',
-        desc: 'Signature Boulevard in Devanahalli is a magnificent fully completed gated community showcasing supreme style. Completed to premier European standards, with broad walkways, fully equipped clubhouse areas, sports facilities, mature landscaped gardens, and secure surveillance units.',
-        size: '22 Acres',
-        plots: '210 Units',
-        approved: 'BIAAPA',
-        status: 'Completed',
-        img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop'
-      },
-      'Heritage Greens': {
-        title: 'Heritage Greens',
-        badge: 'DTCP COMPLIANT',
-        desc: 'Heritage Greens is a pristine, premium development nested in Chikkaballapur Town. Composed of completely constructed premium roads, sprawling green parameters, family community playgrounds, water lines, and legal land clearings ready for immediate home construction.',
-        size: '12 Acres',
-        plots: '140 Units',
-        approved: 'DTCP',
-        status: 'Completed',
-        img: 'https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=800&auto=format&fit=crop'
-      }
-    };
+      closeDrawerBtn.addEventListener("click", toggleMobileMenu);
 
-    // OPEN DETAILED LIGHT OVERLAY
-    function openProjectDetails(projectName) {
-      const data = projectDetailsData[projectName];
-      if (!data) return;
-
-      document.getElementById('detail-title').innerText = data.title;
-      document.getElementById('detail-badge').innerText = data.badge;
-      document.getElementById('detail-desc').innerText = data.desc;
-      document.getElementById('detail-size').innerText = data.size;
-      document.getElementById('detail-plots').innerText = data.plots;
-      document.getElementById('detail-approved').innerText = data.approved;
-      document.getElementById('detail-status').innerText = data.status;
-      document.getElementById('detail-img').src = data.img;
-
-      const overlay = document.getElementById('project-details-overlay');
-      overlay.classList.remove('opacity-0', 'invisible');
-      overlay.classList.add('opacity-100');
-    }
-
-    // CLOSE DETAILED LIGHT OVERLAY
-    function closeProjectDetails() {
-      const overlay = document.getElementById('project-details-overlay');
-      overlay.classList.add('opacity-0', 'invisible');
-      overlay.classList.remove('opacity-100');
-    }
-
-    // OPEN CONTACT FORM MODAL
-    function openContactModal(subject) {
-      document.getElementById('form-subject').value = subject;
-      
-      // Prefill project selector based on click intent
-      const selectElement = document.getElementById('form-purpose-select');
-      if (subject.includes('Royal Greens')) {
-        selectElement.value = 'Royal Greens';
-      } else if (subject.includes('Orchard Valley')) {
-        selectElement.value = 'Orchard Valley';
-      } else if (subject.includes('Anubhav Megacity')) {
-        selectElement.value = 'Anubhav Megacity';
-      } else if (subject.includes('Shankar Enclave')) {
-        selectElement.value = 'Shankar Enclave';
-      } else if (subject.includes('Golden Crest')) {
-        selectElement.value = 'Golden Crest';
-      } else if (subject.includes('Signature Blvd')) {
-        selectElement.value = 'Signature Boulevard';
-      } else if (subject.includes('Heritage Greens')) {
-        selectElement.value = 'Heritage Greens';
-      } else {
-        selectElement.value = 'Select Project';
+      function toggleMobileMenu() {
+        mobileDrawer.classList.add("translate-x-full");
       }
 
-      const modal = document.getElementById('contact-modal');
-      modal.classList.remove('opacity-0', 'invisible');
-      modal.classList.add('opacity-100');
-    }
+      // INTERACTIVE FILTERING FOR PROJECTS
+      function filterProjects(category) {
+        // Manage Active Tab styles
+        const tabs = document.querySelectorAll(".tab-btn");
+        tabs.forEach((tab) => {
+          if (tab.id === `tab-${category}`) {
+            tab.classList.remove("text-gray-400", "border-transparent");
+            tab.classList.add(
+              "text-luxury-darkGreen",
+              "border-luxury-darkGreen",
+            );
+          } else {
+            tab.classList.remove(
+              "text-luxury-darkGreen",
+              "border-luxury-darkGreen",
+            );
+            tab.classList.add("text-gray-400", "border-transparent");
+          }
+        });
 
-    // CLOSE CONTACT FORM MODAL
-    function closeContactModal() {
-      const modal = document.getElementById('contact-modal');
-      modal.classList.add('opacity-0', 'invisible');
-      modal.classList.remove('opacity-100');
-    }
+        // Filter Projects Cards
+        const cards = document.querySelectorAll(".project-card");
+        cards.forEach((card) => {
+          if (card.classList.contains(category)) {
+            card.classList.remove("hidden");
+            // Smooth fade-in animation trigger
+            card.style.opacity = "0";
+            card.style.transform = "translateY(10px)";
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0px)";
+              card.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+            }, 50);
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      }
 
-    // SUBMIT ENQUIRY FORM PROCESSOR
-    function submitForm(event) {
-      event.preventDefault();
-      
-      // Close open modal
-      closeContactModal();
+      // DICTIONARY FOR DETAILED PROPERTY WINDOWS (MOCK DATAS)
+      const projectDetailsData = {
+        "Royal Greens": {
+          title: "Royal Greens",
+          badge: "DTCP APPROVED",
+          desc: "Royal Greens is an exceptionally crafted luxury plotted development spread across 10+ lush acres in Gauribidanur, North Bengaluru. Strategically designed to maximize spaces, with broad 40-feet asphalted primary roads, advanced street lighting, modern storm water drainage infrastructure, and direct, uninterrupted access to clean water networks.",
+          size: "10+ Acres",
+          plots: "164 Units",
+          approved: "DTCP",
+          status: "Ongoing",
+          img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+        },
+        "Orchard Valley": {
+          title: "Orchard Valley",
+          badge: "FARMLANDS APPROVED",
+          desc: "Nestled next to the pristine foot of Nandi Hills near the mystical Adiyogi (Isha Foundation), Orchard Valley features ultra-premium organic villa plots and managed farmlands. It boasts exquisite designer entrance portals, gated perimeter compounds, premium modern sewage layouts, underground utility line provisions, and customized community tree plantation systems.",
+          size: "10 Acres",
+          plots: "50 Units",
+          approved: "Farmlands",
+          status: "Ongoing",
+          img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop",
+        },
+        "Anubhav Megacity": {
+          title: "Anubhav Megacity",
+          badge: "DTCP APPROVED",
+          desc: "Anubhav Megacity is a mega-township redefining contemporary community landscapes in Basavakalyan. It stands as a pinnacle of meticulously secure gated lifestyle layouts, featuring fully modern wellness parks, integrated healthcare facility spaces, dedicated security stations, commercial high-street complexes, and scenic outdoor walkways.",
+          size: "100+ Acres",
+          plots: "980 Units",
+          approved: "DTCP",
+          status: "Ongoing",
+          img: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format&fit=crop",
+        },
+        "Shankar Enclave": {
+          title: "Shankar Enclave",
+          badge: "BMRDA PLANS",
+          desc: "Shankar Enclave in Rajanukunte presents highly anticipated luxury plots tailored for capital appreciation. Located comfortably on North Bengaluru high-growth paths, it features designer parklands, underground sewage treaters, integrated standard security compounds, and premium municipal approval parameters.",
+          size: "15 Acres",
+          plots: "120 Units",
+          approved: "BMRDA",
+          status: "Upcoming",
+          img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
+        },
+        "Golden Crest": {
+          title: "Golden Crest",
+          badge: "DTCP REGISTERED",
+          desc: "Golden Crest is an elite upcoming boutique community offering signature spaces on Yelahanka Extension roads. It features smart secure structures, underground electric layout cabling, rain-water storage spaces, high designer gate enclosures, and quick routes to corporate international airport hubs.",
+          size: "8 Acres",
+          plots: "85 Units",
+          approved: "DTCP",
+          status: "Upcoming",
+          img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop",
+        },
+        "Signature Blvd": {
+          title: "Signature Blvd",
+          badge: "BIAAPA SANCTIONED",
+          desc: "Signature Boulevard in Devanahalli is a magnificent fully completed gated community showcasing supreme style. Completed to premier European standards, with broad walkways, fully equipped clubhouse areas, sports facilities, mature landscaped gardens, and secure surveillance units.",
+          size: "22 Acres",
+          plots: "210 Units",
+          approved: "BIAAPA",
+          status: "Completed",
+          img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
+        },
+        "Heritage Greens": {
+          title: "Heritage Greens",
+          badge: "DTCP COMPLIANT",
+          desc: "Heritage Greens is a pristine, premium development nested in Chikkaballapur Town. Composed of completely constructed premium roads, sprawling green parameters, family community playgrounds, water lines, and legal land clearings ready for immediate home construction.",
+          size: "12 Acres",
+          plots: "140 Units",
+          approved: "DTCP",
+          status: "Completed",
+          img: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=800&auto=format&fit=crop",
+        },
+      };
 
-      // Show luxury success toast
-      const toast = document.getElementById('success-toast');
-      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
-      toast.classList.add('opacity-100', 'translate-y-0');
+      // OPEN DETAILED LIGHT OVERLAY
+      function openProjectDetails(projectName) {
+        const data = projectDetailsData[projectName];
+        if (!data) return;
 
-      // Clear the form elements
-      document.getElementById('enquiryForm').reset();
+        document.getElementById("detail-title").innerText = data.title;
+        document.getElementById("detail-badge").innerText = data.badge;
+        document.getElementById("detail-desc").innerText = data.desc;
+        document.getElementById("detail-size").innerText = data.size;
+        document.getElementById("detail-plots").innerText = data.plots;
+        document.getElementById("detail-approved").innerText = data.approved;
+        document.getElementById("detail-status").innerText = data.status;
+        document.getElementById("detail-img").src = data.img;
 
-      // Auto-hide toast after 5 seconds
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
-        toast.classList.remove('opacity-100', 'translate-y-0');
-      }, 5000);
-    }
-  </script>
-</body>
+        const overlay = document.getElementById("project-details-overlay");
+        overlay.classList.remove("opacity-0", "invisible");
+        overlay.classList.add("opacity-100");
+      }
 
+      // CLOSE DETAILED LIGHT OVERLAY
+      function closeProjectDetails() {
+        const overlay = document.getElementById("project-details-overlay");
+        overlay.classList.add("opacity-0", "invisible");
+        overlay.classList.remove("opacity-100");
+      }
+
+      // OPEN CONTACT FORM MODAL
+      function openContactModal(subject) {
+        document.getElementById("form-subject").value = subject;
+
+        // Prefill project selector based on click intent
+        const selectElement = document.getElementById("form-purpose-select");
+        if (subject.includes("Royal Greens")) {
+          selectElement.value = "Royal Greens";
+        } else if (subject.includes("Orchard Valley")) {
+          selectElement.value = "Orchard Valley";
+        } else if (subject.includes("Anubhav Megacity")) {
+          selectElement.value = "Anubhav Megacity";
+        } else if (subject.includes("Shankar Enclave")) {
+          selectElement.value = "Shankar Enclave";
+        } else if (subject.includes("Golden Crest")) {
+          selectElement.value = "Golden Crest";
+        } else if (subject.includes("Signature Blvd")) {
+          selectElement.value = "Signature Boulevard";
+        } else if (subject.includes("Heritage Greens")) {
+          selectElement.value = "Heritage Greens";
+        } else {
+          selectElement.value = "Select Project";
+        }
+
+        const modal = document.getElementById("contact-modal");
+        modal.classList.remove("opacity-0", "invisible");
+        modal.classList.add("opacity-100");
+      }
+
+      // CLOSE CONTACT FORM MODAL
+      function closeContactModal() {
+        const modal = document.getElementById("contact-modal");
+        modal.classList.add("opacity-0", "invisible");
+        modal.classList.remove("opacity-100");
+      }
+
+      // SUBMIT ENQUIRY FORM PROCESSOR
+      function submitForm(event) {
+        event.preventDefault();
+
+        // Close open modal
+        closeContactModal();
+
+        // Show luxury success toast
+        const toast = document.getElementById("success-toast");
+        toast.classList.remove(
+          "opacity-0",
+          "translate-y-20",
+          "pointer-events-none",
+        );
+        toast.classList.add("opacity-100", "translate-y-0");
+
+        // Clear the form elements
+        document.getElementById("enquiryForm").reset();
+
+        // Auto-hide toast after 5 seconds
+        setTimeout(() => {
+          toast.classList.add(
+            "opacity-0",
+            "translate-y-20",
+            "pointer-events-none",
+          );
+          toast.classList.remove("opacity-100", "translate-y-0");
+        }, 5000);
+      }
+    </script>
+  </body>
 </html>

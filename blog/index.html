@@ -1,0 +1,1916 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO & Social Meta Tags -->
+    <title>
+      Knowledge Base | The Great Builds - Premium Plotted Developments Bangalore
+    </title>
+    <meta
+      name="description"
+      content="Expert analysis on plotted developments, legal safety, and the future of Bangalore's growth corridors. The Great Builds Knowledge Base."
+    />
+    <meta
+      name="keywords"
+      content="real estate bangalore, builders in yelahanka, residential plots yelahanka, The Great Builds, property developers bangalore, land investment karnataka"
+    />
+
+    <!-- Font Integrations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS Support -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome for Premium Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/common.css" />
+
+    <!-- Tailored Configurations -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                darkGreen: "#0a1c12" /* Premium forest green */,
+                warmBeige: "#FAF7EC" /* Warm cream background from the image */,
+                accentBeige: "#F3EFE0" /* Darker tone beige */,
+                gold: "#C5A880" /* Luxury gold highlight */,
+                textCharcoal: "#222222" /* High contrast reading text */,
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Scrollbar and Hover Aesthetics -->
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #faf7ec;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0a1c12;
+        border-radius: 4px;
+      }
+
+      /* Smooth Transitions for filtering and modals */
+      .filter-item {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .filter-item.hidden-card {
+        opacity: 0;
+        transform: scale(0.9) translateY(10px);
+        pointer-events: none;
+        position: absolute;
+        visibility: hidden;
+      }
+
+      /* Subdued overlay styling */
+      .hero-gradient {
+        background: linear-gradient(
+          to bottom,
+          rgba(10, 28, 18, 0.85) 0%,
+          rgba(10, 28, 18, 0.7) 50%,
+          rgba(10, 28, 18, 0.9) 100%
+        );
+      }
+
+      /* Active category line animation styling */
+      .tab-underline {
+        position: relative;
+      }
+      .tab-underline::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #0a1c12;
+        transition: width 0.3s ease;
+      }
+      .active-tab.tab-underline::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-sans text-brand-textCharcoal bg-brand-warmBeige min-h-screen selection:bg-brand-darkGreen selection:text-white"
+  >
+    <!-- Top Header Navigation -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-darkGreen/95 backdrop-blur-md border-b border-white/10"
+      id="main-header"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo / Brand Crest -->
+          <a
+            href="#"
+            class="flex items-center space-x-3 group"
+            aria-label="The Great Builds Home"
+          >
+            <!-- Inline SVG replication of Eagle Crest Logo in image_dd81c0.png -->
+            <svg
+              class="h-12 w-auto text-white transition-transform duration-300 group-hover:scale-105"
+              viewBox="0 0 100 80"
+              fill="currentColor"
+            >
+              <!-- Outstretched stylized wings -->
+              <path
+                d="M10,25 Q30,15 50,30 Q70,15 90,25 Q80,45 50,48 Q20,45 10,25 Z"
+                opacity="0.9"
+              />
+              <!-- Inner circular elements -->
+              <circle
+                cx="50"
+                cy="38"
+                r="14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <!-- Eagle profile head silhouette inside the circle -->
+              <path
+                d="M47,33 Q50,28 53,33 Q55,38 53,41 L47,41 Q45,38 47,33 Z"
+              />
+              <!-- Ribbon/Banner underneath -->
+              <path d="M25,52 L75,52 L70,59 L30,59 Z" />
+              <!-- Horizontal wing lines -->
+              <line
+                x1="15"
+                y1="28"
+                x2="40"
+                y2="35"
+                stroke="#0a1c12"
+                stroke-width="1.5"
+              />
+              <line
+                x1="85"
+                y1="28"
+                x2="60"
+                y2="35"
+                stroke="#0a1c12"
+                stroke-width="1.5"
+              />
+              <line
+                x1="18"
+                y1="33"
+                x2="40"
+                y2="38"
+                stroke="#0a1c12"
+                stroke-width="1.5"
+              />
+              <line
+                x1="82"
+                y1="33"
+                x2="60"
+                y2="38"
+                stroke="#0a1c12"
+                stroke-width="1.5"
+              />
+              <!-- Label Text styled beneath (tiny but crisp) -->
+              <text
+                x="50"
+                y="72"
+                font-family="'Inter', sans-serif"
+                font-weight="bold"
+                font-size="8"
+                text-anchor="middle"
+                fill="white"
+                letter-spacing="1"
+              >
+                THE GREAT BUILDS
+              </text>
+            </svg>
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <nav
+            class="hidden md:flex space-x-8 items-center text-xs tracking-widest font-semibold text-white/90"
+          >
+            <div class="relative group">
+              <button
+                class="hover:text-brand-gold flex items-center gap-1 uppercase transition-colors"
+              >
+                Our Projects
+                <i
+                  class="fa-solid fa-chevron-down text-[10px] opacity-75 group-hover:rotate-180 transition-transform duration-300"
+                ></i>
+              </button>
+              <!-- Dropdown Menu -->
+              <div
+                class="absolute left-0 mt-2 w-48 bg-brand-darkGreen border border-white/10 rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+              >
+                <div class="py-2">
+                  <a
+                    href="#projects"
+                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
+                    >Royal Greens</a
+                  >
+                  <a
+                    href="#projects"
+                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
+                    >Orchard Valley</a
+                  >
+                  <a
+                    href="#projects"
+                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
+                    >Shankar Enclave</a
+                  >
+                  <a
+                    href="#projects"
+                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
+                    >Anubhav Megacity</a
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              href="#gallery"
+              class="hover:text-brand-gold transition-colors uppercase"
+              >Gallery</a
+            >
+            <a
+              href="#about"
+              class="hover:text-brand-gold transition-colors uppercase"
+              >About Us</a
+            >
+            <a
+              href="#blog"
+              class="hover:text-brand-gold transition-colors text-brand-gold font-bold uppercase relative after:absolute after:bottom-[-6px] after:left-0 after:w-full after:height-[2px] after:bg-brand-gold"
+              >Blog</a
+            >
+          </nav>
+
+          <!-- Right Contact Section (Call and Pill CTA) -->
+          <div class="hidden lg:flex items-center space-x-6">
+            <a
+              href="tel:+918217855041"
+              class="text-white hover:text-brand-gold transition-colors flex items-center space-x-2 text-xs font-semibold tracking-wider"
+            >
+              <i
+                class="fa-solid fa-phone-volume text-brand-gold animate-pulse"
+              ></i>
+              <span>+91 82178 55041</span>
+            </a>
+            <button
+              onclick="openContactModal()"
+              class="bg-white hover:bg-brand-gold hover:text-brand-darkGreen text-brand-darkGreen font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-widest transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
+            >
+              Contact Us
+            </button>
+          </div>
+
+          <!-- Mobile Menu Trigger Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              onclick="toggleMobileMenu()"
+              class="text-white hover:text-brand-gold focus:outline-none p-2"
+              aria-label="Toggle navigation drawer"
+            >
+              <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-brand-darkGreen border-t border-white/10 transition-all duration-300"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-3">
+          <div class="border-b border-white/10 pb-3">
+            <p class="text-white/40 text-[10px] tracking-widest uppercase mb-2">
+              Projects
+            </p>
+            <a
+              href="#royal-greens"
+              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
+              >Royal Greens</a
+            >
+            <a
+              href="#orchard-valley"
+              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
+              >Orchard Valley</a
+            >
+            <a
+              href="#shankar-enclave"
+              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
+              >Shankar Enclave</a
+            >
+            <a
+              href="#anubhav-megacity"
+              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
+              >Anubhav Megacity</a
+            >
+          </div>
+          <a
+            href="#gallery"
+            class="block py-2 text-white hover:text-brand-gold text-sm uppercase tracking-wider"
+            >Gallery</a
+          >
+          <a
+            href="#about"
+            class="block py-2 text-white hover:text-brand-gold text-sm uppercase tracking-wider"
+            >About Us</a
+          >
+          <a
+            href="#blog"
+            class="block py-2 text-brand-gold font-bold text-sm uppercase tracking-wider"
+            >Blog</a
+          >
+
+          <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+            <a
+              href="tel:+918217855041"
+              class="text-white flex items-center gap-2 text-sm font-medium"
+            >
+              <i class="fa-solid fa-phone text-brand-gold"></i> +91 82178 55041
+            </a>
+            <button
+              onclick="openContactModal()"
+              class="w-full bg-white text-brand-darkGreen text-center font-bold py-2.5 rounded-full text-xs uppercase tracking-widest hover:bg-brand-gold transition-colors"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative pt-20 overflow-hidden min-h-[500px] lg:min-h-[550px] flex items-center bg-brand-darkGreen"
+    >
+      <!-- Image background simulating premium Bangalore gated community entry -->
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop"
+          alt="Real estate Plotted development gateway entry"
+          class="w-full h-full object-cover object-center scale-105 animate-[subtle-zoom_20s_infinite_alternate]"
+          onerror="
+            this.onerror = null;
+            this.src =
+              'https://placehold.co/1600x600/0a1c12/FFFFFF?text=Premium+Plotted+Developments';
+          "
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+
+      <!-- Content Overlaid -->
+      <div
+        class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 z-10"
+      >
+        <div class="max-w-2xl text-left">
+          <span
+            class="inline-block text-[11px] sm:text-xs tracking-[0.25em] text-brand-gold font-bold uppercase mb-4 animate-[fadeInDown_0.6s_ease]"
+          >
+            Real Estate Insights
+          </span>
+          <h1
+            class="text-5xl sm:text-6xl lg:text-7xl font-serif text-white leading-[1.1] mb-6 animate-[fadeInLeft_0.8s_ease]"
+          >
+            Knowledge<br />
+            <span class="text-brand-accentBeige font-light italic">Base</span>
+          </h1>
+          <div class="h-[2px] w-20 bg-brand-gold mb-6"></div>
+          <p
+            class="text-sm sm:text-base text-gray-300 leading-relaxed font-light tracking-wide max-w-lg mb-8"
+          >
+            Expert analysis on plotted developments, legal safety, and the
+            future of Bangalore's growth corridors. Keep up to date with
+            industrial impact, approvals, and ROI matrices.
+          </p>
+
+          <!-- Search bar inside Hero to enhance User Experience -->
+          <div class="max-w-md relative">
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+              <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+            </div>
+            <input
+              type="text"
+              id="blog-search"
+              oninput="handleSearch()"
+              placeholder="Search articles, legal guides, trends..."
+              class="w-full pl-10 pr-24 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent text-sm transition-all"
+            />
+            <button
+              onclick="triggerSearchReset()"
+              id="search-clear-btn"
+              class="hidden absolute right-3 inset-y-0 my-auto h-6 w-6 text-white/50 hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Knowledge Base Section with Categories -->
+    <main class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
+      <!-- Dynamic Category Tabs -->
+      <div
+        class="border-b border-brand-darkGreen/10 pb-4 mb-10 overflow-x-auto scrollbar-hide"
+      >
+        <div
+          class="flex space-x-8 lg:space-x-12 min-w-max px-2 justify-start md:justify-center text-xs tracking-[0.15em] font-semibold uppercase text-brand-darkGreen/60"
+        >
+          <button
+            onclick="filterCategory('ALL', this)"
+            class="category-tab active-tab tab-underline text-brand-darkGreen font-bold py-2 focus:outline-none transition-colors hover:text-brand-darkGreen"
+          >
+            All
+          </button>
+          <button
+            onclick="filterCategory('MARKET INSIGHTS', this)"
+            class="category-tab tab-underline py-2 focus:outline-none transition-colors hover:text-brand-darkGreen"
+          >
+            Market Insights
+          </button>
+          <button
+            onclick="filterCategory('INVESTMENT GUIDE', this)"
+            class="category-tab tab-underline py-2 focus:outline-none transition-colors hover:text-brand-darkGreen"
+          >
+            Investment Guide
+          </button>
+          <button
+            onclick="filterCategory('BUYER EDUCATION', this)"
+            class="category-tab tab-underline py-2 focus:outline-none transition-colors hover:text-brand-darkGreen"
+          >
+            Buyer Education
+          </button>
+          <button
+            onclick="filterCategory('LOCATION ANALYSIS', this)"
+            class="category-tab tab-underline py-2 focus:outline-none transition-colors hover:text-brand-darkGreen"
+          >
+            Location Analysis
+          </button>
+          <button
+            onclick="filterCategory('REAL ESTATE TRENDS', this)"
+            class="category-tab tab-underline py-2 focus:outline-none transition-colors hover:text-brand-darkGreen"
+          >
+            Real Estate Trends
+          </button>
+        </div>
+      </div>
+
+      <!-- Active Filter Banner & Match Count -->
+      <div
+        class="flex items-center justify-between mb-8 text-xs text-brand-darkGreen/50 uppercase tracking-wider px-2"
+      >
+        <div id="filter-status">
+          Showing:
+          <span class="font-bold text-brand-darkGreen">All Articles</span>
+        </div>
+        <div id="match-count">7 Posts Available</div>
+      </div>
+
+      <!-- Blog Post Grid -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-300"
+        id="articles-grid"
+      >
+        <!-- Card 1: Why Gauribidanur Is Emerging -->
+        <article
+          class="filter-item bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden"
+          data-category="INVESTMENT GUIDE"
+        >
+          <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop"
+              alt="Gauribidanur plot field developments"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-4 left-4 bg-brand-darkGreen text-white text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase"
+            >
+              Investment Guide
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <!-- Meta details -->
+              <div
+                class="flex items-center space-x-2 text-[10px] text-gray-500 tracking-wider uppercase mb-3"
+              >
+                <span
+                  ><i
+                    class="fa-regular fa-calendar-days mr-1.5 text-brand-gold"
+                  ></i
+                  >Mar 01, 2026</span
+                >
+                <span class="text-gray-300">•</span>
+                <span
+                  ><i class="fa-regular fa-clock mr-1.5 text-brand-gold"></i>6
+                  Min Read</span
+                >
+              </div>
+              <!-- Title -->
+              <h3
+                class="font-serif text-brand-darkGreen text-xl sm:text-2xl font-semibold leading-snug mb-3 group-hover:text-brand-gold transition-colors"
+              >
+                Why Gauribidanur Is Emerging as a Land...
+              </h3>
+              <!-- Excerpt -->
+              <p
+                class="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6 font-light"
+              >
+                Discover why Gauribidanur is rapidly becoming the most
+                sought-after destination for land investors near North Bangalore
+                with its upcoming projects, massive infrastructure expansions,
+                and competitive entry prices.
+              </p>
+            </div>
+            <!-- Read more CTA -->
+            <button
+              onclick="openArticle(1)"
+              class="inline-flex items-center text-xs tracking-widest font-bold text-brand-darkGreen uppercase border-b border-transparent group-hover:border-brand-darkGreen pb-1 self-start transition-all"
+            >
+              Read More
+              <span
+                class="ml-2 group-hover:translate-x-1.5 transition-transform duration-300"
+                >→</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 2: DTCP Approved Plots vs Panchayat -->
+        <article
+          class="filter-item bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden"
+          data-category="BUYER EDUCATION"
+        >
+          <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=800&auto=format&fit=crop"
+              alt="Gated property boundaries"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-4 left-4 bg-brand-darkGreen text-white text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase"
+            >
+              Buyer Education
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div
+                class="flex items-center space-x-2 text-[10px] text-gray-500 tracking-wider uppercase mb-3"
+              >
+                <span
+                  ><i
+                    class="fa-regular fa-calendar-days mr-1.5 text-brand-gold"
+                  ></i
+                  >Feb 24, 2026</span
+                >
+                <span class="text-gray-300">•</span>
+                <span
+                  ><i class="fa-regular fa-clock mr-1.5 text-brand-gold"></i>7
+                  Min Read</span
+                >
+              </div>
+              <h3
+                class="font-serif text-brand-darkGreen text-xl sm:text-2xl font-semibold leading-snug mb-3 group-hover:text-brand-gold transition-colors"
+              >
+                DTCP Approved Plots vs Panchayat Plots –...
+              </h3>
+              <p
+                class="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6 font-light"
+              >
+                Confused between DTCP and Panchayat approved plots? We break
+                down the legal, financial, and security aspects that every land
+                buyer in Karnataka must consider before making an offer.
+              </p>
+            </div>
+            <button
+              onclick="openArticle(2)"
+              class="inline-flex items-center text-xs tracking-widest font-bold text-brand-darkGreen uppercase border-b border-transparent group-hover:border-brand-darkGreen pb-1 self-start transition-all"
+            >
+              Read More
+              <span
+                class="ml-2 group-hover:translate-x-1.5 transition-transform duration-300"
+                >→</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 3: How KIADB Industrial Growth Impacts -->
+        <article
+          class="filter-item bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden"
+          data-category="MARKET INSIGHTS"
+        >
+          <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop"
+              alt="KIADB Industrial corridor infrastructure"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-4 left-4 bg-brand-darkGreen text-white text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase"
+            >
+              Market Insights
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div
+                class="flex items-center space-x-2 text-[10px] text-gray-500 tracking-wider uppercase mb-3"
+              >
+                <span
+                  ><i
+                    class="fa-regular fa-calendar-days mr-1.5 text-brand-gold"
+                  ></i
+                  >Feb 15, 2026</span
+                >
+                <span class="text-gray-300">•</span>
+                <span
+                  ><i class="fa-regular fa-clock mr-1.5 text-brand-gold"></i>5
+                  Min Read</span
+                >
+              </div>
+              <h3
+                class="font-serif text-brand-darkGreen text-xl sm:text-2xl font-semibold leading-snug mb-3 group-hover:text-brand-gold transition-colors"
+              >
+                How KIADB Industrial Growth Impacts...
+              </h3>
+              <p
+                class="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6 font-light"
+              >
+                Industrial expansion is a prime indicator of real estate
+                appreciation. Learn how KIADB developments in proximity to
+                residential plotted zones are shifting job matrices and scaling
+                prices.
+              </p>
+            </div>
+            <button
+              onclick="openArticle(3)"
+              class="inline-flex items-center text-xs tracking-widest font-bold text-brand-darkGreen uppercase border-b border-transparent group-hover:border-brand-darkGreen pb-1 self-start transition-all"
+            >
+              Read More
+              <span
+                class="ml-2 group-hover:translate-x-1.5 transition-transform duration-300"
+                >→</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 4: Land Investment vs Apartment Investment -->
+        <article
+          class="filter-item bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden"
+          data-category="INVESTMENT GUIDE"
+        >
+          <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
+              alt="Modern living apartments vs plotting land"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-4 left-4 bg-brand-darkGreen text-white text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase"
+            >
+              Investment Guide
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div
+                class="flex items-center space-x-2 text-[10px] text-gray-500 tracking-wider uppercase mb-3"
+              >
+                <span
+                  ><i
+                    class="fa-regular fa-calendar-days mr-1.5 text-brand-gold"
+                  ></i
+                  >Feb 05, 2026</span
+                >
+                <span class="text-gray-300">•</span>
+                <span
+                  ><i class="fa-regular fa-clock mr-1.5 text-brand-gold"></i>6
+                  Min Read</span
+                >
+              </div>
+              <h3
+                class="font-serif text-brand-darkGreen text-xl sm:text-2xl font-semibold leading-snug mb-3 group-hover:text-brand-gold transition-colors"
+              >
+                Land Investment vs Apartment Investme...
+              </h3>
+              <p
+                class="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6 font-light"
+              >
+                Should you buy a plot or an apartment? We compare initial
+                investments, ROI speed, legal boundaries, maintenance
+                parameters, and flexibility dynamics for primary investors.
+              </p>
+            </div>
+            <button
+              onclick="openArticle(4)"
+              class="inline-flex items-center text-xs tracking-widest font-bold text-brand-darkGreen uppercase border-b border-transparent group-hover:border-brand-darkGreen pb-1 self-start transition-all"
+            >
+              Read More
+              <span
+                class="ml-2 group-hover:translate-x-1.5 transition-transform duration-300"
+                >→</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 5: Checklist Before Buying Residential -->
+        <article
+          class="filter-item bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden"
+          data-category="BUYER EDUCATION"
+        >
+          <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=800&auto=format&fit=crop"
+              alt="Signing estate documentation checklist"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-4 left-4 bg-brand-darkGreen text-white text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase"
+            >
+              Buyer Education
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div
+                class="flex items-center space-x-2 text-[10px] text-gray-500 tracking-wider uppercase mb-3"
+              >
+                <span
+                  ><i
+                    class="fa-regular fa-calendar-days mr-1.5 text-brand-gold"
+                  ></i
+                  >Jan 28, 2026</span
+                >
+                <span class="text-gray-300">•</span>
+                <span
+                  ><i class="fa-regular fa-clock mr-1.5 text-brand-gold"></i>8
+                  Min Read</span
+                >
+              </div>
+              <h3
+                class="font-serif text-brand-darkGreen text-xl sm:text-2xl font-semibold leading-snug mb-3 group-hover:text-brand-gold transition-colors"
+              >
+                Checklist Before Buying Residential...
+              </h3>
+              <p
+                class="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6 font-light"
+              >
+                Don't risk your life savings. Follow our ultimate 10-point
+                checklist to verify legal land clearances, encumbrance titles,
+                approvals from town bodies, and RERA authenticity indexes.
+              </p>
+            </div>
+            <button
+              onclick="openArticle(5)"
+              class="inline-flex items-center text-xs tracking-widest font-bold text-brand-darkGreen uppercase border-b border-transparent group-hover:border-brand-darkGreen pb-1 self-start transition-all"
+            >
+              Read More
+              <span
+                class="ml-2 group-hover:translate-x-1.5 transition-transform duration-300"
+                >→</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 6: The Future of Plotted Developments -->
+        <article
+          class="filter-item bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden"
+          data-category="LOCATION ANALYSIS"
+        >
+          <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=800&auto=format&fit=crop"
+              alt="North Bangalore aerial view real estate layout"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-4 left-4 bg-brand-darkGreen text-white text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase"
+            >
+              Location Analysis
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div
+                class="flex items-center space-x-2 text-[10px] text-gray-500 tracking-wider uppercase mb-3"
+              >
+                <span
+                  ><i
+                    class="fa-regular fa-calendar-days mr-1.5 text-brand-gold"
+                  ></i
+                  >Jan 20, 2026</span
+                >
+                <span class="text-gray-300">•</span>
+                <span
+                  ><i class="fa-regular fa-clock mr-1.5 text-brand-gold"></i>6
+                  Min Read</span
+                >
+              </div>
+              <h3
+                class="font-serif text-brand-darkGreen text-xl sm:text-2xl font-semibold leading-snug mb-3 group-hover:text-brand-gold transition-colors"
+              >
+                The Future of Plotted Developments in Nor...
+              </h3>
+              <p
+                class="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6 font-light"
+              >
+                Why the smart money is moving to North Bangalore. We analyze the
+                upcoming tech corridors, international airport expansion lines,
+                and new commercial developments driving plotted growth.
+              </p>
+            </div>
+            <button
+              onclick="openArticle(6)"
+              class="inline-flex items-center text-xs tracking-widest font-bold text-brand-darkGreen uppercase border-b border-transparent group-hover:border-brand-darkGreen pb-1 self-start transition-all"
+            >
+              Read More
+              <span
+                class="ml-2 group-hover:translate-x-1.5 transition-transform duration-300"
+                >→</span
+              >
+            </button>
+          </div>
+        </article>
+
+        <!-- Card 7: Top 5 Infrastructure Projects Shaping -->
+        <article
+          class="filter-item bg-white rounded-none shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group overflow-hidden"
+          data-category="REAL ESTATE TRENDS"
+        >
+          <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+              alt="Infrastructure road projects highway"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute top-4 left-4 bg-brand-darkGreen text-white text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase"
+            >
+              Real Estate Trends
+            </div>
+          </div>
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div
+                class="flex items-center space-x-2 text-[10px] text-gray-500 tracking-wider uppercase mb-3"
+              >
+                <span
+                  ><i
+                    class="fa-regular fa-calendar-days mr-1.5 text-brand-gold"
+                  ></i
+                  >Jan 12, 2026</span
+                >
+                <span class="text-gray-300">•</span>
+                <span
+                  ><i class="fa-regular fa-clock mr-1.5 text-brand-gold"></i>5
+                  Min Read</span
+                >
+              </div>
+              <h3
+                class="font-serif text-brand-darkGreen text-xl sm:text-2xl font-semibold leading-snug mb-3 group-hover:text-brand-gold transition-colors"
+              >
+                Top 5 Infrastructure Projects Shaping...
+              </h3>
+              <p
+                class="text-sm text-gray-600 line-clamp-3 leading-relaxed mb-6 font-light"
+              >
+                From the Peripheral Ring Road to the new metro lines, we look at
+                the 'Big 5' regional connectivity undertakings that are destined
+                to scale surrounding land valuations immensely.
+              </p>
+            </div>
+            <button
+              onclick="openArticle(7)"
+              class="inline-flex items-center text-xs tracking-widest font-bold text-brand-darkGreen uppercase border-b border-transparent group-hover:border-brand-darkGreen pb-1 self-start transition-all"
+            >
+              Read More
+              <span
+                class="ml-2 group-hover:translate-x-1.5 transition-transform duration-300"
+                >→</span
+              >
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Empty State for Searches -->
+      <div id="empty-state" class="hidden text-center py-20">
+        <div
+          class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-darkGreen/5 text-brand-darkGreen mb-4 text-2xl"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <h3 class="font-serif text-2xl text-brand-darkGreen font-semibold mb-2">
+          No Matching Articles
+        </h3>
+        <p class="text-gray-600 text-sm max-w-md mx-auto">
+          We couldn't find any resources or insights matching your query. Please
+          try searching for general keywords like "Plots", "DTCP",
+          "Gauribidanur" or "Investment".
+        </p>
+        <button
+          onclick="triggerSearchReset()"
+          class="mt-6 px-6 py-2.5 bg-brand-darkGreen text-white text-xs uppercase tracking-wider font-bold hover:bg-brand-gold hover:text-brand-darkGreen transition-colors rounded-none"
+        >
+          Clear Filters
+        </button>
+      </div>
+
+      <!-- Newsletter Catch Box -->
+      <section
+        class="mt-20 bg-brand-darkGreen text-white p-8 md:p-12 lg:p-16 relative overflow-hidden"
+      >
+        <div
+          class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full border border-white/5 pointer-events-none"
+        ></div>
+        <div
+          class="absolute -left-20 -top-20 w-80 h-80 rounded-full border border-white/5 pointer-events-none"
+        ></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+          <span
+            class="text-brand-gold text-[10px] tracking-[0.2em] font-bold uppercase block mb-3"
+            >Newsletter Subscription</span
+          >
+          <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">
+            Never Miss a Legal Update or Plot Launch
+          </h2>
+          <p
+            class="text-sm text-gray-300 max-w-xl mx-auto mb-8 font-light leading-relaxed"
+          >
+            Stay ahead of the real estate landscape in Bangalore. Subscribe to
+            get regulatory shifts, DTCP approval frameworks, and raw land
+            reviews directly in your inbox.
+          </p>
+
+          <form
+            id="newsletter-form"
+            onsubmit="handleNewsletterSubmit(event)"
+            class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
+          >
+            <input
+              type="email"
+              required
+              placeholder="Enter your email address"
+              class="flex-1 px-5 py-3.5 bg-white/10 border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent text-sm"
+            />
+            <button
+              type="submit"
+              class="bg-white hover:bg-brand-gold text-brand-darkGreen hover:text-brand-darkGreen font-bold px-8 py-3.5 text-xs uppercase tracking-widest transition-colors duration-300"
+            >
+              Subscribe Now
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer
+      class="bg-brand-darkGreen text-white/90 border-t border-white/5 pt-16 pb-8"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+        >
+          <!-- Column 1: Brand & Socials -->
+          <div class="space-y-6">
+            <a
+              href="#"
+              class="inline-block"
+              aria-label="The Great Builds Logo Footer"
+            >
+              <!-- Inline SVG Logo Copy -->
+              <svg
+                class="h-16 w-auto text-white transition-transform duration-300 hover:scale-105"
+                viewBox="0 0 100 80"
+                fill="currentColor"
+              >
+                <path
+                  d="M10,25 Q30,15 50,30 Q70,15 90,25 Q80,45 50,48 Q20,45 10,25 Z"
+                  opacity="0.9"
+                />
+                <circle
+                  cx="50"
+                  cy="38"
+                  r="14"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M47,33 Q50,28 53,33 Q55,38 53,41 L47,41 Q45,38 47,33 Z"
+                />
+                <path d="M25,52 L75,52 L70,59 L30,59 Z" />
+                <line
+                  x1="15"
+                  y1="28"
+                  x2="40"
+                  y2="35"
+                  stroke="#0a1c12"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="85"
+                  y1="28"
+                  x2="60"
+                  y2="35"
+                  stroke="#0a1c12"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="50"
+                  y="72"
+                  font-family="'Inter', sans-serif"
+                  font-weight="bold"
+                  font-size="8"
+                  text-anchor="middle"
+                  fill="white"
+                  letter-spacing="1"
+                >
+                  THE GREAT BUILDS
+                </text>
+              </svg>
+            </a>
+            <p
+              class="text-xs text-gray-400 font-light leading-relaxed max-w-sm"
+            >
+              Premium real estate planners and developers dedicated to creating
+              high-yield, RERA compliant and safe residential plotted landmarks
+              across Bangalore's highest growth trajectories.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                aria-label="Facebook Link"
+                class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-brand-darkGreen hover:border-transparent transition-all duration-300 text-xs"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram Link"
+                class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-brand-darkGreen hover:border-transparent transition-all duration-300 text-xs"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                aria-label="YouTube Link"
+                class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-brand-darkGreen hover:border-transparent transition-all duration-300 text-xs"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Projects Links -->
+          <div>
+            <h4
+              class="text-xs tracking-[0.2em] font-bold uppercase text-brand-gold mb-6 border-l-2 border-brand-gold pl-3"
+            >
+              Projects
+            </h4>
+            <ul
+              class="space-y-3.5 text-xs font-medium tracking-wide text-gray-400"
+            >
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Royal Greens</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Orchard Valley</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Shankar Enclave</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Anubhav Megacity</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company Links -->
+          <div>
+            <h4
+              class="text-xs tracking-[0.2em] font-bold uppercase text-brand-gold mb-6 border-l-2 border-brand-gold pl-3"
+            >
+              Company
+            </h4>
+            <ul
+              class="space-y-3.5 text-xs font-medium tracking-wide text-gray-400"
+            >
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <button
+                  onclick="openContactModal()"
+                  class="hover:text-brand-gold transition-colors text-left focus:outline-none"
+                >
+                  Contact Us
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Headquarters Info -->
+          <div class="space-y-5 text-xs text-gray-400">
+            <h4
+              class="text-xs tracking-[0.2em] font-bold uppercase text-brand-gold mb-1 border-l-2 border-brand-gold pl-3"
+            >
+              Headquarters
+            </h4>
+            <div class="flex items-start space-x-3">
+              <i class="fa-solid fa-location-dot mt-0.5 text-brand-gold"></i>
+              <span class="leading-relaxed"
+                >No. 762, 7th Cross, Sector A,<br />Yelahanka New Town,
+                Bengaluru,<br />Karnataka - 560064</span
+              >
+            </div>
+            <div class="flex items-center space-x-3 pt-2">
+              <i class="fa-solid fa-phone text-brand-gold"></i>
+              <a
+                href="tel:+918217855041"
+                class="hover:text-brand-gold transition-colors font-semibold text-white"
+                >+91 82178 55041</a
+              >
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fa-solid fa-envelope text-brand-gold"></i>
+              <a
+                href="mailto:thegreatbuilds123@gmail.com"
+                class="hover:text-brand-gold transition-colors"
+                >thegreatbuilds123@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Credits Strip -->
+        <div
+          class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 tracking-widest uppercase"
+        >
+          <p class="mb-4 md:mb-0 text-center md:text-left">
+            © 2026 The Great Builds. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <span>|</span>
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms of Use</a
+            >
+            <span>|</span>
+            <a href="#" class="hover:text-white transition-colors"
+              >Disclaimer</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Utility Actions (Bottom Right Alignment) -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
+      <!-- WhatsApp Floating CTA Button -->
+      <a
+        href="https://wa.me/918217855041?text=Hi!%20I%20am%20interested%20in%20The%20Great%20Builds%20plotted%20developments.%20Please%20share%20details."
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat on WhatsApp"
+        class="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300"
+      >
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+      </a>
+
+      <!-- Smooth Scroll Back To Top Button -->
+      <button
+        onclick="scrollToTop()"
+        id="scroll-to-top"
+        aria-label="Scroll back to top"
+        class="hidden w-12 h-12 bg-white text-brand-darkGreen border border-brand-darkGreen/10 rounded-full flex items-center justify-center shadow-lg hover:bg-brand-gold hover:text-brand-darkGreen transition-all duration-300 hover:scale-110"
+      >
+        <i class="fa-solid fa-arrow-up text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Modals and Detailed Insights Structure -->
+
+    <!-- READ ARTICLE MODAL -->
+    <div
+      id="article-modal"
+      class="fixed inset-0 z-50 hidden overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+    >
+      <!-- Backdrop Overlay -->
+      <div
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+        onclick="closeArticleModal()"
+      ></div>
+
+      <!-- Modal Central Wrapper -->
+      <div
+        class="flex min-h-full items-center justify-center p-4 text-center sm:p-6 lg:p-8"
+      >
+        <div
+          class="relative transform overflow-hidden bg-brand-warmBeige text-left shadow-2xl transition-all sm:my-8 w-full max-w-4xl border border-brand-darkGreen/10"
+        >
+          <!-- Modal Top Close Header -->
+          <div class="absolute right-4 top-4 z-10">
+            <button
+              onclick="closeArticleModal()"
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-darkGreen text-white hover:bg-brand-gold hover:text-brand-darkGreen transition-colors focus:outline-none"
+            >
+              <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+          </div>
+
+          <!-- Dynamic Content Injector -->
+          <div id="modal-body-content">
+            <!-- Content injected asynchronously on action -->
+          </div>
+
+          <!-- Modal Bottom Close -->
+          <div
+            class="bg-brand-accentBeige px-6 py-4 flex justify-between items-center border-t border-brand-darkGreen/5"
+          >
+            <span
+              class="text-xs text-brand-darkGreen/60 font-semibold uppercase tracking-wider"
+              >The Great Builds Knowledge Base</span
+            >
+            <button
+              onclick="closeArticleModal()"
+              class="px-5 py-2 bg-brand-darkGreen text-white text-xs uppercase tracking-widest font-bold hover:bg-brand-gold hover:text-brand-darkGreen transition-colors"
+            >
+              Close Reader
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT US POPUP MODAL -->
+    <div
+      id="contact-modal"
+      class="fixed inset-0 z-50 hidden overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+        onclick="closeContactModal()"
+      ></div>
+
+      <div
+        class="flex min-h-full items-center justify-center p-4 text-center sm:p-6"
+      >
+        <div
+          class="relative transform overflow-hidden bg-brand-warmBeige text-left shadow-2xl transition-all w-full max-w-xl border border-brand-darkGreen/10 p-8"
+        >
+          <div class="absolute right-4 top-4">
+            <button
+              onclick="closeContactModal()"
+              class="text-brand-darkGreen hover:text-brand-gold transition-colors focus:outline-none p-2"
+            >
+              <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+          </div>
+
+          <div class="mb-6">
+            <span
+              class="text-[10px] tracking-widest text-brand-gold font-bold uppercase block mb-1"
+              >Get In Touch</span
+            >
+            <h3 class="font-serif text-3xl text-brand-darkGreen font-semibold">
+              Contact Our Experts
+            </h3>
+            <p class="text-xs text-gray-500 mt-2">
+              Fill out your inquiry preferences and our site consultants will
+              respond within 2 hours.
+            </p>
+          </div>
+
+          <form
+            id="contact-us-form"
+            onsubmit="handleContactSubmit(event)"
+            class="space-y-4"
+          >
+            <div>
+              <label
+                class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
+                >Your Full Name *</label
+              >
+              <input
+                type="text"
+                required
+                placeholder="John Doe"
+                class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
+              />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
+                  >Phone Number *</label
+                >
+                <input
+                  type="tel"
+                  required
+                  placeholder="+91 XXXXX XXXXX"
+                  class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
+                  >Email Address *</label
+                >
+                <input
+                  type="email"
+                  required
+                  placeholder="john@example.com"
+                  class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
+                >Select Project Interest</label
+              >
+              <select
+                class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
+              >
+                <option value="Royal Greens">
+                  Royal Greens (Plotted Development)
+                </option>
+                <option value="Orchard Valley">
+                  Orchard Valley (Luxury Layout)
+                </option>
+                <option value="Shankar Enclave">
+                  Shankar Enclave (Premium Gated)
+                </option>
+                <option value="Anubhav Megacity">
+                  Anubhav Megacity (Satellite Township)
+                </option>
+                <option value="General Insights">
+                  General Investment Query
+                </option>
+              </select>
+            </div>
+            <div>
+              <label
+                class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
+                >Message / Key Requirements</label
+              >
+              <textarea
+                rows="3"
+                placeholder="I am looking to invest in North Bangalore, please share layout plans..."
+                class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-brand-darkGreen hover:bg-brand-gold text-white hover:text-brand-darkGreen font-bold py-3.5 text-xs uppercase tracking-widest transition-colors duration-300"
+            >
+              Submit Inquiry Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE ACTION NOTIFICATION TOAST -->
+    <div
+      id="toast"
+      class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 max-w-sm bg-brand-darkGreen text-white px-5 py-4 shadow-2xl flex items-center space-x-3 border-l-4 border-brand-gold"
+    >
+      <div class="text-brand-gold text-lg" id="toast-icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div>
+        <h5 class="font-bold text-xs uppercase tracking-wider" id="toast-title">
+          Success
+        </h5>
+        <p class="text-[11px] text-gray-300 mt-0.5" id="toast-message">
+          Your inquiry form has been submitted.
+        </p>
+      </div>
+    </div>
+
+    <!-- Client-Side Articles Database for Full-Screen Modals -->
+    <script>
+      const ARTICLES_DB = {
+        1: {
+          title: "Why Gauribidanur Is Emerging as a Land Investment Hotspot",
+          category: "INVESTMENT GUIDE",
+          date: "March 01, 2026",
+          readTime: "6 Min Read",
+          author: "Devendra Gowda, Senior Land Strategist",
+          image:
+            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop",
+          quote:
+            "Real estate appreciation follows infrastructure. With Gauribidanur's newly proposed development corridors, we are looking at the initial stages of a massive 200% growth sprint.",
+          body: `
+          <p class="mb-4">Gauribidanur, situated just north of Bangalore's bustling international airport zone, has quickly transitioned from a quiet municipality into an investor-favorite paradise. As Bangalore's physical limits push boundaries further outward, strategic land buying has shifted from traditional suburban margins directly to well-linked regional clusters.</p>
+          <p class="mb-4">But what makes Gauribidanur the ultimate goldmine for modern land buyers? First and foremost is the cost entry barrier. Relative to overpriced urban plots in Yelahanka or Sahakar Nagar, plots in Gauribidanur offer prime value. This allows first-time buyers and seasoned land accumulators to acquire substantial parcels without exhausting leverage limits.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">Industrial Integration & Job Multipliers</h4>
+          <p class="mb-4">The growth of Gauribidanur is closely tied to the massive industrial expansions spearheaded by regional planning commissions. The setup of specialized high-tech manufacturing parks and renewable industrial zones means high-value employment clusters are establishing roots right next to these plotted projects.</p>
+          <p class="mb-4">This influx of engineering and operational professionals directly fuels local rental demand and eventual settlement projects. Investors who buy plots today are securing first-mover advantages before these industrial complexes are fully functional.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">Legal Safety First</h4>
+          <p class="mb-4">Always ensure that your plotting layouts have been fully cleared with clear local body or town planning clearances. Our projects in Gauribidanur showcase optimal legal title clarity, double-secured boundaries, and comprehensive road connectivity to the National Highways, making your investment futureproof.</p>
+        `,
+        },
+        2: {
+          title:
+            "DTCP Approved Plots vs Panchayat Approved Plots - The Complete Legal Guide",
+          category: "BUYER EDUCATION",
+          date: "February 24, 2026",
+          readTime: "7 Min Read",
+          author: "Prasanna Kumar, Property Legal Counsel",
+          image:
+            "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=1200&auto=format&fit=crop",
+          quote:
+            "Many buyers are attracted by the low pricing of Gram Panchayat plots, unaware of the complex title-conversion tasks and approval risks involved in future developments.",
+          body: `
+          <p class="mb-4">When venturing out to purchase residential land in Bangalore's fringes, you will inevitably encounter two prominent terms: DTCP (Directorate of Town and Country Planning) Approved and Gram Panchayat Approved. Understanding the fundamental legal deviations between these two categories can save you from costly litigations and project stagnation.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">What is DTCP Approval?</h4>
+          <p class="mb-4">DTCP approvals ensure that a residential layout has been planned strictly in compliance with regional urban development acts. It guarantees designated allocations for open spaces, community parks, drainage utilities, and standardized road widths.</p>
+          <p class="mb-4">Importantly, nationalized and premium private banks willingly sanction home construction loans only for layouts carrying authenticated DTCP approvals. Reselling a DTCP approved plot is also significantly easier as clean clear titles attract higher buyer pool sizes.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">The Pitfalls of Gram Panchayat Plots</h4>
+          <p class="mb-4">Gram Panchayat approvals, while visually appealing due to their considerably lower initial pricing points, are legally limited. Panchayats are primarily rural governing bodies and often lack the authorization to approve large-scale urban residential development designs.</p>
+          <p class="mb-4">Most panchayat-sanctioned plots require a formal land-use conversion process (change of land use to residential) from DC offices. If a layout hasn't undergone this formal conversion, construction permits can be legally withheld by municipal departments later on, causing immense regulatory challenges.</p>
+        `,
+        },
+        3: {
+          title:
+            "How KIADB Industrial Growth Impacts Neighboring Plotted Land Valuations",
+          category: "MARKET INSIGHTS",
+          date: "February 15, 2026",
+          readTime: "5 Min Read",
+          author: "Ananya Sen, Real Estate Research Lead",
+          image:
+            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+          quote:
+            "Historically, plotted layouts situated within a 15 to 25-minute radius of active KIADB industrial parks appreciate 3x faster than traditional purely residential suburbs.",
+          body: `
+          <p class="mb-4">The Karnataka Industrial Areas Development Board (KIADB) has played a crucial role in shaping the state's economic rise. By establishing mega-industrial hubs across strategic transit zones, KIADB is generating regional growth magnets that directly influence surrounding land and housing valuations.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">The Industrial Corridor Ripple Effect</h4>
+          <p class="mb-4">When KIADB acquires and activates an industrial park, it brings high-grade road infrastructures, water networks, and massive power substations to the region. This rapid infrastructure deployment makes neighboring plotted sites immediately viable for premium housing construction.</p>
+          <p class="mb-4">As tech giants, aerospace leaders, and high-value manufacturing units start operational setups, thousands of high-earning management personnel move nearby. This sudden job density creates an immediate demand for premium gated communities with quality amenities, driving plotted land prices up.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">Where to Focus Your Capital</h4>
+          <p class="mb-4">The sweet spot for maximizing plotted layout ROI is inside the 10-15 kilometer perimeter. This ensures residents enjoy peaceful living, away from the immediate industrial noise, while maintaining easy commute access to prime employment hubs.</p>
+        `,
+        },
+        4: {
+          title:
+            "Land Investment vs Apartment Investment: Deciding the Superior Asset Class",
+          category: "INVESTMENT GUIDE",
+          date: "February 05, 2026",
+          readTime: "6 Min Read",
+          author: "Karthik Raja, Wealth Advisory Principal",
+          image:
+            "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
+          quote:
+            "Apartments depreciate as building materials age over time. Land, however, is a finite wealth generator that consistently increases in intrinsic value.",
+          body: `
+          <p class="mb-4">When deciding where to allocate investment capital in real estate, the age-old dilemma of buying a ready apartment vs a plot of land remains. Both present distinct advantages, but from a perspective of pure capital appreciation, flexibility, and control, land holds unique strategic strengths.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">Appreciation Vectors</h4>
+          <p class="mb-4">In an apartment investment, the tangible asset consists of the structure and an Undivided Share of Land (UDS). Over 10-15 years, the physical building undergoes structural wear and tear, losing value, meaning apartment price growth relies purely on general localized inflation.</p>
+          <p class="mb-4">Conversely, residential land does not decay. As land resources near development corridors become scarcer, its intrinsic demand rises dramatically. Plotted investments frequently outperform apartment assets on pure capital returns by a factor of 2:1 in early-stage micro-markets.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">Ultimate Architectural Freedom</h4>
+          <p class="mb-4">When you own land, you retain full creative freedom to construct a home that fits your unique tastes and timelines. You can choose to build instantly, hold the asset as a tax-efficient wealth store, or develop independent rental units to generate passive income streams.</p>
+        `,
+        },
+        5: {
+          title:
+            "The Ultimate 10-Point Checklist Before Buying Residential Plots",
+          category: "BUYER EDUCATION",
+          date: "January 28, 2026",
+          readTime: "8 Min Read",
+          author: "Manjunath Swamy, Property Verification Expert",
+          image:
+            "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200&auto=format&fit=crop",
+          quote:
+            "Real estate due diligence is non-negotiable. Missing even a single title link or verification can lock your hard-earned capital in legal hold indefinitely.",
+          body: `
+          <p class="mb-4">Buying a residential plot is one of life's most significant financial milestones. To ensure your purchase is safe, transparent, and profitable, we have compiled the definitive 10-point document verification guide that every plot buyer in Bangalore should follow.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-4">The Core 5 Documents You Must Verify:</h4>
+          <ul class="list-decimal list-inside space-y-3 pl-2 mb-6 text-gray-700">
+            <li><strong>Mother Deed:</strong> Establishes the historical ownership trace of the land parcel. Ensure there are no gaps in title transfers over at least 30 years.</li>
+            <li><strong>Encumbrance Certificate (EC):</strong> Confirms the plot is free from active mortgage loans, legal claims, or pending liabilities.</li>
+            <li><strong>Land Conversion Order:</strong> Verifies the land has been officially converted from agricultural use to residential use by competent district authorities.</li>
+            <li><strong>RERA Registration:</strong> For layout developments, RERA registration guarantees project compliance, timeline adherence, and formal layout clearances.</li>
+            <li><strong>Khata Document:</strong> Ensure a valid transfer of the property identification number has been updated in current local records.</li>
+          </ul>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">Physical On-Site Checks</h4>
+          <p class="mb-4">Document checks must align with physical property realities. Verify layout boundary points with local surveyors, check for any natural drains or electrical lines passing over the land, and talk to surrounding residents to confirm peace of mind.</p>
+        `,
+        },
+        6: {
+          title:
+            "The Future of Plotted Developments in North Bangalore: Growth Drivers",
+          category: "LOCATION ANALYSIS",
+          date: "January 20, 2026",
+          readTime: "6 Min Read",
+          author: "Vikram Malhotra, Infrastructure Analyst",
+          image:
+            "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop",
+          quote:
+            "North Bangalore is no longer a future bet. It is the active engine driving Bangalore's growth, backed by world-class transit networks and premier business hubs.",
+          body: `
+          <p class="mb-4">North Bangalore has established itself as the commercial and residential epicenter of Karnataka's real estate market. Fueled by its proximity to Kempegowda International Airport and major national highway links, the region is seeing unprecedented investments in premium gated communities and plotted layouts.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">High-Velocity Connectivity Links</h4>
+          <p class="mb-4">The proposed Peripheral Ring Road (PRR), combined with ongoing Metro rail expansions, will directly link North Bangalore to southern and eastern employment centers. These major infrastructure networks significantly shorten travel times, making residential communities in these areas extremely attractive for daily commuters.</p>
+          <p class="mb-4">Additionally, wide highway corridors ensure that weekend retreats, premier hospital systems, and top-tier educational institutions remain easily accessible within minutes.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-2">Plotted Layout Landscape</h4>
+          <p class="mb-4">Unlike highly dense southern sectors where high-rises dominate, North Bangalore offers a wealth of land options. Gated plotted communities feature wide avenues, premium clubhouses, underground cabling systems, and beautiful green zones, providing a balanced lifestyle with excellent growth potential.</p>
+        `,
+        },
+        7: {
+          title:
+            "Top 5 Infrastructure Projects Shaping Bangalore's Real Estate Landscape",
+          category: "REAL ESTATE TRENDS",
+          date: "January 12, 2026",
+          readTime: "5 Min Read",
+          author: "Siddharth Mehta, Urban Infrastructure Specialist",
+          image:
+            "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1200&auto=format&fit=crop",
+          quote:
+            "When public transit infrastructure expands, adjacent land valuations naturally shift upwards. Smart investors align their portfolios with these key transit lines.",
+          body: `
+          <p class="mb-4">Bangalore's growth is driven by massive infrastructure developments that transform suburban areas into major economic hubs. In this analysis, we look at the top five mega-projects that are reshaping local connectivity and driving plotted land valuations.</p>
+          <h4 class="font-serif text-lg font-bold text-brand-darkGreen mt-6 mb-4">The Big 5 Infrastructure Drivers:</h4>
+          <ul class="list-decimal list-inside space-y-3 pl-2 mb-6 text-gray-700">
+            <li><strong>Bengaluru-Chennai Expressway:</strong> A high-speed highway expected to boost economic growth along eastern and southern industrial corridors.</li>
+            <li><strong>Metro Blue Line Expansion:</strong> Directly connects the core city to the International Airport, making north-bound micro-markets highly accessible.</li>
+            <li><strong>Peripheral Ring Road (PRR):</strong> An expansive road project designed to bypass heavy commercial traffic and link major national highways.</li>
+            <li><strong>Satellite Town Ring Road (STRR):</strong> Facilitates fast transit between satellite towns, unlocking land values in secondary markets.</li>
+            <li><strong>Airport Aerotropolis Development:</strong> Transforming the airport zone into an independent commercial city with luxury offices and retail hubs.</li>
+          </ul>
+          <p class="mb-4">By investing in plotted developments located near these major projects, buyers can secure excellent long-term capital returns and enjoy highly connected lifestyles.</p>
+        `,
+        },
+      };
+    </script>
+
+    <!-- Operational Logic Scripting -->
+    <script>
+      // Header Scroll Visual Polish
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("main-header");
+        const scrollTopBtn = document.getElementById("scroll-to-top");
+
+        if (window.scrollY > 80) {
+          header.classList.add("shadow-lg", "bg-brand-darkGreen");
+          header.classList.remove("bg-brand-darkGreen/95");
+        } else {
+          header.classList.remove("shadow-lg");
+          header.classList.add("bg-brand-darkGreen/95");
+        }
+
+        // Scroll to Top visibility toggle
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.remove("hidden");
+          scrollTopBtn.classList.add("flex");
+        } else {
+          scrollTopBtn.classList.add("hidden");
+          scrollTopBtn.classList.remove("flex");
+        }
+      });
+
+      // Mobile Navigation Drawer Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const icon = document.getElementById("menu-icon");
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+        } else {
+          menu.classList.add("hidden");
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        }
+      }
+
+      // Smooth Scroll To Top
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Category Filtering System with Smooth Transition Animations
+      let currentCategory = "ALL";
+      let searchQuery = "";
+
+      function filterCategory(category, buttonEl) {
+        currentCategory = category;
+
+        // Update Tab Visual Highlights
+        document.querySelectorAll(".category-tab").forEach((tab) => {
+          tab.classList.remove(
+            "active-tab",
+            "text-brand-darkGreen",
+            "font-bold",
+          );
+          tab.classList.add("text-brand-darkGreen/60");
+        });
+        buttonEl.classList.add(
+          "active-tab",
+          "text-brand-darkGreen",
+          "font-bold",
+        );
+        buttonEl.classList.remove("text-brand-darkGreen/60");
+
+        applyFilters();
+      }
+
+      // Live Searching Core Function
+      function handleSearch() {
+        const searchInput = document.getElementById("blog-search");
+        const clearBtn = document.getElementById("search-clear-btn");
+        searchQuery = searchInput.value.toLowerCase().trim();
+
+        if (searchQuery.length > 0) {
+          clearBtn.classList.remove("hidden");
+        } else {
+          clearBtn.classList.add("hidden");
+        }
+
+        applyFilters();
+      }
+
+      // Resetting Filters and Search
+      function triggerSearchReset() {
+        const searchInput = document.getElementById("blog-search");
+        searchInput.value = "";
+        searchQuery = "";
+        document.getElementById("search-clear-btn").add("hidden");
+
+        // Reset Category back to ALL
+        const allTab = document.querySelectorAll(".category-tab")[0];
+        filterCategory("ALL", allTab);
+      }
+
+      // Consolidated Core Filtering Algorithm
+      function applyFilters() {
+        const items = document.querySelectorAll(".filter-item");
+        let visibleCount = 0;
+
+        items.forEach((item) => {
+          const itemCategory = item.getAttribute("data-category");
+          const itemTitle = item.querySelector("h3").textContent.toLowerCase();
+          const itemExcerpt = item.querySelector("p").textContent.toLowerCase();
+
+          const matchesCategory =
+            currentCategory === "ALL" || itemCategory === currentCategory;
+          const matchesSearch =
+            searchQuery === "" ||
+            itemTitle.includes(searchQuery) ||
+            itemExcerpt.includes(searchQuery);
+
+          if (matchesCategory && matchesSearch) {
+            item.classList.remove("hidden-card");
+            // Smooth fade in
+            setTimeout(() => {
+              item.style.opacity = "1";
+              item.style.transform = "scale(1) translateY(0)";
+            }, 50);
+            visibleCount++;
+          } else {
+            item.classList.add("hidden-card");
+            item.style.opacity = "0";
+            item.style.transform = "scale(0.95) translateY(10px)";
+          }
+        });
+
+        // Update indicators
+        const statusBanner = document.getElementById("filter-status");
+        const matchIndicator = document.getElementById("match-count");
+        const emptyState = document.getElementById("empty-state");
+        const grid = document.getElementById("articles-grid");
+
+        statusBanner.innerHTML = `Showing: <span class="font-bold text-brand-darkGreen">${currentCategory === "ALL" ? "All Articles" : currentCategory}</span>${searchQuery ? ` matching "${searchQuery}"` : ""}`;
+        matchIndicator.textContent = `${visibleCount} Post${visibleCount !== 1 ? "s" : ""} Available`;
+
+        if (visibleCount === 0) {
+          grid.classList.add("hidden");
+          emptyState.classList.remove("hidden");
+        } else {
+          grid.classList.remove("hidden");
+          emptyState.classList.add("hidden");
+        }
+      }
+
+      // Open Article Reader Modal with Dynamic Context loading
+      function openArticle(id) {
+        const article = ARTICLES_DB[id];
+        if (!article) return;
+
+        const modal = document.getElementById("article-modal");
+        const modalBody = document.getElementById("modal-body-content");
+
+        modalBody.innerHTML = `
+        <!-- Hero Cover Area -->
+        <div class="relative h-[250px] sm:h-[350px] bg-brand-darkGreen">
+          <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x500/0a1c12/FFFFFF?text=The+Great+Builds';" />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-darkGreen via-brand-darkGreen/50 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="inline-block bg-brand-gold text-brand-darkGreen text-[9px] font-bold tracking-widest px-3 py-1 uppercase mb-3">
+              ${article.category}
+            </span>
+            <h2 class="font-serif text-2xl sm:text-4xl text-white font-bold leading-tight">
+              ${article.title}
+            </h2>
+          </div>
+        </div>
+
+        <!-- Article Meta Content Details -->
+        <div class="p-6 sm:p-10">
+          <div class="flex flex-wrap items-center gap-4 border-b border-brand-darkGreen/5 pb-6 mb-6 text-xs text-gray-500 tracking-wide uppercase">
+            <span>By <strong class="text-brand-darkGreen">${article.author}</strong></span>
+            <span class="hidden sm:inline text-gray-300">•</span>
+            <span>Published: <strong>${article.date}</strong></span>
+            <span class="hidden sm:inline text-gray-300">•</span>
+            <span><i class="fa-regular fa-clock mr-1 text-brand-gold"></i> ${article.readTime}</span>
+          </div>
+
+          <!-- Editorial Layout Quote -->
+          <div class="border-l-4 border-brand-gold pl-4 py-2 italic text-gray-600 my-6 bg-brand-accentBeige/40 text-sm sm:text-base">
+            "${article.quote}"
+          </div>
+
+          <!-- Rich Article Text body -->
+          <div class="prose max-w-none text-brand-textCharcoal text-sm sm:text-base leading-relaxed space-y-4 font-light">
+            ${article.body}
+          </div>
+
+          <!-- Social Share Actions -->
+          <div class="border-t border-brand-darkGreen/5 mt-10 pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Share this insights article:</span>
+            <div class="flex space-x-3">
+              <button onclick="shareLink('facebook')" class="px-4 py-2 border border-brand-darkGreen/10 text-brand-darkGreen hover:bg-brand-darkGreen hover:text-white hover:border-transparent text-xs font-semibold tracking-wider uppercase transition-colors">
+                <i class="fa-brands fa-facebook-f mr-1.5"></i> Facebook
+              </button>
+              <button onclick="shareLink('twitter')" class="px-4 py-2 border border-brand-darkGreen/10 text-brand-darkGreen hover:bg-brand-darkGreen hover:text-white hover:border-transparent text-xs font-semibold tracking-wider uppercase transition-colors">
+                <i class="fa-brands fa-x-twitter mr-1.5"></i> Twitter
+              </button>
+              <button onclick="copyToClipboard()" class="px-4 py-2 border border-brand-gold text-brand-darkGreen hover:bg-brand-gold transition-colors text-xs font-semibold tracking-wider uppercase">
+                <i class="fa-regular fa-copy mr-1.5"></i> Copy Link
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+
+        // Display Modal with Fade-In
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden"; // Lock background scrolling
+      }
+
+      function closeArticleModal() {
+        document.getElementById("article-modal").classList.add("hidden");
+        document.body.style.overflow = ""; // Unlock background scrolling
+      }
+
+      // Contact Us Popup Modal Controls
+      function openContactModal() {
+        document.getElementById("contact-modal").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeContactModal() {
+        document.getElementById("contact-modal").classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+
+      // Submissions Handler Toast Trigger (Replaces restricted alert alerts)
+      function showToast(title, message, isError = false) {
+        const toast = document.getElementById("toast");
+        const icon = document.getElementById("toast-icon");
+        const tTitle = document.getElementById("toast-title");
+        const tMsg = document.getElementById("toast-message");
+
+        if (isError) {
+          toast.classList.replace("border-brand-gold", "border-red-500");
+          icon.innerHTML =
+            '<i class="fa-solid fa-triangle-exclamation text-red-500"></i>';
+        } else {
+          toast.classList.replace("border-red-500", "border-brand-gold");
+          icon.innerHTML =
+            '<i class="fa-solid fa-circle-check text-brand-gold"></i>';
+        }
+
+        tTitle.textContent = title;
+        tMsg.textContent = message;
+
+        // Reveal Toast
+        toast.classList.remove("translate-y-24", "opacity-0");
+
+        // Auto Hide after 4 seconds
+        setTimeout(() => {
+          toast.classList.add("translate-y-24", "opacity-0");
+        }, 4000);
+      }
+
+      // Form Submissions Event Triggers
+      function handleNewsletterSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.querySelector("input").value;
+
+        showToast(
+          "Subscription Active!",
+          `Successfully enrolled ${email} into our monthly real estate briefs.`,
+        );
+        form.reset();
+      }
+
+      function handleContactSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.querySelectorAll("input")[0].value;
+
+        closeContactModal();
+        showToast(
+          "Inquiry Received!",
+          `Thank you, ${name}. One of our site coordinators will reach out shortly.`,
+        );
+        form.reset();
+      }
+
+      // Clipboard Copy Utility safely within iframe restrictions
+      function copyToClipboard() {
+        const dummyInput = document.createElement("input");
+        dummyInput.value = window.location.href;
+        document.body.appendChild(dummyInput);
+        dummyInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummyInput);
+        showToast(
+          "Link Copied!",
+          "Article link copied to clipboard successfully.",
+        );
+      }
+
+      // Placeholder actions for share buttons
+      function shareLink(platform) {
+        showToast("Sharing...", `Redirecting to share layout on ${platform}.`);
+      }
+    </script>
+  </body>
+</html>

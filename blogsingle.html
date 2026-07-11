@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How KIADB Industrial Growth Impacts Property Value | The Great Builds</title>
+  <meta name="description" content="Expert insights and deep-dives into the evolving landscape of Indian real estate market. Explore how the massive industrial push in North Bangalore secures high ROI." />
+  
+  <!-- Google Fonts for Premium Luxury Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN (Corrected URL) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    // Configure Tailwind theme extensions after CDN is parsed
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0A150D',      /* Deep forest green/black footer and hero bg */
+              cream: '#FAF8F2',     /* Warm editorial beige body bg */
+              accent: '#344E36',    /* Muted premium sage/emerald green */
+              gold: '#C5A880',      /* Sophisticated gold accent tint */
+              textDark: '#1A241D',  /* Off-black text color for high contrast reading */
+              textLight: '#E8ECE9', /* Warm light gray text */
+              cardCream: '#F4EFEB'  /* Accent block background */
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome for standard icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0A150D',      /* Deep forest green/black footer and hero bg */
+              cream: '#FAF8F2',     /* Warm editorial beige body bg */
+              accent: '#344E36',    /* Muted premium sage/emerald green */
+              gold: '#C5A880',      /* Sophisticated gold accent tint */
+              textDark: '#1A241D',  /* Off-black text color for high contrast reading */
+              textLight: '#E8ECE9', /* Warm light gray text */
+              cardCream: '#F4EFEB'  /* Accent block background */
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles for High Fidelity Transitions and Scroll Revelations -->
+  <style>
+    body {
+      background-color: #FAF8F2;
+      color: #1A241D;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Elegant custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF8F2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #344E36;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1A241D;
+    }
+
+    /* Smooth revealing animations on scroll */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom drop shadow and glowing hover effects */
+    .btn-lux {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .btn-lux::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.5s ease;
+    }
+    .btn-lux:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Submenu hover transitions */
+    .dropdown-content {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+    .dropdown-hover:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="relative min-h-screen selection:bg-brand-accent selection:text-white antialiased overflow-x-hidden">
+
+  <!-- Top Luxury Navbar (Overlaid on Hero) -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 lg:px-16 py-4 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Brand Logo Left -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="relative w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-md group-hover:scale-105 transition-all duration-300">
+          <!-- Elegant Eagle Seal Icon resembling "The Great Builds" Logo in image_dd8d28.png -->
+          <svg class="w-8 h-8 text-white transition-transform duration-500 group-hover:rotate-[360deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v12M6 12h12M8 10l4-4 4 4M8 14l4 4 4-4"></path>
+            <circle cx="12" cy="12" r="3" class="stroke-2 fill-white/20"></circle>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-white font-serif font-bold text-lg tracking-wider leading-none">THE GREAT BUILDS</span>
+          <span class="text-[9px] text-brand-gold font-sans tracking-[0.2em] leading-none mt-1">BUILDERS & DEVELOPERS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu Items -->
+      <div class="hidden lg:flex items-center space-x-8 text-xs font-semibold tracking-widest text-white uppercase">
+        <!-- Projects Dropdown Option -->
+        <div class="relative dropdown-hover py-2">
+          <a href="#" class="hover:text-brand-gold transition duration-200 flex items-center gap-1">
+            Our Projects 
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <div class="dropdown-content absolute left-0 mt-3 w-64 bg-brand-dark border border-brand-accent/30 rounded-lg shadow-2xl p-4 space-y-3 z-50">
+            <a href="#" class="block p-2 hover:bg-brand-accent/20 rounded-md transition duration-150">
+              <p class="text-brand-gold font-serif text-sm font-semibold">Royal Greens</p>
+              <p class="text-[10px] text-gray-400 font-sans normal-case">Premium Gated Plots near Yelahanka</p>
+            </a>
+            <a href="#" class="block p-2 hover:bg-brand-accent/20 rounded-md transition duration-150">
+              <p class="text-brand-gold font-serif text-sm font-semibold">Orchard Valley</p>
+              <p class="text-[10px] text-gray-400 font-sans normal-case">Luxury Villas & Nature Spaces</p>
+            </a>
+            <a href="#" class="block p-2 hover:bg-brand-accent/20 rounded-md transition duration-150">
+              <p class="text-brand-gold font-serif text-sm font-semibold">Shankar Enclave</p>
+              <p class="text-[10px] text-gray-400 font-sans normal-case font-medium">Prime Residential Communes</p>
+            </a>
+            <a href="#" class="block p-2 hover:bg-brand-accent/20 rounded-md transition duration-150">
+              <p class="text-brand-gold font-serif text-sm font-semibold">Anubhav Megacity</p>
+              <p class="text-[10px] text-gray-400 font-sans normal-case">Sought-after Mega Township</p>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="hover:text-brand-gold transition duration-200">Gallery</a>
+        <a href="#" class="hover:text-brand-gold transition duration-200">About Us</a>
+        <a href="#" class="hover:text-brand-gold transition duration-200 border-b border-brand-gold pb-1 text-brand-gold">Blog</a>
+      </div>
+
+      <!-- Right Contact Actions (Desktop) -->
+      <div class="hidden lg:flex items-center space-x-6">
+        <a href="tel:+918217855041" class="text-white text-xs font-semibold tracking-wider hover:text-brand-gold transition duration-200 flex items-center gap-2">
+          <i class="fa-solid fa-phone text-brand-gold text-sm"></i>
+          +91 82178 55041
+        </a>
+        <button onclick="toggleContactModal(true)" class="btn-lux border border-white text-white text-xs tracking-widest uppercase font-bold py-3 px-6 hover:bg-white hover:text-brand-dark transition-all duration-300">
+          Contact Us
+        </button>
+      </div>
+
+      <!-- Mobile Burger Menu Button -->
+      <button onclick="toggleMobileMenu(true)" class="lg:hidden text-white hover:text-brand-gold focus:outline-none transition p-1">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Side Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-brand-dark/95 backdrop-blur-lg z-50 transform translate-x-full transition-transform duration-500 ease-out flex flex-col justify-between p-8 lg:hidden">
+    <div>
+      <div class="flex items-center justify-between mb-12">
+        <div class="flex items-center space-x-2">
+          <span class="text-white font-serif font-bold text-lg tracking-wider">THE GREAT BUILDS</span>
+        </div>
+        <button onclick="toggleMobileMenu(false)" class="text-white hover:text-brand-gold p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="flex flex-col space-y-6 text-xl font-serif text-white tracking-wide">
+        <div>
+          <button onclick="toggleMobileProjects()" class="w-full text-left flex items-center justify-between hover:text-brand-gold transition">
+            <span>Our Projects</span>
+            <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="mobile-projects-sub" class="hidden pl-4 mt-3 space-y-3 border-l border-brand-accent/40 text-sm font-sans normal-case text-gray-400">
+            <a href="#" class="block hover:text-white">Royal Greens - Gated Plots</a>
+            <a href="#" class="block hover:text-white">Orchard Valley - Premium Villas</a>
+            <a href="#" class="block hover:text-white">Shankar Enclave - Community</a>
+            <a href="#" class="block hover:text-white">Anubhav Megacity - Mega Township</a>
+          </div>
+        </div>
+        <a href="#" class="hover:text-brand-gold transition">Gallery</a>
+        <a href="#" class="hover:text-brand-gold transition">About Us</a>
+        <a href="#" class="hover:text-brand-gold transition text-brand-gold">Blog</a>
+      </div>
+    </div>
+
+    <div class="space-y-6 border-t border-white/10 pt-6">
+      <a href="tel:+918217855041" class="flex items-center gap-3 text-white text-base font-sans tracking-wide">
+        <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-gold">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        +91 82178 55041
+      </a>
+      <button onclick="toggleContactModal(true); toggleMobileMenu(false);" class="w-full bg-brand-accent hover:bg-brand-accent/90 text-white font-bold tracking-widest text-xs uppercase py-4 rounded transition-all duration-300">
+        Contact Us
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Premium Hero Banner Section -->
+  <header class="relative min-h-[85vh] lg:min-h-screen flex items-center justify-start overflow-hidden bg-brand-dark pt-24 pb-16">
+    <!-- Hero Background Image (Mimicking gated street scene described in image_dd8d28.png) -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600" 
+           alt="Premium Gated Community Gated Entry Street" 
+           class="w-full h-full object-cover object-center opacity-40 transition-transform duration-10000 scale-105 hover:scale-100"
+           onerror="this.src='https://placehold.co/1600x900/102014/FFFFFF?text=The+Great+Builds+Premium+Plots'">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-brand-dark/40"></div>
+    </div>
+
+    <!-- Hero Content Container (Mimicking Image Layout Exactly) -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full mt-8 lg:mt-12 flex flex-col justify-end">
+      
+      <!-- Back to Insights Link -->
+      <a href="#" class="group inline-flex items-center gap-2 text-xs font-semibold text-gray-400 hover:text-white transition duration-300 uppercase tracking-widest mb-8">
+        <span class="transform group-hover:-translate-x-2 transition-transform duration-300">←</span> 
+        Back to Insights
+      </a>
+
+      <!-- Small Section Category Header with line -->
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="text-xs font-bold text-brand-gold tracking-[0.25em] uppercase">Market Insights</span>
+        <div class="w-16 h-[1px] bg-brand-gold/40"></div>
+      </div>
+
+      <!-- Main Headline: Large Elegant Serif -->
+      <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-7xl text-white max-w-4xl leading-[1.1] mb-6 tracking-wide drop-shadow-lg">
+        How KIADB Industrial Growth Impacts Property Value
+      </h1>
+
+      <!-- Subtitle description -->
+      <p class="font-sans text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl font-light leading-relaxed mb-10">
+        Expert insights and deep-dives into the evolving landscape of the Indian real estate market, focused on localized high-growth corridors.
+      </p>
+
+      <!-- Bottom Metadata Pill badges (Exactly matching layout bottom-left badges in image_dd8d28.png) -->
+      <div class="flex flex-wrap gap-4 items-center">
+        <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2.5 backdrop-blur-md text-xs font-semibold text-white tracking-wider">
+          <i class="fa-regular fa-calendar text-brand-gold"></i>
+          FEB 15, 2026
+        </div>
+        <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2.5 backdrop-blur-md text-xs font-semibold text-white tracking-wider">
+          <i class="fa-regular fa-clock text-brand-gold"></i>
+          5 MIN READ
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- Main Editorial Content Grid Container -->
+  <main class="relative py-16 lg:py-24 px-6 lg:px-16 bg-[#FAF8F2] text-brand-textDark">
+    <div class="max-w-3xl mx-auto">
+      
+      <!-- Content Section: Lead Intro Paragraphs -->
+      <article class="space-y-8 text-base lg:text-lg leading-relaxed font-sans font-normal text-brand-textDark/90">
+        
+        <p class="reveal-item font-light text-xl leading-relaxed text-brand-accent/95 italic border-l-4 border-brand-accent pl-4 py-1">
+          For seasoned real estate investors, there is no stronger buy-signal than the announcement of a new KIADB (Karnataka Industrial Areas Development Board) zone. Industrial growth is the undeniable engine of real estate appreciation. Let's explore exactly how the massive industrial push in North Bangalore is securing incredible ROI for local property buyers.
+        </p>
+
+        <!-- Dynamic Drop-cap on first standard paragraph for high-end editorial feel -->
+        <p class="reveal-item text-justify">
+          <span class="float-left text-5xl lg:text-6xl font-serif font-bold text-brand-accent mr-3 mt-1 leading-none">W</span>hen industrial development takes hold, it brings along infrastructure upgrades, public transport extensions, residential supply requirements, and standard local business ecosystem demand. This cycle generates a multi-year compounding effect on surrounding property values.
+        </p>
+
+        <!-- Subheading 1 -->
+        <h2 class="reveal-item font-serif font-bold text-3xl lg:text-4xl text-brand-accent pt-6 tracking-wide leading-tight">
+          The Snowball Effect of Industrial Hubs
+        </h2>
+
+        <p class="reveal-item text-justify">
+          When KIADB acquires and develops hundreds of acres for industrial use, a powerful economic snowball effect is triggered across distinct structured phases:
+        </p>
+
+        <!-- Highlighted Phase Bullet List with elegant Custom Number Icons -->
+        <div class="space-y-6 pt-4">
+          
+          <div class="reveal-item flex gap-4 items-start bg-white p-5 rounded-lg border-l-2 border-brand-gold/60 shadow-sm">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 text-brand-accent font-bold font-serif flex items-center justify-center text-sm">1</span>
+            <div>
+              <p class="font-bold text-brand-accent mb-1">Phase 1 (Acquisition & Road Building):</p>
+              <p class="text-sm lg:text-base text-gray-700 leading-relaxed">
+                The government lays down massive multi-lane concrete highways to support heavy logistics. Instantly, the connectivity of the entire surrounding rural area upgrades to metropolitan standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal-item flex gap-4 items-start bg-white p-5 rounded-lg border-l-2 border-brand-gold/60 shadow-sm">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 text-brand-accent font-bold font-serif flex items-center justify-center text-sm">2</span>
+            <div>
+              <p class="font-bold text-brand-accent mb-1">Phase 2 (Corporate Setup):</p>
+              <p class="text-sm lg:text-base text-gray-700 leading-relaxed">
+                Multi-national corporations and manufacturing plants build their facilities. This creates tens of thousands of localized, stable jobs ranging from operations to executive leadership.
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal-item flex gap-4 items-start bg-white p-5 rounded-lg border-l-2 border-brand-gold/60 shadow-sm">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-accent/10 text-brand-accent font-bold font-serif flex items-center justify-center text-sm">3</span>
+            <div>
+              <p class="font-bold text-brand-accent mb-1">Phase 3 (Housing Demand Explosion):</p>
+              <p class="text-sm lg:text-base text-gray-700 leading-relaxed">
+                The engineers, managers, and workforce need high-quality places to live. They demand grocery stores, schools, healthcare, and most importantly—well-planned residential housing.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- Luxury Accent Callout Box (Mimicking "Investment Math" block from image_dd8d28.png) -->
+        <div class="reveal-item border-l-4 border-[#3D5634] bg-[#F5F2E6] p-6 lg:p-8 rounded-r-lg my-12 shadow-sm">
+          <h3 class="font-serif font-bold text-xl lg:text-2xl text-brand-accent tracking-wide mb-2">
+            Investment Math
+          </h3>
+          <p class="text-sm lg:text-base text-gray-700 font-sans leading-relaxed italic">
+            "A residential plot purchased within a 5-10 kilometer radius of a new KIADB zone typically sees a <span class="font-bold text-brand-accent text-lg">200% to 300%</span> capital appreciation by the time Phase 3 is fully materialized."
+          </p>
+        </div>
+
+
+        <!-- Center Team Image with Styled Caption -->
+        <div class="reveal-item my-12 overflow-hidden rounded-xl shadow-lg border border-gray-200">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200" 
+               alt="The Great Builds Team Planning Townships" 
+               class="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]"
+               onerror="this.src='https://placehold.co/1200x600/FAF8F2/102014?text=The+Great+Builds+Team+Planning'">
+          
+          <!-- Caption mimicking the exact blueish wide layout in image_dd8d28.png -->
+          <div class="bg-white p-5 text-center border-t border-gray-100">
+            <p class="text-xs font-semibold tracking-[0.18em] text-[#5A6E7C] leading-relaxed uppercase">
+              LOGISTICS AND MANUFACTURING HUBS CREATE DIRECT, HIGH-VOLUME HOUSING DEMAND IN SURROUNDING TOWNSHIPS.
+            </p>
+          </div>
+        </div>
+
+
+        <!-- Subheading 2 -->
+        <h2 class="reveal-item font-serif font-bold text-3xl lg:text-4xl text-brand-accent pt-6 tracking-wide leading-tight">
+          Why North Bangalore Is The Epicenter
+        </h2>
+
+        <p class="reveal-item text-justify">
+          The corridor extending from the Airport towards Doddaballapur, Gauribidanur, and Hindupur is currently experiencing the deepest concentration of KIADB expansion. Companies operating in aerospace, IT, defense manufacturing, and electronics are shifting here to escape inner-city traffic and leverage the proximity to the International Airport.
+        </p>
+
+        <p class="reveal-item text-justify">
+          This has prompted massive planned developments where land parcels are optimized for long-term appreciation, matching the highest benchmarks of modern urban life.
+        </p>
+
+
+        <!-- Subheading 3 -->
+        <h2 class="reveal-item font-serif font-bold text-3xl lg:text-4xl text-brand-accent pt-6 tracking-wide leading-tight">
+          How to Position Your Portfolio
+        </h2>
+
+        <p class="reveal-item text-justify">
+          Do not wait for the factories to start operations; by then, the price will have already factored in the growth. The key is to buy cleared, DTCP-approved land <em>while</em> the industrial parks are under construction. You secure the asset at base value, and ride the appreciation wave as the area naturally gentrifies into a bustling urban satellite town.
+        </p>
+
+      </article>
+
+
+      <!-- Share This Insight Block (Centered section from image_dd8d28.png) -->
+      <div class="reveal-item border-t border-brand-accent/20 mt-16 pt-12 text-center">
+        <h4 class="font-serif font-bold text-2xl text-brand-accent tracking-widest uppercase">
+          Share This Insight
+        </h4>
+        <p class="text-xs text-gray-500 font-sans tracking-wider mt-1 mb-6">
+          Spread curated knowledge with your professional network.
+        </p>
+        
+        <!-- Social Icon Circles -->
+        <div class="flex items-center justify-center space-x-4">
+          <!-- Facebook -->
+          <a href="https://facebook.com/sharer/sharer.php?u=https://thegreatbuilds.com" target="_blank" 
+             class="w-10 h-10 rounded-full border border-blue-200 bg-white flex items-center justify-center text-blue-600 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-300 shadow-sm"
+             title="Share on Facebook">
+            <i class="fa-brands fa-facebook-f text-sm"></i>
+          </a>
+          <!-- Twitter -->
+          <a href="https://twitter.com/intent/tweet?url=https://thegreatbuilds.com" target="_blank" 
+             class="w-10 h-10 rounded-full border border-sky-200 bg-white flex items-center justify-center text-sky-500 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all duration-300 shadow-sm"
+             title="Share on Twitter">
+            <i class="fa-brands fa-x-twitter text-sm"></i>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20insight%20from%20The%20Great%20Builds%20-%20https://thegreatbuilds.com" target="_blank" 
+             class="w-10 h-10 rounded-full border border-green-200 bg-white flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-300 shadow-sm"
+             title="Share on WhatsApp">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/shareArticle?url=https://thegreatbuilds.com" target="_blank" 
+             class="w-10 h-10 rounded-full border border-blue-300 bg-white flex items-center justify-center text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-all duration-300 shadow-sm"
+             title="Share on LinkedIn">
+            <i class="fa-brands fa-linkedin-in text-sm"></i>
+          </a>
+          <!-- Copy Link Option -->
+          <button onclick="copyArticleLink()" 
+                  class="w-10 h-10 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-all duration-300 shadow-sm"
+                  title="Copy Page Link">
+            <i class="fa-solid fa-link text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- Floating Sticky Actions (Right Margin as seen in image_dd8d28.png) -->
+  <div class="fixed right-4 bottom-6 z-40 flex flex-col space-y-3">
+    <!-- WhatsApp Floating Trigger -->
+    <a href="https://wa.me/918217855041?text=Hi,%20I%20am%20interested%20in%20your%20projects.%20Please%20share%20details." 
+       target="_blank" 
+       class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all duration-300 hover:bg-[#128C7E]"
+       title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Elegant Scroll-To-Top Arrow Button -->
+    <button id="btn-back-to-top" 
+            onclick="scrollToTop()" 
+            class="w-12 h-12 rounded-full bg-white text-brand-accent flex flex-col items-center justify-center border border-brand-accent/20 shadow-lg hover:bg-brand-accent hover:text-white active:scale-95 transition-all duration-300 opacity-0 pointer-events-none"
+            title="Back to Top">
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+  </div>
+
+
+  <!-- Dark Luxury Footer (Perfect Mirror of image_dd8d28.png) -->
+  <footer class="bg-brand-dark text-[#D0D7D1] pt-16 pb-8 border-t border-brand-accent/20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12 border-b border-white/5">
+      
+      <!-- Footer Column 1: Brand details and social profiles -->
+      <div class="space-y-6">
+        <a href="#" class="flex items-center space-x-3">
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-white/15 border border-white/20">
+            <!-- Footer Vector Seal Logo -->
+            <svg class="w-10 h-10 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v12M6 12h12"></path>
+              <circle cx="12" cy="12" r="2.5" class="fill-brand-gold/10"></circle>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-white font-serif font-bold text-xl tracking-wider leading-none">THE GREAT BUILDS</span>
+            <span class="text-[9px] text-brand-gold font-sans tracking-[0.2em] leading-none mt-1">BUILDERS & DEVELOPERS</span>
+          </div>
+        </a>
+        <p class="text-xs text-gray-400 font-sans leading-relaxed">
+          Crafting premium residential plots and community layouts in Karnataka with world-class amenities and DTCP clearances.
+        </p>
+        
+        <!-- Social Square Boxes -->
+        <div class="flex items-center space-x-3 pt-2">
+          <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded border border-white/15 flex items-center justify-center text-gray-400 hover:text-white hover:border-brand-gold hover:bg-brand-accent/20 transition-all duration-300">
+            <i class="fa-brands fa-facebook-f text-xs"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded border border-white/15 flex items-center justify-center text-gray-400 hover:text-white hover:border-brand-gold hover:bg-brand-accent/20 transition-all duration-300">
+            <i class="fa-brands fa-instagram text-xs"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="w-8 h-8 rounded border border-white/15 flex items-center justify-center text-gray-400 hover:text-white hover:border-brand-gold hover:bg-brand-accent/20 transition-all duration-300">
+            <i class="fa-brands fa-youtube text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Column 2: Our Projects Links -->
+      <div>
+        <p class="text-xs font-bold tracking-[0.2em] text-white uppercase mb-6 font-sans">Projects</p>
+        <ul class="space-y-3 text-xs font-sans text-gray-400">
+          <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">Royal Greens</a></li>
+          <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">Orchard Valley</a></li>
+          <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">Shankar Enclave</a></li>
+          <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">Anubhav Megacity</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 3: Corporate Info Links -->
+      <div>
+        <p class="text-xs font-bold tracking-[0.2em] text-white uppercase mb-6 font-sans">Company</p>
+        <ul class="space-y-3 text-xs font-sans text-gray-400">
+          <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">About Us</a></li>
+          <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">Gallery</a></li>
+          <li><a href="#" class="hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">Blog</a></li>
+          <li><button onclick="toggleContactModal(true)" class="text-left hover:text-brand-gold hover:translate-x-1 inline-block transition-transform duration-200">Contact Us</button></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 4: Detailed Headquarters -->
+      <div>
+        <p class="text-xs font-bold tracking-[0.2em] text-white uppercase mb-6 font-sans">Headquarters</p>
+        <ul class="space-y-4 text-xs font-sans text-gray-400">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-brand-gold mt-1 text-sm flex-shrink-0"></i>
+            <span class="leading-relaxed">
+              No. 762, 7th Cross, Sector A,<br>
+              Yelahanka New Town, Bengaluru,<br>
+              Karnataka - 560064
+            </span>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-brand-gold text-sm flex-shrink-0"></i>
+            <a href="tel:+918217855041" class="hover:text-white transition">+91 82178 55041</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-brand-gold text-sm flex-shrink-0"></i>
+            <a href="mailto:thegreatbuilds123@gmail.com" class="hover:text-white transition">thegreatbuilds123@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright line matching layout bottom row in image_dd8d28.png -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-16 pt-8 flex flex-col md:flex-row items-center justify-between text-[10px] font-sans tracking-widest text-gray-500 uppercase gap-4 text-center md:text-left">
+      <div>
+        © 2026 THE GREAT BUILDS. ALL RIGHTS RESERVED.
+      </div>
+      <div class="flex flex-wrap gap-4 justify-center md:justify-end">
+        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+        <span>•</span>
+        <a href="#" class="hover:text-white transition">Terms of Use</a>
+        <span>•</span>
+        <a href="#" class="hover:text-white transition">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Interactive Contact Us Modal (Lead Generation Form) -->
+  <div id="contact-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4 bg-brand-dark/80 backdrop-blur-md">
+    <div class="relative bg-[#FAF8F2] w-full max-w-lg rounded-xl shadow-2xl overflow-hidden border border-brand-accent/20 transform scale-95 opacity-0 transition-all duration-300" id="modal-content">
+      
+      <!-- Top banner image / luxury accent in modal -->
+      <div class="bg-brand-dark p-6 text-center relative">
+        <h3 class="font-serif font-bold text-2xl text-white tracking-wider">Arrange a Site Visit</h3>
+        <p class="text-[11px] text-brand-gold font-sans tracking-widest uppercase mt-1">THE GREAT BUILDS CONSULTANCY</p>
+        <button onclick="toggleContactModal(false)" class="absolute top-4 right-4 text-gray-400 hover:text-white p-1">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Lead Capture Form Body -->
+      <form id="leadForm" onsubmit="handleLeadSubmit(event)" class="p-6 lg:p-8 space-y-4">
+        <div>
+          <label class="block text-xs font-bold tracking-wider uppercase text-brand-accent mb-1 font-sans">Your Full Name *</label>
+          <input type="text" required name="fullName" placeholder="John Doe" 
+                 class="w-full bg-white border border-gray-200 rounded p-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent transition" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold tracking-wider uppercase text-brand-accent mb-1 font-sans">Contact Phone *</label>
+          <div class="flex">
+            <span class="bg-gray-100 border border-r-0 border-gray-200 text-gray-500 p-3 text-sm rounded-l font-sans font-medium">+91</span>
+            <input type="tel" required name="phone" pattern="[0-9]{10}" placeholder="8217855041" 
+                   class="w-full bg-white border border-gray-200 rounded-r p-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent transition" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold tracking-wider uppercase text-brand-accent mb-1 font-sans">Project of Interest</label>
+          <select name="project" class="w-full bg-white border border-gray-200 rounded p-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent transition">
+            <option value="Royal Greens">Royal Greens (Plots)</option>
+            <option value="Orchard Valley">Orchard Valley (Villas)</option>
+            <option value="Shankar Enclave">Shankar Enclave (Plots)</option>
+            <option value="Anubhav Megacity">Anubhav Megacity (Premium Layout)</option>
+            <option value="General Consultation" selected>General Consultation</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold tracking-wider uppercase text-brand-accent mb-1 font-sans">Your Message (Optional)</label>
+          <textarea rows="3" name="message" placeholder="I am interested in buying a plot, please share a brochure and schedule a site tour." 
+                    class="w-full bg-white border border-gray-200 rounded p-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-accent focus:border-brand-accent transition resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-dark text-white font-bold tracking-widest text-xs uppercase py-4 rounded transition-all duration-300 mt-4 shadow-md">
+          Request Callback
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Floating Toast Notification System (In-lieu of unsafe Alert dialogs) -->
+  <div id="toast-container" class="fixed top-24 right-4 z-50 space-y-2 pointer-events-none"></div>
+
+
+  <!-- Interactive Controller Scripting -->
+  <script>
+    // Navigation scroll background shift
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('navbar');
+      const btnToTop = document.getElementById('btn-back-to-top');
+      
+      if (window.scrollY > 80) {
+        nav.classList.remove('bg-transparent', 'py-4');
+        nav.classList.add('bg-brand-dark/95', 'backdrop-blur-md', 'py-3', 'shadow-lg');
+      } else {
+        nav.classList.remove('bg-brand-dark/95', 'backdrop-blur-md', 'py-3', 'shadow-lg');
+        nav.classList.add('bg-transparent', 'py-4');
+      }
+
+      // Scroll-To-Top trigger point visibility
+      if (window.scrollY > 400) {
+        btnToTop.classList.remove('opacity-0', 'pointer-events-none');
+        btnToTop.classList.add('opacity-100', 'pointer-events-all');
+      } else {
+        btnToTop.classList.remove('opacity-100', 'pointer-events-all');
+        btnToTop.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+
+    // Mobile Menu Toggling
+    function toggleMobileMenu(open) {
+      const menu = document.getElementById('mobile-menu');
+      if (open) {
+        menu.classList.remove('translate-x-full');
+      } else {
+        menu.classList.add('translate-x-full');
+      }
+    }
+
+    // Toggle sub-projects list in Mobile Drawer
+    function toggleMobileProjects() {
+      const sub = document.getElementById('mobile-projects-sub');
+      sub.classList.toggle('hidden');
+    }
+
+    // Modal Control Logic
+    function toggleContactModal(show) {
+      const modal = document.getElementById('contact-modal');
+      const content = document.getElementById('modal-content');
+      
+      if (show) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+          content.classList.remove('scale-95', 'opacity-0');
+          content.classList.add('scale-100', 'opacity-100');
+        }, 10);
+      } else {
+        content.classList.remove('scale-100', 'opacity-100');
+        content.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+          modal.classList.remove('flex');
+          modal.classList.add('hidden');
+        }, 300);
+      }
+    }
+
+    // Close Modal on clicking outside the core content box
+    document.getElementById('contact-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        toggleContactModal(false);
+      }
+    });
+
+    // Scroll to top implementation
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Safe Toast Notification Launcher
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      
+      toast.className = `p-4 rounded-lg shadow-xl text-white text-xs font-semibold tracking-wider flex items-center gap-3 transform translate-x-12 opacity-0 transition-all duration-300 pointer-events-auto max-w-sm ${
+        type === 'success' ? 'bg-[#344E36] border border-brand-gold/30' : 'bg-red-800'
+      }`;
+      
+      toast.innerHTML = `
+        <i class="fa-solid ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} text-brand-gold text-sm"></i>
+        <span>${message}</span>
+      `;
+      
+      container.appendChild(toast);
+      
+      // Animate entry
+      setTimeout(() => {
+        toast.classList.remove('translate-x-12', 'opacity-0');
+      }, 50);
+
+      // Dismiss after 4 seconds
+      setTimeout(() => {
+        toast.classList.add('translate-x-12', 'opacity-0');
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 4000);
+    }
+
+    // Handle Contact Form Lead Submissions
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const name = formData.get('fullName');
+      const project = formData.get('project');
+
+      // Mimic submission analytics delay
+      showToast(`Thank you ${name}! We have registered your interest in ${project}.`);
+      
+      form.reset();
+      toggleContactModal(false);
+    }
+
+    // Copy Insight Link to Clipboard (Fall-back integrated for high reliability)
+    function copyArticleLink() {
+      const urlText = window.location.href;
+      
+      // Using fallback approach for iframe constraints
+      const tempInput = document.createElement("input");
+      tempInput.value = urlText;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      
+      try {
+        document.execCommand("copy");
+        showToast("Article link copied to clipboard successfully!");
+      } catch (err) {
+        showToast("Could not copy link automatically.", "error");
+      }
+      
+      document.body.removeChild(tempInput);
+    }
+
+    // Dynamic Scroll Reveal Logic matching elegant UX
+    document.addEventListener('DOMContentLoaded', () => {
+      const itemsToReveal = document.querySelectorAll('.reveal-item');
+      
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+            obs.unobserve(entry.target); // Reveal only once per page load session
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' // Trigger slightly before the view threshold
+      });
+
+      itemsToReveal.forEach(item => {
+        observer.observe(item);
+      });
+    });
+  </script>
+</body>
+
+</html>

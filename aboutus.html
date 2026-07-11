@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Core Meta Tags -->
+  <title>The Great Builds | Premium Builders & Developers in Bangalore</title>
+  <meta name="description" content="Property Developers in Yelahanka New Town | The Great Builds. Premium residential plots with world-class amenities in Karnataka." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons for modern UI aesthetics -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Playfair Display (Luxury Serif) & Plus Jakarta Sans (Clean Modern Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Animate On Scroll Library (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            cream: {
+              DEFAULT: '#FAF7F0',  /* Match exact light luxury beige background from image_dd2488.png */
+              dark: '#F3EFE3',     /* Slightly darker shade for sections / hover */
+              light: '#FCFBF9'     /* Ultra-light cream */
+            },
+            forest: {
+              DEFAULT: '#0B241C',  /* Deep emerald forest green for premium branding */
+              light: '#143C2E',
+              dark: '#05120E'
+            },
+            olive: {
+              DEFAULT: '#818D6F',  /* Elegant muted olive gold for highlights */
+              light: '#9FA88C',
+              dark: '#677255'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF7F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #818D6F;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0B241C;
+    }
+
+    /* Core Utility Classes */
+    .premium-border {
+      border-color: rgba(129, 141, 111, 0.2);
+    }
+    
+    .hover-lift {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(11, 36, 28, 0.08);
+    }
+
+    /* Elegant custom navigation blur */
+    .glass-nav {
+      background: rgba(11, 36, 28, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Animated image cards */
+    .image-zoom-container img {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .image-zoom-container:hover img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-forest font-sans overflow-x-hidden antialiased selection:bg-olive selection:text-cream">
+
+  <!-- Navigation bar (Glass-dark styled as in real-world luxury setups) -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav shadow-lg" id="main-header">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-4">
+      <!-- Logo Winged emblem SVG representation matching image_dd2488.png -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20 group-hover:bg-cream/20 transition duration-300">
+          <!-- Handcrafted SVG Winged Shield Logo matching image_dd2488.png -->
+          <svg class="w-8 h-8 text-cream" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z"/>
+            <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z"/>
+            <path d="M35 48 H65 M35 55 H65 M45 62 H55" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <polygon points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none">The</span>
+          <span class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight">Great Builds</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-wider text-cream/90 uppercase">
+        <div class="relative group">
+          <button class="hover:text-olive transition flex items-center gap-1 py-2">
+            Our Projects <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
+          </button>
+          <div class="absolute top-full left-0 mt-2 w-48 bg-forest border border-cream/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Royal Greens</a>
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Orchard Valley</a>
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Shankar Enclave</a>
+            <a href="#" class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition">Anubhav Megacity</a>
+          </div>
+        </div>
+        <a href="#gallery" class="hover:text-olive transition py-2">Gallery</a>
+        <a href="#about" class="text-olive font-bold border-b-2 border-olive py-2">About Us</a>
+        <a href="#blog" class="hover:text-olive transition py-2">Blog</a>
+      </nav>
+
+      <!-- Right Action Contacts -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="tel:+918217855041" class="text-cream hover:text-olive transition flex items-center gap-2 text-sm font-semibold tracking-wide">
+          <i class="fa-solid fa-phone text-olive"></i>
+          <span>+91 82178 55041</span>
+        </a>
+        <button onclick="toggleContactModal(true)" class="bg-cream hover:bg-olive hover:text-cream text-forest font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300 shadow-md">
+          Contact Us
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button onclick="toggleMobileMenu()" class="lg:hidden text-cream hover:text-olive focus:outline-none text-2xl" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-forest-dark border-t border-cream/10 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-xs font-semibold tracking-widest uppercase text-cream/90">
+        <span class="text-[10px] text-olive font-bold tracking-widest">Our Projects</span>
+        <div class="pl-4 flex flex-col gap-3 border-l border-cream/10">
+          <a href="#" class="hover:text-olive">Royal Greens</a>
+          <a href="#" class="hover:text-olive">Orchard Valley</a>
+          <a href="#" class="hover:text-olive">Shankar Enclave</a>
+          <a href="#" class="hover:text-olive">Anubhav Megacity</a>
+        </div>
+        <hr class="border-cream/10 my-1">
+        <a href="#gallery" onclick="toggleMobileMenu()" class="hover:text-olive py-1">Gallery</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="text-olive py-1">About Us</a>
+        <a href="#blog" onclick="toggleMobileMenu()" class="hover:text-olive py-1">Blog</a>
+        <hr class="border-cream/10 my-1">
+        <a href="tel:+918217855041" class="flex items-center gap-2 text-sm text-cream/90 font-medium tracking-normal py-1">
+          <i class="fa-solid fa-phone text-olive"></i> +91 82178 55041
+        </a>
+        <button onclick="toggleContactModal(true); toggleMobileMenu();" class="w-full bg-cream text-forest text-xs font-bold py-3 rounded-full hover:bg-olive hover:text-cream transition mt-2">
+          Contact Us
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+    <!-- Active background carousel slides -->
+    <div class="absolute inset-0 z-0">
+      <!-- Slide 1 -->
+      <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000 transform scale-100" id="hero-slide-1" 
+           style="background-image: linear-gradient(to bottom, rgba(11, 36, 28, 0.75), rgba(11, 36, 28, 0.9)), url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80');">
+      </div>
+      <!-- Slide 2 -->
+      <div class="absolute inset-0 bg-cover bg-center transition-all duration-1000 transform opacity-0 scale-95" id="hero-slide-2" 
+           style="background-image: linear-gradient(to bottom, rgba(11, 36, 28, 0.75), rgba(11, 36, 28, 0.9)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');">
+      </div>
+    </div>
+
+    <!-- Core Content aligned with image_dd2488.png hero layout -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-cream py-16" data-aos="fade-up">
+      <p class="text-[10px] md:text-xs font-bold uppercase tracking-[0.4em] text-olive mb-4">Legacy of Excellence</p>
+      
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-semibold leading-tight tracking-wide mb-6">
+        Building <span class="italic font-light text-olive-light">Trust</span><br class="hidden sm:inline"> & Lasting Value
+      </h1>
+      
+      <p class="text-sm sm:text-base md:text-lg text-cream/85 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+        Dedicated to helping people find elegant, premium plots designed for comfort, quality, and lasting value across Bangalore's growth corridors.
+      </p>
+
+      <!-- CTA triggers premium contact slider -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#about" class="border border-cream/30 hover:border-olive bg-transparent hover:bg-olive hover:text-cream px-8 py-4 text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-300">
+          Discover Story
+        </a>
+        <button onclick="toggleContactModal(true)" class="bg-olive hover:bg-cream text-cream hover:text-forest px-8 py-4 text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-300 shadow-xl">
+          Reserve Site Visit
+        </button>
+      </div>
+    </div>
+
+    <!-- Slide indicators at bottom center -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3">
+      <button onclick="switchHeroSlide(1)" id="slide-dot-1" class="w-12 h-1 bg-cream rounded-full transition-all duration-300 opacity-100"></button>
+      <button onclick="switchHeroSlide(2)" id="slide-dot-2" class="w-6 h-1 bg-cream/30 rounded-full transition-all duration-300 hover:bg-cream/70"></button>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="about" class="py-24 max-w-7xl mx-auto px-6 md:px-12 relative">
+    
+    <!-- Fine-line elegant Section Header matching image_dd2488.png -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="flex items-center justify-center gap-4 text-xs tracking-[0.3em] font-bold text-olive uppercase">
+        <span class="h-[1px] w-12 bg-olive/30"></span>
+        Story
+        <span class="h-[1px] w-12 bg-olive/30"></span>
+      </div>
+      <h2 class="font-serif text-3xl md:text-5xl text-forest mt-3">
+        Our <span class="italic font-light text-olive">Story</span>
+      </h2>
+    </div>
+
+    <!-- Copywriting Blocks & Imagery (Welcome Layout in Image) -->
+    <div class="max-w-4xl mx-auto text-center mb-20" data-aos="fade-up">
+      <h3 class="text-lg md:text-2xl tracking-[0.1em] font-bold text-forest leading-relaxed mb-8 uppercase">
+        Welcome to<br>
+        <span class="text-2xl md:text-3xl font-serif text-olive font-normal">The Great Builds</span>
+      </h3>
+      <p class="text-sm md:text-base text-forest/80 leading-relaxed mb-6">
+        At The Great Builds, we pride ourselves on being a cornerstone of trust in the real estate industry. Our flagship project, <span class="font-bold text-forest border-b border-olive/40 pb-0.5">Royal Greens</span>, exemplifies our commitment to quality and strategic planning.
+      </p>
+      <p class="text-sm md:text-base text-forest/80 leading-relaxed">
+        As Bangalore continues to expand, we align our projects with significant infrastructure growth. Our developments are strategically located near major industrial hubs, ensuring long-term value for our clients.
+      </p>
+    </div>
+
+    <!-- Divider -->
+    <hr class="premium-border border-t max-w-5xl mx-auto mb-20">
+
+    <!-- Counters Section matching image layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto mb-24" id="stats-section">
+      <!-- Stat 1 -->
+      <div class="flex flex-col items-center p-6 border-r border-l md:border-l-0 premium-border" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl md:text-5xl font-serif font-semibold text-olive flex items-center">
+          <span class="counter" data-target="10">0</span><span class="text-olive">+</span>
+        </div>
+        <p class="text-xs uppercase tracking-widest font-bold text-forest/60 mt-2">Years Exp</p>
+      </div>
+      <!-- Stat 2 -->
+      <div class="flex flex-col items-center p-6 border-r md:border-l-0 premium-border" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl md:text-5xl font-serif font-semibold text-olive flex items-center">
+          <span class="counter" data-target="500">0</span><span class="text-olive">+</span>
+        </div>
+        <p class="text-xs uppercase tracking-widest font-bold text-forest/60 mt-2">Happy Clients</p>
+      </div>
+      <!-- Stat 3 -->
+      <div class="flex flex-col items-center p-6 border-r md:border-r-0 premium-border" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-4xl md:text-5xl font-serif font-semibold text-olive flex items-center">
+          <span class="counter" data-target="5">0</span><span class="text-olive">+</span>
+        </div>
+        <p class="text-xs uppercase tracking-widest font-bold text-forest/60 mt-2">Projects</p>
+      </div>
+    </div>
+
+    <!-- Vision & Mission Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <!-- Vision Card -->
+      <div class="bg-cream-dark/40 rounded-2xl p-8 md:p-12 hover-lift relative overflow-hidden group" data-aos="fade-right">
+        <div class="absolute top-0 left-0 w-2 h-full bg-olive"></div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-2.5 h-2.5 bg-olive inline-block"></span>
+          <h4 class="text-lg font-bold tracking-[0.2em] text-forest uppercase">Vision</h4>
+        </div>
+        <p class="text-sm md:text-base text-forest/80 leading-relaxed">
+          Our vision is to create thoughtfully planned communities that combine modern infrastructure, strategic locations, and sustainable development, offering long-term value for homeowners and investors.
+        </p>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="bg-cream-dark/40 rounded-2xl p-8 md:p-12 hover-lift relative overflow-hidden group" data-aos="fade-left">
+        <div class="absolute top-0 left-0 w-2 h-full bg-olive"></div>
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-2.5 h-2.5 bg-olive inline-block"></span>
+          <h4 class="text-lg font-bold tracking-[0.2em] text-forest uppercase">Mission</h4>
+        </div>
+        <p class="text-sm md:text-base text-forest/80 leading-relaxed">
+          Our mission is to serve our clients with excellence by delivering premium properties that inspire confidence, elevate lifestyles, and create lasting value for the future.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Section (The Foundation) -->
+  <section class="py-24 bg-cream-dark/20 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <!-- Fine-line Section Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="flex items-center justify-center gap-4 text-xs tracking-[0.3em] font-bold text-olive uppercase">
+          <span class="h-[1px] w-12 bg-olive/30"></span>
+          The Foundation
+          <span class="h-[1px] w-12 bg-olive/30"></span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl text-forest mt-3">
+          Our Core <span class="italic font-light text-olive">Values</span>
+        </h2>
+      </div>
+
+      <!-- 5 Column Grid matching original image exactly -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <!-- Value 1 -->
+        <div class="bg-cream p-6 rounded-xl hover-lift border border-cream-dark flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <span class="w-2 h-2 bg-olive mb-4"></span>
+          <h4 class="text-xs font-bold tracking-[0.15em] text-forest mb-4 uppercase">Integrity</h4>
+          <p class="text-xs text-forest/75 leading-relaxed">
+            We believe in complete transparency and honesty in every transaction, ensuring our clients invest with confidence.
+          </p>
+        </div>
+        <!-- Value 2 -->
+        <div class="bg-cream p-6 rounded-xl hover-lift border border-cream-dark flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+          <span class="w-2 h-2 bg-olive mb-4"></span>
+          <h4 class="text-xs font-bold tracking-[0.15em] text-forest mb-4 uppercase">Quality</h4>
+          <p class="text-xs text-forest/75 leading-relaxed">
+            From land selection to infrastructure development, we maintain high standards to deliver premium living environments.
+          </p>
+        </div>
+        <!-- Value 3 -->
+        <div class="bg-cream p-6 rounded-xl hover-lift border border-cream-dark flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+          <span class="w-2 h-2 bg-olive mb-4"></span>
+          <h4 class="text-xs font-bold tracking-[0.15em] text-forest mb-4 uppercase">Customer Commitment</h4>
+          <p class="text-xs text-forest/75 leading-relaxed">
+            Our clients are at the center of everything we do, and we are dedicated to providing a seamless experience.
+          </p>
+        </div>
+        <!-- Value 4 -->
+        <div class="bg-cream p-6 rounded-xl hover-lift border border-cream-dark flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
+          <span class="w-2 h-2 bg-olive mb-4"></span>
+          <h4 class="text-xs font-bold tracking-[0.15em] text-forest mb-4 uppercase">Long-Term Value</h4>
+          <p class="text-xs text-forest/75 leading-relaxed">
+            We focus on strategic locations and thoughtful planning to ensure strong appreciation and investment potential.
+          </p>
+        </div>
+        <!-- Value 5 -->
+        <div class="bg-cream p-6 rounded-xl hover-lift border border-cream-dark flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="500">
+          <span class="w-2 h-2 bg-olive mb-4"></span>
+          <h4 class="text-xs font-bold tracking-[0.15em] text-forest mb-4 uppercase">Sustainable Development</h4>
+          <p class="text-xs text-forest/75 leading-relaxed">
+            We strive to develop communities that respect nature while supporting modern lifestyles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Leadership Section -->
+  <section class="py-24 max-w-7xl mx-auto px-6 md:px-12">
+    <!-- Fine-line Section Header -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="flex items-center justify-center gap-4 text-xs tracking-[0.3em] font-bold text-olive uppercase">
+        <span class="h-[1px] w-12 bg-olive/30"></span>
+        The Visionaries
+        <span class="h-[1px] w-12 bg-olive/30"></span>
+      </div>
+      <h2 class="font-serif text-3xl md:text-5xl text-forest mt-3">
+        Executive <span class="italic font-light text-olive">Leadership</span>
+      </h2>
+    </div>
+
+    <!-- Leaders List matching layout & duplicates from image_dd2488.png -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20 max-w-4xl mx-auto">
+      
+      <!-- Leader 1 -->
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-full max-w-[320px] aspect-[4/5] overflow-hidden rounded-xl shadow-lg border-4 border-cream-dark bg-cream-dark relative group mb-6 image-zoom-container">
+          <!-- Fallback handler with highly authentic office workspace photo -->
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" 
+               alt="P Chandra Seshu" 
+               class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition duration-500"
+               onerror="this.src='https://placehold.co/320x400/0B241C/FAF7F0?text=P+Chandra+Seshu'">
+        </div>
+        <h3 class="font-serif text-xl md:text-2xl text-forest font-semibold mb-1">P Chandra Seshu</h3>
+        <p class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-olive mb-3">Managing Director</p>
+        <p class="text-xs md:text-sm text-forest/75 max-w-sm">
+          A visionary leader with deep expertise in real estate planning and development excellence.
+        </p>
+      </div>
+
+      <!-- Leader 2 -->
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-full max-w-[320px] aspect-[4/5] overflow-hidden rounded-xl shadow-lg border-4 border-cream-dark bg-cream-dark relative group mb-6 image-zoom-container">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" 
+               alt="Avinash N" 
+               class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition duration-500"
+               onerror="this.src='https://placehold.co/320x400/0B241C/FAF7F0?text=Avinash+N'">
+        </div>
+        <h3 class="font-serif text-xl md:text-2xl text-forest font-semibold mb-1">Avinash N</h3>
+        <p class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-olive mb-3">Project Manager</p>
+        <p class="text-xs md:text-sm text-forest/75 max-w-sm">
+          Expert in project execution, ensuring every development meets our high standards of quality.
+        </p>
+      </div>
+
+      <!-- Leader 3 (Duplicate row representation as in attachment image_dd2488.png) -->
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-full max-w-[320px] aspect-[4/5] overflow-hidden rounded-xl shadow-lg border-4 border-cream-dark bg-cream-dark relative group mb-6 image-zoom-container">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" 
+               alt="P Chandra Seshu" 
+               class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition duration-500"
+               onerror="this.src='https://placehold.co/320x400/0B241C/FAF7F0?text=P+Chandra+Seshu'">
+        </div>
+        <h3 class="font-serif text-xl md:text-2xl text-forest font-semibold mb-1">P Chandra Seshu</h3>
+        <p class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-olive mb-3">Managing Director</p>
+        <p class="text-xs md:text-sm text-forest/75 max-w-sm">
+          A visionary leader with deep expertise in real estate planning and development excellence.
+        </p>
+      </div>
+
+      <!-- Leader 4 -->
+      <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="w-full max-w-[320px] aspect-[4/5] overflow-hidden rounded-xl shadow-lg border-4 border-cream-dark bg-cream-dark relative group mb-6 image-zoom-container">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" 
+               alt="Avinash N" 
+               class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition duration-500"
+               onerror="this.src='https://placehold.co/320x400/0B241C/FAF7F0?text=Avinash+N'">
+        </div>
+        <h3 class="font-serif text-xl md:text-2xl text-forest font-semibold mb-1">Avinash N</h3>
+        <p class="text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold text-olive mb-3">Project Manager</p>
+        <p class="text-xs md:text-sm text-forest/75 max-w-sm">
+          Expert in project execution, ensuring every development meets our high standards of quality.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Corporate Gallery Section -->
+  <section id="gallery" class="py-24 bg-cream-dark/25 relative">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <!-- Fine-line Section Header -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="flex items-center justify-center gap-4 text-xs tracking-[0.3em] font-bold text-olive uppercase">
+          <span class="h-[1px] w-12 bg-olive/30"></span>
+          Portfolio
+          <span class="h-[1px] w-12 bg-olive/30"></span>
+        </div>
+        <h2 class="font-serif text-3xl md:text-5xl text-forest mt-3">
+          Corporate <span class="italic font-light text-olive">Gallery</span>
+        </h2>
+      </div>
+
+      <!-- Advanced Custom Grid Layout mirroring original layout completely -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+        
+        <!-- Left Column: Big Vertical Image (Main Office Lobby) -->
+        <div class="lg:col-span-7 h-[400px] lg:h-[600px] overflow-hidden rounded-2xl shadow-md image-zoom-container cursor-pointer group relative" 
+             onclick="openLightbox(0)" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+               alt="Aurora Office Reception" 
+               class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-8">
+            <span class="text-cream text-lg font-serif">Aurora Lobby Space</span>
+          </div>
+        </div>
+
+        <!-- Right Column Grid: Two Horizontal Rows -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          
+          <!-- Top Right Image (Boardroom meeting) -->
+          <div class="h-[288px] overflow-hidden rounded-2xl shadow-md image-zoom-container cursor-pointer group relative" 
+               onclick="openLightbox(1)" data-aos="fade-left">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" 
+                 alt="Corporate Boardroom Meeting" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+              <span class="text-cream text-base font-serif">Executive Boardroom</span>
+            </div>
+          </div>
+
+          <!-- Bottom Right Image (Office Workspace Plan) -->
+          <div class="h-[288px] overflow-hidden rounded-2xl shadow-md image-zoom-container cursor-pointer group relative" 
+               onclick="openLightbox(2)" data-aos="fade-left" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" 
+                 alt="Workspace and scale modeling" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+              <span class="text-cream text-base font-serif">Design & Scale Modeling Studio</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Gallery Row 2: Three Identical Square Cards representing office environments -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Bottom Row 1 -->
+        <div class="h-[280px] overflow-hidden rounded-2xl shadow-md image-zoom-container cursor-pointer group relative" 
+             onclick="openLightbox(3)" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80" 
+               alt="Technical Analysis Studio" 
+               class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+            <span class="text-cream text-sm font-serif">Technical Operations</span>
+          </div>
+        </div>
+
+        <!-- Bottom Row 2 -->
+        <div class="h-[280px] overflow-hidden rounded-2xl shadow-md image-zoom-container cursor-pointer group relative" 
+             onclick="openLightbox(4)" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" 
+               alt="Corporate lounge office library" 
+               class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+            <span class="text-cream text-sm font-serif">Research & Development Lounge</span>
+          </div>
+        </div>
+
+        <!-- Bottom Row 3 -->
+        <div class="h-[280px] overflow-hidden rounded-2xl shadow-md image-zoom-container cursor-pointer group relative" 
+             onclick="openLightbox(5)" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+               alt="Team Collaborative Presentation" 
+               class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+            <span class="text-cream text-sm font-serif">Collaborative Workspace</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Head Office Contact Section -->
+  <section class="py-24 max-w-7xl mx-auto px-6 md:px-12 relative">
+    <!-- Fine-line Section Header -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="flex items-center justify-center gap-4 text-xs tracking-[0.3em] font-bold text-olive uppercase">
+        <span class="h-[1px] w-12 bg-olive/30"></span>
+        Visit Us
+        <span class="h-[1px] w-12 bg-olive/30"></span>
+      </div>
+      <h2 class="font-serif text-3xl md:text-5xl text-forest mt-3">
+        Our Head <span class="italic font-light text-olive">Office</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left: Full Address Details matching layout specifications -->
+      <div class="lg:col-span-5 flex flex-col gap-10" data-aos="fade-right">
+        
+        <!-- Row 1: Address Block -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 flex items-center justify-center bg-cream-dark border border-olive/30 text-olive rounded-full flex-shrink-0 mt-1">
+            <i class="fa-solid fa-location-dot text-lg"></i>
+          </div>
+          <div class="flex flex-col">
+            <h4 class="font-serif text-xl font-bold text-forest mb-2">The Great Builds</h4>
+            <p class="text-sm text-forest/80 leading-relaxed mb-1">
+              No. 762, 7th Cross, Sector A, Yelahanka New Town,
+            </p>
+            <p class="text-sm text-forest/80 leading-relaxed mb-3">
+              Bengaluru, Karnataka 560064
+            </p>
+            <div class="text-xs uppercase tracking-widest font-bold text-forest/50">
+              Landmark: <span class="text-olive">California Burrito</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Inquiries -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 flex items-center justify-center bg-cream-dark border border-olive/30 text-olive rounded-full flex-shrink-0 mt-1">
+            <i class="fa-solid fa-phone text-lg"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-[10px] uppercase tracking-widest font-bold text-forest/50 mb-1">Inquiries</div>
+            <a href="tel:+918217855041" class="text-lg font-bold text-forest hover:text-olive transition">
+              +91 82178 55041
+            </a>
+          </div>
+        </div>
+
+        <!-- Row 3: Official Email -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 flex items-center justify-center bg-cream-dark border border-olive/30 text-olive rounded-full flex-shrink-0 mt-1">
+            <i class="fa-solid fa-envelope text-lg"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-[10px] uppercase tracking-widest font-bold text-forest/50 mb-1">Official Email</div>
+            <a href="mailto:thegreatbuilds123@gmail.com" class="text-base font-semibold text-forest hover:text-olive transition break-all">
+              thegreatbuilds123@gmail.com
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Embedded Interactive Map targeted at Bangalore, Yelahanka -->
+      <div class="lg:col-span-7" data-aos="fade-left">
+        <div class="w-full h-[400px] md:h-[480px] bg-cream-dark rounded-2xl overflow-hidden shadow-xl border border-cream-dark relative">
+          <!-- Real Embedded Responsive Google Map pointing near California Burrito, Yelahanka -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6455110825946!2d77.5925345!3d13.0899011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1ec003f9055d%3A0xe2da24cb09efb4b4!2s7th%20Cross%20Rd%2C%20Yelahanka%20New%20Town%2C%20Bengaluru%2C%20Karnataka%20560064!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+            class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Footer matching styling references from attached layout -->
+  <footer class="bg-forest-dark text-cream/70 py-20 border-t border-cream/5">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+      
+      <!-- Logo & Social Column (Col span 4) -->
+      <div class="lg:col-span-4 flex flex-col gap-6">
+        <!-- Logo Winged emblem SVG representation matching image_dd2488.png -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-14 h-14 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20">
+            <svg class="w-10 h-10 text-cream" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z"/>
+              <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z"/>
+              <path d="M35 48 H65 M35 55 H65 M45 62 H55" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <polygon points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none">The</span>
+            <span class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight">Great Builds</span>
+          </div>
+        </a>
+        <p class="text-xs text-cream/50 leading-relaxed max-w-sm">
+          Delivering highly secure, top-tier gated plotting communities and luxury construction across Bangalore's prospective growth avenues.
+        </p>
+        <!-- Social channels -->
+        <div class="flex items-center gap-4 mt-2">
+          <a href="#" class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f text-sm"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300" aria-label="Instagram">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300" aria-label="YouTube">
+            <i class="fa-brands fa-youtube text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects Column (Col span 2.5) -->
+      <div class="lg:col-span-3 flex flex-col gap-5">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">Projects</h4>
+        <div class="flex flex-col gap-3 text-xs">
+          <a href="#" class="hover:text-olive transition">Royal Greens</a>
+          <a href="#" class="hover:text-olive transition">Orchard Valley</a>
+          <a href="#" class="hover:text-olive transition">Shankar Enclave</a>
+          <a href="#" class="hover:text-olive transition">Anubhav Megacity</a>
+        </div>
+      </div>
+
+      <!-- Company Column (Col span 2.5) -->
+      <div class="lg:col-span-2 flex flex-col gap-5">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">Company</h4>
+        <div class="flex flex-col gap-3 text-xs">
+          <a href="#about" class="hover:text-olive transition">About Us</a>
+          <a href="#gallery" class="hover:text-olive transition">Gallery</a>
+          <a href="#blog" class="hover:text-olive transition">Blog</a>
+          <button onclick="toggleContactModal(true)" class="text-left hover:text-olive transition focus:outline-none">Contact Us</button>
+        </div>
+      </div>
+
+      <!-- Headquarters Contact Details (Col span 3) -->
+      <div class="lg:col-span-3 flex flex-col gap-5">
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">Headquarters</h4>
+        <div class="flex flex-col gap-4 text-xs">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-olive mt-0.5"></i>
+            <span class="leading-relaxed">
+              No. 762, 7th Cross Rd, Sector A, Yelahanka New Town, Bengaluru, Karnataka - 560064
+            </span>
+          </div>
+          <a href="tel:+918217855041" class="flex items-center gap-3 hover:text-olive transition">
+            <i class="fa-solid fa-phone text-olive"></i>
+            <span>+91 82178 55041</span>
+          </a>
+          <a href="mailto:thegreatbuilds123@gmail.com" class="flex items-center gap-3 hover:text-olive transition break-all">
+            <i class="fa-solid fa-envelope text-olive"></i>
+            <span>thegreatbuilds123@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyright / Privacy Policy line -->
+    <hr class="border-cream/5 mb-8 max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-cream/45 uppercase">
+      <div>© 2026 The Great Builds. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-cream transition">Privacy Policy</a>
+        <a href="#" class="hover:text-cream transition">Terms of Use</a>
+        <a href="#" class="hover:text-cream transition">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CORE UTILITIES -->
+  <!-- Left/Right Floating Actions (WhatsApp & Back to Top) -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <!-- Back To Top Button -->
+    <button onclick="scrollToTop()" id="back-to-top" class="w-12 h-12 bg-cream text-forest border border-olive/30 hover:bg-olive hover:text-cream rounded-full shadow-xl flex items-center justify-center transition-all duration-300 transform translate-y-20 opacity-0" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up text-base"></i>
+    </button>
+    
+    <!-- WhatsApp Direct Floater -->
+    <a href="https://wa.me/918217855041?text=Hi!%20I'm%20interested%20in%20The%20Great%20Builds%20residential%20plots." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="w-12 h-12 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl flex items-center justify-center text-2xl transition-transform hover:scale-110 active:scale-95" 
+       aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- MODAL: Image Gallery Lightbox Viewer -->
+  <div id="lightbox-modal" class="fixed inset-0 bg-forest/98 z-50 hidden flex-col items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-cream/80 hover:text-white text-3xl transition focus:outline-none" aria-label="Close Lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    
+    <!-- Slide Navigation Arrows -->
+    <button onclick="prevLightboxSlide()" class="absolute left-4 md:left-8 text-cream/60 hover:text-white text-4xl transition focus:outline-none" aria-label="Previous Slide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button onclick="nextLightboxSlide()" class="absolute right-4 md:right-8 text-cream/60 hover:text-white text-4xl transition focus:outline-none" aria-label="Next Slide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Main Active Lightbox Image wrapper -->
+    <div class="max-w-4xl max-h-[80vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Active View" class="max-w-full max-h-[70vh] rounded-lg shadow-2xl object-contain">
+      <p id="lightbox-caption" class="text-cream/80 font-serif mt-4 text-center text-sm md:text-base"></p>
+    </div>
+  </div>
+
+  <!-- MODAL: Premium Contact & Inquiry Overlay Form -->
+  <div id="contact-modal" class="fixed inset-0 bg-forest/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-cream w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl border border-olive/20 flex flex-col relative max-h-[90vh]" data-aos="zoom-in" data-aos-duration="300">
+      
+      <!-- Modal Header -->
+      <div class="bg-forest text-cream p-6 flex justify-between items-center">
+        <div class="flex flex-col">
+          <span class="text-[9px] uppercase tracking-widest text-olive-light">Reserve a site visit</span>
+          <h3 class="font-serif text-xl font-bold">Inquiry Consultant Form</h3>
+        </div>
+        <button onclick="toggleContactModal(false)" class="text-cream/70 hover:text-white text-2xl transition focus:outline-none" aria-label="Close Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Form Content) -->
+      <form id="inquiry-form" onsubmit="handleInquirySubmit(event)" class="p-6 md:p-8 flex flex-col gap-5 overflow-y-auto">
+        
+        <!-- Input field Name -->
+        <div class="flex flex-col gap-1.5">
+          <label for="client-name" class="text-xs font-bold uppercase tracking-wider text-forest/70">Full Name</label>
+          <input type="text" id="client-name" required placeholder="John Doe" 
+                 class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition">
+        </div>
+
+        <!-- Input field Phone -->
+        <div class="flex flex-col gap-1.5">
+          <label for="client-phone" class="text-xs font-bold uppercase tracking-wider text-forest/70">Phone Number</label>
+          <input type="tel" id="client-phone" required placeholder="+91 XXXXX XXXXX" 
+                 class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition">
+        </div>
+
+        <!-- Input field Email -->
+        <div class="flex flex-col gap-1.5">
+          <label for="client-email" class="text-xs font-bold uppercase tracking-wider text-forest/70">Email Address</label>
+          <input type="email" id="client-email" required placeholder="john@example.com" 
+                 class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition">
+        </div>
+
+        <!-- Input field Preferred Project Selection -->
+        <div class="flex flex-col gap-1.5">
+          <label for="client-project" class="text-xs font-bold uppercase tracking-wider text-forest/70">Preferred Property / Project</label>
+          <select id="client-project" class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest text-forest/80 transition">
+            <option value="Royal Greens">Royal Greens</option>
+            <option value="Orchard Valley">Orchard Valley</option>
+            <option value="Shankar Enclave">Shankar Enclave</option>
+            <option value="Anubhav Megacity">Anubhav Megacity</option>
+          </select>
+        </div>
+
+        <!-- Input field Note message -->
+        <div class="flex flex-col gap-1.5">
+          <label for="client-msg" class="text-xs font-bold uppercase tracking-wider text-forest/70">Special requests / Message</label>
+          <textarea id="client-msg" rows="3" placeholder="I'd love to schedule a custom site visit tomorrow morning..." 
+                    class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition"></textarea>
+        </div>
+
+        <!-- Submission Trigger -->
+        <button type="submit" class="w-full bg-forest hover:bg-olive text-cream font-bold py-4 text-xs uppercase tracking-widest rounded-lg transition-all duration-300 shadow-md">
+          Submit Reservation Request
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Custom Beautiful Overlay Toast Notification System (Bypasses Native JS Alerts) -->
+  <div id="toast-notif" class="fixed top-24 right-6 bg-forest text-cream border border-olive/30 px-6 py-4 rounded-xl shadow-2xl z-50 flex items-center gap-3 transition-all duration-500 transform translate-x-96 opacity-0 max-w-md">
+    <div class="w-8 h-8 rounded-full bg-olive flex items-center justify-center text-cream flex-shrink-0">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="flex flex-col">
+      <h5 class="text-sm font-bold text-cream">Request Logged Successfully</h5>
+      <p id="toast-message" class="text-xs text-cream/70 mt-0.5">We will call you back within 1 hour.</p>
+    </div>
+  </div>
+
+  <!-- Core Script Integrations & AOS Initiation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize Animate On Scroll (AOS)
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out'
+    });
+
+    // Mobile Navbar Toggle Control
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const icon = document.getElementById('menu-icon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        menu.classList.add('hidden');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    // Interactive Header Styling on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      const bttButton = document.getElementById('back-to-top');
+      if (window.scrollY > 80) {
+        header.classList.add('py-2', 'bg-forest/95');
+        header.classList.remove('py-4');
+        bttButton.classList.remove('translate-y-20', 'opacity-0');
+        bttButton.classList.add('translate-y-0', 'opacity-100');
+      } else {
+        header.classList.add('py-4');
+        header.classList.remove('py-2', 'bg-forest/95');
+        bttButton.classList.add('translate-y-20', 'opacity-0');
+        bttButton.classList.remove('translate-y-0', 'opacity-100');
+      }
+    });
+
+    // Smooth Back To Top Navigation
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Hero Slideshow Switcher logic
+    let activeHeroSlide = 1;
+    function switchHeroSlide(slideNum) {
+      const slide1 = document.getElementById('hero-slide-1');
+      const slide2 = document.getElementById('hero-slide-2');
+      const dot1 = document.getElementById('slide-dot-1');
+      const dot2 = document.getElementById('slide-dot-2');
+
+      if (slideNum === 1) {
+        slide1.classList.remove('opacity-0', 'scale-95');
+        slide1.classList.add('opacity-100', 'scale-100');
+        slide2.classList.remove('opacity-100', 'scale-100');
+        slide2.classList.add('opacity-0', 'scale-95');
+        
+        dot1.className = "w-12 h-1 bg-cream rounded-full transition-all duration-300 opacity-100";
+        dot2.className = "w-6 h-1 bg-cream/30 rounded-full transition-all duration-300 hover:bg-cream/70";
+        activeHeroSlide = 1;
+      } else {
+        slide2.classList.remove('opacity-0', 'scale-95');
+        slide2.classList.add('opacity-100', 'scale-100');
+        slide1.classList.remove('opacity-100', 'scale-100');
+        slide1.classList.add('opacity-0', 'scale-95');
+
+        dot2.className = "w-12 h-1 bg-cream rounded-full transition-all duration-300 opacity-100";
+        dot1.className = "w-6 h-1 bg-cream/30 rounded-full transition-all duration-300 hover:bg-cream/70";
+        activeHeroSlide = 2;
+      }
+    }
+
+    // Auto-loop Hero slides every 6 seconds
+    setInterval(() => {
+      const nextSlide = activeHeroSlide === 1 ? 2 : 1;
+      switchHeroSlide(nextSlide);
+    }, 6000);
+
+    // Count Up Animations for Stats block
+    const statsSection = document.getElementById('stats-section');
+    const counters = document.querySelectorAll('.counter');
+    let countersStarted = false;
+
+    function startCounting() {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const speed = target > 100 ? 15 : 100; // Calibrate speeds
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 30);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    }
+
+    // Intersection Observer to run statistics counting only when in viewport
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+          startCounting();
+          countersStarted = true;
+        }
+      });
+    }, { threshold: 0.3 });
+
+    statsObserver.observe(statsSection);
+
+    // Lightbox Corporate Gallery configuration details
+    const galleryItems = [
+      { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80", caption: "Aurora Corporate Lobby Area" },
+      { src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80", caption: "Executive Boardroom Layout" },
+      { src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80", caption: "Design and Planning Area Studio" },
+      { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80", caption: "Technical Operations Office Area" },
+      { src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80", caption: "Research & Development Lounge" },
+      { src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80", caption: "Collaborative Meeting Spaces" }
+    ];
+
+    let currentLightboxIdx = 0;
+
+    function openLightbox(index) {
+      currentLightboxIdx = index;
+      const lightboxModal = document.getElementById('lightbox-modal');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+
+      lightboxImg.src = galleryItems[index].src;
+      lightboxCaption.innerText = galleryItems[index].caption;
+      
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const lightboxModal = document.getElementById('lightbox-modal');
+      lightboxModal.classList.remove('flex');
+      lightboxModal.classList.add('hidden');
+    }
+
+    function nextLightboxSlide() {
+      currentLightboxIdx = (currentLightboxIdx + 1) % galleryItems.length;
+      openLightbox(currentLightboxIdx);
+    }
+
+    function prevLightboxSlide() {
+      currentLightboxIdx = (currentLightboxIdx - 1 + galleryItems.length) % galleryItems.length;
+      openLightbox(currentLightboxIdx);
+    }
+
+    // Modal view triggers
+    function toggleContactModal(show) {
+      const modal = document.getElementById('contact-modal');
+      if (show) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Handle form inquiry submission
+    function handleInquirySubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('client-name').value;
+      const project = document.getElementById('client-project').value;
+
+      // Close Form Modal
+      toggleContactModal(false);
+
+      // Trigger beautiful custom Toast success feedback
+      const toast = document.getElementById('toast-notif');
+      const toastText = document.getElementById('toast-message');
+      
+      toastText.innerText = `Thanks ${name}! Your site-visit reservation for ${project} has been requested successfully.`;
+      
+      toast.classList.remove('translate-x-96', 'opacity-0');
+      toast.classList.add('translate-x-0', 'opacity-100');
+
+      // Auto dismiss toast after 5 seconds
+      setTimeout(() => {
+        toast.classList.remove('translate-x-0', 'opacity-100');
+        toast.classList.add('translate-x-96', 'opacity-0');
+      }, 5000);
+
+      // Reset Form fields
+      document.getElementById('inquiry-form').reset();
+    }
+  </script>
+</body>
+
+</html>

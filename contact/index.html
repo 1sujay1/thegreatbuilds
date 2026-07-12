@@ -103,162 +103,8 @@
   <body
     class="bg-cream text-forest font-sans overflow-x-hidden antialiased selection:bg-olive selection:text-cream"
   >
-    <!-- Navigation bar (Glass-dark styled as in main page setups) -->
-    <header
-      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav shadow-lg"
-      id="main-header"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-4"
-      >
-        <!-- Logo Representing The Great Builds -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div
-            class="w-12 h-12 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20 group-hover:bg-cream/20 transition duration-300"
-          >
-            <svg
-              class="w-8 h-8 text-cream"
-              viewBox="0 0 100 100"
-              fill="currentColor"
-            >
-              <path
-                d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-                stroke-linejoin="round"
-              />
-              <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z" />
-              <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z" />
-              <path
-                d="M35 48 H65 M35 55 H65 M45 62 H55"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-              <polygon
-                points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div class="flex flex-col">
-            <span
-              class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none"
-              >The</span
-            >
-            <span
-              class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight"
-              >Great Builds</span
-            >
-          </div>
-        </a>
-
-        <!-- Desktop Links -->
-        <nav
-          class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-wider text-cream/90 uppercase"
-        >
-          <div class="relative group">
-            <button
-              class="hover:text-olive transition flex items-center gap-1 py-2"
-            >
-              Our Projects
-              <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
-            </button>
-            <div
-              class="absolute top-full left-0 mt-2 w-48 bg-forest border border-cream/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden"
-            >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Royal Greens</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Orchard Valley</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Shankar Enclave</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Anubhav Megacity</a
-              >
-            </div>
-          </div>
-          <a href="#" class="hover:text-olive transition py-2">Gallery</a>
-          <a href="#" class="hover:text-olive transition py-2">About Us</a>
-          <a href="#" class="hover:text-olive transition py-2">Blog</a>
-          <a href="#" class="text-olive font-bold border-b-2 border-olive py-2"
-            >Contact Us</a
-          >
-        </nav>
-
-        <!-- Right Action Contacts -->
-        <div class="hidden md:flex items-center gap-6">
-          <a
-            href="tel:+918217855041"
-            class="text-cream hover:text-olive transition flex items-center gap-2 text-sm font-semibold tracking-wide"
-          >
-            <i class="fa-solid fa-phone text-olive"></i>
-            <span>+91 82178 55041</span>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button
-          onclick="toggleMobileMenu()"
-          class="lg:hidden text-cream hover:text-olive focus:outline-none text-2xl"
-          aria-label="Toggle Navigation"
-        >
-          <i class="fa-solid fa-bars" id="menu-icon"></i>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation Drawer -->
-      <div
-        id="mobile-menu"
-        class="hidden lg:hidden bg-forest-dark border-t border-cream/10 px-6 py-6 transition-all duration-300"
-      >
-        <div
-          class="flex flex-col gap-4 text-xs font-semibold tracking-widest uppercase text-cream/90"
-        >
-          <span class="text-[10px] text-olive font-bold tracking-widest"
-            >Our Projects</span
-          >
-          <div class="pl-4 flex flex-col gap-3 border-l border-cream/10">
-            <a href="#" class="hover:text-olive">Royal Greens</a>
-            <a href="#" class="hover:text-olive">Orchard Valley</a>
-            <a href="#" class="hover:text-olive">Shankar Enclave</a>
-            <a href="#" class="hover:text-olive">Anubhav Megacity</a>
-          </div>
-          <hr class="border-cream/10 my-1" />
-          <a href="#" onclick="toggleMobileMenu()" class="hover:text-olive py-1"
-            >Gallery</a
-          >
-          <a href="#" onclick="toggleMobileMenu()" class="hover:text-olive py-1"
-            >About Us</a
-          >
-          <a href="#" onclick="toggleMobileMenu()" class="hover:text-olive py-1"
-            >Blog</a
-          >
-          <a href="#" onclick="toggleMobileMenu()" class="text-olive py-1"
-            >Contact Us</a
-          >
-          <hr class="border-cream/10 my-1" />
-          <a
-            href="tel:+918217855041"
-            class="flex items-center gap-2 text-sm text-cream/90 font-medium tracking-normal py-1"
-          >
-            <i class="fa-solid fa-phone text-olive"></i> +91 82178 55041
-          </a>
-        </div>
-      </div>
-    </header>
+   <!-- Header / Navigation -->
+    <div id="header-container"></div>
 
     <!-- Hero Section -->
     <section
@@ -439,8 +285,7 @@
           </div>
 
           <form
-            id="contact-page-form"
-            onsubmit="handleFormSubmission(event)"
+            id="contact-form2"
             class="space-y-6"
           >
             <!-- Name Field -->
@@ -458,6 +303,7 @@
                 </span>
                 <input
                   type="text"
+                  name="name"
                   id="contact-name"
                   required
                   placeholder="John Doe"
@@ -482,11 +328,11 @@
                     +91
                   </span>
                   <input
-                    type="tel"
+                    type="number"
+                    name="phone"
                     id="contact-phone"
                     required
-                    pattern="[0-9]{10}"
-                    placeholder="98765 43210"
+                    placeholder="98*** *****"
                     class="w-full bg-cream-dark/20 border border-olive/20 rounded-r-lg px-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white transition-all text-forest font-medium"
                   />
                 </div>
@@ -507,66 +353,13 @@
                   </span>
                   <input
                     type="email"
+                    name="email"
                     id="contact-email"
                     required
                     placeholder="john@example.com"
                     class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg pl-11 pr-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white transition-all text-forest font-medium"
                   />
                 </div>
-              </div>
-            </div>
-
-            <!-- Dropdowns: Project & Department Selector -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- Project Select -->
-              <div class="flex flex-col gap-1.5">
-                <label
-                  for="contact-project"
-                  class="text-xs font-bold uppercase tracking-wider text-forest/70"
-                  >Project of Interest</label
-                >
-                <select
-                  id="contact-project"
-                  class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white text-forest/80 transition-all font-semibold"
-                >
-                  <option value="General Consultation">
-                    General Property Consult
-                  </option>
-                  <option value="Royal Greens">
-                    Royal Greens (Gauribidanur)
-                  </option>
-                  <option value="Orchard Valley">
-                    Orchard Valley (Near Adiyogi)
-                  </option>
-                  <option value="Shankar Enclave">
-                    Shankar Enclave (Rajankunte)
-                  </option>
-                  <option value="Anubhav Megacity">
-                    Anubhav Megacity (Basavakalyan)
-                  </option>
-                </select>
-              </div>
-
-              <!-- Department Select -->
-              <div class="flex flex-col gap-1.5">
-                <label
-                  for="contact-department"
-                  class="text-xs font-bold uppercase tracking-wider text-forest/70"
-                  >Department Routing</label
-                >
-                <select
-                  id="contact-department"
-                  class="w-full bg-cream-dark/20 border border-olive/20 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-forest focus:bg-white text-forest/80 transition-all font-semibold"
-                >
-                  <option value="Sales / Site Visits">
-                    Sales &amp; Site Visits
-                  </option>
-                  <option value="Legal & Documentation">
-                    Legal &amp; Title Verification
-                  </option>
-                  <option value="Investments">Investment Advisory Team</option>
-                  <option value="Customer Support">General Support Desk</option>
-                </select>
               </div>
             </div>
 
@@ -578,6 +371,7 @@
                 >Your message or special request</label
               >
               <textarea
+                name="message"
                 id="contact-message"
                 rows="4"
                 placeholder="I would like to schedule a site tour of Royal Greens layout plans this Saturday..."
@@ -588,11 +382,17 @@
             <!-- Submit Button -->
             <button
               type="submit"
+              id="contact_form_btn2"
               class="w-full bg-forest hover:bg-olive hover:text-forest text-cream font-bold py-4.5 text-xs uppercase tracking-widest rounded-lg transition-all duration-300 shadow-lg transform active:scale-95"
             >
               Submit Consultation Request
             </button>
-
+   <div
+            id="success_message_col2"
+            class="mt-2"
+            style="margin-top: 10px"
+          ></div>
+          <div id="error_message2" class="error"></div>
             <!-- Safe-secure notice badge -->
             <div
               class="text-center mt-3 flex items-center justify-center gap-1.5 text-[10px] text-forest/50 font-bold uppercase tracking-wider"
@@ -817,6 +617,9 @@
       </div>
     </div>
 
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/contact.js"></script>
     <!-- Interaction Logic Controls -->
     <script>
       // Header styling on window scroll
@@ -847,33 +650,33 @@
       }
 
       // Form Submission Handler
-      function handleFormSubmission(event) {
-        event.preventDefault();
+      // function handleFormSubmission(event) {
+      //   event.preventDefault();
 
-        const name = document.getElementById("contact-name").value;
-        const project = document.getElementById("contact-project").value;
-        const department = document.getElementById("contact-department").value;
+      //   const name = document.getElementById("contact-name").value;
+      //   const project = document.getElementById("contact-project").value;
+      //   const department = document.getElementById("contact-department").value;
 
-        // Access Toast Objects
-        const toast = document.getElementById("toast-notif");
-        const toastText = document.getElementById("toast-message");
+      //   // Access Toast Objects
+      //   const toast = document.getElementById("toast-notif");
+      //   const toastText = document.getElementById("toast-message");
 
-        // Update success message dynamic parameters
-        toastText.innerText = `Thanks ${name}! Your callback request for ${project} has been routed to our ${department} team.`;
+      //   // Update success message dynamic parameters
+      //   toastText.innerText = `Thanks ${name}! Your callback request for ${project} has been routed to our ${department} team.`;
 
-        // Reveal Toast block smoothly
-        toast.classList.remove("translate-x-96", "opacity-0");
-        toast.classList.add("translate-x-0", "opacity-100");
+      //   // Reveal Toast block smoothly
+      //   toast.classList.remove("translate-x-96", "opacity-0");
+      //   toast.classList.add("translate-x-0", "opacity-100");
 
-        // Dismiss feedback overlay after 5.5 seconds
-        setTimeout(() => {
-          toast.classList.remove("translate-x-0", "opacity-100");
-          toast.classList.add("translate-x-96", "opacity-0");
-        }, 5500);
+      //   // Dismiss feedback overlay after 5.5 seconds
+      //   setTimeout(() => {
+      //     toast.classList.remove("translate-x-0", "opacity-100");
+      //     toast.classList.add("translate-x-96", "opacity-0");
+      //   }, 5500);
 
-        // Reset form variables
-        document.getElementById("contact-page-form").reset();
-      }
+      //   // Reset form variables
+      //   document.getElementById("contact-page-form").reset();
+      // }
     </script>
   </body>
 </html>

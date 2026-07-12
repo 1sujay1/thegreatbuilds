@@ -161,11 +161,38 @@ const headerHTML = `   <header
 
           <!-- Desktop Nav Items -->
           <nav class="hidden lg:flex items-center space-x-8">
-          <a
-              href="/project"
-              class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-              >Project</a
-            >
+            <div class="relative group">
+              <button
+                class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest flex items-center gap-1 transition-colors"
+              >
+                Our Projects
+                <i
+                  class="fa-solid fa-chevron-down text-[10px] text-brand-gold group-hover:rotate-180 transition-transform duration-200"
+                ></i>
+              </button>
+              <div
+                class="absolute top-full left-0 mt-2 w-48 bg-brand-dark/95 border border-brand-gold/20 rounded-md shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              >
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('ongoing')"
+                  class="block px-4 py-2 text-xs uppercase tracking-wider text-brand-cream hover:bg-brand-gold hover:text-brand-dark transition-colors"
+                  >Ongoing Projects</a
+                >
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('upcoming')"
+                  class="block px-4 py-2 text-xs uppercase tracking-wider text-brand-cream hover:bg-brand-gold hover:text-brand-dark transition-colors"
+                  >Upcoming Projects</a
+                >
+                <a
+                  href="#projects-section"
+                  onclick="filterProjects('completed')"
+                  class="block px-4 py-2 text-xs uppercase tracking-wider text-brand-cream hover:bg-brand-gold hover:text-brand-dark transition-colors"
+                  >Completed Projects</a
+                >
+              </div>
+            </div>
             <a
               href="#gallery"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"

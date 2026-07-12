@@ -228,12 +228,42 @@
         id="mobile-menu"
         class="hidden lg:hidden bg-brand-dark/95 border-t border-brand-gold/10 px-4 pt-4 pb-6 space-y-3"
       >
-        <a
-          href="#projects-section"
-          onclick="toggleMobileMenu()"
-          class="block text-sm uppercase tracking-wider text-brand-cream hover:text-brand-gold py-2"
-          >Our Projects</a
-        >
+        <div class="border-b border-brand-gold/10 pb-2">
+          <button
+            type="button"
+            onclick="toggleMobileProjects()"
+            class="w-full flex items-center justify-between text-sm uppercase tracking-wider text-brand-cream hover:text-brand-gold py-2"
+          >
+            <span>Our Projects</span>
+            <i
+              id="mobile-projects-icon"
+              class="fa-solid fa-chevron-down text-[10px] text-brand-gold transition-transform duration-200"
+            ></i>
+          </button>
+          <div
+            id="mobile-projects-sub"
+            class="hidden mt-2 space-y-1 pl-4 border-l border-brand-gold/20"
+          >
+            <a
+              href="#projects-section"
+              onclick="filterProjects('ongoing'); toggleMobileMenu()"
+              class="block text-xs uppercase tracking-wider text-brand-cream hover:text-brand-gold py-1.5"
+              >Ongoing Projects</a
+            >
+            <a
+              href="#projects-section"
+              onclick="filterProjects('upcoming'); toggleMobileMenu()"
+              class="block text-xs uppercase tracking-wider text-brand-cream hover:text-brand-gold py-1.5"
+              >Upcoming Projects</a
+            >
+            <a
+              href="#projects-section"
+              onclick="filterProjects('completed'); toggleMobileMenu()"
+              class="block text-xs uppercase tracking-wider text-brand-cream hover:text-brand-gold py-1.5"
+              >Completed Projects</a
+            >
+          </div>
+        </div>
         <a
           href="#gallery"
           onclick="toggleMobileMenu()"
@@ -893,8 +923,8 @@
             </div>
 
             <form
-              id="enquiry-form"
-              onsubmit="handleEnquirySubmit(event)"
+              id="contact-form3"
+              /* onsubmit="handleEnquirySubmit(event)" */
               class="space-y-6"
             >
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -908,6 +938,7 @@
                   <input
                     type="text"
                     id="fullName"
+                    name="name"
                     required
                     placeholder="John Doe"
                     class="bg-brand-cream border border-brand-gold/20 rounded-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
@@ -924,6 +955,7 @@
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     placeholder="john@example.com"
                     class="bg-brand-cream border border-brand-gold/20 rounded-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
@@ -947,6 +979,7 @@
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
                       required
                       placeholder="81234 56789"
                       pattern="[0-9]{10}"
@@ -956,7 +989,7 @@
                 </div>
 
                 <!-- Interested Project Selector -->
-                <div class="flex flex-col">
+                <!-- <div class="flex flex-col">
                   <label
                     for="projectSelect"
                     class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-2"
@@ -984,7 +1017,7 @@
                       General Investment Enquiry
                     </option>
                   </select>
-                </div>
+                </div> -->
               </div>
 
               <!-- Your Message Field -->
@@ -995,7 +1028,7 @@
                   >Your Message</label
                 >
                 <textarea
-                  id="message"
+                  name="message"
                   rows="4"
                   placeholder="Tell us about your requirements or budget preferences..."
                   class="bg-brand-cream border border-brand-gold/20 rounded-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all resize-none"
@@ -1005,6 +1038,7 @@
               <!-- Submit Button matching premium style of original -->
               <button
                 type="submit"
+                id="contact_form_btn3"
                 class="w-full bg-brand-dark hover:bg-brand-darker text-brand-cream font-bold text-xs tracking-widest uppercase py-4 rounded-md transition-all shadow-md"
               >
                 Submit Enquiry
@@ -1017,6 +1051,13 @@
                 *We respect your absolute privacy. Your personal information,
                 phone number, and preferences are entirely safe and protected.
               </p>
+
+              <div
+            id="success_message_col3"
+            class="mt-2"
+            style="margin-top: 10px"
+          ></div>
+          <div id="error_message3" class="error"></div>
             </form>
           </div>
         </div>
@@ -1613,7 +1654,7 @@
               >Phone Number</label
             >
             <input
-              type="tel"
+              type="number"
               name="phone"
               id="m-phone"
               required
@@ -1844,7 +1885,25 @@
       // Mobile Hamburger Draw Menu
       function toggleMobileMenu() {
         const menu = document.getElementById("mobile-menu");
+        const subMenu = document.getElementById("mobile-projects-sub");
+        const icon = document.getElementById("mobile-projects-icon");
+
         menu.classList.toggle("hidden");
+
+        if (menu.classList.contains("hidden")) {
+          subMenu.classList.add("hidden");
+          icon.style.transform = "rotate(0deg)";
+        }
+      }
+
+      function toggleMobileProjects() {
+        const subMenu = document.getElementById("mobile-projects-sub");
+        const icon = document.getElementById("mobile-projects-icon");
+
+        subMenu.classList.toggle("hidden");
+        icon.style.transform = subMenu.classList.contains("hidden")
+          ? "rotate(0deg)"
+          : "rotate(180deg)";
       }
 
       // Modal Display Trigger Logic

@@ -116,7 +116,7 @@ const headerHTML = `   <header
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- Winged Circular Logo -->
-          <a href="#" class="flex items-center space-x-3 group">
+          <a href="/" class="flex items-center space-x-3 group">
             <div
               class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center p-1 transition-transform duration-300 group-hover:rotate-12"
             >
@@ -182,9 +182,9 @@ const headerHTML = `   <header
               >Contact</a
             >
             <a
-              href="#faq"
+              href="/blog"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-              >FAQ</a
+              >Blog</a
             >
           </nav>
 

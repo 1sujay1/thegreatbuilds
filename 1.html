@@ -1585,7 +1585,11 @@
           </p>
         </div>
 
-        <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+        <form
+          /* onsubmit="handleModalSubmit(event)" */
+          id="contact-form2"
+          class="space-y-4"
+        >
           <input type="hidden" id="modal-project-id" value="" />
           <div class="flex flex-col">
             <label
@@ -1595,8 +1599,10 @@
             >
             <input
               type="text"
+              name="name"
               id="m-name"
               required
+              placeholder="John Doe"
               class="bg-brand-cream border border-brand-gold/20 rounded-md py-2.5 px-4 text-sm focus:outline-none focus:border-brand-gold"
             />
           </div>
@@ -1608,9 +1614,10 @@
             >
             <input
               type="tel"
+              name="phone"
               id="m-phone"
               required
-              placeholder="81234 56789"
+              placeholder="Enter your phone number"
               class="bg-brand-cream border border-brand-gold/20 rounded-md py-2.5 px-4 text-sm focus:outline-none focus:border-brand-gold"
             />
           </div>
@@ -1622,17 +1629,26 @@
             >
             <input
               type="email"
+              name="email"
               id="m-email"
               required
+              placeholder="john@example.com"
               class="bg-brand-cream border border-brand-gold/20 rounded-md py-2.5 px-4 text-sm focus:outline-none focus:border-brand-gold"
             />
           </div>
           <button
             type="submit"
+            id="contact_form_btn2"
             class="w-full bg-brand-dark hover:bg-brand-darker text-brand-cream font-bold text-xs tracking-widest uppercase py-3.5 rounded-md transition-all shadow-md"
           >
             Receive Brochure &amp; Price Sheet
           </button>
+          <div
+            id="success_message_col2"
+            class="mt-2"
+            style="margin-top: 10px"
+          ></div>
+          <div id="error_message2" class="error"></div>
         </form>
       </div>
     </div>
@@ -1656,7 +1672,9 @@
         </p>
       </div>
     </div>
-
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/index.js"></script>
     <!-- Dynamic JavaScript -->
     <script>
       // All dynamic data models to prevent placeholders
@@ -1865,15 +1883,15 @@
       function handleEnquirySubmit(event) {
         event.preventDefault();
         // Reset Form fields
-        document.getElementById("enquiry-form").reset();
-        triggerSuccessToast();
+        // document.getElementById("enquiry-form").reset();
+        // triggerSuccessToast();
       }
 
       // Handle Modal Small Form submissions
       function handleModalSubmit(event) {
         event.preventDefault();
-        closeEnquireModal();
-        triggerSuccessToast();
+        // closeEnquireModal();
+        // triggerSuccessToast();
       }
 
       // Reveal elements on scroll effect

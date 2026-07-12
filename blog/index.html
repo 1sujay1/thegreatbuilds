@@ -34,7 +34,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
 
     <!-- Tailored Configurations -->
     <script>
@@ -48,6 +48,20 @@
                 accentBeige: "#F3EFE0" /* Darker tone beige */,
                 gold: "#C5A880" /* Luxury gold highlight */,
                 textCharcoal: "#222222" /* High contrast reading text */,
+                dark: "#0B1E17", // Deep Forest Green
+                darker: "#060F0C", // Darkest Forest Green
+                gold: "#B59B62", // Classic Warm Gold Accent
+                goldLight: "#D4C39E", // Soft Gold Highlight
+                cream: "#FAF7EE", // Warm Cream Base Background
+                creamLight: "#FFFDF9", // Ultra Light Soft Background
+                creamDark: "#F3EDE0", // Darker Cream for sections
+                charcoal: "#2D3732", // Muted Text
+                grayLight: "#94A3B8",
+                warmBeige: "#FAF7EC", // Warm beige for modal background
+                darkGreen: "#0a1c12", // Dark green for modal elements
+                textCharcoal: "#222222", // Text color for modal
+                accentBeige: "#F3EFE0" /* Darker tone beige */,
+                gold: "#C5A880" /* Luxury gold highlight */,
               },
             },
             fontFamily: {
@@ -119,248 +133,9 @@
   <body
     class="font-sans text-brand-textCharcoal bg-brand-warmBeige min-h-screen selection:bg-brand-darkGreen selection:text-white"
   >
-    <!-- Top Header Navigation -->
-    <header
-      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-darkGreen/95 backdrop-blur-md border-b border-white/10"
-      id="main-header"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          <!-- Logo / Brand Crest -->
-          <a
-            href="#"
-            class="flex items-center space-x-3 group"
-            aria-label="The Great Builds Home"
-          >
-            <!-- Inline SVG replication of Eagle Crest Logo in image_dd81c0.png -->
-            <svg
-              class="h-12 w-auto text-white transition-transform duration-300 group-hover:scale-105"
-              viewBox="0 0 100 80"
-              fill="currentColor"
-            >
-              <!-- Outstretched stylized wings -->
-              <path
-                d="M10,25 Q30,15 50,30 Q70,15 90,25 Q80,45 50,48 Q20,45 10,25 Z"
-                opacity="0.9"
-              />
-              <!-- Inner circular elements -->
-              <circle
-                cx="50"
-                cy="38"
-                r="14"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <!-- Eagle profile head silhouette inside the circle -->
-              <path
-                d="M47,33 Q50,28 53,33 Q55,38 53,41 L47,41 Q45,38 47,33 Z"
-              />
-              <!-- Ribbon/Banner underneath -->
-              <path d="M25,52 L75,52 L70,59 L30,59 Z" />
-              <!-- Horizontal wing lines -->
-              <line
-                x1="15"
-                y1="28"
-                x2="40"
-                y2="35"
-                stroke="#0a1c12"
-                stroke-width="1.5"
-              />
-              <line
-                x1="85"
-                y1="28"
-                x2="60"
-                y2="35"
-                stroke="#0a1c12"
-                stroke-width="1.5"
-              />
-              <line
-                x1="18"
-                y1="33"
-                x2="40"
-                y2="38"
-                stroke="#0a1c12"
-                stroke-width="1.5"
-              />
-              <line
-                x1="82"
-                y1="33"
-                x2="60"
-                y2="38"
-                stroke="#0a1c12"
-                stroke-width="1.5"
-              />
-              <!-- Label Text styled beneath (tiny but crisp) -->
-              <text
-                x="50"
-                y="72"
-                font-family="'Inter', sans-serif"
-                font-weight="bold"
-                font-size="8"
-                text-anchor="middle"
-                fill="white"
-                letter-spacing="1"
-              >
-                THE GREAT BUILDS
-              </text>
-            </svg>
-          </a>
+   <!-- Header / Navigation -->
+    <div id="header-container"></div>
 
-          <!-- Desktop Navigation Links -->
-          <nav
-            class="hidden md:flex space-x-8 items-center text-xs tracking-widest font-semibold text-white/90"
-          >
-            <div class="relative group">
-              <button
-                class="hover:text-brand-gold flex items-center gap-1 uppercase transition-colors"
-              >
-                Our Projects
-                <i
-                  class="fa-solid fa-chevron-down text-[10px] opacity-75 group-hover:rotate-180 transition-transform duration-300"
-                ></i>
-              </button>
-              <!-- Dropdown Menu -->
-              <div
-                class="absolute left-0 mt-2 w-48 bg-brand-darkGreen border border-white/10 rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
-              >
-                <div class="py-2">
-                  <a
-                    href="#projects"
-                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
-                    >Royal Greens</a
-                  >
-                  <a
-                    href="#projects"
-                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
-                    >Orchard Valley</a
-                  >
-                  <a
-                    href="#projects"
-                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
-                    >Shankar Enclave</a
-                  >
-                  <a
-                    href="#projects"
-                    class="block px-4 py-2 text-[11px] hover:bg-white/10 hover:text-brand-gold"
-                    >Anubhav Megacity</a
-                  >
-                </div>
-              </div>
-            </div>
-            <a
-              href="#gallery"
-              class="hover:text-brand-gold transition-colors uppercase"
-              >Gallery</a
-            >
-            <a
-              href="#about"
-              class="hover:text-brand-gold transition-colors uppercase"
-              >About Us</a
-            >
-            <a
-              href="#blog"
-              class="hover:text-brand-gold transition-colors text-brand-gold font-bold uppercase relative after:absolute after:bottom-[-6px] after:left-0 after:w-full after:height-[2px] after:bg-brand-gold"
-              >Blog</a
-            >
-          </nav>
-
-          <!-- Right Contact Section (Call and Pill CTA) -->
-          <div class="hidden lg:flex items-center space-x-6">
-            <a
-              href="tel:+918217855041"
-              class="text-white hover:text-brand-gold transition-colors flex items-center space-x-2 text-xs font-semibold tracking-wider"
-            >
-              <i
-                class="fa-solid fa-phone-volume text-brand-gold animate-pulse"
-              ></i>
-              <span>+91 82178 55041</span>
-            </a>
-            <button
-              onclick="openContactModal()"
-              class="bg-white hover:bg-brand-gold hover:text-brand-darkGreen text-brand-darkGreen font-bold px-6 py-2.5 rounded-full text-xs uppercase tracking-widest transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
-            >
-              Contact Us
-            </button>
-          </div>
-
-          <!-- Mobile Menu Trigger Button -->
-          <div class="md:hidden flex items-center">
-            <button
-              onclick="toggleMobileMenu()"
-              class="text-white hover:text-brand-gold focus:outline-none p-2"
-              aria-label="Toggle navigation drawer"
-            >
-              <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Navigation Drawer -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-brand-darkGreen border-t border-white/10 transition-all duration-300"
-      >
-        <div class="px-4 pt-2 pb-6 space-y-3">
-          <div class="border-b border-white/10 pb-3">
-            <p class="text-white/40 text-[10px] tracking-widest uppercase mb-2">
-              Projects
-            </p>
-            <a
-              href="#royal-greens"
-              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
-              >Royal Greens</a
-            >
-            <a
-              href="#orchard-valley"
-              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
-              >Orchard Valley</a
-            >
-            <a
-              href="#shankar-enclave"
-              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
-              >Shankar Enclave</a
-            >
-            <a
-              href="#anubhav-megacity"
-              class="block py-1 pl-2 text-white/80 hover:text-brand-gold text-sm"
-              >Anubhav Megacity</a
-            >
-          </div>
-          <a
-            href="#gallery"
-            class="block py-2 text-white hover:text-brand-gold text-sm uppercase tracking-wider"
-            >Gallery</a
-          >
-          <a
-            href="#about"
-            class="block py-2 text-white hover:text-brand-gold text-sm uppercase tracking-wider"
-            >About Us</a
-          >
-          <a
-            href="#blog"
-            class="block py-2 text-brand-gold font-bold text-sm uppercase tracking-wider"
-            >Blog</a
-          >
-
-          <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
-            <a
-              href="tel:+918217855041"
-              class="text-white flex items-center gap-2 text-sm font-medium"
-            >
-              <i class="fa-solid fa-phone text-brand-gold"></i> +91 82178 55041
-            </a>
-            <button
-              onclick="openContactModal()"
-              class="w-full bg-white text-brand-darkGreen text-center font-bold py-2.5 rounded-full text-xs uppercase tracking-widest hover:bg-brand-gold transition-colors"
-            >
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
 
     <!-- Hero Section -->
     <section
@@ -975,17 +750,17 @@
 
           <form
             id="newsletter-form"
-            onsubmit="handleNewsletterSubmit(event)"
             class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
           >
-            <input
+            <!-- <input
               type="email"
               required
               placeholder="Enter your email address"
               class="flex-1 px-5 py-3.5 bg-white/10 border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent text-sm"
-            />
+            /> -->
             <button
               type="submit"
+              onclick="openContactModal()"
               class="bg-white hover:bg-brand-gold text-brand-darkGreen hover:text-brand-darkGreen font-bold px-8 py-3.5 text-xs uppercase tracking-widest transition-colors duration-300"
             >
               Subscribe Now
@@ -1300,136 +1075,7 @@
       </div>
     </div>
 
-    <!-- CONTACT US POPUP MODAL -->
-    <div
-      id="contact-modal"
-      class="fixed inset-0 z-50 hidden overflow-y-auto"
-      role="dialog"
-      aria-modal="true"
-    >
-      <div
-        class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
-        onclick="closeContactModal()"
-      ></div>
-
-      <div
-        class="flex min-h-full items-center justify-center p-4 text-center sm:p-6"
-      >
-        <div
-          class="relative transform overflow-hidden bg-brand-warmBeige text-left shadow-2xl transition-all w-full max-w-xl border border-brand-darkGreen/10 p-8"
-        >
-          <div class="absolute right-4 top-4">
-            <button
-              onclick="closeContactModal()"
-              class="text-brand-darkGreen hover:text-brand-gold transition-colors focus:outline-none p-2"
-            >
-              <i class="fa-solid fa-xmark text-2xl"></i>
-            </button>
-          </div>
-
-          <div class="mb-6">
-            <span
-              class="text-[10px] tracking-widest text-brand-gold font-bold uppercase block mb-1"
-              >Get In Touch</span
-            >
-            <h3 class="font-serif text-3xl text-brand-darkGreen font-semibold">
-              Contact Our Experts
-            </h3>
-            <p class="text-xs text-gray-500 mt-2">
-              Fill out your inquiry preferences and our site consultants will
-              respond within 2 hours.
-            </p>
-          </div>
-
-          <form
-            id="contact-us-form"
-            onsubmit="handleContactSubmit(event)"
-            class="space-y-4"
-          >
-            <div>
-              <label
-                class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
-                >Your Full Name *</label
-              >
-              <input
-                type="text"
-                required
-                placeholder="John Doe"
-                class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
-              />
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label
-                  class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
-                  >Phone Number *</label
-                >
-                <input
-                  type="tel"
-                  required
-                  placeholder="+91 XXXXX XXXXX"
-                  class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
-                />
-              </div>
-              <div>
-                <label
-                  class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
-                  >Email Address *</label
-                >
-                <input
-                  type="email"
-                  required
-                  placeholder="john@example.com"
-                  class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
-                />
-              </div>
-            </div>
-            <div>
-              <label
-                class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
-                >Select Project Interest</label
-              >
-              <select
-                class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
-              >
-                <option value="Royal Greens">
-                  Royal Greens (Plotted Development)
-                </option>
-                <option value="Orchard Valley">
-                  Orchard Valley (Luxury Layout)
-                </option>
-                <option value="Shankar Enclave">
-                  Shankar Enclave (Premium Gated)
-                </option>
-                <option value="Anubhav Megacity">
-                  Anubhav Megacity (Satellite Township)
-                </option>
-                <option value="General Insights">
-                  General Investment Query
-                </option>
-              </select>
-            </div>
-            <div>
-              <label
-                class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1"
-                >Message / Key Requirements</label
-              >
-              <textarea
-                rows="3"
-                placeholder="I am looking to invest in North Bangalore, please share layout plans..."
-                class="w-full px-4 py-3 bg-white border border-brand-darkGreen/10 text-brand-textCharcoal placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-brand-darkGreen hover:bg-brand-gold text-white hover:text-brand-darkGreen font-bold py-3.5 text-xs uppercase tracking-widest transition-colors duration-300"
-            >
-              Submit Inquiry Request
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
+   
 
     <!-- INTERACTIVE ACTION NOTIFICATION TOAST -->
     <div
@@ -1448,7 +1094,8 @@
         </p>
       </div>
     </div>
-
+ <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/common.js"></script>
     <!-- Client-Side Articles Database for Full-Screen Modals -->
     <script>
       const ARTICLES_DB = {
@@ -1827,16 +1474,16 @@
         document.body.style.overflow = ""; // Unlock background scrolling
       }
 
-      // Contact Us Popup Modal Controls
-      function openContactModal() {
-        document.getElementById("contact-modal").classList.remove("hidden");
-        document.body.style.overflow = "hidden";
-      }
+      // // Contact Us Popup Modal Controls
+      // function openContactModal() {
+      //   document.getElementById("contact-modal").classList.remove("hidden");
+      //   document.body.style.overflow = "hidden";
+      // }
 
-      function closeContactModal() {
-        document.getElementById("contact-modal").classList.add("hidden");
-        document.body.style.overflow = "";
-      }
+      // function closeContactModal() {
+      //   document.getElementById("contact-modal").classList.add("hidden");
+      //   document.body.style.overflow = "";
+      // }
 
       // Submissions Handler Toast Trigger (Replaces restricted alert alerts)
       function showToast(title, message, isError = false) {

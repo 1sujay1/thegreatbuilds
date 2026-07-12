@@ -394,27 +394,28 @@
         </div>
 
         <!-- Projects Dynamic Tabs Menu -->
+        <!-- Projects Dynamic Tabs Menu -->
         <div
-          class="flex justify-center mb-16 border-b border-brand-gold/20 max-w-lg mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide"
+          class="grid grid-cols-3 mb-16 border-b border-brand-gold/20 max-w-2xl mx-auto text-center"
         >
           <button
             onclick="filterProjects('ongoing')"
             id="tab-ongoing"
-            class="tab-btn px-6 py-3 text-xs uppercase font-bold tracking-widest text-brand-dark relative tab-active transition-all focus:outline-none"
+            class="tab-btn py-3 text-[10px] sm:text-xs uppercase font-bold tracking-widest text-brand-dark relative tab-active transition-all focus:outline-none"
           >
             Ongoing Projects
           </button>
           <button
             onclick="filterProjects('upcoming')"
             id="tab-upcoming"
-            class="tab-btn px-6 py-3 text-xs uppercase font-bold tracking-widest text-brand-charcoal/60 relative transition-all focus:outline-none"
+            class="tab-btn py-3 text-[10px] sm:text-xs uppercase font-bold tracking-widest text-brand-charcoal/60 relative transition-all focus:outline-none"
           >
             Upcoming Projects
           </button>
           <button
             onclick="filterProjects('completed')"
             id="tab-completed"
-            class="tab-btn px-6 py-3 text-xs uppercase font-bold tracking-widest text-brand-charcoal/60 relative transition-all focus:outline-none"
+            class="tab-btn py-3 text-[10px] sm:text-xs uppercase font-bold tracking-widest text-brand-charcoal/60 relative transition-all focus:outline-none"
           >
             Completed Projects
           </button>
@@ -1136,7 +1137,7 @@
         >
           <!-- Logo & Socials column (Col span 4) -->
           <div class="lg:col-span-4 space-y-6">
-            <a href="#" class="flex items-center space-x-3 group">
+            <!-- <a href="#" class="flex items-center space-x-3 group">
               <div
                 class="w-14 h-14 border-2 border-brand-gold rounded-full flex items-center justify-center p-1 transition-transform group-hover:rotate-12"
               >
@@ -1171,13 +1172,35 @@
                 <span
                   class="font-serif text-lg font-bold tracking-wider text-brand-cream uppercase leading-tight"
                   >The Great Builds</span
-                >
-                <span
+                > -->
+                <!-- <span
                   class="text-[9px] uppercase tracking-widest text-brand-gold"
                   >Builders &amp; Developers</span
-                >
-              </div>
-            </a>
+                > -->
+              <!-- </div>
+            </a> -->
+
+            <!-- Winged Circular Logo -->
+<a href="#" class="flex items-center space-x-3 group">
+  <div
+    class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:rotate-12"
+  >
+    <img 
+      src="/assets/images/Anubhav_megacity/logonew1.svg" 
+      alt="The Great Builds Logo" 
+      class="w-full h-full object-cover scale-125"
+    />
+  </div>
+  <div class="flex flex-col">
+    <span
+      class="font-serif text-lg font-bold tracking-wider text-brand-cream uppercase leading-tight"
+      >The Great Builds</span
+    >
+    <span class="text-[9px] uppercase tracking-widest text-brand-gold"
+      >Builders &amp; Developers</span
+    >
+  </div>
+</a>
 
             <p
               class="text-xs text-brand-cream/70 font-light leading-relaxed max-w-sm"

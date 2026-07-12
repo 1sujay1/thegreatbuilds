@@ -162,6 +162,11 @@ const headerHTML = `   <header
           <!-- Desktop Nav Items -->
           <nav class="hidden lg:flex items-center space-x-8">
           <a
+              href="#"
+              class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
+              >Home</a
+            >
+          <a
               href="/project"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
               >Project</a
@@ -181,11 +186,7 @@ const headerHTML = `   <header
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
               >Contact</a
             >
-            <a
-              href="/blog"
-              class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-              >Blog</a
-            >
+           
           </nav>
 
           <!-- Right Side: Phone & Contact Callout -->

@@ -44,6 +44,22 @@
                 100: "#EFECE6", // Warm off-white
                 50: "#FAF8F4", // Cream background
               },
+               brand: {
+                dark: "#0B1E17", // Deep Forest Green
+                darker: "#060F0C", // Darkest Forest Green
+                gold: "#B59B62", // Classic Warm Gold Accent
+                goldLight: "#D4C39E", // Soft Gold Highlight
+                cream: "#FAF7EE", // Warm Cream Base Background
+                creamLight: "#FFFDF9", // Ultra Light Soft Background
+                creamDark: "#F3EDE0", // Darker Cream for sections
+                charcoal: "#2D3732", // Muted Text
+                grayLight: "#94A3B8",
+                warmBeige: "#FAF7EC", // Warm beige for modal background
+                darkGreen: "#0a1c12", // Dark green for modal elements
+                textCharcoal: "#222222", // Text color for modal
+                accentBeige: "#F3EFE0" /* Darker tone beige */,
+                gold: "#C5A880" /* Luxury gold highlight */,
+              },
             },
             fontFamily: {
               serif: ['"Cormorant Garamond"', "serif"],
@@ -158,145 +174,8 @@
     </div>
 
     <!-- Header / Navigation Bar -->
-    <header
-      id="mainHeader"
-      class="fixed top-0 left-0 w-full z-40 bg-royal-900/95 backdrop-blur-md border-b border-royal-300/20 transition-all duration-300"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20 md:h-24">
-          <!-- Logo -->
-          <a href="#" class="flex items-center gap-3">
-            <!-- Elegant Crest SVG resembling "The Great Builds" -->
-            <svg
-              class="w-12 h-12 text-royal-300"
-              viewBox="0 0 100 100"
-              fill="currentColor"
-            >
-              <path
-                d="M50 15L85 35V65L50 85L15 65V35L50 15ZM50 20.8L22 36.8V63.2L50 79.2L78 63.2V36.8L50 20.8ZM50 30C55.5228 30 60 34.4772 60 40C60 44.1354 57.4878 47.6841 53.8821 49.1864L55 65H45L46.1179 49.1864C42.5122 47.6841 40 44.1354 40 40C40 34.4772 44.4772 30 50 30Z"
-              />
-              <path d="M25 50H75" stroke="#A48E68" stroke-width="2" />
-            </svg>
-            <div class="flex flex-col">
-              <span
-                class="text-white font-serif text-lg tracking-wider font-semibold uppercase leading-tight"
-                >The Great Builds</span
-              >
-              <span
-                class="text-royal-300 text-[10px] tracking-[0.2em] uppercase font-sans"
-                >Builders & Developers</span
-              >
-            </div>
-          </a>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center space-x-8">
-            <a
-              href="#projects"
-              class="text-royal-100/85 hover:text-royal-300 text-xs font-semibold tracking-widest uppercase transition-colors"
-              >Our Projects</a
-            >
-            <a
-              href="#gallery"
-              class="text-royal-100/85 hover:text-royal-300 text-xs font-semibold tracking-widest uppercase transition-colors"
-              >Gallery</a
-            >
-            <a
-              href="#about"
-              class="text-royal-100/85 hover:text-royal-300 text-xs font-semibold tracking-widest uppercase transition-colors"
-              >About Us</a
-            >
-            <a
-              href="#faq"
-              class="text-royal-100/85 hover:text-royal-300 text-xs font-semibold tracking-widest uppercase transition-colors"
-              >Blog</a
-            >
-          </nav>
-
-          <!-- Right Side CTA actions -->
-          <div class="hidden md:flex items-center gap-4">
-            <a
-              href="tel:+918217855041"
-              class="text-royal-300 hover:text-white flex items-center gap-2 text-sm font-semibold tracking-wide border-r border-royal-300/30 pr-4 transition-colors"
-            >
-              <i class="fas fa-phone-alt"></i>
-              +91 82178 55041
-            </a>
-            <a
-              href="#contact"
-              class="bg-royal-300 hover:bg-royal-200 text-royal-900 text-xs font-bold tracking-widest uppercase px-6 py-3.5 rounded transition-all duration-300 hover:shadow-[0_4px_20px_rgba(164,142,104,0.3)]"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          <!-- Mobile Menu Button -->
-          <button
-            id="mobileMenuBtn"
-            class="lg:hidden text-royal-300 hover:text-white focus:outline-none transition-colors"
-          >
-            <svg
-              class="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                id="menuIcon"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Drawer Menu -->
-      <div
-        id="mobileMenu"
-        class="hidden lg:hidden bg-royal-900 border-t border-royal-300/20 px-6 py-6 transition-all duration-300"
-      >
-        <nav class="flex flex-col space-y-4">
-          <a
-            href="#projects"
-            class="text-royal-100 hover:text-royal-300 text-sm font-semibold tracking-widest uppercase py-2 border-b border-royal-300/10"
-            >Our Projects</a
-          >
-          <a
-            href="#gallery"
-            class="text-royal-100 hover:text-royal-300 text-sm font-semibold tracking-widest uppercase py-2 border-b border-royal-300/10"
-            >Gallery</a
-          >
-          <a
-            href="#about"
-            class="text-royal-100 hover:text-royal-300 text-sm font-semibold tracking-widest uppercase py-2 border-b border-royal-300/10"
-            >About Us</a
-          >
-          <a
-            href="#faq"
-            class="text-royal-100 hover:text-royal-300 text-sm font-semibold tracking-widest uppercase py-2 border-b border-royal-300/10"
-            >Blog</a
-          >
-          <div class="pt-4 flex flex-col gap-4">
-            <a
-              href="tel:+918217855041"
-              class="text-royal-300 hover:text-white flex items-center gap-2 text-sm font-semibold"
-            >
-              <i class="fas fa-phone-alt"></i>
-              +91 82178 55041
-            </a>
-            <a
-              href="#contact"
-              class="bg-royal-300 text-royal-900 text-center text-xs font-bold tracking-widest uppercase py-3.5 rounded"
-            >
-              Contact Us
-            </a>
-          </div>
-        </nav>
-      </div>
-    </header>
+    <!-- Header / Navigation -->
+    <div id="header-container"></div>
 
     <!-- Hero Section -->
     <section
@@ -833,7 +712,7 @@
               </div>
 
               <!-- Custom Form Confirmation Alert inside form box -->
-              <div
+              <!-- <div
                 id="formSuccessAlert"
                 class="hidden mb-6 bg-emerald-50 border border-emerald-300 text-emerald-900 p-4 rounded-lg flex items-start gap-3"
               >
@@ -849,11 +728,10 @@
                     provided contact details.</span
                   >
                 </div>
-              </div>
+              </div> -->
 
               <form
-                id="enquiryForm"
-                onsubmit="handleEnquirySubmit(event)"
+                id="contact-form2"
                 class="space-y-5"
               >
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -864,27 +742,13 @@
                     >
                     <input
                       type="text"
+                      name="name"
                       required
                       placeholder="John Doe"
                       class="w-full bg-royal-100/30 border border-royal-300/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-royal-300 focus:bg-white transition-all"
                     />
                   </div>
-                  <div>
-                    <label
-                      class="block text-[10px] tracking-widest text-royal-900/60 uppercase font-bold mb-2"
-                      >Email Address</label
-                    >
-                    <input
-                      type="email"
-                      required
-                      placeholder="john@example.com"
-                      class="w-full bg-royal-100/30 border border-royal-300/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-royal-300 focus:bg-white transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
+                    <div>
                     <label
                       class="block text-[10px] tracking-widest text-royal-900/60 uppercase font-bold mb-2"
                       >Phone Number</label
@@ -895,20 +759,38 @@
                         >+91</span
                       >
                       <input
-                        type="tel"
-                        pattern="[6-9][0-9]{9}"
+                        type="number"
+                        name="phone"
                         required
-                        placeholder="81234 56789"
+                        placeholder="Enter your mobile number"
                         class="w-full bg-royal-100/30 border border-royal-300/20 rounded-r-lg px-4 py-3 text-sm focus:outline-none focus:border-royal-300 focus:bg-white transition-all"
                       />
                     </div>
                   </div>
-                  <div>
+               
+                </div>
+   <div>
+                    <label
+                      class="block text-[10px] tracking-widest text-royal-900/60 uppercase font-bold mb-2"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="john@example.com"
+                      class="w-full bg-royal-100/30 border border-royal-300/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-royal-300 focus:bg-white transition-all"
+                    />
+                  </div>
+                <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-5"> -->
+                
+                  <!-- <div>
                     <label
                       class="block text-[10px] tracking-widest text-royal-900/60 uppercase font-bold mb-2"
                       >Interested Project(s)</label
                     >
                     <select
+                      name="project"
                       class="w-full bg-royal-100/30 border border-royal-300/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-royal-300 focus:bg-white transition-all text-royal-900/70"
                     >
                       <option>Royal Greens</option>
@@ -917,8 +799,8 @@
                       <option>Anubhav Megacity</option>
                       <option>Gauribidanur Farmlands</option>
                     </select>
-                  </div>
-                </div>
+                  </div> -->
+                <!-- </div> -->
 
                 <div>
                   <div class="flex justify-between items-center mb-2">
@@ -932,6 +814,7 @@
                   </div>
                   <textarea
                     id="messageField"
+                    name="message"
                     maxlength="100"
                     oninput="updateCharCount()"
                     rows="4"
@@ -942,10 +825,18 @@
 
                 <button
                   type="submit"
+                  id="contact_form_btn2"
                   class="w-full bg-royal-900 hover:bg-royal-800 text-royal-300 text-xs font-bold tracking-widest uppercase py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Submit Enquiry
                 </button>
+
+                  <div
+            id="success_message_col2"
+            class="mt-2"
+            style="margin-top: 10px"
+          ></div>
+          <div id="error_message2" class="error"></div>
 
                 <p class="text-[10px] text-royal-900/40 text-center mt-3">
                   *We respect your privacy. Your details are safe with us.
@@ -2278,8 +2169,7 @@
           </div>
 
           <form
-            id="brochureForm"
-            onsubmit="handleBrochureSubmit(event)"
+            id="contact-form3"
             class="space-y-4"
           >
             <div>
@@ -2290,6 +2180,7 @@
               <input
                 type="text"
                 required
+                name="name"
                 placeholder="John Doe"
                 class="w-full bg-royal-100/30 border border-royal-300/20 rounded-lg px-4 py-2.5 text-xs focus:outline-none focus:border-royal-300 focus:bg-white transition-all"
               />
@@ -2300,10 +2191,10 @@
                 >Mobile Contact Number</label
               >
               <input
-                type="tel"
-                pattern="[6-9][0-9]{9}"
+                type="number"
                 required
-                placeholder="81234 56789"
+                placeholder="Enter your mobile"
+                name="phone"
                 class="w-full bg-royal-100/30 border border-royal-300/20 rounded-lg px-4 py-2.5 text-xs focus:outline-none focus:border-royal-300 focus:bg-white transition-all"
               />
             </div>
@@ -2315,6 +2206,7 @@
               <input
                 type="email"
                 required
+                name="email"
                 placeholder="john@example.com"
                 class="w-full bg-royal-100/30 border border-royal-300/20 rounded-lg px-4 py-2.5 text-xs focus:outline-none focus:border-royal-300 focus:bg-white transition-all"
               />
@@ -2322,10 +2214,17 @@
 
             <button
               type="submit"
+              id="contact_form_btn3"
               class="w-full bg-royal-900 hover:bg-royal-800 text-royal-300 text-xs font-bold tracking-widest uppercase py-3.5 rounded-lg transition-all duration-300"
             >
-              Verify & Download PDF
+             Download PDF
             </button>
+             <div
+            id="success_message_col3"
+            class="mt-2"
+            style="margin-top: 10px"
+          ></div>
+          <div id="error_message3" class="error"></div>
           </form>
         </div>
       </div>
@@ -2386,7 +2285,9 @@
         </div>
       </div>
     </div>
-
+ <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/project.js"></script>
     <!-- JavaScript Interactions & Logical Bindings -->
     <script>
       // Header Blur on Scroll
@@ -2468,21 +2369,21 @@
       }
 
       // Form submission simulation
-      function handleEnquirySubmit(event) {
-        event.preventDefault();
-        const formSuccessAlert = document.getElementById("formSuccessAlert");
-        const enquiryForm = document.getElementById("enquiryForm");
+      // function handleEnquirySubmit(event) {
+      //   event.preventDefault();
+      //   const formSuccessAlert = document.getElementById("formSuccessAlert");
+      //   const enquiryForm = document.getElementById("enquiryForm");
 
-        // Simulating network posting...
-        formSuccessAlert.classList.remove("hidden");
-        enquiryForm.reset();
-        document.getElementById("charCount").innerText = "0/100";
+      //   // Simulating network posting...
+      //   formSuccessAlert.classList.remove("hidden");
+      //   enquiryForm.reset();
+      //   document.getElementById("charCount").innerText = "0/100";
 
-        // Auto-hide success notification after 8 seconds
-        setTimeout(() => {
-          formSuccessAlert.classList.add("hidden");
-        }, 8000);
-      }
+      //   // Auto-hide success notification after 8 seconds
+      //   setTimeout(() => {
+      //     formSuccessAlert.classList.add("hidden");
+      //   }, 8000);
+      // }
 
       // Gallery Tab Switch Logic
       function switchGalleryTab(tabName) {

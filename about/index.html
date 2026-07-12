@@ -60,6 +60,22 @@
                 light: "#9FA88C",
                 dark: "#677255",
               },
+              brand: {
+                dark: "#0B1E17", // Deep Forest Green
+                darker: "#060F0C", // Darkest Forest Green
+                gold: "#B59B62", // Classic Warm Gold Accent
+                goldLight: "#D4C39E", // Soft Gold Highlight
+                cream: "#FAF7EE", // Warm Cream Base Background
+                creamLight: "#FFFDF9", // Ultra Light Soft Background
+                creamDark: "#F3EDE0", // Darker Cream for sections
+                charcoal: "#2D3732", // Muted Text
+                grayLight: "#94A3B8",
+                warmBeige: "#FAF7EC", // Warm beige for modal background
+                darkGreen: "#0a1c12", // Dark green for modal elements
+                textCharcoal: "#222222", // Text color for modal
+                accentBeige: "#F3EFE0" /* Darker tone beige */,
+                gold: "#C5A880" /* Luxury gold highlight */,
+              },
             },
           },
         },
@@ -110,185 +126,8 @@
   <body
     class="bg-cream text-forest font-sans overflow-x-hidden antialiased selection:bg-olive selection:text-cream"
   >
-    <!-- Navigation bar (Glass-dark styled as in real-world luxury setups) -->
-    <header
-      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav shadow-lg"
-      id="main-header"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-4"
-      >
-        <!-- Logo Winged emblem SVG representation matching image_dd2488.png -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div
-            class="w-12 h-12 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20 group-hover:bg-cream/20 transition duration-300"
-          >
-            <!-- Handcrafted SVG Winged Shield Logo matching image_dd2488.png -->
-            <svg
-              class="w-8 h-8 text-cream"
-              viewBox="0 0 100 100"
-              fill="currentColor"
-            >
-              <path
-                d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-                stroke-linejoin="round"
-              />
-              <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z" />
-              <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z" />
-              <path
-                d="M35 48 H65 M35 55 H65 M45 62 H55"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-              <polygon
-                points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div class="flex flex-col">
-            <span
-              class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none"
-              >The</span
-            >
-            <span
-              class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight"
-              >Great Builds</span
-            >
-          </div>
-        </a>
-
-        <!-- Desktop Links -->
-        <nav
-          class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-wider text-cream/90 uppercase"
-        >
-          <div class="relative group">
-            <button
-              class="hover:text-olive transition flex items-center gap-1 py-2"
-            >
-              Our Projects
-              <i class="fa-solid fa-chevron-down text-[10px] opacity-70"></i>
-            </button>
-            <div
-              class="absolute top-full left-0 mt-2 w-48 bg-forest border border-cream/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden"
-            >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Royal Greens</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Orchard Valley</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Shankar Enclave</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-3 hover:bg-forest-light text-cream/80 hover:text-white transition"
-                >Anubhav Megacity</a
-              >
-            </div>
-          </div>
-          <a href="#gallery" class="hover:text-olive transition py-2"
-            >Gallery</a
-          >
-          <a
-            href="#about"
-            class="text-olive font-bold border-b-2 border-olive py-2"
-            >About Us</a
-          >
-          <a href="#blog" class="hover:text-olive transition py-2">Blog</a>
-        </nav>
-
-        <!-- Right Action Contacts -->
-        <div class="hidden md:flex items-center gap-6">
-          <a
-            href="tel:+918217855041"
-            class="text-cream hover:text-olive transition flex items-center gap-2 text-sm font-semibold tracking-wide"
-          >
-            <i class="fa-solid fa-phone text-olive"></i>
-            <span>+91 82178 55041</span>
-          </a>
-          <button
-            onclick="toggleContactModal(true)"
-            class="bg-cream hover:bg-olive hover:text-cream text-forest font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-full transition-all duration-300 shadow-md"
-          >
-            Contact Us
-          </button>
-        </div>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button
-          onclick="toggleMobileMenu()"
-          class="lg:hidden text-cream hover:text-olive focus:outline-none text-2xl"
-          aria-label="Toggle Navigation"
-        >
-          <i class="fa-solid fa-bars" id="menu-icon"></i>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation Drawer -->
-      <div
-        id="mobile-menu"
-        class="hidden lg:hidden bg-forest-dark border-t border-cream/10 px-6 py-6 transition-all duration-300"
-      >
-        <div
-          class="flex flex-col gap-4 text-xs font-semibold tracking-widest uppercase text-cream/90"
-        >
-          <span class="text-[10px] text-olive font-bold tracking-widest"
-            >Our Projects</span
-          >
-          <div class="pl-4 flex flex-col gap-3 border-l border-cream/10">
-            <a href="#" class="hover:text-olive">Royal Greens</a>
-            <a href="#" class="hover:text-olive">Orchard Valley</a>
-            <a href="#" class="hover:text-olive">Shankar Enclave</a>
-            <a href="#" class="hover:text-olive">Anubhav Megacity</a>
-          </div>
-          <hr class="border-cream/10 my-1" />
-          <a
-            href="#gallery"
-            onclick="toggleMobileMenu()"
-            class="hover:text-olive py-1"
-            >Gallery</a
-          >
-          <a href="#about" onclick="toggleMobileMenu()" class="text-olive py-1"
-            >About Us</a
-          >
-          <a
-            href="#blog"
-            onclick="toggleMobileMenu()"
-            class="hover:text-olive py-1"
-            >Blog</a
-          >
-          <hr class="border-cream/10 my-1" />
-          <a
-            href="tel:+918217855041"
-            class="flex items-center gap-2 text-sm text-cream/90 font-medium tracking-normal py-1"
-          >
-            <i class="fa-solid fa-phone text-olive"></i> +91 82178 55041
-          </a>
-          <button
-            onclick="
-              toggleContactModal(true);
-              toggleMobileMenu();
-            "
-            class="w-full bg-cream text-forest text-xs font-bold py-3 rounded-full hover:bg-olive hover:text-cream transition mt-2"
-          >
-            Contact Us
-          </button>
-        </div>
-      </div>
-    </header>
-
+  <!-- Header / Navigation -->
+    <div id="header-container"></div>
     <!-- Hero Section -->
     <section
       class="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20"
@@ -361,7 +200,7 @@
             Discover Story
           </a>
           <button
-            onclick="toggleContactModal(true)"
+            onclick="openContactModal()"
             class="bg-olive hover:bg-cream text-cream hover:text-forest px-8 py-4 text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-300 shadow-xl"
           >
             Reserve Site Visit
@@ -1292,133 +1131,7 @@
       </div>
     </div>
 
-    <!-- MODAL: Premium Contact & Inquiry Overlay Form -->
-    <div
-      id="contact-modal"
-      class="fixed inset-0 bg-forest/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4"
-    >
-      <div
-        class="bg-cream w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl border border-olive/20 flex flex-col relative max-h-[90vh]"
-        data-aos="zoom-in"
-        data-aos-duration="300"
-      >
-        <!-- Modal Header -->
-        <div class="bg-forest text-cream p-6 flex justify-between items-center">
-          <div class="flex flex-col">
-            <span class="text-[9px] uppercase tracking-widest text-olive-light"
-              >Reserve a site visit</span
-            >
-            <h3 class="font-serif text-xl font-bold">
-              Inquiry Consultant Form
-            </h3>
-          </div>
-          <button
-            onclick="toggleContactModal(false)"
-            class="text-cream/70 hover:text-white text-2xl transition focus:outline-none"
-            aria-label="Close Modal"
-          >
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-
-        <!-- Modal Body (Form Content) -->
-        <form
-          id="inquiry-form"
-          onsubmit="handleInquirySubmit(event)"
-          class="p-6 md:p-8 flex flex-col gap-5 overflow-y-auto"
-        >
-          <!-- Input field Name -->
-          <div class="flex flex-col gap-1.5">
-            <label
-              for="client-name"
-              class="text-xs font-bold uppercase tracking-wider text-forest/70"
-              >Full Name</label
-            >
-            <input
-              type="text"
-              id="client-name"
-              required
-              placeholder="John Doe"
-              class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition"
-            />
-          </div>
-
-          <!-- Input field Phone -->
-          <div class="flex flex-col gap-1.5">
-            <label
-              for="client-phone"
-              class="text-xs font-bold uppercase tracking-wider text-forest/70"
-              >Phone Number</label
-            >
-            <input
-              type="tel"
-              id="client-phone"
-              required
-              placeholder="+91 XXXXX XXXXX"
-              class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition"
-            />
-          </div>
-
-          <!-- Input field Email -->
-          <div class="flex flex-col gap-1.5">
-            <label
-              for="client-email"
-              class="text-xs font-bold uppercase tracking-wider text-forest/70"
-              >Email Address</label
-            >
-            <input
-              type="email"
-              id="client-email"
-              required
-              placeholder="john@example.com"
-              class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition"
-            />
-          </div>
-
-          <!-- Input field Preferred Project Selection -->
-          <div class="flex flex-col gap-1.5">
-            <label
-              for="client-project"
-              class="text-xs font-bold uppercase tracking-wider text-forest/70"
-              >Preferred Property / Project</label
-            >
-            <select
-              id="client-project"
-              class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest text-forest/80 transition"
-            >
-              <option value="Royal Greens">Royal Greens</option>
-              <option value="Orchard Valley">Orchard Valley</option>
-              <option value="Shankar Enclave">Shankar Enclave</option>
-              <option value="Anubhav Megacity">Anubhav Megacity</option>
-            </select>
-          </div>
-
-          <!-- Input field Note message -->
-          <div class="flex flex-col gap-1.5">
-            <label
-              for="client-msg"
-              class="text-xs font-bold uppercase tracking-wider text-forest/70"
-              >Special requests / Message</label
-            >
-            <textarea
-              id="client-msg"
-              rows="3"
-              placeholder="I'd love to schedule a custom site visit tomorrow morning..."
-              class="bg-cream-dark/40 border border-olive/30 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-forest transition"
-            ></textarea>
-          </div>
-
-          <!-- Submission Trigger -->
-          <button
-            type="submit"
-            class="w-full bg-forest hover:bg-olive text-cream font-bold py-4 text-xs uppercase tracking-widest rounded-lg transition-all duration-300 shadow-md"
-          >
-            Submit Reservation Request
-          </button>
-        </form>
-      </div>
-    </div>
-
+   
     <!-- Custom Beautiful Overlay Toast Notification System (Bypasses Native JS Alerts) -->
     <div
       id="toast-notif"
@@ -1438,7 +1151,8 @@
         </p>
       </div>
     </div>
-
+  <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/common.js"></script>
     <!-- Core Script Integrations & AOS Initiation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

@@ -172,7 +172,7 @@ const headerHTML = `   <header
               >Project</a
             >
             <a
-              href="#gallery"
+              href="/gallery"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
               >Gallery</a
             >
@@ -298,8 +298,159 @@ const headerHTML = `   <header
         </div>
       </div>
     </header>`
+
+const footerHTML= `   <footer class="bg-forest-dark text-cream/70 py-20 border-t border-cream/5">
+      <div
+        class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16"
+      >
+        <!-- Logo & Social Column (Col span 4) -->
+        <div class="lg:col-span-4 flex flex-col gap-6">
+          <!-- Logo Winged emblem SVG representation matching image_dd2488.png -->
+          <a href="#" class="flex items-center gap-3">
+            <div
+              class="w-14 h-14 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20"
+            >
+              <svg
+                class="w-10 h-10 text-cream"
+                viewBox="0 0 100 100"
+                fill="currentColor"
+              >
+                <path
+                  d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linejoin="round"
+                />
+                <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z" />
+                <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z" />
+                <path
+                  d="M35 48 H65 M35 55 H65 M45 62 H55"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <polygon
+                  points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none"
+                >The</span
+              >
+              <span
+                class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight"
+                >Great Builds</span
+              >
+            </div>
+          </a>
+          <p class="text-xs text-cream/50 leading-relaxed max-w-sm">
+            Delivering highly secure, top-tier gated plotting communities and
+            luxury construction across Bangalore's prospective growth avenues.
+          </p>
+          <!-- Social channels -->
+          <div class="flex items-center gap-4 mt-2">
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300"
+              aria-label="YouTube"
+            >
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Projects Column (Col span 2.5) -->
+        <div class="lg:col-span-3 flex flex-col gap-5">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">
+            Projects
+          </h4>
+          <div class="flex flex-col gap-3 text-xs">
+            <a href="/project" class="hover:text-olive transition">Royal Greens</a>
+            <a href="/project" class="hover:text-olive transition">Orchard Valley</a>
+            <a href="/project" class="hover:text-olive transition">Shankar Enclave</a>
+            <a href="/project" class="hover:text-olive transition">Anubhav Megacity</a>
+          </div>
+        </div>
+
+        <!-- Company Column (Col span 2.5) -->
+        <div class="lg:col-span-2 flex flex-col gap-5">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">
+            Company
+          </h4>
+          <div class="flex flex-col gap-3 text-xs">
+            <a href="/about" class="hover:text-olive transition">About Us</a>
+            <a href="/gallery" class="hover:text-olive transition">Gallery</a>
+            <a href="/blog" class="hover:text-olive transition">Blog</a>
+            <a href="/contact" class="hover:text-olive transition">Contact</a>
+           
+          </div>
+        </div>
+
+        <!-- Headquarters Contact Details (Col span 3) -->
+        <div class="lg:col-span-3 flex flex-col gap-5">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">
+            Headquarters
+          </h4>
+          <div class="flex flex-col gap-4 text-xs">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-olive mt-0.5"></i>
+              <span class="leading-relaxed">
+                No. 762, 7th Cross Rd, Sector A, Yelahanka New Town, Bengaluru,
+                Karnataka - 560064
+              </span>
+            </div>
+            <a
+              href="tel:+918217855041"
+              class="flex items-center gap-3 hover:text-olive transition"
+            >
+              <i class="fa-solid fa-phone text-olive"></i>
+              <span>+91 82178 55041</span>
+            </a>
+            <a
+              href="mailto:thegreatbuilds123@gmail.com"
+              class="flex items-center gap-3 hover:text-olive transition break-all"
+            >
+              <i class="fa-solid fa-envelope text-olive"></i>
+              <span>thegreatbuilds123@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom copyright / Privacy Policy line -->
+      <hr class="border-cream/5 mb-8 max-w-7xl mx-auto" />
+      <div
+        class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-cream/45 uppercase"
+      >
+        <div>© 2026 The Great Builds. All rights reserved.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-cream transition">Privacy Policy</a>
+          <a href="#" class="hover:text-cream transition">Terms of Use</a>
+          <a href="#" class="hover:text-cream transition">Disclaimer</a>
+        </div>
+      </div>
+    </footer>`    
 document.querySelector('body').innerHTML += modalHTML;
 document.getElementById("header-container").innerHTML = headerHTML;
+document.querySelector('.footer-container').innerHTML += footerHTML;
 
 // Contact Us Popup Modal Controls
 function openContactModal() {

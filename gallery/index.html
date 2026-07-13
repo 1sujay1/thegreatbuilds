@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Gallery | The Great Builds</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Inter & Playfair Display for Luxury Branding -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Interactive Map CSS (Leaflet) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxurySand: '#FAF8F3',     /* Warm cream background from image_933d78.png */
+                        luxuryDark: '#0A1C16',     /* Ultra-premium deep forest from image_933d78.png */
+                        luxuryDarkLight: '#142E25',/* Slightly lighter green for interactions */
+                        luxuryGold: '#C0A06D',     /* Brushed gold accent */
+                        luxuryGoldDark: '#9F8052', /* Deep shadow gold */
+                        cardBorder: '#EAE6DF',     /* Soft beige border */
+                           brand: {
+                darkGreen: "#0a1c12" /* Premium forest green */,
+                warmBeige: "#FAF7EC" /* Warm cream background from the image */,
+                accentBeige: "#F3EFE0" /* Darker tone beige */,
+                gold: "#C5A880" /* Luxury gold highlight */,
+                textCharcoal: "#222222" /* High contrast reading text */,
+                dark: "#0B1E17", // Deep Forest Green
+                darker: "#060F0C", // Darkest Forest Green
+                gold: "#B59B62", // Classic Warm Gold Accent
+                goldLight: "#D4C39E", // Soft Gold Highlight
+                cream: "#FAF7EE", // Warm Cream Base Background
+                creamLight: "#FFFDF9", // Ultra Light Soft Background
+                creamDark: "#F3EDE0", // Darker Cream for sections
+                charcoal: "#2D3732", // Muted Text
+                grayLight: "#94A3B8",
+                warmBeige: "#FAF7EC", // Warm beige for modal background
+                darkGreen: "#0a1c12", // Dark green for modal elements
+                textCharcoal: "#222222", // Text color for modal
+                accentBeige: "#F3EFE0" /* Darker tone beige */,
+                gold: "#C5A880" /* Luxury gold highlight */,
+              },
+                    },
+                    boxShadow: {
+                        'luxury': '0px 12px 40px rgba(10, 28, 22, 0.04)',
+                        'gold-glow': '0px 4px 20px rgba(192, 160, 109, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Warm sepia-lux tint filter for the live leaflet map to match color theme */
+        .luxury-map-filter {
+            filter: sepia(0.25) hue-rotate(4deg) contrast(0.92) brightness(0.99);
+        }
+        
+        /* Premium custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C0A06D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9F8052;
+        }
+
+        /* Gold underline animation on navigation links */
+        .nav-link-hover {
+            position: relative;
+        }
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #C0A06D;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link-hover:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body class="bg-luxurySand text-luxuryDark font-sans min-h-screen overflow-x-hidden">
+
+    <!-- Floating Header Navigation -->
+     <!-- Header / Navigation -->
+    <div id="header-container"></div>
+
+    <!-- Twilight Hero Banner Section (Inspired by image_933d78.png) -->
+    <header class="relative bg-luxuryDark h-[70vh] sm:h-[80vh] lg:h-[90vh] flex items-center overflow-hidden">
+        <!-- High-fidelity background twilight luxury architecture image -->
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920" 
+             alt="The Great Builds Premium Twilight Estate Banner" 
+             class="absolute inset-0 w-full h-full object-cover object-center scale-105 filter brightness-[0.4] contrast-[1.05]" />
+        
+        <!-- Gradient overlays mimicking twilight depth -->
+        <div class="absolute inset-0 bg-gradient-to-r from-luxuryDark/95 via-luxuryDark/70 to-transparent"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12">
+            <div class="max-w-3xl">
+                <!-- Golden Accent Tag -->
+                <span class="inline-block text-xs uppercase tracking-[0.4em] text-luxuryGold font-bold mb-4">
+                    INVESTMENT EXCELLENCE
+                </span>
+                
+                <!-- Hero Statement Title -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-white font-semibold leading-tight tracking-tight">
+                    Our Visual Portfolio of <br>
+                    <span class="italic text-luxuryGold font-serif font-light">Trusted Investments</span>
+                </h1>
+                
+                <!-- Secondary Copy Text -->
+                <p class="mt-6 text-sm sm:text-base text-gray-300 font-light leading-relaxed max-w-xl">
+                    Discover premium villa plots, gated layouts, and modern architecture in high-growth corridors. Meticulously engineered layouts backed by robust document verification.
+                </p>
+
+                <!-- Interactive CTA Banner Controls -->
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#gallery-grid-head" class="px-8 py-4 bg-white hover:bg-luxuryGold text-luxuryDark font-bold text-xs uppercase tracking-widest rounded-none transition-all duration-300 shadow-lg">
+                        Explore Gallery
+                    </a>
+                    <a onclick="openContactModal()" class="px-8 py-4 bg-transparent border-2 border-white hover:border-luxuryGold hover:text-luxuryGold text-white font-bold text-xs uppercase tracking-widest rounded-none transition-all duration-300">
+                        Enquire Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Float Floating Social Side Bar overlay from reference picture -->
+        <div class="hidden lg:flex absolute right-6 top-1/2 -translate-y-1/2 flex-col space-y-4 z-10">
+            <a href="#" class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-whatsapp text-lg"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-instagram text-lg"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-youtube text-lg"></i></a>
+        </div>
+    </header>
+
+    <!-- Master Gallery Main Interface Header -->
+    <main id="gallery-grid-head" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        
+        <!-- Filter Controller Tabs -->
+        <div class="flex flex-col items-center mb-16">
+            <span class="text-[10px] tracking-[0.25em] text-luxuryGold uppercase font-bold mb-4">Select Project to View</span>
+            <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-none border border-cardBorder shadow-luxury max-w-full">
+                <button onclick="applyProjectFilter('all')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold transition-all duration-300 bg-luxuryGold text-luxuryDark" data-filter="all">
+                    All Projects
+                </button>
+                <button onclick="applyProjectFilter('royal-greens')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="royal-greens">
+                    Royal Greens
+                </button>
+                <button onclick="applyProjectFilter('countryside')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="countryside">
+                    Countryside
+                </button>
+                <button onclick="applyProjectFilter('anubhav-megacity')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="anubhav-megacity">
+                    Anubhav Megacity
+                </button>
+                <button onclick="applyProjectFilter('shankar-enclave')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="shankar-enclave">
+                    Shankar Enclave
+                </button>
+            </div>
+            <p id="grid-status-counter" class="text-xs text-gray-400 mt-4 tracking-wider uppercase font-medium">Displaying all 9 luxury master builds</p>
+        </div>
+
+        <!-- Visual Grid: 3 Images Per Line (Desktop) | 3 Lines Total = 9 Images -->
+        <div id="project-gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
+            
+            <!-- Card 1: Royal Greens Villa -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="royal-greens" onclick="initiateLightbox(0)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=800" 
+                         alt="Royal Greens Premium Villa Facade" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Royal Greens</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Elite Villa Front Pool</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Gauribidanur, North Bengaluru</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Interactive Capture</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Royal Greens Inside -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="royal-greens" onclick="initiateLightbox(1)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800" 
+                         alt="Royal Greens Luxury Living Area" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Royal Greens</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Grand Double-Height Lounge</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Gauribidanur, North Bengaluru</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Interior Showcase</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Royal Greens Greenspace -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="royal-greens" onclick="initiateLightbox(2)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" 
+                         alt="Royal Greens Gated Entryway and Gardens" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Royal Greens</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Architectural Gated Boulevard</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Gauribidanur, North Bengaluru</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Master Planning</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Countryside Living -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="countryside" onclick="initiateLightbox(3)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" 
+                         alt="Countryside Cozy Living Space" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Countryside</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Nordic Oak Living Room</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Near Adiyogi, Chikkaballapur</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Interior Showcase</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Countryside Sunset -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="countryside" onclick="initiateLightbox(4)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
+                         alt="Countryside Exterior Terraces" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Countryside</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Panoramic Sunset Deck</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Near Adiyogi, Chikkaballapur</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Exterior Landscape</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Countryside Modern Kitchen -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="countryside" onclick="initiateLightbox(5)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" 
+                         alt="Countryside Modular Kitchen" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Countryside</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Minimalist Premium Kitchen</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Near Adiyogi, Chikkaballapur</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Interior Showcase</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Anubhav Megacity Gated Villa -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="anubhav-megacity" onclick="initiateLightbox(6)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" 
+                         alt="Anubhav Megacity High Class Plots" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Anubhav Megacity</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Grand Signature Villa Plot</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Basavakalyan, Karnataka</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Structural View</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8: Anubhav Megacity Modern Road -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="anubhav-megacity" onclick="initiateLightbox(7)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" 
+                         alt="Anubhav Megacity Smart Concrete Roads" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Anubhav Megacity</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Integrated Smart Concrete Road</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Basavakalyan, Karnataka</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Infrastructure</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9: Shankar Enclave Main Entry -->
+            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="shankar-enclave" onclick="initiateLightbox(8)">
+                <div class="relative overflow-hidden h-72">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" 
+                         alt="Shankar Enclave Modern Apartment Gate" 
+                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Shankar Enclave</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Luxury Residential Entrance</h3>
+                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Yelahanka New Town, Bengaluru</p>
+                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
+                        <span>Master Build</span>
+                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Cinematic Walkthrough Video Section -->
+    <section class="bg-luxuryDark py-24 border-y border-cardBorder/10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-luxuryGold/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.4em] text-luxuryGold font-bold font-semibold">Immersive Tour</span>
+                <h2 class="text-3xl sm:text-4xl font-serif text-white font-semibold mt-4 mb-4">Master Plan Virtual Tour</h2>
+                <p class="text-gray-400 text-xs sm:text-sm font-light">
+                    Walk through the meticulously paved express CC arterial roads, lush botanical gardens, and wellness clubhouses crafted exclusively by The Great Builds.
+                </p>
+            </div>
+
+            <!-- Video Player Stage with Play Overlay -->
+            <div class="relative max-w-4xl mx-auto aspect-video border border-luxuryGold/30 bg-black shadow-luxury shadow-gold-glow/5 group">
+                <!-- Premium architectural loop video -->
+                <video id="master-walkthrough-video" class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200" loop muted playsinline>
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-apartment-building-with-glass-facade-41398-large.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <!-- Immersive Controls Overlays -->
+                <div id="video-overlay" class="absolute inset-0 bg-black/40 flex flex-col justify-between p-6 transition-all duration-500 group-hover:bg-black/20">
+                    <div class="flex justify-between items-start">
+                        <span class="bg-luxuryGold text-luxuryDark px-3 py-1 text-[9px] tracking-widest uppercase font-bold font-semibold">Cinematic Preview</span>
+                        <span class="text-white/60 text-xs font-light">4K Aerial Footage</span>
+                    </div>
+                    
+                    <!-- Centered Play Toggle -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button id="video-play-btn" onclick="toggleVideoPlayback()" class="w-20 h-20 bg-luxuryGold text-luxuryDark hover:bg-white hover:scale-105 transition-all duration-300 rounded-full flex items-center justify-center shadow-lg focus:outline-none" aria-label="Play Drone Video">
+                            <i id="video-play-icon" class="fa-solid fa-play text-2xl translate-x-0.5"></i>
+                        </button>
+                    </div>
+
+                    <div class="flex justify-between items-end text-xs text-white/80 font-light pointer-events-none">
+                        <span>Anubhav Megacity Master Tour</span>
+                        <span id="video-timer-indicator">0:00 / Cinematic</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Deluxe Map and Form Enquiries (Replicated from image_933d78.png) -->
+    <section id="contact" class="py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="display: none;">
+        
+        <div class="text-center max-w-2xl mx-auto mb-20">
+            <span class="text-xs uppercase tracking-[0.4em] text-luxuryGold font-bold font-semibold">Contact Us</span>
+            <h2 class="text-3xl sm:text-4xl font-serif text-luxuryDark font-semibold mt-4">Connect with <span class="italic text-luxuryGold">The Great Builds</span></h2>
+            <p class="text-gray-500 text-xs sm:text-sm font-light mt-2">Submit your queries below and our regional investment manager will reach out within 24 hours.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Left Grid: Stylized Map Component -->
+            <div class="lg:col-span-5 w-full flex flex-col bg-white border border-cardBorder shadow-luxury p-4 group">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-bold font-semibold"><i class="fa-solid fa-location-crosshairs mr-1"></i> Bengaluru Headquarters</span>
+                    <a href="https://maps.google.com" target="_blank" class="text-luxuryDark hover:text-luxuryGold text-xs font-semibold flex items-center space-x-1 transition-colors">
+                        <span>Open in Maps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+                <!-- Interactive Leaflet map integration container -->
+                <div id="contact-leaflet-map" class="w-full h-[450px] luxury-map-filter border border-cardBorder bg-luxurySand transition-all duration-300"></div>
+                <div class="mt-4 flex items-center space-x-3 text-xs text-gray-500 font-light leading-relaxed">
+                    <i class="fa-solid fa-map-pin text-luxuryGold text-lg shrink-0"></i>
+                    <p>No. 762, 7th Cross, Sector A, Yelahanka New Town, Bengaluru, Karnataka - 560064</p>
+                </div>
+            </div>
+
+            <!-- Right Grid: High-Fidelity Enquiry Form (verbatim form structure from image_933d78.png) -->
+            <div class="lg:col-span-7 bg-white border border-cardBorder shadow-luxury p-8 sm:p-12 relative">
+                
+                <h3 class="font-serif text-xl sm:text-2xl font-bold text-luxuryDark mb-2">Enquiry Form</h3>
+                <p class="text-gray-500 text-xs font-light mb-8">Fill out the detailed form below to register your exclusive plot allocation priority.</p>
+
+                <!-- Feedback Message Overlay (Replaces alerts) -->
+                <div id="submission-success-notification" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center p-8 text-center z-20">
+                    <div class="w-16 h-16 bg-luxuryGold/20 text-luxuryGold rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-envelope-circle-check text-2xl"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl font-bold text-luxuryDark mb-2">Enquiry Received</h4>
+                    <p class="text-gray-500 text-sm max-w-sm mx-auto font-light leading-relaxed">
+                        Thank you for reaching out. An experienced relationship manager from <strong class="text-luxuryGold">The Great Builds</strong> has been assigned to your query and will contact you shortly.
+                    </p>
+                    <button onclick="dismissFeedbackNotification()" class="mt-8 px-6 py-2.5 border border-luxuryGold text-luxuryDark text-xs uppercase tracking-widest font-bold hover:bg-luxuryDark hover:text-luxurySand transition-all">
+                        New Enquiry
+                    </button>
+                </div>
+
+                <!-- Form Inputs -->
+                <form id="enquiry-form" onsubmit="handleEnquiryFormSubmission(event)" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Full Name field -->
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] tracking-widest text-luxuryDark uppercase font-bold font-semibold">Full Name</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-400 pointer-events-none">
+                                    <i class="fa-regular fa-user text-xs"></i>
+                                </span>
+                                <input type="text" required placeholder="John Doe" 
+                                       class="w-full pl-10 pr-4 py-3 bg-luxurySand/40 border border-cardBorder hover:border-luxuryGold focus:border-luxuryDark focus:outline-none text-sm transition-colors rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- Email field -->
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] tracking-widest text-luxuryDark uppercase font-bold font-semibold">Email Address</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-400 pointer-events-none">
+                                    <i class="fa-regular fa-envelope text-xs"></i>
+                                </span>
+                                <input type="email" required placeholder="john@example.com" 
+                                       class="w-full pl-10 pr-4 py-3 bg-luxurySand/40 border border-cardBorder hover:border-luxuryGold focus:border-luxuryDark focus:outline-none text-sm transition-colors rounded-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Phone Number field -->
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] tracking-widest text-luxuryDark uppercase font-bold font-semibold">Phone Number</label>
+                            <div class="relative flex">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-400 pointer-events-none">
+                                    <i class="fa-solid fa-phone text-xs"></i>
+                                </span>
+                                <span class="absolute inset-y-0 left-8 pl-1.5 flex items-center text-gray-500 font-medium text-xs pointer-events-none">
+                                    +91
+                                </span>
+                                <input type="tel" required pattern="[0-9]{10}" placeholder="81234 56789" 
+                                       class="w-full pl-16 pr-4 py-3 bg-luxurySand/40 border border-cardBorder hover:border-luxuryGold focus:border-luxuryDark focus:outline-none text-sm transition-colors rounded-none">
+                            </div>
+                        </div>
+
+                        <!-- Project Dropdown select field -->
+                        <div class="flex flex-col space-y-2">
+                            <label class="text-[10px] tracking-widest text-luxuryDark uppercase font-bold font-semibold font-semibold font-semibold">Interested Project(s)</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-400 pointer-events-none">
+                                    <i class="fa-solid fa-building-circle-check text-xs"></i>
+                                </span>
+                                <select required class="w-full pl-10 pr-4 py-3 bg-luxurySand/40 border border-cardBorder hover:border-luxuryGold focus:border-luxuryDark focus:outline-none text-sm transition-colors rounded-none appearance-none">
+                                    <option value="" disabled selected>Select Projects</option>
+                                    <option value="royal-greens">Royal Greens</option>
+                                    <option value="countryside">Countryside</option>
+                                    <option value="anubhav-megacity">Anubhav Megacity</option>
+                                    <option value="shankar-enclave">Shankar Enclave</option>
+                                </select>
+                                <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 pointer-events-none">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message details -->
+                    <div class="flex flex-col space-y-2">
+                        <label class="text-[10px] tracking-widest text-luxuryDark uppercase font-bold font-semibold">Your Message</label>
+                        <textarea required rows="4" placeholder="Tell us about your requirements or preferred plot dimensions..." 
+                                  class="w-full p-4 bg-luxurySand/40 border border-cardBorder hover:border-luxuryGold focus:border-luxuryDark focus:outline-none text-sm transition-colors rounded-none resize-none"></textarea>
+                    </div>
+
+                    <!-- Form submission action -->
+                    <button type="submit" class="w-full py-4 bg-luxuryDark text-white hover:bg-luxuryGold hover:text-luxuryDark transition-all duration-300 font-bold text-xs uppercase tracking-[0.2em] rounded-none shadow-lg">
+                        Submit Enquiry
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Custom Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-8 select-none transition-opacity duration-300">
+        
+        <!-- Header Controls -->
+        <div class="flex justify-between items-center w-full z-10">
+            <div class="text-gray-400 text-xs tracking-[0.2em] font-medium">
+                BUILD <span id="lightbox-curr-index" class="text-luxuryGold font-bold">1</span> / <span id="lightbox-total-index">9</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <button onclick="toggleLightboxZoom()" class="text-gray-400 hover:text-white transition-colors" title="Zoom Stage">
+                    <i id="lightbox-zoom-btn-icon" class="fa-solid fa-magnifying-glass-plus text-lg"></i>
+                </button>
+                <button onclick="dismissLightbox()" class="text-gray-400 hover:text-luxuryGold text-xl transition-colors" title="Close Portfolio View">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Slider Arena -->
+        <div class="relative flex-1 flex items-center justify-between w-full max-w-6xl mx-auto my-4 overflow-hidden">
+            <!-- Swipe / Arrow Nav Left -->
+            <button onclick="stepLightboxSlide(-1)" class="absolute left-2 sm:left-4 z-20 w-12 h-12 rounded-full bg-white/10 hover:bg-luxuryGold hover:text-luxuryDark transition-all duration-300 flex items-center justify-center text-white focus:outline-none" aria-label="Previous Build">
+                <i class="fa-solid fa-chevron-left text-sm"></i>
+            </button>
+
+            <!-- Image Viewframe -->
+            <div class="w-full h-full flex items-center justify-center p-2 relative">
+                <img id="lightbox-stage-image" src="" alt="Master Build Large View" class="max-w-full max-h-[70vh] sm:max-h-[75vh] object-contain transition-transform duration-500 scale-100 shadow-2xl">
+            </div>
+
+            <!-- Swipe / Arrow Nav Right -->
+            <button onclick="stepLightboxSlide(1)" class="absolute right-2 sm:right-4 z-20 w-12 h-12 rounded-full bg-white/10 hover:bg-luxuryGold hover:text-luxuryDark transition-all duration-300 flex items-center justify-center text-white focus:outline-none" aria-label="Next Build">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+            </button>
+        </div>
+
+        <!-- Descriptive Caption Footer panel -->
+        <div class="w-full max-w-3xl mx-auto text-center z-10 pb-4">
+            <span id="lightbox-tag-pill" class="text-luxuryGold uppercase tracking-widest text-[9px] font-bold border border-luxuryGold/40 px-3 py-1 rounded-none bg-luxuryGold/5">Royal Greens</span>
+            <h2 id="lightbox-caption-title" class="font-serif text-xl sm:text-2xl font-bold text-white mt-3">Scenic Luxury Exterior</h2>
+            <p id="lightbox-caption-desc" class="text-gray-400 text-xs mt-2 max-w-xl mx-auto font-light">Spanning expansive gated community plots situated near key commercial arteries.</p>
+        </div>
+    </div>
+
+    <!-- Deluxe Footer (Replicated visual properties from image_933d78.png) -->
+   <div class="footer-container"></div>
+ <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <!-- Interactive Core Scripts -->
+    <!-- Interactive Map Script (Leaflet) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script>
+        // Gallery Database containing details for the 9 distinct visuals
+        const masterGalleryData = [
+            {
+                img: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=1200',
+                project: 'royal-greens',
+                tag: 'Royal Greens',
+                title: 'Elite Villa Front Pool',
+                desc: 'A gorgeous modern villa view overlooking the landscaped smart swimming arena, custom-crafted under luxury provisions.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200',
+                project: 'royal-greens',
+                tag: 'Royal Greens',
+                title: 'Grand Double-Height Lounge',
+                desc: 'Expansive designer ventilation incorporating custom double-glazing window elements to elevate luxury living parameters.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200',
+                project: 'royal-greens',
+                tag: 'Royal Greens',
+                title: 'Architectural Gated Boulevard',
+                desc: 'Exquisite paved tree-lined central layout roads planned gracefully with integrated storm drains and modern cables.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200',
+                project: 'countryside',
+                tag: 'Countryside',
+                title: 'Nordic Oak Living Room',
+                desc: 'Seamless structural designs using clean hardwood flooring, panoramic glazing, and natural lighting components.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
+                project: 'countryside',
+                tag: 'Countryside',
+                title: 'Panoramic Sunset Deck',
+                desc: 'Stunning outdoor sunset deck and relaxation terraces designed in harmony with native flora and natural landscape.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=1200',
+                project: 'countryside',
+                tag: 'Countryside',
+                title: 'Minimalist Premium Kitchen',
+                desc: 'High-end modular systems integrated perfectly within expansive dining environments designed for upscale families.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200',
+                project: 'anubhav-megacity',
+                tag: 'Anubhav Megacity',
+                title: 'Grand Signature Villa Plot',
+                desc: 'A premium-tier custom residential construction featuring highly structured smart layout divisions.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1200',
+                project: 'anubhav-megacity',
+                tag: 'Anubhav Megacity',
+                title: 'Integrated Smart Concrete Road',
+                desc: 'Beautifully paved wide CC transit pathways designed structurally to ensure robust urban communication networks.'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=1200',
+                project: 'shankar-enclave',
+                tag: 'Shankar Enclave',
+                title: 'Luxury Residential Entrance',
+                desc: 'A modern state-of-the-art entry gate built as part of the elegant Shankar Enclave gated residential framework.'
+            }
+        ];
+
+        let activeSlideIndex = 0;
+        let lightboxIsZoomed = false;
+
+        // Mobile side menu transitions
+        const mobileToggleBtn = document.getElementById('mobile-toggle-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const mobileCloseBtn = document.getElementById('mobile-close-btn');
+        const mobileContactTrigger = document.getElementById('mobile-contact-trigger');
+
+        mobileToggleBtn.addEventListener('click', () => {
+            mobileDrawer.classList.remove('hidden');
+            setTimeout(() => {
+                mobileDrawer.classList.remove('translate-x-full');
+            }, 10);
+        });
+
+        const closeMobileDrawer = () => {
+            mobileDrawer.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileDrawer.classList.add('hidden');
+            }, 300);
+        };
+
+        mobileCloseBtn.addEventListener('click', closeMobileDrawer);
+        mobileContactTrigger.addEventListener('click', closeMobileDrawer);
+
+        // Gallery filtering mechanism
+        function applyProjectFilter(projectFilter) {
+            const galleryCards = document.querySelectorAll('.gallery-item');
+            const tabButtons = document.querySelectorAll('.project-tab');
+            let visibleCount = 0;
+
+            // Manage button active states
+            tabButtons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === projectFilter) {
+                    btn.classList.add('bg-luxuryGold', 'text-luxuryDark');
+                    btn.classList.remove('text-gray-500');
+                } else {
+                    btn.classList.remove('bg-luxuryGold', 'text-luxuryDark');
+                    btn.classList.add('text-gray-500');
+                }
+            });
+
+            // Grid card anim transitions
+            galleryCards.forEach(card => {
+                const projectAttr = card.getAttribute('data-project');
+                if (projectFilter === 'all' || projectAttr === projectFilter) {
+                    card.style.display = 'block';
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(15px)';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 60);
+                    visibleCount++;
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(15px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 250);
+                }
+            });
+
+            // Status message
+            const counterText = document.getElementById('grid-status-counter');
+            if (projectFilter === 'all') {
+                counterText.textContent = 'Displaying all 9 luxury master builds';
+            } else {
+                const label = projectFilter.replace('-', ' ');
+                counterText.textContent = `Showing ${visibleCount} builds for ${label}`;
+            }
+        }
+
+        // Custom walkthrough video controls
+        const walkthroughVideo = document.getElementById('master-walkthrough-video');
+        const videoOverlay = document.getElementById('video-overlay');
+        const videoPlayIcon = document.getElementById('video-play-icon');
+        const videoTimer = document.getElementById('video-timer-indicator');
+
+        function toggleVideoPlayback() {
+            if (walkthroughVideo.paused) {
+                walkthroughVideo.play();
+                videoPlayIcon.classList.remove('fa-play');
+                videoPlayIcon.classList.add('fa-pause');
+                videoOverlay.classList.add('opacity-0');
+            } else {
+                walkthroughVideo.pause();
+                videoPlayIcon.classList.remove('fa-pause');
+                videoPlayIcon.classList.add('fa-play');
+                videoOverlay.classList.remove('opacity-0');
+            }
+        }
+
+        walkthroughVideo.addEventListener('timeupdate', () => {
+            const currentMins = Math.floor(walkthroughVideo.currentTime / 60);
+            const currentSecs = Math.floor(walkthroughVideo.currentTime % 60).toString().padStart(2, '0');
+            const totalMins = Math.floor(walkthroughVideo.duration / 60) || 0;
+            const totalSecs = Math.floor(walkthroughVideo.duration % 60).toString().padStart(2, '0') || '00';
+            videoTimer.textContent = `${currentMins}:${currentSecs} / ${totalMins}:${totalSecs}`;
+        });
+
+        // Leaflet dynamic live map initialization
+        let leafletInstance;
+        window.addEventListener('DOMContentLoaded', () => {
+            // Headquarters centered near Bangalore, Yelahanka
+            leafletInstance = L.map('contact-leaflet-map', {
+                scrollWheelZoom: false
+            }).setView([13.0970, 77.5960], 14);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> developers'
+            }).addTo(leafletInstance);
+
+            // Styled map pin using luxury dark slate color theme
+            const customLuxMarkerIcon = L.divIcon({
+                html: `<div class="flex items-center justify-center w-8 h-8 rounded-full bg-luxuryDark border-2 border-luxuryGold text-luxuryGold shadow-lg animate-bounce">
+                         <i class="fa-solid fa-location-dot"></i>
+                       </div>`,
+                className: '',
+                iconSize: [32, 32],
+                iconAnchor: [16, 32]
+            });
+
+            L.marker([13.0970, 77.5960], { icon: customLuxMarkerIcon }).addTo(leafletInstance)
+                .bindPopup(`<div class="p-2 font-serif text-center">
+                             <strong class="text-luxuryDark tracking-wider block">THE GREAT BUILDS</strong>
+                             <span class="text-xs text-gray-500 font-sans mt-1 block">Bengaluru Headquarters</span>
+                           </div>`)
+                .openPopup();
+        });
+
+        // Immersive Lightbox Engine
+        const lightboxContainer = document.getElementById('lightbox-modal');
+        const lightboxImage = document.getElementById('lightbox-stage-image');
+        const lightboxCurrLabel = document.getElementById('lightbox-curr-index');
+        const lightboxTotalLabel = document.getElementById('lightbox-total-index');
+        const lightboxTagPill = document.getElementById('lightbox-tag-pill');
+        const lightboxCaptionTitle = document.getElementById('lightbox-caption-title');
+        const lightboxCaptionDesc = document.getElementById('lightbox-caption-desc');
+        const lightboxZoomIcon = document.getElementById('lightbox-zoom-btn-icon');
+
+        lightboxTotalLabel.textContent = masterGalleryData.length;
+
+        function initiateLightbox(slideIdx) {
+            activeSlideIndex = slideIdx;
+            renderLightboxSlide();
+            lightboxContainer.classList.remove('hidden');
+            lightboxContainer.style.opacity = '0';
+            document.body.style.overflow = 'hidden'; // Disable screen scroll
+            setTimeout(() => {
+                lightboxContainer.style.opacity = '1';
+            }, 10);
+        }
+
+        function dismissLightbox() {
+            lightboxContainer.style.opacity = '0';
+            document.body.style.overflow = 'auto'; // Re-enable screen scroll
+            resetLightboxZoomState();
+            setTimeout(() => {
+                lightboxContainer.classList.add('hidden');
+            }, 300);
+        }
+
+        function renderLightboxSlide() {
+            const slideData = masterGalleryData[activeSlideIndex];
+            lightboxImage.style.opacity = '0';
+            lightboxImage.style.transform = 'scale(0.96)';
+            resetLightboxZoomState();
+
+            setTimeout(() => {
+                lightboxImage.src = slideData.img;
+                lightboxCurrLabel.textContent = activeSlideIndex + 1;
+                lightboxTagPill.textContent = slideData.tag;
+                lightboxCaptionTitle.textContent = slideData.title;
+                lightboxCaptionDesc.textContent = slideData.desc;
+
+                lightboxImage.style.opacity = '1';
+                lightboxImage.style.transform = 'scale(1)';
+            }, 180);
+        }
+
+        function stepLightboxSlide(stepOffset) {
+            activeSlideIndex = (activeSlideIndex + stepOffset + masterGalleryData.length) % masterGalleryData.length;
+            renderLightboxSlide();
+        }
+
+        function toggleLightboxZoom() {
+            if (!lightboxIsZoomed) {
+                lightboxImage.classList.remove('scale-100');
+                lightboxImage.classList.add('scale-125', 'cursor-zoom-out');
+                lightboxZoomIcon.classList.remove('fa-magnifying-glass-plus');
+                lightboxZoomIcon.classList.add('fa-magnifying-glass-minus');
+                lightboxIsZoomed = true;
+            } else {
+                resetLightboxZoomState();
+            }
+        }
+
+        function resetLightboxZoomState() {
+            lightboxImage.classList.remove('scale-125', 'cursor-zoom-out');
+            lightboxImage.classList.add('scale-100');
+            lightboxZoomIcon.classList.remove('fa-magnifying-glass-minus');
+            lightboxZoomIcon.classList.add('fa-magnifying-glass-plus');
+            lightboxIsZoomed = false;
+        }
+
+        // Close on clicking backdrop area
+        lightboxContainer.addEventListener('click', (event) => {
+            if (event.target === lightboxContainer || event.target.parentElement === lightboxContainer) {
+                dismissLightbox();
+            }
+        });
+
+        // Swipe Gestures Support for Mobile Devices
+        let touchStartCoordX = 0;
+        let touchEndCoordX = 0;
+
+        lightboxContainer.addEventListener('touchstart', (event) => {
+            touchStartCoordX = event.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightboxContainer.addEventListener('touchend', (event) => {
+            touchEndCoordX = event.changedTouches[0].screenX;
+            evaluateTouchSwipe();
+        }, { passive: true });
+
+        function evaluateTouchSwipe() {
+            const dragThreshold = 55;
+            if (touchStartCoordX - touchEndCoordX > dragThreshold) {
+                stepLightboxSlide(1); // Swipe left
+            } else if (touchEndCoordX - touchStartCoordX > dragThreshold) {
+                stepLightboxSlide(-1); // Swipe right
+            }
+        }
+
+        // Global key navigations
+        document.addEventListener('keydown', (event) => {
+            if (!lightboxContainer.classList.contains('hidden')) {
+                if (event.key === 'Escape') dismissLightbox();
+                if (event.key === 'ArrowRight') stepLightboxSlide(1);
+                if (event.key === 'ArrowLeft') stepLightboxSlide(-1);
+            }
+        });
+
+        // Enquiry form presentation callback
+        function handleEnquiryFormSubmission(event) {
+            event.preventDefault();
+            const notification = document.getElementById('submission-success-notification');
+            notification.classList.remove('hidden');
+        }
+
+        function dismissFeedbackNotification() {
+            const notification = document.getElementById('submission-success-notification');
+            notification.classList.add('hidden');
+            document.getElementById('enquiry-form').reset();
+        }
+    </script>
+</body>
+</html>

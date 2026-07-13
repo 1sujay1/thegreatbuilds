@@ -116,48 +116,26 @@ const headerHTML = `   <header
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- Winged Circular Logo -->
-          <a href="/" class="flex items-center space-x-3 group">
-            <div
-              class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center p-1 transition-transform duration-300 group-hover:rotate-12"
-            >
-              <svg
-                class="w-10 h-10 text-brand-gold"
-                viewBox="0 0 100 100"
-                fill="currentColor"
-              >
-                <!-- Custom Stylized Shield & Wings Logo -->
-                <path
-                  d="M50,15 L75,25 L75,55 C75,75 50,85 50,85 C50,85 25,75 25,55 L25,25 L50,15 Z"
-                  fill="none"
-                  stroke="#B59B62"
-                  stroke-width="4"
-                />
-                <path
-                  d="M25,35 H10 C10,35 5,45 20,50 C10,53 12,63 25,58"
-                  fill="none"
-                  stroke="#B59B62"
-                  stroke-width="3"
-                />
-                <path
-                  d="M75,35 H90 C90,35 95,45 80,50 C90,53 88,63 75,58"
-                  fill="none"
-                  stroke="#B59B62"
-                  stroke-width="3"
-                />
-                <circle cx="50" cy="45" r="10" fill="#B59B62" />
-                <path d="M40,45 H60" stroke="#0B1E17" stroke-width="3" />
-              </svg>
-            </div>
-            <div class="flex flex-col">
-              <span
-                class="font-serif text-lg font-bold tracking-wider text-brand-cream uppercase leading-tight"
-                >The Great Builds</span
-              >
-              <span class="text-[9px] uppercase tracking-widest text-brand-gold"
-                >Builders &amp; Developers</span
-              >
-            </div>
-          </a>
+         <a href="#" class="flex items-center space-x-3 group">
+  <div
+    class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:rotate-12"
+  >
+    <img 
+      src="/assets/images/Anubhav_megacity/logonew1.svg" 
+      alt="The Great Builds Logo" 
+      class="w-full h-full object-cover scale-100 transition-transform duration-300 group-hover:scale-110"
+    />
+  </div>
+  <div class="flex flex-col">
+    <span
+      class="font-serif text-lg font-bold tracking-wider text-brand-cream uppercase leading-tight"
+      >The Great Builds</span
+    >
+    <!-- <span class="text-[9px] uppercase tracking-widest text-brand-gold"
+      >Builders &amp; Developers</span
+    > -->
+  </div>
+</a>
 
           <!-- Desktop Nav Items -->
           <nav class="hidden lg:flex items-center space-x-8">
@@ -306,47 +284,26 @@ const footerHTML= `   <footer class="bg-forest-dark text-cream/70 py-20 border-t
         <!-- Logo & Social Column (Col span 4) -->
         <div class="lg:col-span-4 flex flex-col gap-6">
           <!-- Logo Winged emblem SVG representation matching image_dd2488.png -->
-          <a href="#" class="flex items-center gap-3">
-            <div
-              class="w-14 h-14 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20"
-            >
-              <svg
-                class="w-10 h-10 text-cream"
-                viewBox="0 0 100 100"
-                fill="currentColor"
-              >
-                <path
-                  d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linejoin="round"
-                />
-                <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z" />
-                <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z" />
-                <path
-                  d="M35 48 H65 M35 55 H65 M45 62 H55"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-                <polygon
-                  points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <div class="flex flex-col">
-              <span
-                class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none"
-                >The</span
-              >
-              <span
-                class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight"
-                >Great Builds</span
-              >
-            </div>
-          </a>
+          <a href="#" class="flex items-center space-x-3 group">
+  <div
+    class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:rotate-12"
+  >
+    <img 
+      src="/assets/images/Anubhav_megacity/logonew1.svg" 
+      alt="The Great Builds Logo" 
+      class="w-full h-full object-cover scale-100 transition-transform duration-300 group-hover:scale-110"
+    />
+  </div>
+  <div class="flex flex-col">
+    <span
+      class="font-serif text-lg font-bold tracking-wider text-brand-dark uppercase leading-tight"
+      >The Great Builds</span
+    >
+    <!-- <span class="text-[9px] uppercase tracking-widest text-brand-gold"
+      >Builders &amp; Developers</span
+    > -->
+  </div>
+</a>
           <p class="text-xs text-cream/50 leading-relaxed max-w-sm">
             Delivering highly secure, top-tier gated plotting communities and
             luxury construction across Bangalore's prospective growth avenues.

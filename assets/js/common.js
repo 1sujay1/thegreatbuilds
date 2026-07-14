@@ -140,7 +140,7 @@ const headerHTML = `   <header
           <!-- Desktop Nav Items -->
           <nav class="hidden lg:flex items-center space-x-8">
           <a
-              href="#"
+              href="/index.html"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
               >Home</a
             >
@@ -170,11 +170,11 @@ const headerHTML = `   <header
           <!-- Right Side: Phone & Contact Callout -->
           <div class="hidden lg:flex items-center space-x-6">
             <a
-              href="tel:+918217855041"
+              href="tel:+9174118 54822"
               class="text-xs tracking-wider font-semibold text-brand-cream hover:text-brand-gold transition-colors flex items-center gap-2"
             >
               <i class="fa-solid fa-phone text-brand-gold"></i>
-              +91 82178 55041
+              +91 74118 54822
             </a>
  
             <a

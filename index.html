@@ -3,1549 +3,635 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Great Builds | Premium Builders & Developers in Bangalore</title>
-    <!-- Paste the favicon link tag right here -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
 
-    <!-- Font and Icon CDNs -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    <!-- Core Meta Tags -->
+    <title>
+      Coming Soon | The Great Builds - Premium Developers in Bangalore
+    </title>
+    <meta
+      name="description"
+      content="The Great Builds premium plotting developers portal is launching soon. Join our priority whitelist and secure first-choice privileges."
     />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for precise SVG-like icons -->
-     
+
+    <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="assets/css/common.css" />
+    <!-- Google Fonts: Playfair Display (Luxury Serif) & Plus Jakarta Sans (Clean Modern Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Custom Theme Configurations -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              brand: {
-                dark: "#0B1E17", // Deep Forest Green
-                darker: "#060F0C", // Darkest Forest Green
-                gold: "#B59B62", // Classic Warm Gold Accent
-                goldLight: "#D4C39E", // Soft Gold Highlight
-                cream: "#FAF7EE", // Warm Cream Base Background
-                creamLight: "#FFFDF9", // Ultra Light Soft Background
-                creamDark: "#F3EDE0", // Darker Cream for sections
-                charcoal: "#2D3732", // Muted Text
-                grayLight: "#94A3B8",
-                warmBeige: "#FAF7EC", // Warm beige for modal background
-                darkGreen: "#0a1c12", // Dark green for modal elements
-                textCharcoal: "#222222", // Text color for modal
-                accentBeige: "#F3EFE0" /* Darker tone beige */,
-                gold: "#C5A880" /* Luxury gold highlight */,
-              },
-            },
             fontFamily: {
-              serif: ['"Cormorant Garamond"', "serif"],
-              sans: ["Inter", "sans-serif"],
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              cream: {
+                DEFAULT: "#FAF7F0" /* Light luxury beige background */,
+                dark: "#F3EFE3" /* Section backgrounds */,
+                light: "#FCFBF9" /* Highlight cream */,
+              },
+              forest: {
+                DEFAULT: "#0B241C" /* Deep emerald forest green */,
+                light: "#143C2E",
+                dark: "#05120E",
+              },
+              olive: {
+                DEFAULT: "#818D6F" /* Elegant muted olive gold */,
+                light: "#9FA88C",
+                dark: "#677255",
+              },
             },
           },
         },
       };
     </script>
 
+    <!-- High-Fidelity Custom Styles -->
     <style>
-      /* Premium custom scrollbar styling */
+      /* Custom Scrollbar */
       ::-webkit-scrollbar {
-        width: 10px;
+        width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #0b1e17;
+        background: #faf7f0;
       }
       ::-webkit-scrollbar-thumb {
-        background: #b59b62;
-        border-radius: 5px;
+        background: #818d6f;
+        border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #d4c39e;
+        background: #0b241c;
       }
-      /* Dynamic Active State lines for tabs & navigation */
-      .tab-active::after {
-        content: "";
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #b59b62;
-        transition: all 0.3s ease;
+
+      .premium-border {
+        border-color: rgba(129, 141, 111, 0.2);
       }
-      /* Scroll Triggered Animations Utility */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
+
+      .hover-lift {
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
+      .hover-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(11, 36, 28, 0.08);
+      }
+
+      /* Pulse animation for under construction indicator */
+      @keyframes beacon {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.3);
+          opacity: 1;
+        }
+      }
+      .beacon-pulse {
+        animation: beacon 2s infinite ease-in-out;
       }
     </style>
   </head>
 
   <body
-    class="bg-brand-cream text-brand-charcoal font-sans antialiased overflow-x-hidden"
+    class="bg-cream text-forest font-sans overflow-x-hidden antialiased selection:bg-olive selection:text-cream flex flex-col min-h-screen"
   >
-    <!-- Header / Navigation -->
-    <div id="header-container"></div>
-
-    <!-- Hero Section -->
-    <section
-      class="relative min-h-screen pt-20 flex items-center overflow-hidden"
-    >
-      <!-- Unsplash Real Estate/Villa Driveway Premium Cover Background -->
-      <div class="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
-          alt="Luxurious Villa Estate"
-          class="w-full h-full object-cover object-center filter brightness-50"
-        />
-        <!-- Dark overlay gradient -->
-        <div class="absolute inset-0 bg-gradient-to-t"></div>
-      </div>
-
-      <!-- Hero Content Overlay Container -->
+    <!-- Header Block representing The Great Builds -->
+    <header class="absolute top-0 left-0 w-full z-50">
       <div
-        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white flex flex-col justify-end min-h-[80vh]"
+        class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-6"
       >
-        <div class="max-w-3xl space-y-6">
-          <!-- Subtle Lead Accent -->
-          <div class="flex items-center space-x-3 mb-2">
-            <div class="w-12 h-[1px] bg-brand-gold"></div>
-            <span
-              class="text-xs sm:text-sm font-bold tracking-[0.25em] text-brand-gold uppercase"
-              >Investment Excellence</span
-            >
-          </div>
-
-          <!-- Custom Styled Hero Heading matching style "Your Trusted Partner in Real Estate Investments" -->
-          <h1
-            class="text-4xl sm:text-5xl md:text-6xl font-light tracking-wide leading-tight text-brand-cream font-serif"
-          >
-            Your
-            <span class="italic font-normal text-brand-gold font-serif"
-              >Trusted</span
-            >
-            Partner <br class="hidden sm:inline" />
-            <strong
-              class="font-bold text-white block sm:inline mt-1 sm:mt-0 font-sans text-3xl sm:text-5xl md:text-6xl tracking-tight"
-              >in Real Estate Investments</strong
-            >
-          </h1>
-
-          <p
-            class="text-brand-cream/90 text-sm sm:text-base md:text-lg max-w-2xl font-light leading-relaxed"
-          >
-            The Great Builds helps you discover premium plots in high-growth
-            locations, backed by expert guidance and a seamless, crystal-clear
-            buying experience.
-          </p>
-
-          <!-- Dynamic Action Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 pt-4">
-            <a
-              href="#projects-section"
-              class="bg-brand-cream text-brand-dark font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-sm hover:bg-brand-gold hover:text-brand-dark transition-all shadow-xl hover:-translate-y-0.5 text-center"
-            >
-              Explore Projects
-            </a>
-            <a
-              href="#enquiry-section"
-              class="border border-white/60 text-white font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-sm hover:bg-white hover:text-brand-dark hover:border-white transition-all text-center"
-            >
-              Enquire Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose The Great Builds Section -->
-    <section id="why-choose-us" class="py-24 bg-brand-cream relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Title Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16 reveal active">
-          <div class="flex items-center justify-center gap-3 mb-2">
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span
-              class="text-xs uppercase tracking-widest text-brand-gold font-bold"
-              >Why Choose</span
-            >
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-          </div>
-          <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
-          >
-            Why Choose
-            <span class="text-brand-gold font-semibold">The Great Builds</span>
-          </h2>
-          <p
-            class="mt-6 text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-light"
-          >
-            We deliver exactly what we promise. At The Great Builds, we offer
-            premium plotted developments at an affordable price, with clear
-            documentation and transparent processes. Founded by young architects
-            with a clear vision, we create well-designed plotted communities
-            built for future growth and high customer satisfaction.
-          </p>
-        </div>
-
-        <!-- Grid of Selling Points & Custom Verification Box -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-stretch"
-        >
-          <!-- Left Features: Column of 3 key items -->
-          <div class="lg:col-span-7 flex flex-col justify-between gap-8">
-            <!-- Card 1: Personalized Investment Plans -->
-            <div
-              class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/20 transition-all flex gap-5"
-            >
-              <div
-                class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold shrink-0"
-              >
-                <i class="fa-solid fa-file-invoice-dollar text-xl"></i>
-              </div>
-              <div>
-                <h3
-                  class="font-serif text-xl font-bold tracking-wide text-brand-dark mb-2"
-                >
-                  PERSONALIZED INVESTMENT PLANS
-                </h3>
-                <p
-                  class="text-sm text-brand-charcoal/80 font-light leading-relaxed"
-                >
-                  We tailor custom, low-risk real estate plans based on your
-                  direct financial goals, ensuring you make the correct
-                  long-term purchase decision.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 2: Proven Success -->
-            <div
-              class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/20 transition-all flex gap-5"
-            >
-              <div
-                class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold shrink-0"
-              >
-                <i class="fa-solid fa-chart-line text-xl"></i>
-              </div>
-              <div>
-                <h3
-                  class="font-serif text-xl font-bold tracking-wide text-brand-dark mb-2"
-                >
-                  PROVEN SUCCESS
-                </h3>
-                <p
-                  class="text-sm text-brand-charcoal/80 font-light leading-relaxed"
-                >
-                  We maintain an outstanding track record of high-yield
-                  residential plotted developments, guaranteeing premium
-                  appreciation.
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 3: Expert Support -->
-            <div
-              class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/20 transition-all flex gap-5"
-            >
-              <div
-                class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold shrink-0"
-              >
-                <i class="fa-solid fa-headset text-xl"></i>
-              </div>
-              <div>
-                <h3
-                  class="font-serif text-xl font-bold tracking-wide text-brand-dark mb-2"
-                >
-                  EXPERT SUPPORT
-                </h3>
-                <p
-                  class="text-sm text-brand-charcoal/80 font-light leading-relaxed"
-                >
-                  Our highly experienced, responsive customer relations team
-                  works continuously to share on-ground real estate insights and
-                  updates.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Feature: Why Trust Us Checklist Box -->
+        <a href="#" class="flex items-center gap-3 group">
           <div
-            class="lg:col-span-5 bg-brand-dark text-brand-cream p-8 sm:p-10 rounded-lg flex flex-col justify-between border border-brand-gold/20 shadow-xl relative overflow-hidden"
+            class="w-12 h-12 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20 group-hover:bg-cream/20 transition duration-300 backdrop-blur-md"
           >
-            <!-- Subtle background graphics -->
-            <div
-              class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-gold/5 rounded-full blur-2xl"
-            ></div>
-
-            <div>
-              <h3
-                class="font-serif text-2xl tracking-wide text-brand-gold font-bold mb-6"
-              >
-                WHY TRUST US
-              </h3>
-
-              <ul class="space-y-4">
-                <li
-                  class="flex items-center gap-4 py-2 border-b border-brand-cream/10"
-                >
-                  <span
-                    class="w-8 h-8 rounded-full bg-brand-gold/25 text-brand-gold flex items-center justify-center text-xs shrink-0"
-                    ><i class="fa-solid fa-circle-check"></i
-                  ></span>
-                  <span class="text-xs uppercase font-semibold tracking-wider"
-                    >10+ YEARS OF EXPERIENCE</span
-                  >
-                </li>
-                <li
-                  class="flex items-center gap-4 py-2 border-b border-brand-cream/10"
-                >
-                  <span
-                    class="w-8 h-8 rounded-full bg-brand-gold/25 text-brand-gold flex items-center justify-center text-xs shrink-0"
-                    ><i class="fa-solid fa-circle-check"></i
-                  ></span>
-                  <span class="text-xs uppercase font-semibold tracking-wider"
-                    >500+ PROPERTIES SOLD</span
-                  >
-                </li>
-                <li
-                  class="flex items-center gap-4 py-2 border-b border-brand-cream/10"
-                >
-                  <span
-                    class="w-8 h-8 rounded-full bg-brand-gold/25 text-brand-gold flex items-center justify-center text-xs shrink-0"
-                    ><i class="fa-solid fa-circle-check"></i
-                  ></span>
-                  <span class="text-xs uppercase font-semibold tracking-wider"
-                    >LEGAL PROPERTY VERIFICATION</span
-                  >
-                </li>
-                <li
-                  class="flex items-center gap-4 py-2 border-b border-brand-cream/10"
-                >
-                  <span
-                    class="w-8 h-8 rounded-full bg-brand-gold/25 text-brand-gold flex items-center justify-center text-xs shrink-0"
-                    ><i class="fa-solid fa-circle-check"></i
-                  ></span>
-                  <span class="text-xs uppercase font-semibold tracking-wider"
-                    >CLEAR DOCUMENTATION</span
-                  >
-                </li>
-                <li class="flex items-center gap-4 py-2">
-                  <span
-                    class="w-8 h-8 rounded-full bg-brand-gold/25 text-brand-gold flex items-center justify-center text-xs shrink-0"
-                    ><i class="fa-solid fa-circle-check"></i
-                  ></span>
-                  <span class="text-xs uppercase font-semibold tracking-wider"
-                    >GOVERNMENT APPROVED LAYOUTS</span
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Highlighted Direct Contact Phone Box/Badge -->
-            <div class="mt-8 pt-6 border-t border-brand-cream/10">
-              <a
-                href="tel:+9174118 54822"
-                class="flex items-center justify-center gap-3 bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-bold tracking-widest text-sm uppercase py-3.5 rounded-sm shadow-md transition-all"
-              >
-                <i class="fa-solid fa-phone-volume"></i>
-                +91 74118 54822
-              </a>
-            </div>
+            <svg
+              class="w-8 h-8 text-cream"
+              viewBox="0 0 100 100"
+              fill="currentColor"
+            >
+              <path
+                d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+              <path d="M25 45 C15 40 5 45 5 45 C15 50 25 55 25 55 Z" />
+              <path d="M75 45 C85 40 95 45 95 45 C85 50 75 55 75 55 Z" />
+              <path
+                d="M35 48 H65 M35 55 H65 M45 62 H55"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <polygon
+                points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29"
+                fill="currentColor"
+              />
+            </svg>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Discover Projects Section -->
-    <section id="projects-section" class="py-24 bg-brand-creamDark relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Title Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <div class="flex items-center justify-center gap-3 mb-2">
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span
-              class="text-xs uppercase tracking-widest text-brand-gold font-bold"
-              >Discover projects by</span
-            >
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-          </div>
-          <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
-          >
-            Discover projects by
-            <span class="text-brand-gold font-semibold">The Great Builds</span>
-          </h2>
-        </div>
-
-        <!-- Projects Dynamic Tabs Menu -->
-        <!-- Projects Dynamic Tabs Menu -->
-        <div
-          class="grid grid-cols-3 mb-16 border-b border-brand-gold/20 max-w-2xl mx-auto text-center"
-        >
-          <button
-            onclick="filterProjects('ongoing')"
-            id="tab-ongoing"
-            class="tab-btn py-3 text-[10px] sm:text-xs uppercase font-bold tracking-widest text-brand-dark relative tab-active transition-all focus:outline-none"
-          >
-            Ongoing Projects
-          </button>
-          <button
-            onclick="filterProjects('upcoming')"
-            id="tab-upcoming"
-            class="tab-btn py-3 text-[10px] sm:text-xs uppercase font-bold tracking-widest text-brand-charcoal/60 relative transition-all focus:outline-none"
-          >
-            Upcoming Projects
-          </button>
-          <button
-            onclick="filterProjects('completed')"
-            id="tab-completed"
-            class="tab-btn py-3 text-[10px] sm:text-xs uppercase font-bold tracking-widest text-brand-charcoal/60 relative transition-all focus:outline-none"
-          >
-            Completed Projects
-          </button>
-        </div>
-
-        <!-- Projects Grid Container -->
-        <div
-          id="projects-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-300"
-        >
-          <!-- JS inserts dynamic projects cards here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Happy Customers Section -->
-    <section id="gallery" class="py-24 bg-brand-cream relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Title Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="flex items-center justify-center gap-3 mb-2">
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span
-              class="text-xs uppercase tracking-widest text-brand-gold font-bold"
-              >Testimonials</span
-            >
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-          </div>
-          <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
-          >
-            Our Happy
-            <span class="text-brand-gold font-semibold">Customers</span>
-          </h2>
-          <p class="mt-4 text-sm text-brand-charcoal/80 font-light">
-            Hear from the real families and premium investors who trusted us to
-            find their perfect piece of land.
-          </p>
-        </div>
-
-        <!-- Customer Cards Slider Container with Horizontal Scroll Snapping -->
-        <div class="relative overflow-hidden px-4">
-          <div
-            id="testimonial-slider"
-            class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-10 scrollbar-hide"
-          >
-            <!-- Customer 1 -->
-            <div
-              class="min-w-full sm:min-w-[450px] lg:min-w-[380px] snap-start bg-brand-creamLight rounded-lg border border-brand-gold/10 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-            >
-              <div>
-                <!-- Image Placeholder with onerror fallback -->
-                <div
-                  class="w-full h-48 rounded-lg overflow-hidden mb-6 bg-brand-creamDark border border-brand-gold/15"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=600&q=80"
-                    alt="Happy customer shreyas singh on plot site"
-                    class="w-full h-full object-cover object-center"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x400/0b1e17/FAF7EE?text=Customer+Review'
-                    "
-                  />
-                </div>
-                <div class="flex gap-1 text-brand-gold mb-3">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p
-                  class="text-sm italic text-brand-charcoal/90 leading-relaxed font-light mb-6"
-                >
-                  "Secure and incredibly well-maintained community. The
-                  world-class clubhouse, gated security, and luxury premium
-                  amenities are truly perfect for my family."
-                </p>
-              </div>
-              <div class="border-t border-brand-gold/10 pt-4">
-                <h4
-                  class="font-serif text-base font-bold text-brand-dark uppercase"
-                >
-                  SHREYAS SINGH
-                </h4>
-                <p
-                  class="text-[10px] tracking-widest text-brand-gold uppercase"
-                >
-                  HEBBAL, BANGALORE
-                </p>
-              </div>
-            </div>
-
-            <!-- Customer 2 -->
-            <div
-              class="min-w-full sm:min-w-[450px] lg:min-w-[380px] snap-start bg-brand-creamLight rounded-lg border border-brand-gold/10 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div
-                  class="w-full h-48 rounded-lg overflow-hidden mb-6 bg-brand-creamDark border border-brand-gold/15"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80"
-                    alt="Customer Ullas Shankar reviews plot purchase"
-                    class="w-full h-full object-cover object-center"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x400/0b1e17/FAF7EE?text=Customer+Review'
-                    "
-                  />
-                </div>
-                <div class="flex gap-1 text-brand-gold mb-3">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p
-                  class="text-sm italic text-brand-charcoal/90 leading-relaxed font-light mb-6"
-                >
-                  "A seamless, straightforward experience from start to finish.
-                  Their absolute professionalism and smooth physical handover
-                  process were totally top-notch."
-                </p>
-              </div>
-              <div class="border-t border-brand-gold/10 pt-4">
-                <h4
-                  class="font-serif text-base font-bold text-brand-dark uppercase"
-                >
-                  ULLAS SHANKAR SHET
-                </h4>
-                <p
-                  class="text-[10px] tracking-widest text-brand-gold uppercase"
-                >
-                  RAJAJINAGAR, BANGALORE
-                </p>
-              </div>
-            </div>
-
-            <!-- Customer 3 -->
-            <div
-              class="min-w-full sm:min-w-[450px] lg:min-w-[380px] snap-start bg-brand-creamLight rounded-lg border border-brand-gold/10 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div
-                  class="w-full h-48 rounded-lg overflow-hidden mb-6 bg-brand-creamDark border border-brand-gold/15"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
-                    alt="Shwetha U happy customer story"
-                    class="w-full h-full object-cover object-center"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x400/0b1e17/FAF7EE?text=Customer+Review'
-                    "
-                  />
-                </div>
-                <div class="flex gap-1 text-brand-gold mb-3">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p
-                  class="text-sm italic text-brand-charcoal/90 leading-relaxed font-light mb-6"
-                >
-                  "The perfect, balanced blend of pristine nature and modern,
-                  robust convenience. I absolutely love the immense tranquility
-                  of this masterpiece community."
-                </p>
-              </div>
-              <div class="border-t border-brand-gold/10 pt-4">
-                <h4
-                  class="font-serif text-base font-bold text-brand-dark uppercase"
-                >
-                  SHWETHA U
-                </h4>
-                <p
-                  class="text-[10px] tracking-widest text-brand-gold uppercase"
-                >
-                  JAYANAGAR, BANGALORE
-                </p>
-              </div>
-            </div>
-
-            <!-- Customer 4 -->
-            <div
-              class="min-w-full sm:min-w-[450px] lg:min-w-[380px] snap-start bg-brand-creamLight rounded-lg border border-brand-gold/10 p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div
-                  class="w-full h-48 rounded-lg overflow-hidden mb-6 bg-brand-creamDark border border-brand-gold/15"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
-                    alt="Kruthika K M customer testimonial"
-                    class="w-full h-full object-cover object-center"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/600x400/0b1e17/FAF7EE?text=Customer+Review'
-                    "
-                  />
-                </div>
-                <div class="flex gap-1 text-brand-gold mb-3">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p
-                  class="text-sm italic text-brand-charcoal/90 leading-relaxed font-light mb-6"
-                >
-                  "Transparent, fair pricing and incredibly simple legal
-                  documentation. I'm very happy with my plot investment at The
-                  Great Builds!"
-                </p>
-              </div>
-              <div class="border-t border-brand-gold/10 pt-4">
-                <h4
-                  class="font-serif text-base font-bold text-brand-dark uppercase"
-                >
-                  KRUTHIKA K M
-                </h4>
-                <p
-                  class="text-[10px] tracking-widest text-brand-gold uppercase"
-                >
-                  MALLESHWARAM, BANGALORE
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slider Navigation Controls -->
-          <div class="flex justify-center gap-4 mt-8">
-            <button
-              onclick="scrollTestimonials(-1)"
-              class="w-10 h-10 border border-brand-gold/30 hover:bg-brand-gold hover:text-brand-dark text-brand-gold rounded-full flex items-center justify-center transition-all"
-            >
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button
-              onclick="scrollTestimonials(1)"
-              class="w-10 h-10 border border-brand-gold/30 hover:bg-brand-gold hover:text-brand-dark text-brand-gold rounded-full flex items-center justify-center transition-all"
-            >
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Connect with The Great Builds (Map & Lead Capture Form) -->
-    <section id="enquiry-section" class="py-24 bg-brand-creamDark relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Title Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="flex items-center justify-center gap-3 mb-2">
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span
-              class="text-xs uppercase tracking-widest text-brand-gold font-bold"
-              >Contact Us</span
-            >
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-          </div>
-          <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
-          >
-            Connect with
-            <span class="text-brand-gold font-semibold">The Great Builds</span>
-          </h2>
-        </div>
-
-        <!-- Map & Form Layout Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
-          <!-- Left Column: Google Map Iframe matching original styling -->
-          <div
-            class="lg:col-span-6 min-h-[400px] lg:min-h-full rounded-lg overflow-hidden border border-brand-gold/20 shadow-lg relative bg-brand-creamLight"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6720498877543!2d77.5936443!3d13.0881552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19001b6a7ecb%3A0xe54c1348be8216e9!2sThe%20Great%20Builds!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              class="absolute top-0 left-0 w-full h-full border-0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="The Great Builds Bangalore Office Location"
-            >
-            </iframe>
-          </div>
-
-          <!-- Right Column: Premium Custom Enquiry Lead Form -->
-          <div
-            class="lg:col-span-6 bg-brand-creamLight rounded-lg border border-brand-gold/15 p-8 sm:p-10 shadow-lg relative"
-          >
-            <div class="mb-8">
-              <h3 class="font-serif text-2xl font-bold text-brand-dark">
-                Enquiry Form
-              </h3>
-              <p class="text-xs text-brand-charcoal/70 mt-1">
-                Fill out the detailed form below and our regional investment
-                manager will contact you within 24 hours.
-              </p>
-            </div>
-
-            <form
-              id="contact-form3"
-             
-              class="space-y-6"
-            >
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <!-- Full Name Field -->
-                <div class="flex flex-col">
-                  <label
-                    for="fullName"
-                    class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-2"
-                    >Full Name</label
-                  >
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="name"
-                    required
-                    placeholder="John Doe"
-                    class="bg-brand-cream border border-brand-gold/20 rounded-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
-                  />
-                </div>
-
-                <!-- Email Address Field -->
-                <div class="flex flex-col">
-                  <label
-                    for="email"
-                    class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-2"
-                    >Email Address</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="john@example.com"
-                    class="bg-brand-cream border border-brand-gold/20 rounded-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
-                  />
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <!-- Phone Number Field -->
-                <div class="flex flex-col">
-                  <label
-                    for="phone"
-                    class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-2"
-                    >Phone Number</label
-                  >
-                  <div class="flex">
-                    <span
-                      class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-brand-gold/20 bg-brand-creamDark text-brand-dark text-xs font-semibold"
-                      >+91</span
-                    >
-                    <input
-                      type="number"
-                      id="phone"
-                      name="phone"
-                      required
-                      placeholder="Enter your mobile"
-                      class="flex-1 min-w-0 bg-brand-cream border border-brand-gold/20 rounded-r-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
-                    />
-                  </div>
-                </div>
-
-                <!-- Interested Project Selector -->
-                <!-- <div class="flex flex-col">
-                  <label
-                    for="projectSelect"
-                    class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-2"
-                    >Interested Project(s)</label
-                  >
-                  <select
-                    id="projectSelect"
-                    required
-                    class="bg-brand-cream border border-brand-gold/20 rounded-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all cursor-pointer"
-                  >
-                    <option value="" disabled selected>Select Projects</option>
-                    <option value="royal-greens">
-                      Royal Greens (Gauribidanur)
-                    </option>
-                    <option value="orchard-valley">
-                      Orchard Valley (Near Adiyogi)
-                    </option>
-                    <option value="anubhav-megacity">
-                      Anubhav Megacity (Basavakalyan)
-                    </option>
-                    <option value="shankar-enclave">
-                      Shankar Enclave (Upcoming)
-                    </option>
-                    <option value="general-query">
-                      General Investment Enquiry
-                    </option>
-                  </select>
-                </div> -->
-              </div>
-
-              <!-- Your Message Field -->
-              <div class="flex flex-col">
-                <label
-                  for="message"
-                  class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-2"
-                  >Your Message</label
-                >
-                <textarea
-                  name="message"
-                  rows="4"
-                  placeholder="Tell us about your requirements or budget preferences..."
-                  class="bg-brand-cream border border-brand-gold/20 rounded-md py-3 px-4 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all resize-none"
-                ></textarea>
-              </div>
-
-              <!-- Submit Button matching premium style of original -->
-              <button
-                type="submit"
-                id="contact_form_btn3"
-                class="w-full bg-brand-dark hover:bg-brand-darker text-brand-cream font-bold text-xs tracking-widest uppercase py-4 rounded-md transition-all shadow-md"
-              >
-                Submit Enquiry
-              </button>
-
-              <!-- Small Privacy Note -->
-              <p
-                class="text-[9px] text-center text-brand-charcoal/60 leading-normal"
-              >
-                *We respect your absolute privacy. Your personal information,
-                phone number, and preferences are entirely safe and protected.
-              </p>
-
-              <div
-            id="success_message_col3"
-            class="mt-2"
-            style="margin-top: 10px"
-          ></div>
-          <div id="error_message3" class="error"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Accordion Section -->
-    <section id="faq" class="py-24 bg-brand-cream relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Title Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="flex items-center justify-center gap-3 mb-2">
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span
-              class="text-xs uppercase tracking-widest text-brand-gold font-bold"
-              >FAQ</span
-            >
-            <div class="w-10 h-[1px] bg-brand-gold"></div>
-          </div>
-          <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
-          >
-            Questions about
-            <span class="text-brand-gold font-semibold">The Great Builds?</span>
-          </h2>
-        </div>
-
-        <!-- FAQ Split Panel Grid layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
-          <!-- Left Column Graphic Banner matching "Project Questions?" visually of original -->
-          <div
-            class="lg:col-span-4 relative rounded-lg overflow-hidden border border-brand-gold/25 shadow-xl min-h-[300px] lg:min-h-full flex flex-col justify-end p-8 bg-brand-dark"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=600&q=80"
-              alt="Beautiful plot community development"
-              class="absolute inset-0 w-full h-full object-cover object-center filter opacity-40 brightness-75"
-              onerror="
-                this.src =
-                  'https://placehold.co/600x600/0b1e17/b59b62?text=The+Great+Builds+Community'
-              "
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/20 to-transparent"
-            ></div>
-
-            <!-- Heading box layout matching image -->
-            <div
-              class="relative z-10 bg-brand-cream/95 backdrop-blur-sm p-6 rounded-md border border-brand-gold/20 shadow-md"
-            >
-              <h3
-                class="font-serif text-3xl font-bold tracking-tight text-brand-dark uppercase leading-tight mb-4"
-              >
-                PROJECT<br />QUESTIONS?
-              </h3>
-              <a
-                href="#enquiry-section"
-                class="inline-block bg-brand-dark hover:bg-brand-darker text-brand-cream text-[10px] font-bold tracking-widest uppercase px-6 py-3 rounded-sm transition-all shadow-md"
-              >
-                Enquire Now
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Column Interactive Accordion Elements -->
-          <div class="lg:col-span-8 flex flex-col justify-between gap-4">
-            <!-- Accordion item 1 -->
-            <div
-              class="border border-brand-gold/20 rounded-lg bg-brand-creamLight shadow-sm transition-all overflow-hidden"
-            >
-              <button
-                onclick="toggleAccordion('faq-1')"
-                class="w-full text-left py-5 px-6 flex items-center justify-between gap-4 focus:outline-none"
-              >
-                <span class="font-serif text-lg font-bold text-brand-dark"
-                  >What types of properties does The Great Builds offer?</span
-                >
-                <span
-                  id="faq-1-icon"
-                  class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-              </button>
-              <div
-                id="faq-1-content"
-                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
-              >
-                <div
-                  class="p-6 pt-0 text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10"
-                >
-                  We design and build exclusive, highly integrated residential
-                  premium villa plots within masterfully planned gated
-                  communities. Each community features state-of-the-art
-                  facilities, paved roads, and clear legal boundaries.
-                </div>
-              </div>
-            </div>
-
-            <!-- Accordion item 2 -->
-            <div
-              class="border border-brand-gold/20 rounded-lg bg-brand-creamLight shadow-sm transition-all overflow-hidden"
-            >
-              <button
-                onclick="toggleAccordion('faq-2')"
-                class="w-full text-left py-5 px-6 flex items-center justify-between gap-4 focus:outline-none"
-              >
-                <span class="font-serif text-lg font-bold text-brand-dark"
-                  >Are your projects legally approved?</span
-                >
-                <span
-                  id="faq-2-icon"
-                  class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-              </button>
-              <div
-                id="faq-2-content"
-                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
-              >
-                <div
-                  class="p-6 pt-0 text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10"
-                >
-                  Absolutely. All projects of The Great Builds are fully
-                  registered under RERA, have obtained comprehensive approval
-                  from town planning bodies (DTCP / local authorities), and
-                  carry perfectly clear titles checked by veteran legal
-                  attorneys.
-                </div>
-              </div>
-            </div>
-
-            <!-- Accordion item 3 -->
-            <div
-              class="border border-brand-gold/20 rounded-lg bg-brand-creamLight shadow-sm transition-all overflow-hidden"
-            >
-              <button
-                onclick="toggleAccordion('faq-3')"
-                class="w-full text-left py-5 px-6 flex items-center justify-between gap-4 focus:outline-none"
-              >
-                <span class="font-serif text-lg font-bold text-brand-dark"
-                  >Where are your projects located?</span
-                >
-                <span
-                  id="faq-3-icon"
-                  class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-              </button>
-              <div
-                id="faq-3-content"
-                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
-              >
-                <div
-                  class="p-6 pt-0 text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10"
-                >
-                  Our active premium plot communities are thoughtfully situated
-                  in Bangalore’s fastest growing real estate pathways, such as
-                  Gauribidanur (North Bengaluru), Chikkaballapur (near Adiyogi),
-                  and strategic locales across Karnataka.
-                </div>
-              </div>
-            </div>
-
-            <!-- Accordion item 4 -->
-            <div
-              class="border border-brand-gold/20 rounded-lg bg-brand-creamLight shadow-sm transition-all overflow-hidden"
-            >
-              <button
-                onclick="toggleAccordion('faq-4')"
-                class="w-full text-left py-5 px-6 flex items-center justify-between gap-4 focus:outline-none"
-              >
-                <span class="font-serif text-lg font-bold text-brand-dark"
-                  >Is the property ready for registration?</span
-                >
-                <span
-                  id="faq-4-icon"
-                  class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-              </button>
-              <div
-                id="faq-4-content"
-                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
-              >
-                <div
-                  class="p-6 pt-0 text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10"
-                >
-                  Yes, our completed and ongoing gated communities have plot
-                  markings fully layout-ready, roads fully constructed, and
-                  utility provisions connected, facilitating immediate legal
-                  registrations.
-                </div>
-              </div>
-            </div>
-
-            <!-- Accordion item 5 -->
-            <div
-              class="border border-brand-gold/20 rounded-lg bg-brand-creamLight shadow-sm transition-all overflow-hidden"
-            >
-              <button
-                onclick="toggleAccordion('faq-5')"
-                class="w-full text-left py-5 px-6 flex items-center justify-between gap-4 focus:outline-none"
-              >
-                <span class="font-serif text-lg font-bold text-brand-dark"
-                  >Can I get a bank loan for my purchase?</span
-                >
-                <span
-                  id="faq-5-icon"
-                  class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-              </button>
-              <div
-                id="faq-5-content"
-                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
-              >
-                <div
-                  class="p-6 pt-0 text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10"
-                >
-                  Yes, we maintain institutional partnerships with leading
-                  nationalized and private banking partners (such as HDFC,
-                  ICICI, SBI) who facilitate prompt approval of plot loans for
-                  all our developments.
-                </div>
-              </div>
-            </div>
-
-            <!-- Accordion item 6 -->
-            <div
-              class="border border-brand-gold/20 rounded-lg bg-brand-creamLight shadow-sm transition-all overflow-hidden"
-            >
-              <button
-                onclick="toggleAccordion('faq-6')"
-                class="w-full text-left py-5 px-6 flex items-center justify-between gap-4 focus:outline-none"
-              >
-                <span class="font-serif text-lg font-bold text-brand-dark"
-                  >More Questions...</span
-                >
-                <span
-                  id="faq-6-icon"
-                  class="w-8 h-8 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300"
-                >
-                  <i class="fa-solid fa-chevron-down"></i>
-                </span>
-              </button>
-              <div
-                id="faq-6-content"
-                class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
-              >
-                <div
-                  class="p-6 pt-0 text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10"
-                >
-                  We're always available to guide you. For specific property,
-                  customized legal, or investment consultation questions, feel
-                  free to contact our head office directly at +91 82178 55041.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Container -->
-    <div class="footer-container"></div>
-
-    <!-- Sticky Floating Actions Sidebar (Right Center) -->
-    <div
-      class="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3"
-    >
-      <!-- WhatsApp -->
-      <a
-        href="https://wa.me/918217855041"
-        target="_blank"
-        aria-label="WhatsApp"
-        class="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-      </a>
-      <!-- Instagram -->
-      <a
-        href="https://instagram.com"
-        target="_blank"
-        aria-label="Instagram"
-        class="w-10 h-10 bg-[#E1306C] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-instagram text-lg"></i>
-      </a>
-      <!-- Facebook -->
-      <a
-        href="https://facebook.com"
-        target="_blank"
-        aria-label="Facebook"
-        class="w-10 h-10 bg-[#1877F2] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-facebook-f text-sm"></i>
-      </a>
-      <!-- YouTube -->
-      <a
-        href="https://youtube.com"
-        target="_blank"
-        aria-label="YouTube"
-        class="w-10 h-10 bg-[#FF0000] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-youtube text-sm"></i>
-      </a>
-      <!-- Scroll to Top Arrow -->
-      <button
-        onclick="scrollToTop()"
-        aria-label="Scroll to top"
-        class="w-10 h-10 bg-brand-cream border border-brand-gold/30 text-brand-gold rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-solid fa-arrow-up"></i>
-      </button>
-    </div>
-
-    <!-- Interactive Modal Dialog Box for lead requests / projects enquiry -->
-    <div
-      id="enquire-modal"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-dark/80 opacity-0 invisible transition-all duration-300"
-    >
-      <div
-        class="relative w-full max-w-md bg-brand-creamLight rounded-lg border border-brand-gold/25 p-8 shadow-2xl"
-      >
-        <button
-          onclick="closeEnquireModal()"
-          class="absolute top-4 right-4 text-brand-charcoal hover:text-brand-gold focus:outline-none"
-        >
-          <i class="fa-solid fa-xmark text-xl"></i>
-        </button>
-
-        <div class="mb-6">
-          <h3 class="font-serif text-2xl font-bold text-brand-dark">
-            Request Project Details
-          </h3>
-          <p
-            class="text-xs text-brand-charcoal/70 mt-1"
-            id="modal-project-title"
-          >
-            Project: General Request
-          </p>
-        </div>
-
-        <form
-          id="contact-form2"
-          class="space-y-4"
-        >
-          <input type="hidden" id="modal-project-id" value="" />
           <div class="flex flex-col">
+            <span
+              class="text-xs uppercase tracking-[0.3em] font-light text-cream/70 leading-none"
+              >The</span
+            >
+            <span
+              class="text-sm uppercase tracking-[0.15em] font-extrabold text-cream leading-tight"
+              >Great Builds</span
+            >
+          </div>
+        </a>
+
+        <!-- Quick Contact Dial -->
+        <div class="flex items-center gap-6">
+          <a
+            href="tel:+918217855041"
+            class="text-cream hover:text-olive transition flex items-center gap-2 text-xs font-semibold tracking-widest uppercase"
+          >
+            <i class="fa-solid fa-phone text-olive-light"></i>
+            <span class="hidden md:inline">+91 82178 55041</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero & Coming Soon Content Section -->
+    <section
+      class="relative bg-forest flex-grow flex items-center justify-center pt-32 pb-24 overflow-hidden"
+    >
+      <!-- Overlay Architectural blueprint pattern -->
+      <div class="absolute inset-0 z-0 opacity-15">
+        <img
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80"
+          alt="Real estate plans blueprint"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-forest/90 via-forest/95 to-forest/99 z-0"
+      ></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-cream">
+        <!-- Premium Status Ribbon -->
+        <div
+          class="inline-flex items-center gap-2.5 px-4 py-2 bg-cream/10 border border-cream/20 rounded-full mb-8 backdrop-blur-md"
+        >
+          <span
+            class="w-2.5 h-2.5 bg-[#FFBF00] rounded-full beacon-pulse"
+          ></span>
+          <span
+            class="text-[10px] tracking-[0.25em] font-bold uppercase text-olive-light"
+            >New Launch Imminent</span
+          >
+        </div>
+
+        <h1
+          class="font-serif text-4xl sm:text-6xl md:text-7xl font-semibold leading-tight tracking-wide mb-6"
+        >
+          Crafting Gated
+          <span class="italic font-light text-olive-light">Masterpieces</span
+          ><br />
+          In Bangalore
+        </h1>
+
+        <p
+          class="text-sm sm:text-base md:text-lg text-cream/80 font-light max-w-2xl mx-auto mb-12 leading-relaxed"
+        >
+          The Great Builds is preparing to reveal its premier collection of
+          secure plotting communities, DTCP-approved layouts, and organic
+          farmlands across North Bangalore's fastest-appreciating corridors.
+        </p>
+
+        <!-- Countdown Panel Grid -->
+        <div
+          class="grid grid-cols-4 gap-3 max-w-md mx-auto mb-16"
+          id="countdown-grid"
+        >
+          <div
+            class="bg-cream/5 border border-cream/10 rounded-xl p-3 sm:p-5 backdrop-blur-md"
+          >
+            <span
+              class="block text-2xl sm:text-4xl font-serif font-bold text-olive-light"
+              id="timer-days"
+              >00</span
+            >
+            <span
+              class="block text-[8px] sm:text-[9px] uppercase tracking-widest text-cream/50 mt-1"
+              >Days</span
+            >
+          </div>
+          <div
+            class="bg-cream/5 border border-cream/10 rounded-xl p-3 sm:p-5 backdrop-blur-md"
+          >
+            <span
+              class="block text-2xl sm:text-4xl font-serif font-bold text-olive-light"
+              id="timer-hours"
+              >00</span
+            >
+            <span
+              class="block text-[8px] sm:text-[9px] uppercase tracking-widest text-cream/50 mt-1"
+              >Hours</span
+            >
+          </div>
+          <div
+            class="bg-cream/5 border border-cream/10 rounded-xl p-3 sm:p-5 backdrop-blur-md"
+          >
+            <span
+              class="block text-2xl sm:text-4xl font-serif font-bold text-olive-light"
+              id="timer-mins"
+              >00</span
+            >
+            <span
+              class="block text-[8px] sm:text-[9px] uppercase tracking-widest text-cream/50 mt-1"
+              >Mins</span
+            >
+          </div>
+          <div
+            class="bg-cream/5 border border-cream/10 rounded-xl p-3 sm:p-5 backdrop-blur-md"
+          >
+            <span
+              class="block text-2xl sm:text-4xl font-serif font-bold text-olive-light"
+              id="timer-secs"
+              >00</span
+            >
+            <span
+              class="block text-[8px] sm:text-[9px] uppercase tracking-widest text-cream/50 mt-1"
+              >Secs</span
+            >
+          </div>
+        </div>
+
+        <!-- Action Button triggering the Contact Modal -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button
+            onclick="toggleContactModal(true)"
+            class="bg-olive hover:bg-cream text-cream hover:text-forest px-10 py-4 text-xs font-bold uppercase tracking-widest rounded-lg transition-all duration-300 shadow-xl transform active:scale-95"
+          >
+            <i class="fa-regular fa-paper-plane mr-2"></i> Contact Us / Get
+            Notified
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL: Premium Contact & Whitelist Overlay Form -->
+    <div
+      id="contact-modal"
+      class="fixed inset-0 bg-forest/80 backdrop-blur-md z-50 hidden items-center justify-center p-4"
+    >
+      <div
+        class="bg-cream w-full max-w-xl rounded-2xl overflow-hidden shadow-2xl border border-olive/20 flex flex-col relative max-h-[90vh]"
+        id="modal-container"
+      >
+        <!-- Modal Header -->
+        <div
+          class="bg-forest text-cream p-6 flex justify-between items-center border-b border-cream/10"
+        >
+          <div class="flex flex-col">
+            <span
+              class="text-[9px] uppercase tracking-widest text-olive-light font-bold"
+              >VIP Early Entry</span
+            >
+            <h3 class="font-serif text-xl font-bold">
+              Secure Priority Whitelist
+            </h3>
+          </div>
+          <button
+            onclick="toggleContactModal(false)"
+            class="text-cream/70 hover:text-white text-2xl transition focus:outline-none"
+            aria-label="Close Modal"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <form
+          id="pre-launch-form"
+          onsubmit="handlePreLaunchSubmit(event)"
+          class="p-6 md:p-8 flex flex-col gap-5 overflow-y-auto"
+        >
+          <!-- Name Input -->
+          <div class="flex flex-col gap-1.5">
             <label
-              for="m-name"
-              class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-1"
-              >Your Name</label
+              for="reg-name"
+              class="text-xs font-bold uppercase tracking-wider text-forest/70"
+              >Full Name *</label
             >
             <input
               type="text"
-              name="name"
-              id="m-name"
+              id="reg-name"
               required
               placeholder="John Doe"
-              class="bg-brand-cream border border-brand-gold/20 rounded-md py-2.5 px-4 text-sm focus:outline-none focus:border-brand-gold"
+              class="w-full bg-cream-dark/30 border border-olive/20 rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-forest focus:bg-white text-forest font-medium transition-all"
             />
           </div>
-          <div class="flex flex-col">
+
+          <!-- Phone & Email Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label
+                for="reg-phone"
+                class="text-xs font-bold uppercase tracking-wider text-forest/70"
+                >Phone Number *</label
+              >
+              <div class="flex">
+                <span
+                  class="inline-flex items-center px-3.5 rounded-l-lg border border-r-0 border-olive/20 bg-cream-dark text-forest text-xs font-bold select-none"
+                  >+91</span
+                >
+                <input
+                  type="tel"
+                  id="reg-phone"
+                  required
+                  pattern="[0-9]{10}"
+                  placeholder="98765 43210"
+                  class="flex-1 min-w-0 bg-cream-dark/30 border border-olive/20 rounded-r-lg px-4 py-3 text-xs focus:outline-none focus:border-forest focus:bg-white text-forest font-medium transition-all"
+                />
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label
+                for="reg-email"
+                class="text-xs font-bold uppercase tracking-wider text-forest/70"
+                >Email Address *</label
+              >
+              <input
+                type="email"
+                id="reg-email"
+                required
+                placeholder="john@example.com"
+                class="w-full bg-cream-dark/30 border border-olive/20 rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-forest focus:bg-white text-forest font-medium transition-all"
+              />
+            </div>
+          </div>
+
+          <!-- Project Choice & Budget Preference Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label
+                for="reg-project"
+                class="text-xs font-bold uppercase tracking-wider text-forest/70"
+                >Project of Interest</label
+              >
+              <select
+                id="reg-project"
+                class="w-full bg-cream-dark/30 border border-olive/20 rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-forest focus:bg-white text-forest/80 font-bold transition-all cursor-pointer"
+              >
+                <option value="General Consultation">
+                  General Consultation
+                </option>
+                <option value="Royal Greens">
+                  Royal Greens (Gauribidanur)
+                </option>
+                <option value="Orchard Valley (Plots)">
+                  Orchard Valley (Adiyogi Chikkaballapur)
+                </option>
+                <option value="Shankar Enclave">
+                  Shankar Enclave (Rajanukunte)
+                </option>
+                <option value="Anubhav Megacity">
+                  Anubhav Megacity (Basavakalyan)
+                </option>
+              </select>
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+              <label
+                for="reg-budget"
+                class="text-xs font-bold uppercase tracking-wider text-forest/70"
+                >Budget Preference</label
+              >
+              <select
+                id="reg-budget"
+                class="w-full bg-cream-dark/30 border border-olive/20 rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-forest focus:bg-white text-forest/80 font-bold transition-all cursor-pointer"
+              >
+                <option value="15 - 30 Lakhs">₹15 Lakhs - ₹30 Lakhs</option>
+                <option value="30 - 50 Lakhs">₹30 Lakhs - ₹50 Lakhs</option>
+                <option value="50 Lakhs - 1 Crore">₹50 Lakhs - ₹1 Crore</option>
+                <option value="Above 1 Crore">Above ₹1 Crore</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Custom Request Text -->
+          <div class="flex flex-col gap-1.5">
             <label
-              for="m-phone"
-              class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-1"
-              >Phone Number</label
+              for="reg-msg"
+              class="text-xs font-bold uppercase tracking-wider text-forest/70"
+              >Requirements / Message</label
             >
-            <input
-              type="number"
-              name="phone"
-              id="m-phone"
-              required
-              placeholder="Enter your phone number"
-              class="bg-brand-cream border border-brand-gold/20 rounded-md py-2.5 px-4 text-sm focus:outline-none focus:border-brand-gold"
-            />
+            <textarea
+              id="reg-msg"
+              rows="3"
+              placeholder="Please share brochure details and pricing sheets..."
+              class="w-full bg-cream-dark/30 border border-olive/20 rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-forest focus:bg-white text-forest font-medium transition-all resize-none"
+            ></textarea>
           </div>
-          <div class="flex flex-col">
-            <label
-              for="m-email"
-              class="text-[10px] font-bold tracking-wider uppercase text-brand-dark mb-1"
-              >Email Address</label
-            >
-            <input
-              type="email"
-              name="email"
-              id="m-email"
-              required
-              placeholder="john@example.com"
-              class="bg-brand-cream border border-brand-gold/20 rounded-md py-2.5 px-4 text-sm focus:outline-none focus:border-brand-gold"
-            />
-          </div>
+
+          <!-- Submit Button -->
           <button
             type="submit"
-            id="contact_form_btn2"
-            class="w-full bg-brand-dark hover:bg-brand-darker text-brand-cream font-bold text-xs tracking-widest uppercase py-3.5 rounded-md transition-all shadow-md"
+            class="w-full bg-forest hover:bg-olive text-cream hover:text-forest font-bold py-4 text-xs uppercase tracking-widest rounded-lg transition-all duration-300 shadow-lg transform active:scale-95"
           >
-            Receive Brochure &amp; Price Sheet
+            Submit Whitelist Inquiry
           </button>
+
           <div
-            id="success_message_col2"
-            class="mt-2"
-            style="margin-top: 10px"
-          ></div>
-          <div id="error_message2" class="error"></div>
+            class="text-center flex items-center justify-center gap-1.5 text-[9px] text-forest/50 font-bold uppercase tracking-wider"
+          >
+            <i class="fa-solid fa-shield-halved text-olive text-xs"></i>
+            <span
+              >Secure encryption. Your parameters are strictly guarded.</span
+            >
+          </div>
         </form>
       </div>
     </div>
 
-    <!-- Lead Submission Toast Success Message Box -->
-    <div
-      id="toast"
-      class="fixed bottom-6 left-6 z-50 bg-brand-dark border border-brand-gold/30 text-brand-cream py-4 px-6 rounded-lg shadow-2xl flex items-center gap-3 translate-y-24 opacity-0 transition-all duration-300"
+    <!-- Footer Block (Sleek and Minimalist) -->
+    <footer
+      class="bg-forest-dark text-cream/70 py-10 border-t border-cream/5 mt-auto"
     >
       <div
-        class="w-8 h-8 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center"
+        class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col sm:flex-row justify-between items-center gap-6"
       >
-        <i class="fa-solid fa-circle-check"></i>
+        <!-- Brand Segment -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 flex items-center justify-center bg-cream/10 rounded-full border border-cream/20"
+          >
+            <svg
+              class="w-6 h-6 text-cream"
+              viewBox="0 0 100 100"
+              fill="currentColor"
+            >
+              <path
+                d="M50 15 L75 35 L75 60 C75 75 50 85 50 85 C50 85 25 75 25 60 L25 35 Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+              <polygon
+                points="50,22 53,29 61,29 55,34 57,41 50,37 43,41 45,34 39,29 47,29"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <span class="text-xs uppercase tracking-[0.2em] font-bold text-cream"
+            >The Great Builds</span
+          >
+        </div>
+
+        <!-- Quick legal metrics links -->
+        <div
+          class="flex gap-6 text-[10px] tracking-widest text-cream/45 uppercase"
+        >
+          <span>© 2026 The Great Builds</span>
+          <span class="hidden sm:inline">|</span>
+          <a href="#" class="hover:text-cream transition">Privacy Policy</a>
+          <a href="#" class="hover:text-cream transition">Disclaimer</a>
+        </div>
       </div>
-      <div>
-        <h5 class="text-xs uppercase font-bold tracking-wide">
-          Enquiry Submitted!
-        </h5>
-        <p class="text-[10px] text-brand-cream/70 mt-0.5">
-          We'll reach out to you within the hour.
+    </footer>
+
+    <!-- FLOATING CORE ACTIONS -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+      <!-- WhatsApp Direct Floater -->
+      <a
+        href="https://wa.me/918217855041?text=Hi!%20I'm%20interested%20in%20The%20Great%20Builds%20gated%20communities."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-12 h-12 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-2xl flex items-center justify-center text-2xl transition-transform hover:scale-110 active:scale-95 animate-bounce"
+        aria-label="Chat on WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- Custom Success Overlay Toast Notification -->
+    <div
+      id="toast-notif"
+      class="fixed top-24 right-6 bg-forest text-cream border border-olive/30 px-6 py-4 rounded-xl shadow-2xl z-50 flex items-center gap-3 transition-all duration-500 transform translate-x-96 opacity-0 max-w-md"
+    >
+      <div
+        class="w-8 h-8 rounded-full bg-olive flex items-center justify-center text-cream flex-shrink-0"
+      >
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div class="flex flex-col">
+        <h5 class="text-sm font-bold text-cream">Early Registration Active</h5>
+        <p id="toast-message" class="text-xs text-cream/70 mt-0.5">
+          We will call you back within 1 hour.
         </p>
       </div>
     </div>
-    <script src="assets/js/config.js"></script>
-    <script src="assets/js/common.js"></script>
-    <script src="assets/js/index.js"></script>
-    <!-- Dynamic JavaScript -->
+
     <script>
-      // All dynamic data models to prevent placeholders
-      const projectsData = [
-        {
-          id: "royal-greens",
-          title: "Royal Greens",
-          location: "GAURIBIDANUR, NORTH BENGALURU",
-          category: "ongoing",
-          imageUrl:
-            "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
-          fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Royal+Greens+Entrance",
-        },
-        {
-          id: "orchard-valley",
-          title: "CountrySide",
-          location: "NEAR ADIYOGI, CHIKKABALLAPUR",
-          category: "ongoing",
-          imageUrl:
-            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
-          fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Orchard+Valley+Plots",
-        },
-        {
-          id: "anubhav-megacity",
-          title: "Anubhav Megacity",
-          location: "BASAVAKALYAN, KARNATAKA",
-          category: "ongoing",
-          imageUrl:
-            "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=600&q=80",
-          fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Anubhav+Megacity",
-        },
-        {
-          id: "shankar-enclave",
-          title: "Shankar Enclave",
-          location: "YELAHANKA, BENGALURU",
-          category: "upcoming",
-          imageUrl:
-            "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80",
-          fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Shankar+Enclave",
-        },
-        {
-          id: "golden-meadows",
-          title: "Golden Meadows",
-          location: "DEVANAHALLI, BENGALURU",
-          category: "upcoming",
-          imageUrl:
-            "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=600&q=80",
-          fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Golden+Meadows",
-        },
-        {
-          id: "green-meadows",
-          title: "Green Meadows Phase I",
-          location: "DODDABALLAPUR, BENGALURU",
-          category: "completed",
-          imageUrl:
-            "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80",
-          fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Green+Meadows",
-        },
-      ];
+      // Countdown Timer Logic
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 4); // Dynamic 15 days launch countdown
 
-      // Rendering filtered project cards dynamically
-      function renderProjects(category) {
-        const grid = document.getElementById("projects-grid");
-        grid.innerHTML = "";
+      function updateCountdown() {
+        const now = new Date();
+        const difference = targetDate - now;
 
-        const filtered = projectsData.filter(
-          (proj) => proj.category === category,
+        if (difference <= 0) {
+          document.getElementById("timer-days").innerText = "00";
+          document.getElementById("timer-hours").innerText = "00";
+          document.getElementById("timer-mins").innerText = "00";
+          document.getElementById("timer-secs").innerText = "00";
+          return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
         );
+        const mins = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((difference % (1000 * 60)) / 1000);
 
-        filtered.forEach((proj) => {
-          const card = document.createElement("div");
-          card.className =
-            "bg-brand-creamLight rounded-lg border border-brand-gold/10 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between";
-          card.innerHTML = `
-          <div>
-            <!-- Custom Image Layout -->
-            <div class="h-64 overflow-hidden relative">
-              <img src="${proj.imageUrl}" alt="${proj.title}" 
-                   class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-115"
-                   onerror="this.src='${proj.fallbackUrl}'">
-              <span class="absolute top-4 left-4 bg-brand-dark/90 text-brand-gold text-[9px] font-bold tracking-widest px-3 py-1.5 uppercase rounded-sm border border-brand-gold/20">
-                ${proj.category}
-              </span>
-            </div>
-
-            <!-- Content Area -->
-            <div class="p-6">
-              <h3 class="font-serif text-2xl font-bold tracking-wide text-brand-dark">${proj.title}</h3>
-              <p class="text-[10px] tracking-widest text-brand-gold mt-1 uppercase font-semibold">${proj.location}</p>
-            </div>
-          </div>
-
-          <!-- Bottom Actions Section with chevron arrows -->
-          <div class="border-t border-brand-gold/10 p-6 flex items-center justify-between">
-            <button onclick="openEnquireModal('${proj.title}', '${proj.id}')" class="text-[11px] font-bold tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors flex items-center gap-1.5">
-              VIEW DETAILS <i class="fa-solid fa-arrow-right-long"></i>
-            </button>
-            <button onclick="openEnquireModal('${proj.title}', '${proj.id}')" class="text-[11px] font-bold tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors flex items-center gap-1.5">
-              ENQUIRE NOW <i class="fa-solid fa-arrow-right-long"></i>
-            </button>
-          </div>
-        `;
-          grid.appendChild(card);
-        });
+        document.getElementById("timer-days").innerText =
+          days < 10 ? "0" + days : days;
+        document.getElementById("timer-hours").innerText =
+          hours < 10 ? "0" + hours : hours;
+        document.getElementById("timer-mins").innerText =
+          mins < 10 ? "0" + mins : mins;
+        document.getElementById("timer-secs").innerText =
+          secs < 10 ? "0" + secs : secs;
       }
 
-      // Dynamic Filter Selector Tabs logic
-      function filterProjects(category) {
-        // Toggle CSS Styles of all buttons
-        document.querySelectorAll(".tab-btn").forEach((btn) => {
-          btn.classList.remove("tab-active", "text-brand-dark");
-          btn.classList.add("text-brand-charcoal/60");
-        });
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
 
-        // Style active button
-        const activeBtn = document.getElementById(`tab-${category}`);
-        if (activeBtn) {
-          activeBtn.classList.add("tab-active", "text-brand-dark");
-          activeBtn.classList.remove("text-brand-charcoal/60");
-        }
-
-        // Re-render
-        renderProjects(category);
-      }
-
-      // Toggle Accordion Panels
-      function toggleAccordion(id) {
-        const content = document.getElementById(`${id}-content`);
-        const icon = document.getElementById(`${id}-icon`);
-
-        if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-          content.style.maxHeight = "0px";
-          icon.style.transform = "rotate(0deg)";
+      // Toggle Modal Controls
+      function toggleContactModal(show) {
+        const modal = document.getElementById("contact-modal");
+        if (show) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
         } else {
-          // Close all other elements first to look like a polished accordion
-          document.querySelectorAll("[id$='-content']").forEach((elem) => {
-            elem.style.maxHeight = "0px";
-          });
-          document.querySelectorAll("[id$='-icon']").forEach((elem) => {
-            elem.style.transform = "rotate(0deg)";
-          });
-
-          // Open targets
-          content.style.maxHeight = content.scrollHeight + "px";
-          icon.style.transform = "rotate(180deg)";
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
         }
       }
 
-      // Customer Testimonial Scroll Functions
-      function scrollTestimonials(direction) {
-        const slider = document.getElementById("testimonial-slider");
-        const step = slider.clientWidth;
-        slider.scrollBy({ left: direction * step, behavior: "smooth" });
-      }
-
-      // Sticky Scroll-to-Top trigger
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      // Mobile Hamburger Draw Menu
-      function toggleMobileMenu() {
-        const menu = document.getElementById("mobile-menu");
-        const subMenu = document.getElementById("mobile-projects-sub");
-        const icon = document.getElementById("mobile-projects-icon");
-
-        menu.classList.toggle("hidden");
-
-        if (menu.classList.contains("hidden")) {
-          subMenu.classList.add("hidden");
-          icon.style.transform = "rotate(0deg)";
-        }
-      }
-
-      function toggleMobileProjects() {
-        const subMenu = document.getElementById("mobile-projects-sub");
-        const icon = document.getElementById("mobile-projects-icon");
-
-        subMenu.classList.toggle("hidden");
-        icon.style.transform = subMenu.classList.contains("hidden")
-          ? "rotate(0deg)"
-          : "rotate(180deg)";
-      }
-
-      // Modal Display Trigger Logic
-      function openEnquireModal(
-        projectTitle = "General Query",
-        projectId = "general",
-      ) {
-        document.getElementById("modal-project-title").textContent =
-          `Project: ${projectTitle}`;
-        document.getElementById("modal-project-id").value = projectId;
-
-        const modal = document.getElementById("enquire-modal");
-        modal.classList.remove("invisible", "opacity-0");
-        modal.classList.add("opacity-100");
-      }
-
-      function closeEnquireModal() {
-        const modal = document.getElementById("enquire-modal");
-        modal.classList.add("invisible", "opacity-0");
-        modal.classList.remove("opacity-100");
-      }
-
-      // Toast Success Panel Alerts
-      function triggerSuccessToast() {
-        const toast = document.getElementById("toast");
-        toast.classList.remove("translate-y-24", "opacity-0");
-        toast.classList.add("translate-y-0", "opacity-100");
-
-        setTimeout(() => {
-          toast.classList.add("translate-y-24", "opacity-0");
-          toast.classList.remove("translate-y-0", "opacity-100");
-        }, 4000);
-      }
-
-      // Reveal elements on scroll effect
-      function handleReveal() {
-        const reveals = document.querySelectorAll(".reveal");
-        reveals.forEach((reveal) => {
-          const windowHeight = window.innerHeight;
-          const revealTop = reveal.getBoundingClientRect().top;
-          const revealPoint = 150;
-
-          if (revealTop < windowHeight - revealPoint) {
-            reveal.classList.add("active");
+      // Modal click out to close
+      document
+        .getElementById("contact-modal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            toggleContactModal(false);
           }
         });
+
+      // Whitelist Form Submit handler
+      function handlePreLaunchSubmit(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("reg-name").value;
+        const project = document.getElementById("reg-project").value;
+
+        // Access Toast Notification parameters
+        const toast = document.getElementById("toast-notif");
+        const toastText = document.getElementById("toast-message");
+
+        toastText.innerText = `Thank you ${name}! Your pre-launch slot for ${project} has been requested successfully.`;
+
+        // Close Modal first
+        toggleContactModal(false);
+
+        // Reveal Success Toast
+        toast.classList.remove("translate-x-96", "opacity-0");
+        toast.classList.add("translate-x-0", "opacity-100");
+
+        setTimeout(() => {
+          toast.classList.remove("translate-x-0", "opacity-100");
+          toast.classList.add("translate-x-96", "opacity-0");
+        }, 5000);
+
+        document.getElementById("pre-launch-form").reset();
       }
-
-      // Initial setup on Window Load hook
-      window.onload = function () {
-        // Setup first view tab dynamically
-        renderProjects("ongoing");
-
-        // Register scroll listeners
-        window.addEventListener("scroll", handleReveal);
-
-        // Hook mobile drawer toggler
-        document
-          .getElementById("mobile-menu-btn")
-          .addEventListener("click", toggleMobileMenu);
-      };
     </script>
   </body>
 </html>

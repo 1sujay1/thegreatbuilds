@@ -145,7 +145,7 @@ const headerHTML = `   <header
               >Home</a
             >
           <a
-              href="/projects"
+              href="/project"
                             class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
               >Project</a
             >
@@ -375,18 +375,18 @@ const footerHTML= `   <footer class="bg-forest-dark text-cream/70 py-20 border-t
               </span>
             </div>
             <a
-              href="tel:+918217855041"
+              href="tel:+91 7411854822"
               class="flex items-center gap-3 hover:text-olive transition"
             >
               <i class="fa-solid fa-phone text-olive"></i>
-              <span>+91 82178 55041</span>
+              <span>+91 74118 54822</span>
             </a>
             <a
               href="mailto:thegreatbuilds123@gmail.com"
               class="flex items-center gap-3 hover:text-olive transition break-all"
             >
               <i class="fa-solid fa-envelope text-olive"></i>
-              <span>thegreatbuilds123@gmail.com</span>
+              <span>info@thegreatbuilds.com</span>
             </a>
           </div>
         </div>

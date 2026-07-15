@@ -147,7 +147,7 @@ const headerHTML = `   <header
           <a
               href="/allproject"
                             class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-              >Projects</a
+              >Project</a
             >
             <a
               href="/gallery"

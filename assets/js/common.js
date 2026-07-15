@@ -341,7 +341,7 @@ const footerHTML= `   <footer class="bg-forest-dark text-cream/70 py-20 border-t
           </h4>
           <div class="flex flex-col gap-3 text-xs">
             <a href="/project" class="hover:text-olive transition">Royal Greens</a>
-            <a href="/project" class="hover:text-olive transition">Orchard Valley</a>
+            <a href="/project" class="hover:text-olive transition">The CountrySide</a>
             <a href="/project" class="hover:text-olive transition">Shankar Enclave</a>
             <a href="/project" class="hover:text-olive transition">Anubhav Megacity</a>
           </div>

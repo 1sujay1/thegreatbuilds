@@ -260,11 +260,11 @@ const headerHTML = `   <header
         >
         <div class="pt-4 border-t border-brand-gold/10 flex flex-col gap-3">
           <a
-            href="tel:+918217855041"
+            href="tel:+917411854822"
             class="text-sm tracking-wider font-semibold text-brand-cream flex items-center gap-2"
           >
             <i class="fa-solid fa-phone text-brand-gold"></i>
-            +91 82178 55041
+            +91 74118 54822
           </a>
           <a
             href="#enquiry-section"
@@ -382,7 +382,7 @@ const footerHTML= `   <footer class="bg-forest-dark text-cream/70 py-20 border-t
               <span>+91 74118 54822</span>
             </a>
             <a
-              href="mailto:thegreatbuilds123@gmail.com"
+              href="mailto:info@thegreatbuilds.com"
               class="flex items-center gap-3 hover:text-olive transition break-all"
             >
               <i class="fa-solid fa-envelope text-olive"></i>

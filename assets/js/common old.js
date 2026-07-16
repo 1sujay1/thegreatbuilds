@@ -1,7 +1,3 @@
-/* ==========================================================================
-   THE GREAT BUILDS - COMMON LAYOUT TEMPLATES
-   ========================================================================== */
-
 const modalHTML = `<div
       id="common-contact-modal"
       class="fixed inset-0 z-50 hidden overflow-y-auto"
@@ -114,53 +110,61 @@ const modalHTML = `<div
         </div>
       </div>
     </div>`;
-
 const headerHTML = `   <header
       class="fixed top-0 left-0 w-full z-50 bg-brand-dark/95 backdrop-blur-md shadow-lg border-b border-brand-gold/10 transition-all duration-300"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- Winged Circular Logo -->
-          <a href="#" class="flex items-center space-x-3 group">
-            <div
-              class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:rotate-12"
-            >
-              <img 
-                src="/assets/images/Anubhav_megacity/logonew1.svg" 
-                alt="The Great Builds Logo" 
-                class="w-full h-full object-cover scale-100 transition-transform duration-300 group-hover:scale-110"
-              />
-            </div>
-            <div class="flex flex-col">
-              <span
-                class="font-serif text-lg font-bold tracking-wider text-brand-cream uppercase leading-tight"
-                >The Great Builds</span
-              >
-            </div>
-          </a>
+         <a href="#" class="flex items-center space-x-3 group">
+  <div
+    class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:rotate-12"
+  >
+    <img 
+      src="/assets/images/Anubhav_megacity/logonew1.svg" 
+      alt="The Great Builds Logo" 
+      class="w-full h-full object-cover scale-100 transition-transform duration-300 group-hover:scale-110"
+    />
+  </div>
+  <div class="flex flex-col">
+    <span
+      class="font-serif text-lg font-bold tracking-wider text-brand-cream uppercase leading-tight"
+      >The Great Builds</span
+    >
+    <!-- <span class="text-[9px] uppercase tracking-widest text-brand-gold"
+      >Builders &amp; Developers</span
+    > -->
+  </div>
+</a>
 
           <!-- Desktop Nav Items -->
           <nav class="hidden lg:flex items-center space-x-8">
-            <a
+          <a
               href="/index.html"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-            >Home</a>
-            <a
+              >Home</a
+            >
+          <a
               href="/project"
-              class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-            >Project</a>
+                            class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
+              >Project</a
+            >
             <a
               href="/gallery"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-            >Gallery</a>
+              >Gallery</a
+            >
             <a
               href="/about"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-            >About Us</a>
+              >About Us</a
+            >
             <a
               href="/contact"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
-            >Contact</a>
+              >Contact</a
+            >
+           
           </nav>
 
           <!-- Right Side: Phone & Contact Callout -->
@@ -220,34 +224,40 @@ const headerHTML = `   <header
               href="#projects-section"
               onclick="filterProjects('ongoing'); toggleMobileMenu()"
               class="block text-xs uppercase tracking-wider text-brand-cream hover:text-brand-gold py-1.5"
-            >Ongoing Projects</a>
+              >Ongoing Projects</a
+            >
             <a
               href="#projects-section"
               onclick="filterProjects('upcoming'); toggleMobileMenu()"
               class="block text-xs uppercase tracking-wider text-brand-cream hover:text-brand-gold py-1.5"
-            >Upcoming Projects</a>
+              >Upcoming Projects</a
+            >
             <a
               href="#projects-section"
               onclick="filterProjects('completed'); toggleMobileMenu()"
               class="block text-xs uppercase tracking-wider text-brand-cream hover:text-brand-gold py-1.5"
-            >Completed Projects</a>
+              >Completed Projects</a
+            >
           </div>
         </div>
         <a
           href="#gallery"
           onclick="toggleMobileMenu()"
           class="block text-sm uppercase tracking-wider text-brand-cream hover:text-brand-gold py-2"
-        >Gallery</a>
+          >Gallery</a
+        >
         <a
           href="#why-choose-us"
           onclick="toggleMobileMenu()"
           class="block text-sm uppercase tracking-wider text-brand-cream hover:text-brand-gold py-2"
-        >About Us</a>
+          >About Us</a
+        >
         <a
           href="#faq"
           onclick="toggleMobileMenu()"
           class="block text-sm uppercase tracking-wider text-brand-cream hover:text-brand-gold py-2"
-        >FAQ</a>
+          >FAQ</a
+        >
         <div class="pt-4 border-t border-brand-gold/10 flex flex-col gap-3">
           <a
             href="tel:+917411854822"
@@ -265,52 +275,58 @@ const headerHTML = `   <header
           </a>
         </div>
       </div>
-    </header>`;
-const footerHTML = `   <footer class="bg-brand-dark text-gray-300 pt-16 pb-8 border-t border-brand-gold/10">
+    </header>`
+
+const footerHTML= `   <footer class="bg-forest-dark text-cream/70 py-20 border-t border-cream/5">
       <div
-        class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-8"
+        class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16"
       >
-        <!-- Logo & Social Column -->
+        <!-- Logo & Social Column (Col span 4) -->
         <div class="lg:col-span-4 flex flex-col gap-6">
+          <!-- Logo Winged emblem SVG representation matching image_dd2488.png -->
           <a href="#" class="flex items-center space-x-3 group">
-            <div
-              class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:rotate-12"
-            >
-              <img 
-                src="/assets/images/Anubhav_megacity/logonew1.svg" 
-                alt="The Great Builds Logo" 
-                class="w-full h-full object-cover scale-100 transition-transform duration-300 group-hover:scale-110"
-              />
-            </div>
-            <div class="flex flex-col">
-              <span
-                class="font-serif text-lg font-bold tracking-wider text-white uppercase leading-tight"
-                >The Great Builds</span
-              >
-            </div>
-          </a>
-          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+  <div
+    class="w-14 h-14 bg-transparent border-2 border-brand-gold rounded-full flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:rotate-12"
+  >
+    <img 
+      src="/assets/images/Anubhav_megacity/logonew1.svg" 
+      alt="The Great Builds Logo" 
+      class="w-full h-full object-cover scale-100 transition-transform duration-300 group-hover:scale-110"
+    />
+  </div>
+  <div class="flex flex-col">
+    <span
+      class="font-serif text-lg font-bold tracking-wider text-brand-dark uppercase leading-tight"
+      >The Great Builds</span
+    >
+    <!-- <span class="text-[9px] uppercase tracking-widest text-brand-gold"
+      >Builders &amp; Developers</span
+    > -->
+  </div>
+</a>
+          <p class="text-xs text-cream/50 leading-relaxed max-w-sm">
             Delivering highly secure, top-tier gated plotting communities and
             luxury construction across Bangalore's prospective growth avenues.
           </p>
+          <!-- Social channels -->
           <div class="flex items-center gap-4 mt-2">
             <a
               href="#"
-              class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-dark hover:border-brand-gold transition duration-300"
+              class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300"
               aria-label="Facebook"
             >
               <i class="fa-brands fa-facebook-f text-sm"></i>
             </a>
             <a
               href="#"
-              class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-dark hover:border-brand-gold transition duration-300"
+              class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300"
               aria-label="Instagram"
             >
               <i class="fa-brands fa-instagram text-sm"></i>
             </a>
             <a
               href="#"
-              class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-dark hover:border-brand-gold transition duration-300"
+              class="w-10 h-10 rounded-full border border-cream/10 flex items-center justify-center hover:bg-olive hover:text-cream hover:border-olive transition duration-300"
               aria-label="YouTube"
             >
               <i class="fa-brands fa-youtube text-sm"></i>
@@ -318,169 +334,119 @@ const footerHTML = `   <footer class="bg-brand-dark text-gray-300 pt-16 pb-8 bor
           </div>
         </div>
 
-        <!-- Projects Column -->
+        <!-- Projects Column (Col span 2.5) -->
         <div class="lg:col-span-3 flex flex-col gap-5">
-          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">
             Projects
           </h4>
           <div class="flex flex-col gap-3 text-xs">
-            <a href="/project" class="hover:text-brand-gold transition">Royal Greens</a>
-            <a href="/project" class="hover:text-brand-gold transition">The CountrySide</a>
-            <a href="/project" class="hover:text-brand-gold transition">Shankar Enclave</a>
-            <a href="/project" class="hover:text-brand-gold transition">Anubhava Megacity</a>
+            <a href="/project" class="hover:text-olive transition">Royal Greens</a>
+            <a href="/project" class="hover:text-olive transition">The CountrySide</a>
+            <a href="/project" class="hover:text-olive transition">Shankar Enclave</a>
+            <a href="/project" class="hover:text-olive transition">Anubhava Megacity</a>
           </div>
         </div>
 
-        <!-- Company Column -->
+        <!-- Company Column (Col span 2.5) -->
         <div class="lg:col-span-2 flex flex-col gap-5">
-          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">
             Company
           </h4>
           <div class="flex flex-col gap-3 text-xs">
-            <a href="/about" class="hover:text-brand-gold transition">About Us</a>
-            <a href="/gallery" class="hover:text-brand-gold transition">Gallery</a>
-            <a href="/blog" class="hover:text-brand-gold transition">Blog</a>
-            <a href="/contact" class="hover:text-brand-gold transition">Contact</a>
+            <a href="/about" class="hover:text-olive transition">About Us</a>
+            <a href="/gallery" class="hover:text-olive transition">Gallery</a>
+            <a href="/blog" class="hover:text-olive transition">Blog</a>
+            <a href="/contact" class="hover:text-olive transition">Contact</a>
+           
           </div>
         </div>
 
-        <!-- Headquarters Contact Details -->
+        <!-- Headquarters Contact Details (Col span 3) -->
         <div class="lg:col-span-3 flex flex-col gap-5">
-          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">
+          <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-cream">
             Headquarters
           </h4>
           <div class="flex flex-col gap-4 text-xs">
             <div class="flex items-start gap-3">
-              <i class="fa-solid fa-location-dot text-brand-gold mt-0.5"></i>
+              <i class="fa-solid fa-location-dot text-olive mt-0.5"></i>
               <span class="leading-relaxed">
                 No. 762, 7th Cross Rd, Sector A, Yelahanka New Town, Bengaluru,
                 Karnataka - 560064
               </span>
             </div>
             <a
-              href="tel:+917411854822"
-              class="flex items-center gap-3 hover:text-brand-gold transition"
+              href="tel:+91 7411854822"
+              class="flex items-center gap-3 hover:text-olive transition"
             >
-              <i class="fa-solid fa-phone text-brand-gold"></i>
+              <i class="fa-solid fa-phone text-olive"></i>
               <span>+91 74118 54822</span>
             </a>
             <a
               href="mailto:info@thegreatbuilds.com"
-              class="flex items-center gap-3 hover:text-brand-gold transition break-all"
+              class="flex items-center gap-3 hover:text-olive transition break-all"
             >
-              <i class="fa-solid fa-envelope text-brand-gold"></i>
+              <i class="fa-solid fa-envelope text-olive"></i>
               <span>info@thegreatbuilds.com</span>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Bottom copyright line -->
-      <hr class="border-white/10 mb-4 max-w-7xl mx-auto" />
+      <!-- Bottom copyright / Privacy Policy line -->
+      <hr class="border-cream/5 mb-8 max-w-7xl mx-auto" />
       <div
-        class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-gray-400 uppercase"
+        class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] tracking-widest text-cream/45 uppercase"
       >
         <div>© 2026 The Great Builds. All rights reserved.</div>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-white transition">Privacy Policy</a>
-          <a href="#" class="hover:text-white transition">Terms of Use</a>
-          <a href="#" class="hover:text-white transition">Disclaimer</a>
+          <a href="#" class="hover:text-cream transition">Privacy Policy</a>
+          <a href="#" class="hover:text-cream transition">Terms of Use</a>
+          <a href="#" class="hover:text-cream transition">Disclaimer</a>
         </div>
       </div>
-    </footer>`;
+    </footer>`    
+document.querySelector('body').innerHTML += modalHTML;
+document.getElementById("header-container").innerHTML = headerHTML;
+document.querySelector('.footer-container').innerHTML += footerHTML;
 
-/* ==========================================================================
-   DOM INJECTION ENGINE
-   ========================================================================== */
-
-function injectCommonLayout() {
-  const headerContainer = document.getElementById("header-container");
-  const footerContainer = document.querySelector('.footer-container');
-
-  // Inject Header without resetting global HTML contents
-  if (headerContainer) {
-    headerContainer.innerHTML = headerHTML;
-    initializeMobileMenu(); // Bind mobile events once injected
-  }
-
-  // Inject Footer smoothly
-  if (footerContainer) {
-    footerContainer.innerHTML = footerHTML;
-  }
-
-  // Append modal structure safely to layout bottom without breaking listeners
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
-
-  // Initialize form validation engine
-  initializeContactForm();
-}
-
-/* ==========================================================================
-   POPUP MODAL INTERACTION INTERFACES
-   ========================================================================== */
-
-window.openContactModal = function() {
-  const modal = document.getElementById("common-contact-modal");
-  if (modal) modal.classList.remove("hidden");
+// Contact Us Popup Modal Controls
+function openContactModal() {
+  document.getElementById("common-contact-modal").classList.remove("hidden");
   document.body.style.overflow = "hidden";
-};
-
-window.closeContactModal = function() {
-  const modal = document.getElementById("common-contact-modal");
-  if (modal) modal.classList.add("hidden");
-  document.body.style.overflow = "";
-};
-
-/* ==========================================================================
-   MOBILE DRAWER NAVIGATION LOGIC
-   ========================================================================== */
-
-function initializeMobileMenu() {
-  const menuBtn = document.getElementById("mobile-menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", function() {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
 }
 
-window.toggleMobileMenu = function() {
-  const mobileMenu = document.getElementById("mobile-menu");
-  if (mobileMenu) mobileMenu.classList.add("hidden");
-};
+function closeContactModal() {
+  document.getElementById("common-contact-modal").classList.add("hidden");
+  document.body.style.overflow = "";
+}
 
-window.toggleMobileProjects = function() {
-  const subMenu = document.getElementById("mobile-projects-sub");
-  const icon = document.getElementById("mobile-projects-icon");
-  if (subMenu) subMenu.classList.toggle("hidden");
-  if (icon) icon.classList.toggle("rotate-180");
-};
-
-/* ==========================================================================
-   FORM HANDLING & DATA TRANSMISSION ENGINE
-   ========================================================================== */
-
-function initializeContactForm() {
+document.addEventListener("DOMContentLoaded", function () {
   var bookingForm = document.getElementById("common-contact-us-form");
   if (!bookingForm) return;
-
   var successMsg = document.getElementById("common-modal-success_message");
   var errorMsg = document.getElementById("common-modal-error_message");
   var submitBtn = document.getElementById("common-modal-contact_form_btn");
-
   bookingForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    if (successMsg) { successMsg.textContent = ""; successMsg.style.display = "none"; }
-    if (errorMsg) { errorMsg.textContent = ""; errorMsg.style.display = "none"; }
-
+    if (successMsg) {
+      successMsg.textContent = "";
+      successMsg.style.display = "none";
+    }
+    if (errorMsg) {
+      errorMsg.textContent = "";
+      errorMsg.style.display = "none";
+    }
+    console.log("Form data:", bookingForm);
     var name = bookingForm.name.value.trim();
     var email = bookingForm.email.value.trim();
     var mobile = bookingForm.querySelector("[name=phone]")?.value.trim() || "";
+    console.log("Mobile:", mobile);
     var message = bookingForm.message?.value?.trim() || "";
-
+    console.log({ name, email, mobile, message });
+    console.log("Submitting form...");
+    console.log("Using BaseURL:", BaseURL);
+    console.log(submitBtn);
     if (!name || !email || !mobile) {
       if (errorMsg) {
         errorMsg.style.display = "block";
@@ -489,59 +455,45 @@ function initializeContactForm() {
       }
       return;
     }
-
-    // Resolve structural endpoint base URL safely across local and production live servers
-    var currentBaseURL = (typeof BaseURL !== 'undefined') ? BaseURL : window.location.origin;
-
     submitBtn.disabled = true;
     var originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = "Submitting...";
-
-    fetch(`${currentBaseURL}/api/v1/contact`, {
+    fetch(`${BaseURL}/api/v1/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         project: "THE_GREAT_BUILDS",
-        name: name,
-        email: email,
+        name,
+        email,
         phone: mobile,
-        message: message,
+        message,
       }),
     })
-    .then(function (res) {
-      if (res.status !== 200) {
-        throw new Error("Failed to submit. Please try again.");
-      }
-      return res.json();
-    })
-    .then(function (data) {
-      if (successMsg) {
-        successMsg.style.display = "block";
-        successMsg.style.color = "#388e3c";
-        successMsg.textContent = "Thank you! Your request has been sent.";
-      }
-      bookingForm.reset();
-    })
-    .catch(function (err) {
-      if (errorMsg) {
-        errorMsg.style.display = "block";
-        errorMsg.style.color = "#d32f2f";
-        errorMsg.textContent = err.message || "Submission failed. Please try again.";
-      }
-    })
-    .finally(function () {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
-    });
+      .then(function (res) {
+        if (res.status !== 200) {
+          throw new Error("Failed to submit. Please try again.");
+        }
+        return res.json();
+      })
+      .then(function (data) {
+        if (successMsg) {
+          successMsg.style.display = "block";
+          successMsg.style.color = "#388e3c";
+          successMsg.textContent = "Thank you! Your request has been sent.";
+        }
+        bookingForm.reset();
+      })
+      .catch(function (err) {
+        if (errorMsg) {
+          errorMsg.style.display = "block";
+          errorMsg.style.color = "#d32f2f";
+          errorMsg.textContent =
+            err.message || "Submission failed. Please try again.";
+        }
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      });
   });
-}
-
-/* ==========================================================================
-   INITIALIZATION TRIGGER
-   ========================================================================== */
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", injectCommonLayout);
-} else {
-  injectCommonLayout();
-}
+});

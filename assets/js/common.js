@@ -339,7 +339,7 @@ const footerHTML = `   <footer class="bg-brand-dark text-gray-300 pt-16 pb-8 bor
           <div class="flex flex-col gap-3 text-xs">
             <a href="/about" class="hover:text-brand-gold transition">About Us</a>
             <a href="/gallery" class="hover:text-brand-gold transition">Gallery</a>
-            <a href="/blog" class="hover:text-brand-gold transition">Blog</a>
+            <a href="#" class="hover:text-brand-gold transition">Blog</a>
             <a href="/contact" class="hover:text-brand-gold transition">Contact</a>
           </div>
         </div>

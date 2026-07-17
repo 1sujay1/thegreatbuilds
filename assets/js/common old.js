@@ -140,7 +140,7 @@ const headerHTML = `   <header
           <!-- Desktop Nav Items -->
           <nav class="hidden lg:flex items-center space-x-8">
           <a
-              href="/index.html"
+              href="/"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
               >Home</a
             >

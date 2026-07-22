@@ -154,6 +154,10 @@ const headerHTML = `   <header
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
             >Gallery</a>
             <a
+              href="/nri"
+              class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
+            >NRI</a>
+            <a
               href="/about"
               class="text-xs uppercase font-semibold text-brand-cream hover:text-brand-gold tracking-widest transition-colors"
             >About Us</a>

@@ -790,7 +790,7 @@
                   </div>
                   <div>
                     <h5 class="text-xs font-bold uppercase text-brand-gold">NRI Helpline / WhatsApp</h5>
-                    <p class="text-xs text-brand-cream/80 mt-0.5">+91 74118 54822</p>
+                    <p class="text-xs text-brand-cream/80 mt-0.5">+91 74118 54822 / +91 80 4567 8900</p>
                   </div>
                 </div>
 
@@ -800,7 +800,7 @@
                   </div>
                   <div>
                     <h5 class="text-xs font-bold uppercase text-brand-gold">Official Email</h5>
-                    <p class="text-xs text-brand-cream/80 mt-0.5">info@thegreatbuilds.com</p>
+                    <p class="text-xs text-brand-cream/80 mt-0.5">nri@thegreatbuilds.com</p>
                   </div>
                 </div>
               </div>
@@ -940,10 +940,10 @@
 
     <!-- Header & Footer Auto-Injector Fallback for Common Layouts -->
     <script>
-      /* Inject Common Header Markup if #header-container is empty */
+      /* Inject Common Header Markup */
       function renderCommonHeader() {
         const headerContainer = document.getElementById('header-container');
-        if (headerContainer && headerContainer.children.length === 0) {
+        if (headerContainer && !headerContainer.querySelector('header')) {
           headerContainer.innerHTML = `
             <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-dark/95 backdrop-blur-md border-b border-brand-gold/20 shadow-md">
               <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1009,7 +1009,7 @@
       function renderCommonFooter() {
         const footers = document.querySelectorAll('.footer-container');
         footers.forEach(container => {
-          if (container.children.length === 0) {
+          if (!container.querySelector('footer')) {
             container.innerHTML = `
               <footer class="bg-brand-darker text-brand-cream/80 border-t border-brand-gold/20 pt-16 pb-12">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1082,6 +1082,10 @@
           }
         });
       }
+
+      // Execute render immediately so header is visible prior to external resources loading
+      renderCommonHeader();
+      renderCommonFooter();
     </script>
 
     <!-- Application JavaScript Logic -->
@@ -1136,13 +1140,21 @@
       let currentHorizon = 3;
 
       // Initialize Page
-      window.onload = function() {
+      function initPage() {
         renderCommonHeader();
         renderCommonFooter();
         renderNriProjects('all');
         updateCalculator();
-        window.addEventListener('scroll', handleReveal);
-      };
+        handleReveal();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPage);
+      } else {
+        initPage();
+      }
+      window.addEventListener('load', initPage);
+      window.addEventListener('scroll', handleReveal);
 
       // Render Projects Cards
       function renderNriProjects(filter) {

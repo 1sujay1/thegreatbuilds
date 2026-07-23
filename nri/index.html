@@ -47,6 +47,20 @@
                 darkGreen: "#0a1c12",
                 textCharcoal: "#222222",
                 accentBeige: "#F3EFE0",
+                dark: "#0B1E17", // Deep Forest Green
+                darker: "#060F0C", // Darkest Forest Green
+                gold: "#B59B62", // Classic Warm Gold Accent
+                goldLight: "#D4C39E", // Soft Gold Highlight
+                cream: "#FAF7EE", // Warm Cream Base Background
+                creamLight: "#FFFDF9", // Ultra Light Soft Background
+                creamDark: "#F3EDE0", // Darker Cream for sections
+                charcoal: "#2D3732", // Muted Text
+                grayLight: "#94A3B8",
+                warmBeige: "#FAF7EC", // Warm beige for modal background
+                darkGreen: "#0a1c12", // Dark green for modal elements
+                textCharcoal: "#222222", // Text color for modal
+                accentBeige: "#F3EFE0" /* Darker tone beige */,
+                gold: "#C5A880" /* Luxury gold highlight */,
               },
             },
             fontFamily: {
@@ -934,12 +948,11 @@
     </div>
 
     <!-- Script imports -->
-    <script src="assets/js/config.js" onerror="console.log('config script fallback')"></script>
-    <script src="assets/js/common.js" onerror="console.log('common script fallback')"></script>
-    <script src="assets/js/index.js" onerror="console.log('index script fallback')"></script>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/common.js" ></script>
 
     <!-- Header & Footer Auto-Injector Fallback for Common Layouts -->
-    <script>
+    <!-- <script>
       /* Inject Common Header Markup */
       function renderCommonHeader() {
         const headerContainer = document.getElementById('header-container');
@@ -1086,7 +1099,7 @@
       // Execute render immediately so header is visible prior to external resources loading
       renderCommonHeader();
       renderCommonFooter();
-    </script>
+    </script> -->
 
     <!-- Application JavaScript Logic -->
     <script>
@@ -1141,8 +1154,8 @@
 
       // Initialize Page
       function initPage() {
-        renderCommonHeader();
-        renderCommonFooter();
+        // renderCommonHeader();
+        // renderCommonFooter();
         renderNriProjects('all');
         updateCalculator();
         handleReveal();

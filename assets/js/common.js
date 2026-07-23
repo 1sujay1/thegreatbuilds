@@ -243,6 +243,12 @@ const headerHTML = `   <header
           onclick="toggleMobileMenu()"
           class="block text-sm uppercase tracking-wider text-brand-cream hover:text-brand-gold py-2"
         >Gallery</a>
+
+         <a
+          href="#nri"
+          onclick="toggleMobileMenu()"
+          class="block text-sm uppercase tracking-wider text-brand-cream hover:text-brand-gold py-2"
+        >NRI</a>
         <a
           href="#why-choose-us"
           onclick="toggleMobileMenu()"

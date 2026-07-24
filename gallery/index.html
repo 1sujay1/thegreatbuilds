@@ -155,213 +155,160 @@
                 </div>
             </div>
         </div>
-
-        <!-- Float Floating Social Side Bar overlay from reference picture -->
-        <div class="hidden lg:flex absolute right-6 top-1/2 -translate-y-1/2 flex-col space-y-4 z-10">
-            <a href="#" class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-whatsapp text-lg"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-instagram text-lg"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center hover:scale-110 transition-transform"><i class="fa-brands fa-youtube text-lg"></i></a>
-        </div>
     </header>
 
     <!-- Master Gallery Main Interface Header -->
     <main id="gallery-grid-head" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         
         <!-- Filter Controller Tabs -->
-        <div class="flex flex-col items-center mb-16">
-            <span class="text-[10px] tracking-[0.25em] text-luxuryGold uppercase font-bold mb-4">Select Project to View</span>
-            <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-none border border-cardBorder shadow-luxury max-w-full">
-                <button onclick="applyProjectFilter('all')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold transition-all duration-300 bg-luxuryGold text-luxuryDark" data-filter="all">
-                    All Projects
-                </button>
-                <button onclick="applyProjectFilter('royal-greens')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="royal-greens">
-                    Royal Greens
-                </button>
-                <button onclick="applyProjectFilter('countryside')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="countryside">
-                    Countryside
-                </button>
-                <button onclick="applyProjectFilter('anubhav-megacity')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="anubhav-megacity">
-                    Anubhav Megacity
-                </button>
-                <button onclick="applyProjectFilter('shankar-enclave')" class="project-tab px-6 py-2.5 text-xs uppercase tracking-widest font-bold text-gray-500 hover:text-luxuryDark transition-all duration-300" data-filter="shankar-enclave">
-                    Shankar Enclave
-                </button>
-            </div>
-            <p id="grid-status-counter" class="text-xs text-gray-400 mt-4 tracking-wider uppercase font-medium">Displaying all 9 luxury master builds</p>
+        <div class="flex flex-col items-center mb-10">
+            <p id="grid-status-counter" class="text-xs text-gray-400 tracking-wider uppercase font-medium">Displaying all luxury master builds</p>
         </div>
 
-        <!-- Visual Grid: 3 Images Per Line (Desktop) | 3 Lines Total = 9 Images -->
+        <!-- Visual Grid: Responsive Animated Image Gallery (3 Cards Per Row) -->
         <div id="project-gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
             
             <!-- Card 1: Royal Greens Villa -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="royal-greens" onclick="initiateLightbox(0)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=800" 
-                         alt="Royal Greens Premium Villa Facade" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Royal Greens</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Elite Villa Front Pool</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Gauribidanur, North Bengaluru</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Interactive Capture</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="royal-greens" onclick="initiateLightbox(0)">
+                <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=800" 
+                     alt="Royal Greens Premium Villa Facade" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Royal Greens</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Elite Villa Front Pool</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 2: Royal Greens Inside -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="royal-greens" onclick="initiateLightbox(1)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800" 
-                         alt="Royal Greens Luxury Living Area" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Royal Greens</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Grand Double-Height Lounge</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Gauribidanur, North Bengaluru</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Interior Showcase</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="royal-greens" onclick="initiateLightbox(1)">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800" 
+                     alt="Royal Greens Luxury Living Area" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Royal Greens</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Grand Double-Height Lounge</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 3: Royal Greens Greenspace -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="royal-greens" onclick="initiateLightbox(2)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" 
-                         alt="Royal Greens Gated Entryway and Gardens" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Royal Greens</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Architectural Gated Boulevard</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Gauribidanur, North Bengaluru</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Master Planning</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="royal-greens" onclick="initiateLightbox(2)">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" 
+                     alt="Royal Greens Gated Entryway and Gardens" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Royal Greens</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Architectural Gated Boulevard</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 4: Countryside Living -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="countryside" onclick="initiateLightbox(3)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" 
-                         alt="Countryside Cozy Living Space" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Countryside</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Nordic Oak Living Room</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Near Adiyogi, Chikkaballapur</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Interior Showcase</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="countryside" onclick="initiateLightbox(3)">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" 
+                     alt="Countryside Cozy Living Space" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Countryside</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Nordic Oak Living Room</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 5: Countryside Sunset -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="countryside" onclick="initiateLightbox(4)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
-                         alt="Countryside Exterior Terraces" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Countryside</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Panoramic Sunset Deck</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Near Adiyogi, Chikkaballapur</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Exterior Landscape</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="countryside" onclick="initiateLightbox(4)">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" 
+                     alt="Countryside Exterior Terraces" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Countryside</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Panoramic Sunset Deck</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 6: Countryside Modern Kitchen -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="countryside" onclick="initiateLightbox(5)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" 
-                         alt="Countryside Modular Kitchen" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Countryside</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Minimalist Premium Kitchen</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Near Adiyogi, Chikkaballapur</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Interior Showcase</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="countryside" onclick="initiateLightbox(5)">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" 
+                     alt="Countryside Modular Kitchen" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Countryside</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Minimalist Premium Kitchen</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 7: Anubhav Megacity Gated Villa -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="anubhav-megacity" onclick="initiateLightbox(6)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" 
-                         alt="Anubhav Megacity High Class Plots" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Anubhav Megacity</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Grand Signature Villa Plot</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Basavakalyan, Karnataka</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Structural View</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="anubhav-megacity" onclick="initiateLightbox(6)">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" 
+                     alt="Anubhav Megacity High Class Plots" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Anubhav Megacity</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Grand Signature Villa Plot</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 8: Anubhav Megacity Modern Road -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="anubhav-megacity" onclick="initiateLightbox(7)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" 
-                         alt="Anubhav Megacity Smart Concrete Roads" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Anubhav Megacity</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Integrated Smart Concrete Road</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Basavakalyan, Karnataka</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Infrastructure</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="anubhav-megacity" onclick="initiateLightbox(7)">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" 
+                     alt="Anubhav Megacity Smart Concrete Roads" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Anubhav Megacity</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Integrated Smart Concrete Road</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 
             <!-- Card 9: Shankar Enclave Main Entry -->
-            <div class="gallery-item group bg-white border border-cardBorder shadow-luxury overflow-hidden transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-project="shankar-enclave" onclick="initiateLightbox(8)">
-                <div class="relative overflow-hidden h-72">
-                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" 
-                         alt="Shankar Enclave Modern Apartment Gate" 
-                         class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-luxuryDark via-luxuryDark/10 to-transparent opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                    <span class="absolute top-4 left-4 bg-luxuryGold text-luxuryDark px-3 py-1 text-[10px] tracking-widest uppercase font-bold">Shankar Enclave</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-serif text-lg font-bold text-luxuryDark group-hover:text-luxuryGold transition-colors">Luxury Residential Entrance</h3>
-                    <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-location-dot mr-1.5 text-luxuryGold"></i>Yelahanka New Town, Bengaluru</p>
-                    <div class="flex items-center justify-between mt-4 pt-4 border-t border-cardBorder text-[10px] tracking-widest text-luxuryGold uppercase font-bold">
-                        <span>Master Build</span>
-                        <span>Expand <i class="fa-solid fa-maximize ml-1"></i></span>
+            <div class="gallery-item relative overflow-hidden rounded-xl shadow-lg border border-brand-gold/20 aspect-[4/3] group cursor-pointer hover:-translate-y-2 hover:shadow-2xl hover:border-brand-gold/60 transition-all duration-500 reveal" data-project="shankar-enclave" onclick="initiateLightbox(8)">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800" 
+                     alt="Shankar Enclave Modern Apartment Gate" 
+                     class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                <span class="absolute top-3 left-3 bg-luxuryGold text-luxuryDark px-3 py-1 rounded text-[10px] font-extrabold tracking-widest uppercase shadow-md z-10">Shankar Enclave</span>
+                
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-white p-4 text-center">
+                    <div class="w-12 h-12 rounded-full bg-luxuryGold/90 text-luxuryDark flex items-center justify-center mb-2 transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                        <i class="fa-solid fa-expand text-lg"></i>
                     </div>
+                    <h4 class="font-extrabold text-sm tracking-wide text-white drop-shadow">Luxury Residential Entrance</h4>
+                    <span class="text-[10px] tracking-widest text-luxuryGold uppercase font-extrabold mt-1">Click to Expand</span>
                 </div>
             </div>
 

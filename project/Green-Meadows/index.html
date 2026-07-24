@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+
+    <title>Green Meadows Phase I | Eco-Plotted Community in Doddaballapur - The Great Builds</title>
+    <meta
+      name="description"
+      content="Green Meadows Phase I by The Great Builds. Premier 18-acre completed eco-friendly residential layout in Doddaballapur, Bengaluru with 120 villa plots."
+    />
+
+    <!-- Google Fonts Integration: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#0B1E17",
+                darker: "#060F0C",
+                gold: "#B59B62",
+                goldLight: "#D4C39E",
+                cream: "#FAF7EE",
+                creamLight: "#FFFDF9",
+                creamDark: "#F3EDE0",
+                charcoal: "#2D3732",
+                warmBeige: "#FAF7EC",
+                darkGreen: "#0a1c12",
+              },
+            },
+            fontFamily: {
+              serif: ['"Plus Jakarta Sans"', "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-brand-cream text-brand-charcoal font-sans antialiased overflow-x-hidden">
+    <!-- Header Navigation Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Banner Section -->
+    <section class="relative min-h-[85vh] pt-24 flex items-center justify-center bg-brand-dark overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1920&q=80"
+          alt="Green Meadows Layout View"
+          class="w-full h-full object-cover filter brightness-50 scale-105 transition-transform duration-[10s] hover:scale-100"
+          onerror="this.src='https://placehold.co/1920x1080/0b1e17/FAF7EE?text=Green+Meadows'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-brand-dark/70"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white w-full">
+        <div class="max-w-3xl space-y-6">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="bg-brand-gold text-brand-dark text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-sm tracking-widest">
+              COMPLETED PROJECT
+            </span>
+            <span class="border border-brand-gold/60 text-brand-goldLight text-xs font-bold uppercase px-3.5 py-1.5 rounded-sm tracking-widest">
+              ECO PLOTTED ESTATE
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Green Meadows Phase I
+          </h1>
+          <p class="text-brand-goldLight text-sm sm:text-base font-medium uppercase tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+            DODDABALLAPUR, BENGALURU
+          </p>
+          <p class="text-brand-cream/90 text-base sm:text-lg font-medium leading-relaxed max-w-2xl">
+            A completed 18-acre eco-friendly residential layout in Doddaballapur. Features 120 villa plots surrounded by dense tree avenues, rainwater harvesting systems, and paved footpaths.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-2 max-w-xl">
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">TOTAL AREA</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-white mt-1">18 Acres</span>
+            </div>
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">TOTAL PLOTS</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-white mt-1">120 Units</span>
+            </div>
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">STATUS</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-emerald-400 mt-1">Completed</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button
+              onclick="openContactModal('Green Meadows Inquiry')"
+              class="bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm transition-all shadow-xl text-center"
+            >
+              ENQUIRE NOW <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+            <a
+              href="#contact-section"
+              class="border border-white/60 text-white font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm hover:bg-white hover:text-brand-dark transition-all text-center"
+            >
+              SCHEDULE SITE VISIT
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Project Section -->
+    <section class="py-20 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 reveal">
+            <div class="relative rounded-lg overflow-hidden border border-brand-gold/20 shadow-2xl group">
+              <img
+                src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1000&q=80"
+                alt="Green Meadows Estate"
+                class="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                onerror="this.src='https://placehold.co/800x600/0b1e17/FAF7EE?text=Green+Meadows+Plots'"
+              />
+              <div class="absolute bottom-4 left-4 bg-brand-dark/90 text-brand-gold px-4 py-2 text-xs font-bold uppercase tracking-widest rounded border border-brand-gold/30">
+                Eco-Friendly Plotted Estate
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-6 reveal">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-[1px] bg-brand-gold"></div>
+              <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">ABOUT THE PROJECT</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Sustainable Living in <span class="text-brand-gold">Doddaballapur</span>
+            </h2>
+            <p class="text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-medium">
+              Green Meadows Phase I is an 18-acre completed eco-conscious residential development in Doddaballapur. Designed for families seeking green living away from city congestion, it features fruit orchards, rainwater harvesting pits, and solar street lighting.
+            </p>
+            <p class="text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-medium">
+              Equipped with ready A-Katha title deeds, wide internal avenues, and 24/7 security.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-brand-gold/15">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-leaf text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Sustainable Eco Design</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-droplet text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Rainwater Harvesting</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-tree text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Dense Tree Avenues</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Gated Perimeter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Highlights Section -->
+    <section class="py-20 bg-brand-creamDark relative border-y border-brand-gold/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">KEY ADVANTAGES</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Estate <span class="text-brand-gold">Highlights</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-tree text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">500+ Avenue Shade Trees</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Planted with gulmohar, mahogany, and neem trees providing natural cooling and shade.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-cloud-rain text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Rainwater Harvesting Network</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Integrated percolation pits recharging groundwater reserves across the layout.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-road text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">30ft & 40ft Internal Roads</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Asphalt roads with interlock paver footpaths and street lighting poles.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-shield-halved text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Secure Gated Entrance</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Arch gate entrance with security cabin and 24/7 security guard patrol.
+            </p>
+          </div>
+          <div class="bg-brand-gold/10 p-8 rounded-lg border border-brand-gold/30 shadow-sm hover:shadow-md transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-chart-line text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">High ROI Potential</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Doddaballapur industrial corridor growth guarantees steady land appreciation.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-house-circle-check text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Immediate Construction Ready</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Demarcated plot boundary stones, electricity lines, and water pipes installed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- World-Class Amenities Section -->
+    <section class="py-20 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">LUXURY FEATURES</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Estate <span class="text-brand-gold">Amenities</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-tree text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Eco Park</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-child-reaching text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Children's Play Area</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-person-walking text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Walking Track</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-shield-halved text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">24/7 Security</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-faucet-drip text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Water Network</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-bolt text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Electricity Lines</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-cloud-rain text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Rainwater Pits</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-road text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Wide Asphalt Roads</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section class="py-20 bg-brand-creamDark relative border-t border-brand-gold/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">PROJECT GALLERY</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Visual & Site <span class="text-brand-gold">Showcase</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="relative rounded-lg overflow-hidden group shadow-md reveal">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" alt="Green Meadows Layout View" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold uppercase tracking-widest text-xs">
+              Eco-Layout View
+            </div>
+          </div>
+          <div class="relative rounded-lg overflow-hidden group shadow-md reveal">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Avenue Trees" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold uppercase tracking-widest text-xs">
+              Tree Avenues
+            </div>
+          </div>
+          <div class="relative rounded-lg overflow-hidden group shadow-md reveal">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Park Area" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold uppercase tracking-widest text-xs">
+              Park Greenery
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact-section" class="py-24 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">GET IN TOUCH</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Schedule a Visit to <span class="text-brand-gold">Green Meadows Phase I</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          <div class="lg:col-span-6 min-h-[400px] rounded-lg overflow-hidden border border-brand-gold/20 shadow-lg relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.123456789!2d77.54!3d13.29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1e32a09f973d%3A0x8f9c61ac62269c28!2sDoddaballapur%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1784106756241!5m2!1sen!2sin"
+              class="w-full h-full border-0 min-h-[400px]"
+              allowfullscreen=""
+              loading="lazy"
+              title="Green Meadows Location Map"
+            ></iframe>
+          </div>
+
+          <div class="lg:col-span-6 bg-brand-creamLight rounded-lg border border-brand-gold/20 p-8 sm:p-10 shadow-lg">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-brand-dark">Project Enquiry Form</h3>
+              <p class="text-xs text-brand-charcoal/70 mt-1 font-medium">
+                Submit your details to request plot availability chart & layout map for Green Meadows Phase I.
+              </p>
+            </div>
+
+            <form id="project-green-form" class="space-y-4">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Your Full Name *</label>
+                <input type="text" required name="name" placeholder="John Doe" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Email Address *</label>
+                <input type="email" required name="email" placeholder="john@example.com" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Phone Number *</label>
+                <input type="tel" required name="phone" placeholder="+91 98765 43210" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Message / Visit Preference</label>
+                <textarea rows="3" name="message" placeholder="Interested in plot details for Green Meadows Doddaballapur..." class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark font-extrabold py-3.5 text-xs uppercase tracking-widest transition-colors rounded shadow-md">
+                Submit Inquiry Request
+              </button>
+              <div id="project-form-status" class="text-xs font-bold mt-2 text-center"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    <div id="modal-container"></div>
+
+    <script src="../../assets/js/config.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

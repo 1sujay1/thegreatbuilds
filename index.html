@@ -7,16 +7,15 @@
     <!-- Paste the favicon link tag right here -->
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
 
-    <!-- Font and Icon CDNs -->
+    <!-- Google Fonts Integration: Plus Jakarta Sans (ExtraBold 800 Headings, Medium 500 Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for precise SVG-like icons -->
-     
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -45,13 +44,31 @@
                 warmBeige: "#FAF7EC", // Warm beige for modal background
                 darkGreen: "#0a1c12", // Dark green for modal elements
                 textCharcoal: "#222222", // Text color for modal
-                accentBeige: "#F3EFE0" /* Darker tone beige */,
-                gold: "#C5A880" /* Luxury gold highlight */,
+                accentBeige: "#F3EFE0", /* Darker tone beige */
               },
+              cream: {
+                DEFAULT: "#FAF7F0",
+                dark: "#F3EFE3",
+                light: "#FCFBF9"
+              },
+              forest: {
+                DEFAULT: "#0B241C",
+                light: "#143C2E",
+                dark: "#05120E"
+              },
+              royal: {
+                900: "#0F251D",
+                800: "#143026",
+                700: "#1A3F32",
+                300: "#A48E68",
+                200: "#BDB090",
+                100: "#EFECE6",
+                50: "#FAF8F4"
+              }
             },
             fontFamily: {
-              serif: ['"Cormorant Garamond"', "serif"],
-              sans: ["Inter", "sans-serif"],
+              serif: ['"Plus Jakarta Sans"', "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
             },
           },
         },
@@ -134,21 +151,21 @@
 
           <!-- Custom Styled Hero Heading matching style "Your Trusted Partner in Real Estate Investments" -->
           <h1
-            class="text-4xl sm:text-5xl md:text-6xl font-light tracking-wide leading-tight text-brand-cream font-serif"
+            class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-brand-cream"
           >
             Your
-            <span class="italic font-normal text-brand-gold font-serif"
+            <span class="text-brand-gold"
               >Trusted</span
             >
             Partner <br class="hidden sm:inline" />
             <strong
-              class="font-bold text-white block sm:inline mt-1 sm:mt-0 font-sans text-3xl sm:text-5xl md:text-6xl tracking-tight"
+              class="font-extrabold text-white block sm:inline mt-1 sm:mt-0 text-2xl sm:text-4xl lg:text-5xl tracking-tight"
               >in Real Estate Investments</strong
             >
           </h1>
 
           <p
-            class="text-brand-cream/90 text-sm sm:text-base md:text-lg max-w-2xl font-light leading-relaxed"
+            class="text-brand-cream/90 text-sm sm:text-base md:text-lg max-w-2xl font-medium leading-relaxed"
           >
             The Great Builds helps you discover premium plots in high-growth
             locations, backed by expert guidance and a seamless, crystal-clear
@@ -188,10 +205,10 @@
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
           <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
+            class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight"
           >
             Why Choose
-            <span class="text-brand-gold font-semibold">The Great Builds</span>
+            <span class="text-brand-gold">The Great Builds</span>
           </h2>
           <p
             class="mt-6 text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-light"
@@ -388,10 +405,10 @@
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
           <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
+            class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight"
           >
             Discover projects by
-            <span class="text-brand-gold font-semibold">The Great Builds</span>
+            <span class="text-brand-gold">The Great Builds</span>
           </h2>
         </div>
 
@@ -447,10 +464,10 @@
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
           <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
+            class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight"
           >
             Our Happy
-            <span class="text-brand-gold font-semibold">Customers</span>
+            <span class="text-brand-gold">Customers</span>
           </h2>
           <p class="mt-4 text-sm text-brand-charcoal/80 font-light">
             Hear from the real families and premium investors who trusted us to
@@ -687,10 +704,10 @@
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
           <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
+            class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight"
           >
             Connect with
-            <span class="text-brand-gold font-semibold">The Great Builds</span>
+            <span class="text-brand-gold">The Great Builds</span>
           </h2>
         </div>
         
@@ -880,10 +897,10 @@
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
           <h2
-            class="text-4xl sm:text-5xl font-serif font-light text-brand-dark"
+            class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight"
           >
             Questions about
-            <span class="text-brand-gold font-semibold">The Great Builds?</span>
+            <span class="text-brand-gold">The Great Builds?</span>
           </h2>
         </div>
 
@@ -1131,56 +1148,6 @@
     <!-- Footer Container -->
     <div class="footer-container"></div>
 
-    <!-- Sticky Floating Actions Sidebar (Right Center) -->
-    <div
-      class="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3"
-    >
-      <!-- WhatsApp -->
-      <a
-        href="https://wa.me/917411854822"
-        target="_blank"
-        aria-label="WhatsApp"
-        class="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-      </a>
-      <!-- Instagram -->
-      <a
-        href="https://instagram.com"
-        target="_blank"
-        aria-label="Instagram"
-        class="w-10 h-10 bg-[#E1306C] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-instagram text-lg"></i>
-      </a>
-      <!-- Facebook -->
-      <a
-        href="https://facebook.com"
-        target="_blank"
-        aria-label="Facebook"
-        class="w-10 h-10 bg-[#1877F2] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-facebook-f text-sm"></i>
-      </a>
-      <!-- YouTube -->
-      <a
-        href="https://youtube.com"
-        target="_blank"
-        aria-label="YouTube"
-        class="w-10 h-10 bg-[#FF0000] text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-brands fa-youtube text-sm"></i>
-      </a>
-      <!-- Scroll to Top Arrow -->
-      <button
-        onclick="scrollToTop()"
-        aria-label="Scroll to top"
-        class="w-10 h-10 bg-brand-cream border border-brand-gold/30 text-brand-gold rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-      >
-        <i class="fa-solid fa-arrow-up"></i>
-      </button>
-    </div>
-
     <!-- Interactive Modal Dialog Box for lead requests / projects enquiry -->
     <div
       id="enquire-modal"
@@ -1306,36 +1273,40 @@
           title: "Royal Greens",
           location: "GAURIBIDANUR, NORTH BENGALURU",
           category: "completed",
+          pageUrl: "/project/Royal-Greens",
           imageUrl:
             "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
           fallbackUrl:
             "https://placehold.co/600x400/0b1e17/b59b62?text=Royal+Greens+Entrance",
         },
         {
-          id: "orchard-valley",
+          id: "the-countryside",
           title: "The CountrySide",
           location: "NEAR ADIYOGI, CHIKKABALLAPUR",
           category: "ongoing",
+          pageUrl: "/project/The-CountrySide",
           imageUrl:
             "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
           fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Orchard+Valley+Plots",
+            "https://placehold.co/600x400/0b1e17/b59b62?text=The+CountrySide+Plots",
         },
         {
-          id: "anubhav-megacity",
+          id: "anubhava-megacity",
           title: "Anubhava Megacity",
           location: "BASAVAKALYAN, KARNATAKA",
           category: "ongoing",
+          pageUrl: "/project/Anubhava-Megacity",
           imageUrl:
             "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=600&q=80",
           fallbackUrl:
-            "https://placehold.co/600x400/0b1e17/b59b62?text=Anubhav+Megacity",
+            "https://placehold.co/600x400/0b1e17/b59b62?text=Anubhava+Megacity",
         },
         {
           id: "shankar-enclave",
           title: "Shankar Enclave",
           location: "YELAHANKA, BENGALURU",
           category: "completed",
+          pageUrl: "/project/Shankar-Enclave",
           imageUrl:
             "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80",
           fallbackUrl:
@@ -1346,6 +1317,7 @@
           title: "Golden Meadows",
           location: "DEVANAHALLI, BENGALURU",
           category: "upcoming",
+          pageUrl: "/project/Golden-Meadows",
           imageUrl:
             "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=600&q=80",
           fallbackUrl:
@@ -1356,6 +1328,7 @@
           title: "Green Meadows Phase I",
           location: "DODDABALLAPUR, BENGALURU",
           category: "completed",
+          pageUrl: "/project/Green-Meadows",
           imageUrl:
             "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80",
           fallbackUrl:
@@ -1397,10 +1370,10 @@
 
           <!-- Bottom Actions Section with chevron arrows -->
           <div class="border-t border-brand-gold/10 p-6 flex items-center justify-between">
-            <button onclick="openEnquireModal('${proj.title}', '${proj.id}')" class="text-[11px] font-bold tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors flex items-center gap-1.5">
+            <a href="${proj.pageUrl}" class="text-[11px] font-bold tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors flex items-center gap-1.5">
               VIEW DETAILS <i class="fa-solid fa-arrow-right-long"></i>
-            </button>
-            <button onclick="openEnquireModal('${proj.title}', '${proj.id}')" class="text-[11px] font-bold tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors flex items-center gap-1.5">
+            </a>
+            <button onclick="openContactModal('${proj.title} Inquiry')" class="text-[11px] font-bold tracking-widest uppercase text-brand-dark hover:text-brand-gold transition-colors flex items-center gap-1.5">
               ENQUIRE NOW <i class="fa-solid fa-arrow-right-long"></i>
             </button>
           </div>

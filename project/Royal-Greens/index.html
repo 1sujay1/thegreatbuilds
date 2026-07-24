@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+
+    <title>Royal Greens | Luxury Villa & Residential Plots in Gauribidanur - The Great Builds</title>
+    <meta
+      name="description"
+      content="Royal Greens by The Great Builds. Premier 25-acre completed residential plot community in Gauribidanur, North Bengaluru with luxury clubhouse, pool, and clear titles."
+    />
+     <!-- Paste the favicon link tag right here -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+
+    <!-- Google Fonts Integration: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#0B1E17",
+                darker: "#060F0C",
+                gold: "#B59B62",
+                goldLight: "#D4C39E",
+                cream: "#FAF7EE",
+                creamLight: "#FFFDF9",
+                creamDark: "#F3EDE0",
+                charcoal: "#2D3732",
+                warmBeige: "#FAF7EC",
+                darkGreen: "#0a1c12",
+              },
+            },
+            fontFamily: {
+              serif: ['"Plus Jakarta Sans"', "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-brand-cream text-brand-charcoal font-sans antialiased overflow-x-hidden">
+    <!-- Header Navigation Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Banner Section -->
+    <section class="relative min-h-[85vh] pt-24 flex items-center justify-center bg-brand-dark overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80"
+          alt="Royal Greens Gated Estate"
+          class="w-full h-full object-cover filter brightness-50 scale-105 transition-transform duration-[10s] hover:scale-100"
+          onerror="this.src='https://placehold.co/1920x1080/0b1e17/FAF7EE?text=Royal+Greens'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-brand-dark/70"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white w-full">
+        <div class="max-w-3xl space-y-6">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="bg-brand-gold text-brand-dark text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-sm tracking-widest">
+              COMPLETED PROJECT
+            </span>
+            <span class="border border-brand-gold/60 text-brand-goldLight text-xs font-bold uppercase px-3.5 py-1.5 rounded-sm tracking-widest">
+              VILLA PLOTS & LUXURY GATED ESTATE
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Royal Greens
+          </h1>
+          <p class="text-brand-goldLight text-sm sm:text-base font-medium uppercase tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+            GAURIBIDANUR, NORTH BENGALURU
+          </p>
+          <p class="text-brand-cream/90 text-base sm:text-lg font-medium leading-relaxed max-w-2xl">
+           Discover Royal Greens by The Great Builds, an elite gated community offering premium villas and villa plots in Gauribidanur.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-2 max-w-xl">
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">TOTAL AREA</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-white mt-1">10 Acres</span>
+            </div>
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">TOTAL PLOTS</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-white mt-1">164 Units</span>
+            </div>
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">APPROVAL</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-emerald-400 mt-1">DTCP</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button
+              onclick="openContactModal('Royal Greens Inquiry')"
+              class="bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm transition-all shadow-xl text-center"
+            >
+              ENQUIRE NOW <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+            <a
+              href="#contact-section"
+              class="border border-white/60 text-white font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm hover:bg-white hover:text-brand-dark transition-all text-center"
+            >
+              SCHEDULE SITE VISIT
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Project Section -->
+    <section class="py-20 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 reveal">
+            <div class="relative rounded-lg overflow-hidden border border-brand-gold/20 shadow-2xl group">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80"
+                alt="Royal Greens Villa Plots"
+                class="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                onerror="this.src='https://placehold.co/800x600/0b1e17/FAF7EE?text=Royal+Greens+Entrance'"
+              />
+              <div class="absolute bottom-4 left-4 bg-brand-dark/90 text-brand-gold px-4 py-2 text-xs font-bold uppercase tracking-widest rounded border border-brand-gold/30">
+                100% Ready for Construction
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-6 reveal">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-[1px] bg-brand-gold"></div>
+              <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">ABOUT THE PROJECT</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Regal Living in <span class="text-brand-gold">Gauribidanur</span>
+            </h2>
+            <p class="text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-medium">
+              Discover Royal Greens by The Great Builds, an elite gated community offering premium villas and villa plots in Gauribidanur. Situated in the high-growth North Bengaluru corridor, this meticulously planned development features wide internal roads and lush landscapes, providing the perfect canvas for sophisticated living and strategic real estate investment.
+            </p>
+            <!-- <p class="text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-medium">
+              Located near major industrial corridors and educational institutes, Royal Greens guarantees rapid property appreciation alongside high quality of life.
+            </p> -->
+
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-brand-gold/15">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-hotel text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">10+ Acres</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-water-ladder text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">164 Plots</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">DTCP Approved</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-file-circle-check text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">E-Khata Ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Highlights Section -->
+    <!-- <section class="py-20 bg-brand-creamDark relative border-y border-brand-gold/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">KEY ADVANTAGES</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Project <span class="text-brand-gold">Highlights</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-hotel text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">15,000 Sq.Ft Clubhouse</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Grand multi-level clubhouse featuring indoor games, banquet hall, gym, and guest suites.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-water-ladder text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Designer Swimming Pool</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Resort-style outdoor pool with dedicated kids splash area and sun loungers.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-shield-halved text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">3-Tier Security System</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Gated entrance archway, CCTV perimeter monitoring, and round-the-clock security guards.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-road text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Wide Tree-Lined Avenues</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              40ft & 30ft asphalt roads with paved footpaths and lush green landscaping.
+            </p>
+          </div>
+          <div class="bg-brand-gold/10 p-8 rounded-lg border border-brand-gold/30 shadow-sm hover:shadow-md transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-chart-line text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Proven Value Growth</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              High land value appreciation due to proximity to Gauribidanur Industrial Hub.
+            </p>
+          </div>
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-house-chimney-check text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Ready Villa Construction</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Immediate villa construction approval with electricity, water, and sewage connections ready.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Premium Amenities Section (22 Amenities Grid) -->
+    <section class="py-20 bg-brand-cream relative border-t border-brand-gold/15">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-emerald-800 font-extrabold block mb-2">LIFESTYLE</span>
+          <div class="flex items-center justify-center gap-6">
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Premium <span class="text-emerald-800">Amenities</span>
+            </h2>
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+          </div>
+        </div>
+
+        <!-- 22 Items Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8">
+          <!-- 1. Tennis & Badminton Court -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-table-tennis-paddle-ball text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Tennis & Badminton Court</h4>
+          </div>
+
+          <!-- 2. Cricket Pitch -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-baseball-bat-ball text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Cricket Pitch</h4>
+          </div>
+
+          <!-- 3. Jogging Track -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-person-running text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Jogging Track</h4>
+          </div>
+
+          <!-- 4. Outdoor Gym -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-dumbbell text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Outdoor Gym</h4>
+          </div>
+
+          <!-- 5. Park -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-tree text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Park</h4>
+          </div>
+
+          <!-- 6. Swimming Pool -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-water-ladder text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Swimming Pool</h4>
+          </div>
+
+          <!-- 7. Party Hall -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-masks-theater text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Party Hall</h4>
+          </div>
+
+          <!-- 8. Yoga & Meditation Center -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-spa text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Yoga & Meditation Center</h4>
+          </div>
+
+          <!-- 9. Indoor Gym -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-dumbbell text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Indoor Gym</h4>
+          </div>
+
+          <!-- 10. Grand Entrance with Arch -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-archway text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Grand Entrance with Arch</h4>
+          </div>
+
+          <!-- 11. Durable Roads -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-road text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Durable Roads</h4>
+          </div>
+
+          <!-- 12. STP -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-recycle text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">STP</h4>
+          </div>
+
+          <!-- 13. Kids Play Area -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-child-reaching text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Kids Play Area</h4>
+          </div>
+
+          <!-- 14. Club House -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-building-columns text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Club House</h4>
+          </div>
+
+          <!-- 15. 24x7 Security -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-user-shield text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">24x7 Security</h4>
+          </div>
+
+          <!-- 16. Toddlers Pool -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-person-swimming text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Toddlers Pool</h4>
+          </div>
+
+          <!-- 17. Underground Drainage & Water -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-faucet-drip text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Underground Drainage & Water</h4>
+          </div>
+
+          <!-- 18. Streetlights -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-lightbulb text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Streetlights</h4>
+          </div>
+
+          <!-- 19. Gazebos & Pergolas -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-dungeon text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Gazebos & Pergolas</h4>
+          </div>
+
+          <!-- 20. Avenue Plantation -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-tree text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Avenue Plantation</h4>
+          </div>
+
+          <!-- 21. Pool Table -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-circle-dot text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Pool Table</h4>
+          </div>
+
+          <!-- 22. Table Tennis -->
+          <div class="flex flex-col items-center text-center p-4 rounded-lg hover:bg-white/60 transition-all group reveal">
+            <div class="w-16 h-16 rounded-full flex items-center justify-center text-emerald-800 bg-emerald-800/10 mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-ping-pong-paddle-ball text-2xl text-emerald-800"></i>
+            </div>
+            <h4 class="text-xs font-extrabold text-brand-dark uppercase tracking-wider leading-snug">Table Tennis</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Modern Animated Project Gallery Section (Matching Attached Screenshot) -->
+    <section class="py-24 bg-brand-cream relative border-t border-brand-gold/15">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-emerald-800 font-extrabold block mb-2">PROJECT GALLERY</span>
+          <div class="flex items-center justify-center gap-6 mb-3">
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Visual & Site <span class="text-emerald-800">Showcase</span>
+            </h2>
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+          </div>
+          <p class="text-sm sm:text-base font-medium text-brand-charcoal/80">Explore actual 3D renders & site development views of Royal Greens.</p>
+        </div>
+
+        <!-- 5-Image Masonry Grid (Matching Attached Screenshot) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 reveal">
+          <!-- 1. Main Left Feature Hero Image (Entrance Gate Arch) -->
+          <div class="lg:col-span-6 relative rounded-xl overflow-hidden shadow-2xl border border-brand-gold/20 group h-[420px] lg:h-[500px] cursor-pointer" onclick="openGalleryModal('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80', 'Royal Greens Grand Entrance Arch')">
+            <img
+              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80"
+              alt="Royal Greens Grand Entrance Arch"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            
+            <!-- Floating Badge & Title -->
+            <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+              <div>
+                <span class="bg-brand-gold text-brand-dark text-[10px] font-extrabold uppercase px-3 py-1 rounded-sm tracking-widest block mb-2 w-fit">
+                  FEATURED VIEW
+                </span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white font-serif tracking-wide">
+                  Grand Entrance Archway
+                </h3>
+              </div>
+              <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white group-hover:bg-brand-gold group-hover:text-brand-dark transition-all">
+                <i class="fa-solid fa-expand text-lg"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Grid of 4 Tile Images -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4 lg:gap-6 h-[420px] lg:h-[500px]">
+            <!-- 2. Top-Left Tile (Modern Villa Rows) -->
+            <div class="relative rounded-xl overflow-hidden shadow-lg border border-brand-gold/20 group cursor-pointer h-full" onclick="openGalleryModal('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80', 'Modern Row Villas & Avenues')">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80"
+                alt="Modern Row Villas & Avenues"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-bold uppercase tracking-wider">Luxury Villa Avenues</span>
+              </div>
+            </div>
+
+            <!-- 3. Top-Right Tile (Gated Community Approach) -->
+            <div class="relative rounded-xl overflow-hidden shadow-lg border border-brand-gold/20 group cursor-pointer h-full" onclick="openGalleryModal('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', 'Gated Community Landscaping')">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
+                alt="Gated Community Landscaping"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-bold uppercase tracking-wider">Landscaped Parks</span>
+              </div>
+            </div>
+
+            <!-- 4. Bottom-Left Tile (Resort Pool & Clubhouse) -->
+            <div class="relative rounded-xl overflow-hidden shadow-lg border border-brand-gold/20 group cursor-pointer h-full" onclick="openGalleryModal('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80', 'Resort Pool & Clubhouse Aerial View')">
+              <img
+                src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80"
+                alt="Resort Pool & Clubhouse Aerial View"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-bold uppercase tracking-wider">Clubhouse & Pool</span>
+              </div>
+            </div>
+
+            <!-- 5. Bottom-Right Tile (Masterplan Layout Aerial) -->
+            <div class="relative rounded-xl overflow-hidden shadow-lg border border-brand-gold/20 group cursor-pointer h-full" onclick="openGalleryModal('https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=1200&q=80', 'Masterplan Top View')">
+              <img
+                src="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=600&q=80"
+                alt="Masterplan Top View"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span class="text-white text-xs font-bold uppercase tracking-wider">Masterplan Layout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsive Video Walkthrough Section -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden border-t border-brand-gold/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-extrabold block mb-2">VIRTUAL TOUR</span>
+          <div class="flex items-center justify-center gap-6 mb-3">
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+              Cinematic Video <span class="text-brand-gold">Walkthrough</span>
+            </h2>
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+          </div>
+          <p class="text-sm sm:text-base font-medium text-brand-cream/80">Experience an immersive virtual flythrough of Royal Greens Gauribidanur.</p>
+        </div>
+
+        <!-- Video Player Card Container -->
+        <div class="max-w-5xl mx-auto reveal">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-gold/30 group bg-brand-darker">
+            <!-- Video Thumbnail Backdrop -->
+            <div class="relative h-[320px] sm:h-[450px] lg:h-[520px] w-full overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80"
+                alt="Royal Greens Video Tour Thumbnail"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-75"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-brand-dark/60"></div>
+
+              <!-- Animated Play Trigger Button -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <button
+                  onclick="openVideoModal()"
+                  class="relative group/btn focus:outline-none"
+                  aria-label="Play Video Walkthrough"
+                >
+                  <span class="absolute -inset-4 rounded-full bg-brand-gold/30 animate-ping"></span>
+                  <span class="absolute -inset-8 rounded-full bg-brand-gold/15 animate-pulse"></span>
+                  
+                  <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center shadow-2xl group-hover/btn:scale-110 group-hover/btn:bg-brand-goldLight transition-all">
+                    <i class="fa-solid fa-play text-2xl sm:text-3xl ml-1 text-brand-dark"></i>
+                  </div>
+                </button>
+                <span class="mt-6 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-brand-goldLight drop-shadow-md">
+                  CLICK TO WATCH 4K VIDEO TOUR
+                </span>
+              </div>
+            </div>
+
+            <!-- Bottom Video Specs Bar -->
+            <div class="grid grid-cols-3 divide-x divide-brand-gold/20 bg-brand-darker/90 p-4 sm:p-6 text-center border-t border-brand-gold/20">
+              <div>
+                <span class="block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-gold">RESOLUTION</span>
+                <span class="block text-sm sm:text-lg font-extrabold text-white mt-1">4K Ultra HD</span>
+              </div>
+              <div>
+                <span class="block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-gold">FOOTAGE</span>
+                <span class="block text-sm sm:text-lg font-extrabold text-white mt-1">Aerial Drone & 3D</span>
+              </div>
+              <div>
+                <span class="block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-gold">DURATION</span>
+                <span class="block text-sm sm:text-lg font-extrabold text-white mt-1">2 Mins Tour</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Image Lightbox Modal -->
+    <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+      <button onclick="closeGalleryModal()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold transition-colors focus:outline-none">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="max-w-5xl w-full text-center space-y-4">
+        <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full mx-auto rounded-lg shadow-2xl border border-white/20 object-contain" />
+        <p id="lightbox-caption" class="text-white text-base font-serif font-bold uppercase tracking-wider"></p>
+      </div>
+    </div>
+
+    <!-- Video Modal Player -->
+    <div id="video-modal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+      <button onclick="closeVideoModal()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold transition-colors focus:outline-none z-10">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="max-w-4xl w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-brand-gold/30 relative">
+        <iframe
+          id="modal-video-iframe"
+          class="w-full h-full border-0"
+          src=""
+          title="Royal Greens Video Walkthrough"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Modal Helper Scripts -->
+    <script>
+      function openGalleryModal(src, caption) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox-caption').innerText = caption;
+        document.getElementById('gallery-lightbox').classList.remove('hidden');
+      }
+
+      function closeGalleryModal() {
+        document.getElementById('gallery-lightbox').classList.add('hidden');
+      }
+
+      function openVideoModal() {
+        // Sample real estate walkthrough video embed URL
+        document.getElementById('modal-video-iframe').src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+        document.getElementById('video-modal').classList.remove('hidden');
+      }
+
+      function closeVideoModal() {
+        document.getElementById('modal-video-iframe').src = "";
+        document.getElementById('video-modal').classList.add('hidden');
+      }
+    </script>
+
+    <!-- Contact & Map Section -->
+    <section id="contact-section" class="py-24 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">GET IN TOUCH</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Schedule a Visit to <span class="text-brand-gold">Royal Greens</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          <div class="lg:col-span-6 min-h-[400px] rounded-lg overflow-hidden border border-brand-gold/20 shadow-lg relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.123456789!2d77.51!3d13.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb1f32a09f973d%3A0x8f9c61ac62269c28!2sGauribidanur!5e0!3m2!1sen!2sin!4v1784106756241!5m2!1sen!2sin"
+              class="w-full h-full border-0 min-h-[400px]"
+              allowfullscreen=""
+              loading="lazy"
+              title="Royal Greens Location Map"
+            ></iframe>
+          </div>
+
+          <div class="lg:col-span-6 bg-brand-creamLight rounded-lg border border-brand-gold/20 p-8 sm:p-10 shadow-lg">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-brand-dark">Project Enquiry Form</h3>
+              <p class="text-xs text-brand-charcoal/70 mt-1 font-medium">
+                Submit your details to request available resale/re-allotment plots and site visit for Royal Greens.
+              </p>
+            </div>
+
+            <form id="project-royal-form" class="space-y-4">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Your Full Name *</label>
+                <input type="text" required name="name" placeholder="John Doe" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Email Address *</label>
+                <input type="email" required name="email" placeholder="john@example.com" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Phone Number *</label>
+                <input type="tel" required name="phone" placeholder="+91 98765 43210" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Message / Visit Preference</label>
+                <textarea rows="3" name="message" placeholder="Interested in plot dimensions at Royal Greens..." class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark font-extrabold py-3.5 text-xs uppercase tracking-widest transition-colors rounded shadow-md">
+                Submit Inquiry Request
+              </button>
+              <div id="project-form-status" class="text-xs font-bold mt-2 text-center"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project FAQs Section (Moved Above Footer) -->
+    <section class="py-20 bg-brand-creamDark relative border-t border-brand-gold/15">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-emerald-800 font-extrabold block mb-2">LIFESTYLE</span>
+          <div class="flex items-center justify-center gap-6 mb-3">
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Project <span class="text-emerald-800">FAQs</span>
+            </h2>
+            <div class="h-[1px] bg-brand-gold/40 flex-1 max-w-[150px]"></div>
+          </div>
+          <p class="text-sm sm:text-base font-medium text-brand-charcoal/80">Common questions about Royal Greens.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Left Column: Graphic Card matching Image 2 -->
+          <div class="lg:col-span-5 reveal">
+            <div class="relative rounded-xl overflow-hidden shadow-2xl border border-brand-gold/20 group">
+              <img
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+                alt="Royal Greens Gate"
+                class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-90"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+              <!-- Top Left Cream Box -->
+              <div class="absolute top-6 left-6 bg-brand-cream/95 backdrop-blur-md p-6 rounded-md shadow-xl border border-brand-gold/30 max-w-[240px]">
+                <h3 class="text-2xl font-extrabold text-brand-dark leading-tight tracking-wider uppercase">
+                  PROJECT<br />QUESTIONS?
+                </h3>
+              </div>
+
+              <!-- Bottom CTA Button -->
+              <div class="absolute bottom-8 left-6">
+                <button
+                  onclick="openContactModal('Royal Greens FAQ Inquiry')"
+                  class="bg-brand-cream/90 hover:bg-brand-gold text-brand-dark font-extrabold text-xs tracking-widest uppercase px-6 py-3.5 rounded-sm transition-all shadow-xl"
+                >
+                  ENQUIRE NOW
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Accordion Questions -->
+          <div class="lg:col-span-7 space-y-4 reveal">
+            <!-- Q1 -->
+            <div class="bg-brand-cream p-5 rounded-lg border border-brand-gold/20 shadow-sm">
+              <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between text-left gap-4 group focus:outline-none">
+                <span class="font-bold text-brand-dark text-base sm:text-lg group-hover:text-emerald-800 transition-colors">
+                  What does Royal Greens offer?
+                </span>
+                <span id="faq-icon-1" class="w-8 h-8 rounded-full bg-brand-creamDark flex items-center justify-center text-brand-dark transition-transform duration-300">
+                  <i class="fa-solid fa-chevron-down text-xs"></i>
+                </span>
+              </button>
+              <div id="faq-ans-1" class="mt-3 text-sm text-brand-charcoal/80 font-medium leading-relaxed border-t border-brand-gold/15 pt-3 hidden">
+                It is an elite gated community in Gauribidanur offering both premium villas and villa plots, designed for modern living and long-term investment.
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="bg-brand-cream p-5 rounded-lg border border-brand-gold/20 shadow-sm">
+              <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between text-left gap-4 group focus:outline-none">
+                <span class="font-bold text-brand-dark text-base sm:text-lg group-hover:text-emerald-800 transition-colors">
+                  Is the project legally approved?
+                </span>
+                <span id="faq-icon-2" class="w-8 h-8 rounded-full bg-brand-creamDark flex items-center justify-center text-brand-dark transition-transform duration-300">
+                  <i class="fa-solid fa-chevron-down text-xs"></i>
+                </span>
+              </button>
+              <div id="faq-ans-2" class="mt-3 text-sm text-brand-charcoal/80 font-medium leading-relaxed border-t border-brand-gold/15 pt-3 hidden">
+                Yes. Royal Greens is DTCP-approved and comes with E-Khata, ensuring a secure and transparent legal process for all buyers.
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="bg-brand-cream p-5 rounded-lg border border-brand-gold/20 shadow-sm">
+              <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between text-left gap-4 group focus:outline-none">
+                <span class="font-bold text-brand-dark text-base sm:text-lg group-hover:text-emerald-800 transition-colors">
+                  What kind of infrastructure is provided?
+                </span>
+                <span id="faq-icon-3" class="w-8 h-8 rounded-full bg-brand-creamDark flex items-center justify-center text-brand-dark transition-transform duration-300">
+                  <i class="fa-solid fa-chevron-down text-xs"></i>
+                </span>
+              </button>
+              <div id="faq-ans-3" class="mt-3 text-sm text-brand-charcoal/80 font-medium leading-relaxed border-t border-brand-gold/15 pt-3 hidden">
+                The community features wide internal roads, lush landscaped areas, and the safety of a fully gated environment.
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="bg-brand-cream p-5 rounded-lg border border-brand-gold/20 shadow-sm">
+              <button onclick="toggleFaq(4)" class="w-full flex items-center justify-between text-left gap-4 group focus:outline-none">
+                <span class="font-bold text-brand-dark text-base sm:text-lg group-hover:text-emerald-800 transition-colors">
+                  Why is this a good investment?
+                </span>
+                <span id="faq-icon-4" class="w-8 h-8 rounded-full bg-brand-creamDark flex items-center justify-center text-brand-dark transition-transform duration-300">
+                  <i class="fa-solid fa-chevron-down text-xs"></i>
+                </span>
+              </button>
+              <div id="faq-ans-4" class="mt-3 text-sm text-brand-charcoal/80 font-medium leading-relaxed border-t border-brand-gold/15 pt-3 hidden">
+                Located in the rapidly growing North Bengaluru corridor near major industrial hubs, the project offers high potential for property value appreciation.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion JS Script -->
+    <script>
+      function toggleFaq(index) {
+        const ans = document.getElementById('faq-ans-' + index);
+        const icon = document.getElementById('faq-icon-' + index);
+        if (ans.classList.contains('hidden')) {
+          ans.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        } else {
+          ans.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+        }
+      }
+    </script>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    <div id="modal-container"></div>
+
+    <script src="../../assets/js/config.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

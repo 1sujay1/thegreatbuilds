@@ -400,13 +400,36 @@ const footerHTML = `   <footer class="bg-brand-dark text-gray-300 pt-16 pb-8 bor
       </div>
     </footer>`;
 
+const stickySocialHTML = `<div id="sticky-social-bar" class="fixed top-1/2 -translate-y-1/2 right-0 z-50 flex flex-col space-y-1.5 shadow-2xl">
+  <a href="https://wa.me/917411854822" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-11 h-11 sm:w-13 sm:h-13 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-l-2xl flex items-center justify-center shadow-lg transform hover:-translate-x-2 transition-all duration-300 group">
+    <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="w-11 h-11 sm:w-13 sm:h-13 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 hover:opacity-95 text-white rounded-l-2xl flex items-center justify-center shadow-lg transform hover:-translate-x-2 transition-all duration-300 group">
+    <i class="fa-brands fa-instagram text-2xl group-hover:scale-110 transition-transform"></i>
+  </a>
+  <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="w-11 h-11 sm:w-13 sm:h-13 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-l-2xl flex items-center justify-center shadow-lg transform hover:-translate-x-2 transition-all duration-300 group">
+    <i class="fa-brands fa-facebook-f text-xl group-hover:scale-110 transition-transform"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="w-11 h-11 sm:w-13 sm:h-13 bg-[#FF0000] hover:bg-[#E60000] text-white rounded-l-2xl flex items-center justify-center shadow-lg transform hover:-translate-x-2 transition-all duration-300 group">
+    <i class="fa-brands fa-youtube text-xl group-hover:scale-110 transition-transform"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-11 h-11 sm:w-13 sm:h-13 bg-[#0A66C2] hover:bg-[#0854A0] text-white rounded-l-2xl flex items-center justify-center shadow-lg transform hover:-translate-x-2 transition-all duration-300 group">
+    <i class="fa-brands fa-linkedin-in text-xl group-hover:scale-110 transition-transform"></i>
+  </a>
+</div>`;
+
+const scrollToTopHTML = `<button id="scroll-to-top-btn" onclick="scrollToTop()" aria-label="Scroll to top" class="fixed bottom-6 right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-brand-gold text-brand-dark rounded-full shadow-2xl border-2 border-white/40 flex items-center justify-center opacity-0 pointer-events-none translate-y-6 transition-all duration-500 hover:bg-brand-goldLight hover:scale-110 group">
+  <span class="absolute inset-0 rounded-full bg-brand-gold/40 animate-ping pointer-events-none"></span>
+  <i class="fa-solid fa-arrow-up text-lg font-bold group-hover:animate-bounce relative z-10"></i>
+</button>`;
+
 /* ==========================================================================
    DOM INJECTION ENGINE
    ========================================================================== */
 
 function injectCommonLayout() {
   const headerContainer = document.getElementById("header-container");
-  const footerContainer = document.querySelector('.footer-container');
+  const footerContainer = document.getElementById("footer-container") || document.querySelector('.footer-container');
 
   // Inject Header without resetting global HTML contents
   if (headerContainer) {
@@ -420,10 +443,73 @@ function injectCommonLayout() {
   }
 
   // Append modal structure safely to layout bottom without breaking listeners
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
+  if (!document.getElementById("common-contact-modal")) {
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+  }
+
+  // Append sticky right social media bar
+  if (!document.getElementById("sticky-social-bar")) {
+    document.body.insertAdjacentHTML('beforeend', stickySocialHTML);
+  }
+
+  // Append floating scroll-to-top button
+  if (!document.getElementById("scroll-to-top-btn")) {
+    document.body.insertAdjacentHTML('beforeend', scrollToTopHTML);
+  }
 
   // Initialize form validation engine
   initializeContactForm();
+
+  // Initialize scroll reveal animations for all content sections
+  initializeScrollReveal();
+}
+
+window.scrollToTop = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+window.addEventListener('scroll', function() {
+  const scrollBtn = document.getElementById('scroll-to-top-btn');
+  if (scrollBtn) {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-6');
+      scrollBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+    } else {
+      scrollBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      scrollBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-6');
+    }
+  }
+});
+
+function initializeScrollReveal() {
+  const revealElements = document.querySelectorAll(".reveal");
+  if (!revealElements.length) return;
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -20px 0px" }
+  );
+
+  revealElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add("active");
+    } else {
+      revealObserver.observe(el);
+    }
+  });
+
+  // Guarantees all sections display after 400ms even if observer doesn't trigger
+  setTimeout(() => {
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("active"));
+  }, 400);
 }
 
 /* ==========================================================================
@@ -474,75 +560,83 @@ window.toggleMobileProjects = function() {
    ========================================================================== */
 
 function initializeContactForm() {
-  var bookingForm = document.getElementById("common-contact-us-form");
-  if (!bookingForm) return;
+  // Bind both common modal form and project-specific enquiry forms
+  const formsToBind = document.querySelectorAll("form[id*='contact'], form[id^='project-']");
+  
+  formsToBind.forEach(function (bookingForm) {
+    if (bookingForm.dataset.bound) return;
+    bookingForm.dataset.bound = "true";
 
-  var successMsg = document.getElementById("common-modal-success_message");
-  var errorMsg = document.getElementById("common-modal-error_message");
-  var submitBtn = document.getElementById("common-modal-contact_form_btn");
+    bookingForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  bookingForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+      var successMsg = bookingForm.querySelector("#common-modal-success_message, #project-form-status");
+      var errorMsg = bookingForm.querySelector("#common-modal-error_message, #project-form-status");
+      var submitBtn = bookingForm.querySelector("button[type=submit]");
 
-    if (successMsg) { successMsg.textContent = ""; successMsg.style.display = "none"; }
-    if (errorMsg) { errorMsg.textContent = ""; errorMsg.style.display = "none"; }
+      if (successMsg) { successMsg.textContent = ""; successMsg.style.display = "none"; }
+      if (errorMsg && errorMsg !== successMsg) { errorMsg.textContent = ""; errorMsg.style.display = "none"; }
 
-    var name = bookingForm.name.value.trim();
-    var email = bookingForm.email.value.trim();
-    var mobile = bookingForm.querySelector("[name=phone]")?.value.trim() || "";
-    var message = bookingForm.message?.value?.trim() || "";
+      var name = bookingForm.name?.value?.trim() || "";
+      var email = bookingForm.email?.value?.trim() || "";
+      var mobile = bookingForm.querySelector("[name=phone]")?.value?.trim() || "";
+      var message = bookingForm.message?.value?.trim() || "";
 
-    if (!name || !email || !mobile) {
-      if (errorMsg) {
-        errorMsg.style.display = "block";
-        errorMsg.style.color = "#d32f2f";
-        errorMsg.textContent = "Please fill all required fields.";
+      if (!name || !email || !mobile) {
+        if (errorMsg) {
+          errorMsg.style.display = "block";
+          errorMsg.style.color = "#d32f2f";
+          errorMsg.textContent = "Please fill all required fields (Name, Email, Phone).";
+        }
+        return;
       }
-      return;
-    }
 
-    // Resolve structural endpoint base URL safely across local and production live servers
-    var currentBaseURL = (typeof BaseURL !== 'undefined') ? BaseURL : window.location.origin;
+      var currentBaseURL = (typeof BaseURL !== 'undefined') ? BaseURL : window.location.origin;
 
-    submitBtn.disabled = true;
-    var originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = "Submitting...";
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        var originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = "Submitting Inquiry...";
+      }
 
-    fetch(`${currentBaseURL}/api/v1/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        project: "THE_GREAT_BUILDS",
-        name: name,
-        email: email,
-        phone: mobile,
-        message: message,
-      }),
-    })
-    .then(function (res) {
-      if (res.status !== 200) {
-        throw new Error("Failed to submit. Please try again.");
-      }
-      return res.json();
-    })
-    .then(function (data) {
-      if (successMsg) {
-        successMsg.style.display = "block";
-        successMsg.style.color = "#388e3c";
-        successMsg.textContent = "Thank you! Your request has been sent.";
-      }
-      bookingForm.reset();
-    })
-    .catch(function (err) {
-      if (errorMsg) {
-        errorMsg.style.display = "block";
-        errorMsg.style.color = "#d32f2f";
-        errorMsg.textContent = err.message || "Submission failed. Please try again.";
-      }
-    })
-    .finally(function () {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalText;
+      fetch(`${currentBaseURL}/api/v1/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          project: "THE_GREAT_BUILDS",
+          name: name,
+          email: email,
+          phone: mobile,
+          message: message,
+        }),
+      })
+      .then(function (res) {
+        if (res.status !== 200) {
+          throw new Error("Failed to submit. Please try again.");
+        }
+        return res.json();
+      })
+      .then(function (data) {
+        if (successMsg) {
+          successMsg.style.display = "block";
+          successMsg.style.color = "#15803d";
+          successMsg.textContent = "Thank you! Your project inquiry has been successfully sent. Our manager will contact you within 24 hours.";
+        }
+        bookingForm.reset();
+      })
+      .catch(function (err) {
+        if (errorMsg) {
+          errorMsg.style.display = "block";
+          errorMsg.style.color = "#b91c1c";
+          errorMsg.textContent = err.message || "Submission failed. Please check your connection.";
+        }
+      })
+      .finally(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
     });
   });
 }

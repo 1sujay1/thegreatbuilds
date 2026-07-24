@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NRI Real Estate Investment Desk | The Great Builds - Bangalore Plots & Villa Estates</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=32&q=80" />
+    
 
-    <!-- Google Fonts: Cormorant Garamond & Inter -->
+     <!-- Paste the favicon link tag right here -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+
+    <!-- Google Fonts Integration: Plus Jakarta Sans (ExtraBold 800 Headings, Medium 500 Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,800&display=swap"
       rel="stylesheet"
     />
 
@@ -25,6 +27,9 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Common CSS System -->
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
     <!-- Tailwind CSS Script -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -34,38 +39,24 @@
           extend: {
             colors: {
               brand: {
-                dark: "#0B1E17",       // Deep Forest Green
-                darker: "#060F0C",     // Darkest Forest Green
-                gold: "#B59B62",       // Classic Warm Gold Accent
-                goldLight: "#D4C39E",  // Soft Gold Highlight
-                cream: "#FAF7EE",      // Warm Cream Base Background
-                creamLight: "#FFFDF9", // Ultra Light Soft Background
-                creamDark: "#F3EDE0",  // Darker Cream for sections
-                charcoal: "#2D3732",   // Muted Text
+                dark: "#0B1E17",
+                darker: "#060F0C",
+                gold: "#B59B62",
+                goldLight: "#D4C39E",
+                cream: "#FAF7EE",
+                creamLight: "#FFFDF9",
+                creamDark: "#F3EDE0",
+                charcoal: "#2D3732",
                 grayLight: "#94A3B8",
                 warmBeige: "#FAF7EC",
                 darkGreen: "#0a1c12",
                 textCharcoal: "#222222",
                 accentBeige: "#F3EFE0",
-                dark: "#0B1E17", // Deep Forest Green
-                darker: "#060F0C", // Darkest Forest Green
-                gold: "#B59B62", // Classic Warm Gold Accent
-                goldLight: "#D4C39E", // Soft Gold Highlight
-                cream: "#FAF7EE", // Warm Cream Base Background
-                creamLight: "#FFFDF9", // Ultra Light Soft Background
-                creamDark: "#F3EDE0", // Darker Cream for sections
-                charcoal: "#2D3732", // Muted Text
-                grayLight: "#94A3B8",
-                warmBeige: "#FAF7EC", // Warm beige for modal background
-                darkGreen: "#0a1c12", // Dark green for modal elements
-                textCharcoal: "#222222", // Text color for modal
-                accentBeige: "#F3EFE0" /* Darker tone beige */,
-                gold: "#C5A880" /* Luxury gold highlight */,
               },
             },
             fontFamily: {
-              serif: ['"Cormorant Garamond"', "serif"],
-              sans: ["Inter", "sans-serif"],
+              serif: ['"Plus Jakarta Sans"', "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
             },
           },
         },
@@ -156,36 +147,36 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <!-- Left Main Hero Heading & Copy -->
-          <div class="lg:col-span-7 space-y-6">
+          <div class="lg:col-span-7 space-y-6 reveal">
             <!-- Global Indian Badge -->
-            <div class="inline-flex items-center gap-3 bg-brand-gold/15 border border-brand-gold/40 px-4 py-2 rounded-full">
+            <div class="inline-flex items-center gap-3 bg-brand-gold/15 border border-brand-gold/40 px-4 py-2 rounded-full shadow-md">
               <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-              <span class="text-xs font-bold tracking-[0.2em] text-brand-gold uppercase">Exclusive NRI Wealth Desk</span>
+              <span class="text-xs font-extrabold tracking-[0.2em] text-brand-gold uppercase">Exclusive NRI Wealth Desk</span>
             </div>
 
             <!-- Title -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-light leading-tight text-brand-cream font-serif">
-              Invest in <span class="italic font-normal text-brand-gold">Bangalore’s</span> High-Growth Real Estate 
-              <strong class="block font-bold text-white font-sans text-3xl sm:text-5xl lg:text-5xl mt-2 tracking-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight text-brand-cream tracking-tight">
+              Invest in <span class="text-brand-gold">Bangalore’s</span> High-Growth Real Estate 
+              <span class="block text-white mt-2">
                 From Anywhere in the World
-              </strong>
+              </span>
             </h1>
 
-            <p class="text-brand-cream/85 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+            <p class="text-brand-cream/90 text-sm sm:text-base max-w-2xl font-medium leading-relaxed">
               Empowering Non-Resident Indians across UAE, USA, UK, Singapore & Australia with 100% transparent, legally verified plotted developments and end-to-end remote asset management.
             </p>
 
             <!-- Key NRI Value Bullets -->
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-              <div class="flex items-center gap-2.5 text-brand-cream/90 text-xs sm:text-sm font-medium">
+              <div class="flex items-center gap-2.5 text-brand-cream/90 text-xs sm:text-sm font-medium hover:text-brand-gold transition-colors">
                 <i class="fa-solid fa-shield-halved text-brand-gold"></i>
                 <span>FEMA & RERA Compliant</span>
               </div>
-              <div class="flex items-center gap-2.5 text-brand-cream/90 text-xs sm:text-sm font-medium">
+              <div class="flex items-center gap-2.5 text-brand-cream/90 text-xs sm:text-sm font-medium hover:text-brand-gold transition-colors">
                 <i class="fa-solid fa-video text-brand-gold"></i>
                 <span>Live 4K Drone Tours</span>
               </div>
-              <div class="flex items-center gap-2.5 text-brand-cream/90 text-xs sm:text-sm font-medium">
+              <div class="flex items-center gap-2.5 text-brand-cream/90 text-xs sm:text-sm font-medium hover:text-brand-gold transition-colors">
                 <i class="fa-solid fa-file-signature text-brand-gold"></i>
                 <span>Power of Attorney Guidance</span>
               </div>
@@ -193,34 +184,34 @@
 
             <!-- Action CTAs -->
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="#roi-calculator" class="bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-sm transition-all shadow-xl text-center hover:-translate-y-0.5">
+              <a href="#roi-calculator" class="bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm transition-all shadow-xl text-center hover:-translate-y-1 hover:shadow-2xl">
                 <i class="fa-solid fa-calculator mr-2"></i> Calculate Investment ROI
               </a>
-              <button onclick="openEnquireModal('NRI Portfolio Consultation', 'nri-hero-consult')" class="border border-brand-cream/40 text-brand-cream font-bold text-xs tracking-widest uppercase px-8 py-4 rounded-sm hover:bg-brand-cream hover:text-brand-dark transition-all text-center">
+              <button onclick="openEnquireModal('NRI Portfolio Consultation', 'nri-hero-consult')" class="border border-brand-cream/40 text-brand-cream font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm hover:bg-brand-cream hover:text-brand-dark transition-all text-center hover:-translate-y-1 hover:shadow-xl">
                 Request NRI Advisory Call
               </button>
             </div>
           </div>
 
           <!-- Right Quick Priority Express Form for NRIs -->
-          <div class="lg:col-span-5">
-            <div class="glass-card rounded-lg border border-brand-gold/30 p-6 sm:p-8 shadow-2xl text-brand-cream">
+          <div class="lg:col-span-5 reveal">
+            <div class="glass-card rounded-lg border border-brand-gold/30 p-6 sm:p-8 shadow-2xl text-brand-cream hover:border-brand-gold/60 transition-all duration-500">
               <div class="border-b border-brand-gold/20 pb-4 mb-6">
-                <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold">Priority Overseas Desk</span>
-                <h3 class="font-serif text-2xl font-bold text-brand-cream">Book Private NRI Callback</h3>
-                <p class="text-xs text-brand-cream/70 mt-1">Get custom investment options matching your preferred timezone.</p>
+                <span class="text-[10px] uppercase font-extrabold tracking-widest text-brand-gold">Priority Overseas Desk</span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-brand-cream tracking-wide">Book Private NRI Callback</h3>
+                <p class="text-xs sm:text-sm font-medium text-brand-cream/70 mt-1">Get custom investment options matching your preferred timezone.</p>
               </div>
 
               <form id="hero-nri-form" onsubmit="handleHeroSubmit(event)" class="space-y-4">
                 <div>
-                  <label class="block text-[10px] font-bold tracking-wider uppercase text-brand-goldLight mb-1">Your Name</label>
-                  <input type="text" id="hn-name" required placeholder="e.g. Dr. Rajesh Sharma" class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold" />
+                  <label class="block text-[10px] font-extrabold tracking-wider uppercase text-brand-goldLight mb-1">Your Name</label>
+                  <input type="text" id="hn-name" required placeholder="e.g. Dr. Rajesh Sharma" class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold transition-colors" />
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label class="block text-[10px] font-bold tracking-wider uppercase text-brand-goldLight mb-1">Country of Residence</label>
-                    <select id="hn-country" required class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold">
+                    <label class="block text-[10px] font-extrabold tracking-wider uppercase text-brand-goldLight mb-1">Country of Residence</label>
+                    <select id="hn-country" required class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold transition-colors">
                       <option value="" disabled selected>Select Country</option>
                       <option value="UAE">UAE (Dubai/Abu Dhabi)</option>
                       <option value="USA">United States</option>
@@ -234,19 +225,19 @@
                   </div>
 
                   <div>
-                    <label class="block text-[10px] font-bold tracking-wider uppercase text-brand-goldLight mb-1">Phone (with country code)</label>
-                    <input type="tel" id="hn-phone" required placeholder="+971 50 123 4567" class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold" />
+                    <label class="block text-[10px] font-extrabold tracking-wider uppercase text-brand-goldLight mb-1">Phone (with country code)</label>
+                    <input type="tel" id="hn-phone" required placeholder="+971 50 123 4567" class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold transition-colors" />
                   </div>
                 </div>
 
                 <div>
-                  <label class="block text-[10px] font-bold tracking-wider uppercase text-brand-goldLight mb-1">Email Address</label>
-                  <input type="email" id="hn-email" required placeholder="rajesh@example.com" class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold" />
+                  <label class="block text-[10px] font-extrabold tracking-wider uppercase text-brand-goldLight mb-1">Email Address</label>
+                  <input type="email" id="hn-email" required placeholder="rajesh@example.com" class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold transition-colors" />
                 </div>
 
                 <div>
-                  <label class="block text-[10px] font-bold tracking-wider uppercase text-brand-goldLight mb-1">Investment Budget</label>
-                  <select id="hn-budget" required class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold">
+                  <label class="block text-[10px] font-extrabold tracking-wider uppercase text-brand-goldLight mb-1">Investment Budget</label>
+                  <select id="hn-budget" required class="w-full bg-brand-darker/80 border border-brand-gold/20 rounded py-2.5 px-3 text-sm text-brand-cream focus:outline-none focus:border-brand-gold transition-colors">
                     <option value="" disabled selected>Select Budget Range</option>
                     <option value="30L-50L">₹30 Lakhs - ₹50 Lakhs (~$36k - $60k)</option>
                     <option value="50L-1Cr">₹50 Lakhs - ₹1 Crore (~$60k - $120k)</option>
@@ -255,7 +246,7 @@
                   </select>
                 </div>
 
-                <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-bold text-xs tracking-widest uppercase py-3.5 rounded shadow-lg transition-all mt-2">
+                <button type="submit" class="w-full bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-extrabold text-xs tracking-widest uppercase py-3.5 rounded shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 mt-2">
                   Connect With NRI Advisor
                 </button>
               </form>
@@ -269,26 +260,26 @@
     <!-- NRI Metrics Highlights Banner -->
     <section class="bg-brand-darker border-y border-brand-gold/20 py-10 relative z-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
           
-          <div class="space-y-1">
-            <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-gold">₹150+ Cr</span>
-            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-semibold">NRI Portfolios Managed</p>
+          <div class="space-y-1 p-3 rounded-lg hover:bg-white/5 transition-all group">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-gold group-hover:scale-105 block transition-transform">₹150+ Cr</span>
+            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-extrabold">NRI Portfolios Managed</p>
           </div>
 
-          <div class="space-y-1">
-            <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-gold">100%</span>
-            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-semibold">Clear Title Legal Assurance</p>
+          <div class="space-y-1 p-3 rounded-lg hover:bg-white/5 transition-all group">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-gold group-hover:scale-105 block transition-transform">100%</span>
+            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-extrabold">Clear Title Legal Assurance</p>
           </div>
 
-          <div class="space-y-1">
-            <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-gold">18.4%</span>
-            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-semibold">Avg. 3-Yr Capital Growth</p>
+          <div class="space-y-1 p-3 rounded-lg hover:bg-white/5 transition-all group">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-gold group-hover:scale-105 block transition-transform">18.4%</span>
+            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-extrabold">Avg. 3-Yr Capital Growth</p>
           </div>
 
-          <div class="space-y-1">
-            <span class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-gold">450+</span>
-            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-semibold">Global Indian Families Trust Us</p>
+          <div class="space-y-1 p-3 rounded-lg hover:bg-white/5 transition-all group">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-gold group-hover:scale-105 block transition-transform">450+</span>
+            <p class="text-[10px] sm:text-xs uppercase tracking-widest text-brand-cream/70 font-extrabold">Global Indian Families Trust Us</p>
           </div>
 
         </div>
@@ -302,13 +293,13 @@
         <div class="text-center max-w-3xl mx-auto mb-16 reveal">
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Investment Drivers</span>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-extrabold">Investment Drivers</span>
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-brand-dark">
-            Why NRIs Prefer <span class="text-brand-gold font-semibold">Bangalore Plotted Real Estate</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Why NRIs Prefer <span class="text-brand-gold">Bangalore Plotted Real Estate</span>
           </h2>
-          <p class="mt-4 text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-light">
+          <p class="mt-4 text-sm sm:text-base font-medium text-brand-charcoal/80 leading-relaxed">
             Bengaluru remains India's premier wealth creation corridor. Land investments in North Bengaluru near Kempegowda International Airport provide unrivaled security, rapid appreciation, and strong currency arbitrage benefits.
           </p>
         </div>
@@ -317,45 +308,45 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           <!-- Card 1 -->
-          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-500 reveal">
             <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-gold mb-6 text-xl">
               <i class="fa-solid fa-plane-departure"></i>
             </div>
-            <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Airport Corridor Growth</h3>
-            <p class="text-xs text-brand-charcoal/80 leading-relaxed font-light">
+            <h3 class="text-lg sm:text-xl font-extrabold text-brand-dark mb-3 tracking-wide">Airport Corridor Growth</h3>
+            <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
               Devenahalli, Gauribidanur, and Chikkaballapur are witnessing multi-billion dollar infrastructure hubs, IT parks, and SEZ expansions.
             </p>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-500 reveal">
             <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-gold mb-6 text-xl">
               <i class="fa-solid fa-[#25D366] fa-coins text-brand-gold"></i>
             </div>
-            <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Currency Arbitrage</h3>
-            <p class="text-xs text-brand-charcoal/80 leading-relaxed font-light">
+            <h3 class="text-lg sm:text-xl font-extrabold text-brand-dark mb-3 tracking-wide">Currency Arbitrage</h3>
+            <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
               Earning in USD, AED, SGD or GBP gives high purchasing power in Indian real estate, creating an unbeatable asset backed by physical land.
             </p>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-500 reveal">
             <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-gold mb-6 text-xl">
               <i class="fa-solid fa-stamp"></i>
             </div>
-            <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">100% Legal Transparency</h3>
-            <p class="text-xs text-brand-charcoal/80 leading-relaxed font-light">
+            <h3 class="text-lg sm:text-xl font-extrabold text-brand-dark mb-3 tracking-wide">100% Legal Transparency</h3>
+            <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
               All properties feature DTCP/RERA approvals, clear titles, single-owner histories, and institutional bank loan pre-approvals.
             </p>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all">
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/15 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-500 reveal">
             <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-gold mb-6 text-xl">
               <i class="fa-solid fa-hand-holding-hand"></i>
             </div>
-            <h3 class="font-serif text-xl font-bold text-brand-dark mb-3">Zero-Hassle Resale & Exit</h3>
-            <p class="text-xs text-brand-charcoal/80 leading-relaxed font-light">
+            <h3 class="text-lg sm:text-xl font-extrabold text-brand-dark mb-3 tracking-wide">Zero-Hassle Resale & Exit</h3>
+            <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
               We assist with future leasing, plot maintenance, and full capital repatriation under RBI FEMA guidelines when you decide to exit.
             </p>
           </div>
@@ -369,16 +360,16 @@
     <section id="nri-services" class="py-24 bg-brand-creamDark relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">End-to-End Care</span>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-extrabold">End-to-End Care</span>
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-brand-dark">
-            Dedicated <span class="text-brand-gold font-semibold">NRI Concierge Services</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Dedicated <span class="text-brand-gold">NRI Concierge Services</span>
           </h2>
-          <p class="mt-4 text-sm text-brand-charcoal/80 font-light">
+          <p class="mt-4 text-sm sm:text-base font-medium text-brand-charcoal/80 leading-relaxed">
             You don't need to fly down to Bangalore to secure your dream plot. Our team manages every detail locally on your behalf.
           </p>
         </div>
@@ -386,17 +377,17 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           <!-- Left Column Image Feature -->
-          <div class="lg:col-span-5 relative rounded-lg overflow-hidden border border-brand-gold/20 shadow-xl min-h-[350px]">
+          <div class="lg:col-span-5 relative rounded-lg overflow-hidden border border-brand-gold/20 shadow-xl min-h-[350px] group reveal">
             <img 
               src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" 
               alt="NRI Relationship Manager Consultation" 
-              class="w-full h-full object-cover filter brightness-90"
+              class="w-full h-full object-cover filter brightness-90 group-hover:scale-105 transition-transform duration-700"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent"></div>
             <div class="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-md border border-brand-gold/30 text-white">
-              <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Remote Execution</span>
-              <h4 class="font-serif text-xl font-bold mt-1">Dedicated Relationship Manager</h4>
-              <p class="text-xs text-brand-cream/80 mt-1">Assigned 1-on-1 advisor available across US, Gulf, European & Asian time zones.</p>
+              <span class="text-[10px] uppercase tracking-widest text-brand-gold font-extrabold">Remote Execution</span>
+              <h4 class="text-xl font-extrabold mt-1">Dedicated Relationship Manager</h4>
+              <p class="text-xs font-medium text-brand-cream/80 mt-1">Assigned 1-on-1 advisor available across US, Gulf, European & Asian time zones.</p>
             </div>
           </div>
 
@@ -404,65 +395,65 @@
           <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             
             <!-- Service 1 -->
-            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between">
+            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-gold/40 transition-all duration-300 reveal">
               <div>
                 <div class="w-10 h-10 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
                   <i class="fa-solid fa-video"></i>
                 </div>
-                <h3 class="font-serif text-lg font-bold text-brand-dark mb-2">Live 4K Virtual Site Visits</h3>
-                <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+                <h3 class="text-base sm:text-lg font-extrabold text-brand-dark mb-2 tracking-wide">Live 4K Virtual Site Visits</h3>
+                <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                   Interactive video walkthroughs with real-time drone perspectives, plot boundary measurements, and neighborhood connectivity tours.
                 </p>
               </div>
-              <button onclick="openEnquireModal('4K Live Virtual Tour Request', 'live-tour')" class="mt-4 text-[11px] font-bold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1">
+              <button onclick="openEnquireModal('4K Live Virtual Tour Request', 'live-tour')" class="mt-4 text-xs font-extrabold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1 transition-colors">
                 Schedule Tour <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
 
             <!-- Service 2 -->
-            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between">
+            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-gold/40 transition-all duration-300 reveal">
               <div>
                 <div class="w-10 h-10 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
                   <i class="fa-solid fa-passport"></i>
                 </div>
-                <h3 class="font-serif text-lg font-bold text-brand-dark mb-2">Power of Attorney (PoA) Legal Support</h3>
-                <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+                <h3 class="text-base sm:text-lg font-extrabold text-brand-dark mb-2 tracking-wide">Power of Attorney (PoA) Legal Support</h3>
+                <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                   Complete assistance with embassy attestation, drafting, and registering legal PoA so a family member can register on your behalf.
                 </p>
               </div>
-              <button onclick="openEnquireModal('PoA Legal Guidance', 'poa-service')" class="mt-4 text-[11px] font-bold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1">
+              <button onclick="openEnquireModal('PoA Legal Guidance', 'poa-service')" class="mt-4 text-xs font-extrabold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1 transition-colors">
                 Learn PoA Rules <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
 
             <!-- Service 3 -->
-            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between">
+            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-gold/40 transition-all duration-300 reveal">
               <div>
                 <div class="w-10 h-10 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
                   <i class="fa-solid fa-building-columns"></i>
                 </div>
-                <h3 class="font-serif text-lg font-bold text-brand-dark mb-2">NRE / NRO Banking Assistance</h3>
-                <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+                <h3 class="text-base sm:text-lg font-extrabold text-brand-dark mb-2 tracking-wide">NRE / NRO Banking Assistance</h3>
+                <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                   Seamless wire transfer guidance, inward remittance tax certificates (15CA/15CB), and direct plot home loans with HDFC, ICICI & SBI.
                 </p>
               </div>
-              <button onclick="openEnquireModal('NRE/NRO Banking Inquiry', 'nre-banking')" class="mt-4 text-[11px] font-bold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1">
+              <button onclick="openEnquireModal('NRE/NRO Banking Inquiry', 'nre-banking')" class="mt-4 text-xs font-extrabold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1 transition-colors">
                 Banking Guidance <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
 
             <!-- Service 4 -->
-            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between">
+            <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1.5 hover:border-brand-gold/40 transition-all duration-300 reveal">
               <div>
                 <div class="w-10 h-10 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center text-lg mb-4">
                   <i class="fa-solid fa-fence"></i>
                 </div>
-                <h3 class="font-serif text-lg font-bold text-brand-dark mb-2">Asset Maintenance & Security</h3>
-                <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+                <h3 class="text-base sm:text-lg font-extrabold text-brand-dark mb-2 tracking-wide">Asset Maintenance & Security</h3>
+                <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                   Gated security, compound wall construction, fencing, plot upkeep, and regular photo updates sent directly to your WhatsApp.
                 </p>
               </div>
-              <button onclick="openEnquireModal('Asset Protection Care', 'asset-maintenance')" class="mt-4 text-[11px] font-bold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1">
+              <button onclick="openEnquireModal('Asset Protection Care', 'asset-maintenance')" class="mt-4 text-xs font-extrabold text-brand-gold hover:text-brand-dark uppercase tracking-wider text-left flex items-center gap-1 transition-colors">
                 Protect Your Asset <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
@@ -478,16 +469,16 @@
     <section id="roi-calculator" class="py-24 bg-brand-dark text-brand-cream relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Interactive Tool</span>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-extrabold">Interactive Tool</span>
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-brand-cream">
-            NRI Currency & <span class="text-brand-gold font-semibold">Growth Estimator</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-cream tracking-tight">
+            NRI Currency & <span class="text-brand-gold">Growth Estimator</span>
           </h2>
-          <p class="mt-4 text-sm text-brand-cream/80 font-light">
+          <p class="mt-4 text-sm sm:text-base font-medium text-brand-cream/80 leading-relaxed">
             Convert your local currency into Indian Rupees (INR) and project capital growth in Bangalore's top growth corridors over a 3, 5, or 10-year horizon.
           </p>
         </div>
@@ -500,7 +491,7 @@
               
               <!-- Currency Selector -->
               <div>
-                <label class="block text-xs font-bold tracking-wider uppercase text-brand-gold mb-2">Select Your Foreign Currency</label>
+                <label class="block text-xs font-extrabold tracking-wider uppercase text-brand-gold mb-2">Select Your Foreign Currency</label>
                 <div class="grid grid-cols-3 sm:grid-cols-6 gap-2" id="currency-buttons">
                   <button type="button" onclick="setCurrency('USD', 83.5)" class="curr-btn active py-2.5 px-3 text-xs font-bold rounded border border-brand-gold bg-brand-gold text-brand-dark transition-all">USD ($)</button>
                   <button type="button" onclick="setCurrency('AED', 22.7)" class="curr-btn py-2.5 px-3 text-xs font-bold rounded border border-brand-gold/30 bg-brand-dark text-brand-cream hover:border-brand-gold transition-all">AED (د.إ)</button>
@@ -526,7 +517,7 @@
 
               <!-- Holding Period Tabs -->
               <div>
-                <label class="block text-xs font-bold tracking-wider uppercase text-brand-gold mb-2">Investment Horizon</label>
+                <label class="block text-xs font-extrabold tracking-wider uppercase text-brand-gold mb-2">Investment Horizon</label>
                 <div class="grid grid-cols-3 gap-3">
                   <button type="button" onclick="setHorizon(3)" id="hz-3" class="hz-btn py-3 text-xs font-bold rounded border border-brand-gold bg-brand-gold text-brand-dark">3 Years</button>
                   <button type="button" onclick="setHorizon(5)" id="hz-5" class="hz-btn py-3 text-xs font-bold rounded border border-brand-gold/30 bg-brand-dark text-brand-cream">5 Years</button>
@@ -540,24 +531,24 @@
             <div class="lg:col-span-5 bg-brand-dark/90 border border-brand-gold/30 p-8 rounded-lg space-y-6">
               
               <div class="border-b border-brand-gold/20 pb-4">
-                <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">INR Equivalent</span>
-                <div class="font-serif text-3xl font-bold text-brand-cream mt-1" id="res-inr">₹50.10 Lakhs</div>
+                <span class="text-[10px] uppercase tracking-widest text-brand-gold font-extrabold">INR Equivalent</span>
+                <div class="text-3xl font-extrabold text-brand-cream mt-1" id="res-inr">₹50.10 Lakhs</div>
               </div>
 
               <div class="border-b border-brand-gold/20 pb-4">
-                <span class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Estimated Land Valuation (<span id="res-years-text">3</span> Years)</span>
-                <div class="font-serif text-4xl font-bold text-brand-gold mt-1" id="res-future-val">₹83.12 Lakhs</div>
-                <p class="text-[11px] text-brand-cream/60 mt-1 italic">*Based on historical 18% CAGR in North Bangalore airport corridors.</p>
+                <span class="text-[10px] uppercase tracking-widest text-brand-gold font-extrabold">Estimated Land Valuation (<span id="res-years-text">3</span> Years)</span>
+                <div class="text-4xl font-extrabold text-brand-gold mt-1" id="res-future-val">₹83.12 Lakhs</div>
+                <p class="text-[11px] font-medium text-brand-cream/60 mt-1 italic">*Based on historical 18% CAGR in North Bangalore airport corridors.</p>
               </div>
 
               <div class="pt-2">
                 <div class="flex justify-between text-xs py-1 border-b border-brand-cream/10">
-                  <span class="text-brand-cream/70">Estimated Net Gain:</span>
-                  <span class="font-bold text-green-400" id="res-gain">+₹33.02 Lakhs (~$39.5k)</span>
+                  <span class="text-brand-cream/70 font-medium">Estimated Net Gain:</span>
+                  <span class="font-extrabold text-green-400" id="res-gain">+₹33.02 Lakhs (~$39.5k)</span>
                 </div>
               </div>
 
-              <button onclick="openEnquireModal('Custom ROI Projection Sheet Request', 'roi-sheet')" class="w-full bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-bold text-xs tracking-widest uppercase py-4 rounded shadow-xl transition-all">
+              <button onclick="openEnquireModal('Custom ROI Projection Sheet Request', 'roi-sheet')" class="w-full bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-extrabold text-xs tracking-widest uppercase py-4 rounded shadow-xl transition-all">
                 Download Detailed Investment Sheet
               </button>
 
@@ -573,29 +564,29 @@
     <section id="nri-projects" class="py-24 bg-brand-creamDark relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Handpicked Portfolios</span>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-extrabold">Handpicked Portfolios</span>
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-brand-dark">
-            NRI-Preferred <span class="text-brand-gold font-semibold">Gated Plot Communities</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            NRI-Preferred <span class="text-brand-gold">Gated Plot Communities</span>
           </h2>
-          <p class="mt-4 text-sm text-brand-charcoal/80 font-light">
+          <p class="mt-4 text-sm sm:text-base font-medium text-brand-charcoal/80 leading-relaxed">
             Fully developed, DTCP approved, ready-for-registration villa plots in North Bangalore with high capital growth guarantees.
           </p>
         </div>
 
         <!-- Filter Category Tabs -->
-        <div class="flex justify-center gap-4 mb-12 border-b border-brand-gold/20 pb-4 text-xs font-bold uppercase tracking-widest">
+        <div class="flex justify-center gap-4 mb-12 border-b border-brand-gold/20 pb-4 text-xs font-extrabold uppercase tracking-widest reveal">
           <button onclick="filterNriProjects('all')" id="tab-all" class="nri-tab-btn tab-active text-brand-dark relative py-2 px-4 focus:outline-none">All Projects</button>
           <button onclick="filterNriProjects('ongoing')" id="tab-ongoing" class="nri-tab-btn text-brand-charcoal/60 relative py-2 px-4 focus:outline-none">Ongoing Developments</button>
           <button onclick="filterNriProjects('completed')" id="tab-completed" class="nri-tab-btn text-brand-charcoal/60 relative py-2 px-4 focus:outline-none">Completed Communities</button>
         </div>
 
         <!-- Projects Grid Container -->
-        <div id="nri-projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="nri-projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
           <!-- Dynamically Injected by JS -->
         </div>
 
@@ -606,16 +597,16 @@
     <section id="purchase-process" class="py-24 bg-brand-cream relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Seamless Experience</span>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-extrabold">Seamless Experience</span>
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-brand-dark">
-            5 Simple Steps to <span class="text-brand-gold font-semibold">Own Your Land</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            5 Simple Steps to <span class="text-brand-gold">Own Your Land</span>
           </h2>
-          <p class="mt-4 text-sm text-brand-charcoal/80 font-light">
+          <p class="mt-4 text-sm sm:text-base font-medium text-brand-charcoal/80 leading-relaxed">
             From virtual selection to physical registration and keys handover without stepping out of your home country.
           </p>
         </div>
@@ -623,63 +614,63 @@
         <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
           
           <!-- Step 1 -->
-          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between">
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between hover:shadow-xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-300 reveal">
             <div>
-              <span class="text-3xl font-serif font-bold text-brand-gold">01</span>
-              <h3 class="font-serif text-lg font-bold text-brand-dark mt-2 mb-2">Virtual Site Tour</h3>
-              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              <span class="text-3xl font-extrabold text-brand-gold">01</span>
+              <h3 class="text-lg font-extrabold text-brand-dark mt-2 mb-2 tracking-wide">Virtual Site Tour</h3>
+              <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                 Schedule a 1-on-1 video walkthrough with real-time plot layout drone views.
               </p>
             </div>
-            <div class="mt-4 text-[10px] text-brand-gold font-bold uppercase tracking-widest">Step 1</div>
+            <div class="mt-4 text-[10px] text-brand-gold font-extrabold uppercase tracking-widest">Step 1</div>
           </div>
 
           <!-- Step 2 -->
-          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between">
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between hover:shadow-xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-300 reveal">
             <div>
-              <span class="text-3xl font-serif font-bold text-brand-gold">02</span>
-              <h3 class="font-serif text-lg font-bold text-brand-dark mt-2 mb-2">Legal Verification</h3>
-              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              <span class="text-3xl font-extrabold text-brand-gold">02</span>
+              <h3 class="text-lg font-extrabold text-brand-dark mt-2 mb-2 tracking-wide">Legal Verification</h3>
+              <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                 Receive clear title copies, RERA certificates & 30-year search report for review.
               </p>
             </div>
-            <div class="mt-4 text-[10px] text-brand-gold font-bold uppercase tracking-widest">Step 2</div>
+            <div class="mt-4 text-[10px] text-brand-gold font-extrabold uppercase tracking-widest">Step 2</div>
           </div>
 
           <!-- Step 3 -->
-          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between">
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between hover:shadow-xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-300 reveal">
             <div>
-              <span class="text-3xl font-serif font-bold text-brand-gold">03</span>
-              <h3 class="font-serif text-lg font-bold text-brand-dark mt-2 mb-2">Online Booking</h3>
-              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              <span class="text-3xl font-extrabold text-brand-gold">03</span>
+              <h3 class="text-lg font-extrabold text-brand-dark mt-2 mb-2 tracking-wide">Online Booking</h3>
+              <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                 Reserve your chosen plot number with token transfer via NRE / NRO or international wire.
               </p>
             </div>
-            <div class="mt-4 text-[10px] text-brand-gold font-bold uppercase tracking-widest">Step 3</div>
+            <div class="mt-4 text-[10px] text-brand-gold font-extrabold uppercase tracking-widest">Step 3</div>
           </div>
 
           <!-- Step 4 -->
-          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between">
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between hover:shadow-xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-300 reveal">
             <div>
-              <span class="text-3xl font-serif font-bold text-brand-gold">04</span>
-              <h3 class="font-serif text-lg font-bold text-brand-dark mt-2 mb-2">PoA / Registration</h3>
-              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              <span class="text-3xl font-extrabold text-brand-gold">04</span>
+              <h3 class="text-lg font-extrabold text-brand-dark mt-2 mb-2 tracking-wide">PoA / Registration</h3>
+              <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                 Execute sale deed registration in Bangalore via Power of Attorney or personal visit.
               </p>
             </div>
-            <div class="mt-4 text-[10px] text-brand-gold font-bold uppercase tracking-widest">Step 4</div>
+            <div class="mt-4 text-[10px] text-brand-gold font-extrabold uppercase tracking-widest">Step 4</div>
           </div>
 
           <!-- Step 5 -->
-          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between">
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 relative flex flex-col justify-between hover:shadow-xl hover:-translate-y-2 hover:border-brand-gold/40 transition-all duration-300 reveal">
             <div>
-              <span class="text-3xl font-serif font-bold text-brand-gold">05</span>
-              <h3 class="font-serif text-lg font-bold text-brand-dark mt-2 mb-2">Asset Care</h3>
-              <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed">
+              <span class="text-3xl font-extrabold text-brand-gold">05</span>
+              <h3 class="text-lg font-extrabold text-brand-dark mt-2 mb-2 tracking-wide">Asset Care</h3>
+              <p class="text-sm font-medium text-brand-charcoal/80 leading-relaxed">
                 Continuous plot maintenance, fencing, regular updates, or resale support when needed.
               </p>
             </div>
-            <div class="mt-4 text-[10px] text-brand-gold font-bold uppercase tracking-widest">Step 5</div>
+            <div class="mt-4 text-[10px] text-brand-gold font-extrabold uppercase tracking-widest">Step 5</div>
           </div>
 
         </div>
@@ -691,16 +682,16 @@
     <section id="fema-faq" class="py-24 bg-brand-creamDark relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
           <div class="flex items-center justify-center gap-3 mb-2">
             <div class="w-10 h-[1px] bg-brand-gold"></div>
-            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Knowledge Center</span>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-extrabold">Knowledge Center</span>
             <div class="w-10 h-[1px] bg-brand-gold"></div>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-light text-brand-dark">
-            FEMA & Legal <span class="text-brand-gold font-semibold">NRI Guidelines</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            FEMA & Legal <span class="text-brand-gold">NRI Guidelines</span>
           </h2>
-          <p class="mt-4 text-sm text-brand-charcoal/80 font-light">
+          <p class="mt-4 text-sm sm:text-base font-medium text-brand-charcoal/80 leading-relaxed">
             Clear answers to common legal, tax, and repatriation questions for overseas Indian citizens.
           </p>
         </div>
@@ -708,54 +699,54 @@
         <div class="max-w-4xl mx-auto space-y-4">
           
           <!-- FAQ 1 -->
-          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm">
-            <button onclick="toggleFaq('faq-nri-1')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none">
-              <span class="font-serif text-lg font-bold text-brand-dark">Can NRIs and OCIs legally buy residential plots in India?</span>
+          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm hover:border-brand-gold/40 transition-all duration-300 reveal">
+            <button onclick="toggleFaq('faq-nri-1')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none group">
+              <span class="text-base sm:text-lg font-extrabold text-brand-dark group-hover:text-brand-gold transition-colors">Can NRIs and OCIs legally buy residential plots in India?</span>
               <span id="faq-nri-1-icon" class="w-7 h-7 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300">
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
             </button>
             <div id="faq-nri-1-content" class="max-h-0 overflow-hidden transition-all duration-300">
-              <p class="p-6 pt-0 text-xs sm:text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10">
+              <p class="p-6 pt-0 text-sm font-medium text-brand-charcoal/80 leading-relaxed border-t border-brand-gold/10">
                 Yes! Under Reserve Bank of India (RBI) and FEMA guidelines, Non-Resident Indians (NRIs) and Overseas Citizens of India (OCIs) holding valid passports can freely purchase residential plots, villas, and commercial property in India without prior RBI approval. (Note: Agricultural land and plantations are restricted).
               </p>
             </div>
           </div>
 
           <!-- FAQ 2 -->
-          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm">
-            <button onclick="toggleFaq('faq-nri-2')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none">
-              <span class="font-serif text-lg font-bold text-brand-dark">How do payments work? Can I use my foreign account or NRE/NRO accounts?</span>
+          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm hover:border-brand-gold/40 transition-all duration-300 reveal">
+            <button onclick="toggleFaq('faq-nri-2')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none group">
+              <span class="text-base sm:text-lg font-extrabold text-brand-dark group-hover:text-brand-gold transition-colors">How do payments work? Can I use my foreign account or NRE/NRO accounts?</span>
               <span id="faq-nri-2-icon" class="w-7 h-7 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300">
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
             </button>
             <div id="faq-nri-2-content" class="max-h-0 overflow-hidden transition-all duration-300">
-              <p class="p-6 pt-0 text-xs sm:text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10">
+              <p class="p-6 pt-0 text-sm font-medium text-brand-charcoal/80 leading-relaxed border-t border-brand-gold/10">
                 Payments must be made through normal banking channels via inward remittance from overseas bank accounts, or through NRE (Non-Resident External) or NRO (Non-Resident Ordinary) account balances in India. Cash payments are strictly prohibited.
               </p>
             </div>
           </div>
 
           <!-- FAQ 3 -->
-          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm">
-            <button onclick="toggleFaq('faq-nri-3')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none">
-              <span class="font-serif text-lg font-bold text-brand-dark">How does Power of Attorney (PoA) work if I cannot travel to Bangalore for registration?</span>
+          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm hover:border-brand-gold/40 transition-all duration-300 reveal">
+            <button onclick="toggleFaq('faq-nri-3')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none group">
+              <span class="text-base sm:text-lg font-extrabold text-brand-dark group-hover:text-brand-gold transition-colors">How does Power of Attorney (PoA) work if I cannot travel to Bangalore for registration?</span>
               <span id="faq-nri-3-icon" class="w-7 h-7 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300">
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
             </button>
             <div id="faq-nri-3-content" class="max-h-0 overflow-hidden transition-all duration-300">
-              <p class="p-6 pt-0 text-xs sm:text-sm text-brand-charcoal/80 leading-relaxed font-light border-t border-brand-gold/10">
+              <p class="p-6 pt-0 text-sm font-medium text-brand-charcoal/80 leading-relaxed border-t border-brand-gold/10">
                 You can execute a Power of Attorney (PoA) in favor of a trusted family member or legal representative in India. The PoA document must be signed in your country of residence, attested by the Indian Consulate/Embassy (or apostilled), and registered locally in Bangalore before the property deed execution.
               </p>
             </div>
           </div>
 
           <!-- FAQ 4 -->
-          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm">
-            <button onclick="toggleFaq('faq-nri-4')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none">
-              <span class="font-serif text-lg font-bold text-brand-dark">Can I repatriate the money back to my foreign account when I sell the plot?</span>
+          <div class="bg-brand-creamLight rounded-lg border border-brand-gold/20 overflow-hidden shadow-sm hover:border-brand-gold/40 transition-all duration-300 reveal">
+            <button onclick="toggleFaq('faq-nri-4')" class="w-full py-5 px-6 text-left flex justify-between items-center focus:outline-none group">
+              <span class="text-base sm:text-lg font-extrabold text-brand-dark group-hover:text-brand-gold transition-colors">Can I repatriate the money back to my foreign account when I sell the plot?</span>
               <span id="faq-nri-4-icon" class="w-7 h-7 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold text-xs transition-transform duration-300">
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
@@ -884,19 +875,6 @@
 
     <!-- Common Footer Container -->
     <div class="footer-container"></div>
-
-    <!-- Sticky Floating Action Icons (Right Center) -->
-    <div class="fixed right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3">
-      <a href="https://wa.me/917411854822?text=Hello%20The%20Great%20Builds,%20I%20am%20an%20NRI%20interested%20in%20Bangalore%20plots." target="_blank" aria-label="WhatsApp NRI Desk" class="w-11 h-11 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
-        <i class="fa-brands fa-whatsapp text-xl"></i>
-      </a>
-      <a href="tel:+917411854822" aria-label="Call NRI Desk" class="w-11 h-11 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
-        <i class="fa-solid fa-phone text-base"></i>
-      </a>
-      <button onclick="scrollToTop()" aria-label="Scroll to top" class="w-11 h-11 bg-brand-dark border border-brand-gold/40 text-brand-gold rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
-        <i class="fa-solid fa-arrow-up text-sm"></i>
-      </button>
-    </div>
 
     <!-- Generic Interactive Modal Dialog -->
     <div id="enquire-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-dark/80 opacity-0 invisible transition-all duration-300">

@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+
+    <title>The CountrySide | Farmlands Near Adiyogi, Chikkaballapur - The Great Builds</title>
+    <meta
+      name="description"
+      content="The CountrySide by The Great Builds. Premium 10-acre managed farmland plots near Adiyogi, Chikkaballapur with world-class amenities and clear titles."
+    />
+
+    <!-- Google Fonts Integration: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/common.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#0B1E17",
+                darker: "#060F0C",
+                gold: "#B59B62",
+                goldLight: "#D4C39E",
+                cream: "#FAF7EE",
+                creamLight: "#FFFDF9",
+                creamDark: "#F3EDE0",
+                charcoal: "#2D3732",
+                warmBeige: "#FAF7EC",
+                darkGreen: "#0a1c12",
+              },
+            },
+            fontFamily: {
+              serif: ['"Plus Jakarta Sans"', "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-brand-cream text-brand-charcoal font-sans antialiased overflow-x-hidden">
+    <!-- Header Navigation Container -->
+    <div id="header-container"></div>
+
+    <!-- Hero Banner Section -->
+    <section class="relative min-h-[85vh] pt-24 flex items-center justify-center bg-brand-dark overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80"
+          alt="The CountrySide Adiyogi Chikkaballapur Farmlands"
+          class="w-full h-full object-cover filter brightness-50 scale-105 transition-transform duration-[10s] hover:scale-100"
+          onerror="this.src='https://placehold.co/1920x1080/0b1e17/FAF7EE?text=The+CountrySide'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-brand-dark/70"></div>
+      </div>
+
+      <!-- Hero Overlay Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white w-full">
+        <div class="max-w-3xl space-y-6">
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="bg-brand-gold text-brand-dark text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-sm tracking-widest">
+              ONGOING PROJECT
+            </span>
+            <span class="border border-brand-gold/60 text-brand-goldLight text-xs font-bold uppercase px-3.5 py-1.5 rounded-sm tracking-widest">
+              FARMLANDS & MANAGED ESTATES
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            The CountrySide
+          </h1>
+          <p class="text-brand-goldLight text-sm sm:text-base font-medium uppercase tracking-widest flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+            NEAR ADIYOGI, CHIKKABALLAPUR, BENGALURU
+          </p>
+          <p class="text-brand-cream/90 text-base sm:text-lg font-medium leading-relaxed max-w-2xl">
+            A tranquil 10-acre managed farmland estate nestled in the picturesque foothills of Adiyogi. Designed for high-yield agriculture, weekend retreats, and eco-luxury living.
+          </p>
+
+          <!-- Quick Stats Row -->
+          <div class="grid grid-cols-3 gap-4 pt-2 max-w-xl">
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">TOTAL AREA</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-white mt-1">10 Acres</span>
+            </div>
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">TOTAL PLOTS</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-white mt-1">50 Units</span>
+            </div>
+            <div class="bg-brand-dark/80 backdrop-blur-md border border-brand-gold/20 p-4 rounded-md text-center">
+              <span class="block text-[10px] tracking-widest text-brand-gold uppercase font-bold">STATUS</span>
+              <span class="block text-lg sm:text-xl font-extrabold text-brand-gold mt-1">Ongoing</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button
+              onclick="openContactModal('The CountrySide Inquiry')"
+              class="bg-brand-gold hover:bg-brand-goldLight text-brand-dark font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm transition-all shadow-xl text-center"
+            >
+              ENQUIRE NOW <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+            <a
+              href="#contact-section"
+              class="border border-white/60 text-white font-extrabold text-xs tracking-widest uppercase px-8 py-4 rounded-sm hover:bg-white hover:text-brand-dark transition-all text-center"
+            >
+              SCHEDULE SITE VISIT
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Project Section -->
+    <section class="py-20 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Column: Showcase Image -->
+          <div class="lg:col-span-6 reveal">
+            <div class="relative rounded-lg overflow-hidden border border-brand-gold/20 shadow-2xl group">
+              <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+                alt="The CountrySide Farmland View"
+                class="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                onerror="this.src='https://placehold.co/800x600/0b1e17/FAF7EE?text=The+CountrySide+Estate'"
+              />
+              <div class="absolute bottom-4 left-4 bg-brand-dark/90 text-brand-gold px-4 py-2 text-xs font-bold uppercase tracking-widest rounded border border-brand-gold/30">
+                Managed Farmland Plots
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative Content -->
+          <div class="lg:col-span-6 space-y-6 reveal">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-[1px] bg-brand-gold"></div>
+              <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">ABOUT THE PROJECT</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Escape to Serene Nature Near <span class="text-brand-gold">Adiyogi</span>
+            </h2>
+            <p class="text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-medium">
+              The CountrySide offers a rare opportunity to own a piece of fertile, green farmland in North Bangalore's fastest-appreciating eco-corridor. Located within minutes of the iconic Adiyogi Shiva Statue in Chikkaballapur, this project combines agricultural bounty with luxury retreat amenities.
+            </p>
+            <p class="text-sm sm:text-base text-brand-charcoal/80 leading-relaxed font-medium">
+              Each plot comes with full compound wall fencing, fruit plantations, drip irrigation, and access to a central farmhouse clubhouse. Ideal for organic farming enthusiasts, family holiday retreats, and long-term land wealth creation.
+            </p>
+
+            <!-- Quick Specs List -->
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-brand-gold/15">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">100% Clear Legal Title</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-road text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">30ft & 40ft Internal Roads</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-seedling text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">Organic Fruit Plantation</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-droplet text-brand-gold text-xl"></i>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-dark">24/7 Drip Water Supply</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Highlights Section -->
+    <section class="py-20 bg-brand-creamDark relative border-y border-brand-gold/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">KEY ADVANTAGES</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Project <span class="text-brand-gold">Highlights</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Highlight Card 1 -->
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-mountain-sun text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Scenic Adiyogi Foothills</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Located just 10 minutes from Adiyogi, offering unobstructed mountain views and fresh, crisp air all year round.
+            </p>
+          </div>
+
+          <!-- Highlight Card 2 -->
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-tree text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Managed Organic Farming</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Professional agricultural team handles cultivation of mango, teak, and sandalwood trees on your plot with zero hassle.
+            </p>
+          </div>
+
+          <!-- Highlight Card 3 -->
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-lock text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Gated & Guarded Compound</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Fully fenced perimeter with 24/7 security personnel, CCTV surveillance, and grand entrance archway.
+            </p>
+          </div>
+
+          <!-- Highlight Card 4 -->
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-car-side text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Highway Access</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Seamlessly connected via 6-lane NH-44 highway, located just 45 minutes from Bangalore International Airport.
+            </p>
+          </div>
+
+          <!-- Highlight Card 5 -->
+          <div class="bg-brand-gold/10 p-8 rounded-lg border border-brand-gold/30 shadow-sm hover:shadow-md transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-chart-line text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">High Appreciation Rate</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Chikkaballapur is a rapidly booming tourist and industrial hub, ensuring strong land capital growth.
+            </p>
+          </div>
+
+          <!-- Highlight Card 6 -->
+          <div class="bg-brand-creamLight p-8 rounded-lg border border-brand-gold/10 shadow-sm hover:shadow-md hover:border-brand-gold/30 transition-all space-y-4 reveal">
+            <div class="w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold">
+              <i class="fa-solid fa-house-chimney-window text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Farmhouse Construction Ready</h3>
+            <p class="text-sm text-brand-charcoal/80 font-medium leading-relaxed">
+              Demarcated plot boundaries equipped with electricity connections, ideal for building custom wooden cottages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- World-Class Amenities Section -->
+    <section class="py-20 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">LUXURY FEATURES</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            World-Class <span class="text-brand-gold">Amenities</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-hotel text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Clubhouse</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-child-reaching text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Children's Play Zone</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-person-walking text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Walking & Jogging Track</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-shield-virus text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">24/7 Gated Security</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-faucet-drip text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Underground Water Network</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-bolt text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Electricity Infrastructure</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-spa text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Aromatic Plantations</h4>
+          </div>
+          <div class="bg-brand-creamLight p-6 rounded-lg border border-brand-gold/15 text-center hover:border-brand-gold transition-all group reveal">
+            <i class="fa-solid fa-road text-3xl text-brand-gold mb-3 group-hover:scale-110 transition-transform"></i>
+            <h4 class="text-sm font-bold text-brand-dark uppercase tracking-wider">Wide Asphalt Roads</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section class="py-20 bg-brand-creamDark relative border-t border-brand-gold/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">PROJECT GALLERY</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Visual & Site <span class="text-brand-gold">Showcase</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="relative rounded-lg overflow-hidden group shadow-md reveal">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="The CountrySide View" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold uppercase tracking-widest text-xs">
+              View Landscape
+            </div>
+          </div>
+          <div class="relative rounded-lg overflow-hidden group shadow-md reveal">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Farmland Greenery" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold uppercase tracking-widest text-xs">
+              Organic Plantation
+            </div>
+          </div>
+          <div class="relative rounded-lg overflow-hidden group shadow-md reveal">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Nature Views" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-bold uppercase tracking-widest text-xs">
+              Adiyogi Viewpoint
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact-section" class="py-24 bg-brand-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+            <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">GET IN TOUCH</span>
+            <div class="w-10 h-[1px] bg-brand-gold"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight">
+            Schedule a Visit to <span class="text-brand-gold">The CountrySide</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          <!-- Google Maps Embed -->
+          <div class="lg:col-span-6 min-h-[400px] rounded-lg overflow-hidden border border-brand-gold/20 shadow-lg relative">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.123456789!2d77.6898467!3d13.4381718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19a3090f973d%3A0x8f9c61ac62269c28!2sChikkaballapur!5e0!3m2!1sen!2sin!4v1784106756241!5m2!1sen!2sin"
+              class="w-full h-full border-0 min-h-[400px]"
+              allowfullscreen=""
+              loading="lazy"
+              title="The CountrySide Location Map"
+            ></iframe>
+          </div>
+
+          <!-- Lead Form -->
+          <div class="lg:col-span-6 bg-brand-creamLight rounded-lg border border-brand-gold/20 p-8 sm:p-10 shadow-lg">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-brand-dark">Project Enquiry Form</h3>
+              <p class="text-xs text-brand-charcoal/70 mt-1 font-medium">
+                Submit your details to request site visit transport and pricing list for The CountrySide.
+              </p>
+            </div>
+
+            <form id="project-countryside-form" class="space-y-4">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Your Full Name *</label>
+                <input type="text" required name="name" placeholder="John Doe" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Email Address *</label>
+                <input type="email" required name="email" placeholder="john@example.com" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Phone Number *</label>
+                <input type="tel" required name="phone" placeholder="+91 98765 43210" class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-bold text-gray-600 mb-1">Message / Visit Preference</label>
+                <textarea rows="3" name="message" placeholder="I would like to schedule a site visit for The CountrySide this weekend..." class="w-full px-4 py-3 bg-white border border-brand-dark/15 text-brand-dark text-sm rounded focus:ring-2 focus:ring-brand-gold focus:outline-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark font-extrabold py-3.5 text-xs uppercase tracking-widest transition-colors rounded shadow-md">
+                Submit Inquiry Request
+              </button>
+              <div id="project-form-status" class="text-xs font-bold mt-2 text-center"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    <div id="modal-container"></div>
+
+    <script src="../../assets/js/config.js"></script>
+    <script src="../../assets/js/common.js"></script>
+  </body>
+</html>

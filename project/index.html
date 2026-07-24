@@ -15,11 +15,11 @@
       content="Property Developers in Yelahanka New Town | The Great Builds. Premium residential plots with world-class amenities in Karnataka."
     />
 
-    <!-- Google Fonts: Cormorant Garamond (Serif) & Inter (Sans) -->
+    <!-- Google Fonts Integration: Plus Jakarta Sans (ExtraBold 800 Headings, Medium 500 Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,800&display=swap"
       rel="stylesheet"
     />
 
@@ -40,8 +40,8 @@
         theme: {
           extend: {
             fontFamily: {
-              serif: ['"Cormorant Garamond"', "serif"],
-              sans: ["Inter", "sans-serif"],
+              serif: ['"Plus Jakarta Sans"', "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
             },
             colors: {
               royal: {
@@ -606,7 +606,7 @@
               class="px-6 pb-6 flex items-center justify-between border-t border-luxury-gold/10 pt-4"
             >
               <button
-                onclick="openProjectDetails('Anubhav Megacity')"
+                onclick="openProjectDetails('Anubhava Megacity')"
                 class="text-xs font-semibold tracking-wider font-sans text-luxury-darkGreen hover:text-luxury-gold flex items-center gap-1.5 transition-colors group/btn"
               >
                 VIEW DETAILS
@@ -1630,23 +1630,23 @@
         filterProjects('ongoing');
       });
 
-      // OPEN DETAILED LIGHT OVERLAY
+      const projectUrlMap = {
+        "CountrySide": "/project/The-CountrySide",
+        "Orchard Valley": "/project/The-CountrySide",
+        "The CountrySide": "/project/The-CountrySide",
+        "Anubhava Megacity": "/project/Anubhava-Megacity",
+        "Anubhava Mega City": "/project/Anubhava-Megacity",
+        "Royal Greens": "/project/Royal-Greens",
+        "Shankar Enclave": "/project/Shankar-Enclave",
+        "Golden Meadows": "/project/Golden-Meadows",
+        "Green Meadows": "/project/Green-Meadows",
+        "Green Meadows Phase I": "/project/Green-Meadows"
+      };
+
+      // NAVIGATE DIRECTLY TO DEDICATED PROJECT PAGE
       function openProjectDetails(projectName) {
-        const data = projectDetailsData[projectName];
-        if (!data) return;
-
-        document.getElementById("detail-title").innerText = data.title;
-        document.getElementById("detail-badge").innerText = data.badge;
-        document.getElementById("detail-desc").innerText = data.desc;
-        document.getElementById("detail-size").innerText = data.size;
-        document.getElementById("detail-plots").innerText = data.plots;
-        document.getElementById("detail-approved").innerText = data.approved;
-        document.getElementById("detail-status").innerText = data.status;
-        document.getElementById("detail-img").src = data.img;
-
-        const overlay = document.getElementById("project-details-overlay");
-        overlay.classList.remove("opacity-0", "invisible");
-        overlay.classList.add("opacity-100");
+        const targetUrl = projectUrlMap[projectName] || `/project/${projectName.toLowerCase().replace(/\s+/g, '-')}`;
+        window.location.href = targetUrl;
       }
 
       // CLOSE DETAILED LIGHT OVERLAY

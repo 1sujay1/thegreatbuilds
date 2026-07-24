@@ -40,3 +40,103 @@
 .btn-lux:hover::after {
   transform: translate(-50%, -50%) scale(1);
 }
+
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY SYSTEM & FONT SMOOTHING
+   ========================================================================== */
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  color: #2D3732;
+}
+
+p, span, li, td, th, input, textarea, select, label {
+  font-weight: 500;
+}
+
+/* Master Balanced Heading Scale */
+h1 {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: clamp(2rem, 4vw, 3.25rem); /* 32px to 52px max for Hero H1 */
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: clamp(1.65rem, 2.5vw, 2.35rem); /* 26px to 38px for Section Titles - Balanced & Professional */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem); /* 19px to 24px for Card Titles */
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: clamp(1rem, 1.2vw, 1.2rem); /* 16px to 19px */
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.font-serif {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+/* Force balanced scale on section headers */
+section h2, .section-title {
+  font-size: clamp(1.65rem, 2.5vw, 2.35rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1e17;
+}
+::-webkit-scrollbar-thumb {
+  background: #b59b62;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4c39e;
+}
+
+/* Tab active indicator */
+.tab-active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b59b62;
+  transition: all 0.3s ease;
+}
+
+/* Scroll reveal helper */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
